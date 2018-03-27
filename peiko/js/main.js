@@ -22,7 +22,7 @@ $(document).ready(function(){
   scrollWidth = div.offsetWidth - div.clientWidth;
   document.body.removeChild(div);
   scrollWidth = -1*scrollWidth/2;
-  console.log(scrollWidth);
+  // console.log(scrollWidth);
   $(".header__menu").click(function() {
     console.log('click menu');
     let menuWidth = $('.header__menu').width();
@@ -125,11 +125,23 @@ $(document).ready(function(){
   let tabActiveClass = 'vacancy__tab--active';
   let contentActiveClass = 'vacancy__content--active';
   let windowBig = false;
+  let id = 1;
+  $(`.vacancy__tab[data-tab="${id}"]`).addClass('tabActiveClass');
+  $(`.vacancy__content[data-cont="${id}"]`).addClass(contentActiveClass);
+
+  rowAmount = $(`.vacancy__content[data-cont="${id}"] .vacancy__row`).length;
+  let padding = rowAmount*64 + 10;
+  if ($('.vacancy .l-container').width() >= 720) {$('.vacancy__table-container').css({'padding-bottom': padding+"px"});}
+
+
+
+
+
+
   if($(window).width() >= 766+scrollWidth){
     var tabsHeight = $('.vacancy__tabs').height();
     windowBig = true;
   }
-
   $(window).on('resize',function(){
     console.log('resize')
     if($(window).width() < 766+scrollWidth*2){

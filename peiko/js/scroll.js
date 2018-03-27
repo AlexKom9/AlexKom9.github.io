@@ -1,9 +1,14 @@
 //scroll
 $("#hero__look").click(function() {
+  windowHeight = $(window).height();
+  let scrollHeight = windowHeight;
+  if ($('.hero').height() > windowHeight){
+    scrollHeight = $('.hero').height()
+  }
   $('html, body').animate({
-      scrollTop: $(window).height() }, 500);
+      scrollTop: scrollHeight }, 500);
 });
-// 
+//
 // $(document).ready(function(){
 //   $.scrollify({
 //     section : ".section",

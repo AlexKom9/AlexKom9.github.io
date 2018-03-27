@@ -1646,12 +1646,12 @@ a {
         -ms-flex-align: center;
             align-items: center;
     margin-bottom: 3rem; }
-  @media only screen and (max-width: 766px) {
+  @media only screen and (max-width: 890px) {
     .examp__img {
       display: none; } }
   .examp__img--mobile {
     display: none; }
-    @media only screen and (max-width: 766px) {
+    @media only screen and (max-width: 890px) {
       .examp__img--mobile {
         display: inline-block; } }
 
