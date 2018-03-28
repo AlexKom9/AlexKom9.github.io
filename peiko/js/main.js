@@ -131,7 +131,7 @@ $(document).ready(function(){
   let contentActiveClass = 'vacancy__content--active';
   let windowBig = false;
   let id = 1;
-  $(`.vacancy__tab[data-tab="${id}"]`).addClass('tabActiveClass');
+  $(`.vacancy__tab[data-tab="${id}"]`).addClass(tabActiveClass);
   $(`.vacancy__content[data-cont="${id}"]`).addClass(contentActiveClass);
 
   rowAmount = $(`.vacancy__content[data-cont="${id}"] .vacancy__row`).length;
