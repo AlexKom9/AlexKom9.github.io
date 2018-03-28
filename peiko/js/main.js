@@ -61,6 +61,16 @@ $(".job__btn").click(function() {
     $('.send-cv').addClass("modal--active")
 });
 
+$(".vacancy__response").click(function() {
+    console.log('click job__btn');
+    if($('.l-page').hasClass("l-page--modal-opened")){
+    } else {
+      $('.l-page').addClass("l-page--modal-opened")
+    }
+    $('.send-cv').addClass("modal--active")
+});
+
+
 
 
 $(".close-btn").click(function() {
@@ -68,7 +78,7 @@ $(".close-btn").click(function() {
     $('.modal').removeClass("modal--active")
     $(".header").removeClass("header--modal-active");
     $('.header').css({'margin-left': 0})
-
+    return false
 });
 
 //!!!Lan-block!!!
@@ -124,7 +134,25 @@ $('.card').on('mouseleave', function(){
 })
 
 // !!! TABLE !!!
+
+
+
+
 $(document).ready(function(){
+
+  findAmound = function(){
+    ans = 0;
+    for (var i = 0; i < $('.vacancy__content').length; i++) {
+      curr = $('.vacancy__content').eq(i).find('.vacancy__row').length;
+      if ( curr > ans){
+        ans = curr;
+      }
+    }
+    return ans;
+  }
+  let rowAmount = findAmound();
+  // rowAmount = $(`.vacancy__content[data-cont="${id}"] .vacancy__row`).length;
+
   let tab = $('.vacancy__tab');
   let content = $('.vacancy__content');
   let tabActiveClass = 'vacancy__tab--active';
@@ -134,7 +162,6 @@ $(document).ready(function(){
   $(`.vacancy__tab[data-tab="${id}"]`).addClass(tabActiveClass);
   $(`.vacancy__content[data-cont="${id}"]`).addClass(contentActiveClass);
 
-  rowAmount = $(`.vacancy__content[data-cont="${id}"] .vacancy__row`).length;
   let padding = rowAmount*64 + 10;
   if ($('.vacancy .l-container').width() >= 720) {$('.vacancy__table-container').css({'padding-bottom': padding+"px"});}
 
@@ -153,7 +180,7 @@ $(document).ready(function(){
       windowBig = false;
       $('.vacancy__table-container').css({'padding-bottom': 0});
     } else {
-      rowAmount = $(`.vacancy__content[data-cont="${id}"] .vacancy__row`).length;
+      // rowAmount = $(`.vacancy__content[data-cont="${id}"] .vacancy__row`).length;
       let padding = rowAmount*64 + 10;
       $('.vacancy__table-container').css({'padding-bottom': padding+"px"});
     }
@@ -165,7 +192,7 @@ $(document).ready(function(){
     tab.removeClass(tabActiveClass);
     content.removeClass(contentActiveClass);
     $(this).addClass(tabActiveClass);
-    rowAmount = $(`.vacancy__content[data-cont="${id}"] .vacancy__row`).length;
+    // rowAmount = $(`.vacancy__content[data-cont="${id}"] .vacancy__row`).length;
     let padding = rowAmount*64 + 10;
     if ($('.vacancy .l-container').width() >= 720) {$('.vacancy__table-container').css({'padding-bottom': padding+"px"});}
     console.log('rowAmount='+rowAmount);
