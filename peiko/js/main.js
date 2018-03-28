@@ -2,6 +2,11 @@
 $(document).ready(function(){
   // console.log('jq work');
   $('.start__slider').slick({
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    pauseOnHover: false,
+    speed: 1000,
     arrows: false,
     dots: true,
     dotsClass: 'start__dots'
