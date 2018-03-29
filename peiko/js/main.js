@@ -162,7 +162,7 @@ $(document).ready(function(){
   $(`.vacancy__tab[data-tab="${id}"]`).addClass(tabActiveClass);
   $(`.vacancy__content[data-cont="${id}"]`).addClass(contentActiveClass);
 
-  let padding = rowAmount*64 + 10;
+  let padding = rowAmount*66 + 10;
   if ($('.vacancy .l-container').width() >= 720) {$('.vacancy__table-container').css({'padding-bottom': padding+"px"});}
 
 
@@ -181,7 +181,7 @@ $(document).ready(function(){
       $('.vacancy__table-container').css({'padding-bottom': 0});
     } else {
       // rowAmount = $(`.vacancy__content[data-cont="${id}"] .vacancy__row`).length;
-      let padding = rowAmount*64 + 10;
+      let padding = rowAmount*66 + 10;
       $('.vacancy__table-container').css({'padding-bottom': padding+"px"});
     }
   })
@@ -193,7 +193,7 @@ $(document).ready(function(){
     content.removeClass(contentActiveClass);
     $(this).addClass(tabActiveClass);
     // rowAmount = $(`.vacancy__content[data-cont="${id}"] .vacancy__row`).length;
-    let padding = rowAmount*64 + 10;
+    let padding = rowAmount*66 + 10;
     if ($('.vacancy .l-container').width() >= 720) {$('.vacancy__table-container').css({'padding-bottom': padding+"px"});}
     console.log('rowAmount='+rowAmount);
     $(`.vacancy__content[data-cont="${id}"]`).addClass(contentActiveClass)
