@@ -27,6 +27,7 @@ function scrollBarWidth(){
   scrollWidth = div.offsetWidth - div.clientWidth;
   document.body.removeChild(div);
   // return scrollWidth
+	// console.log(scrollWidth)
 };
 
 // ***OPEN MODAL WINDOW MAIN MENU***
@@ -41,7 +42,7 @@ function openMainMenu(){
 		$('.l-page').toggleClass("l-page--modal-opened");
 		// console.log('scrollWidth='+scrollWidth)
 		let headerMargin = -1*scrollWidth/2;
-		$('.header').css({'margin-left': headerMargin})
+		$('.header').css({'margin-left': -4+"px"})
 	});
 };
 
