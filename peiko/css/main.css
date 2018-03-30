@@ -2884,7 +2884,8 @@ html {
   font-family: "MuseoSansCyrl", sans-serif;
   max-width: 2000px;
   position: relative;
-  margin: 0 auto; }
+  margin: 0 auto;
+  overflow-x: hidden; }
   .l-page--modal-opened {
     overflow: hidden; }
 
@@ -3028,17 +3029,17 @@ html {
     width: 90px;
     height: 90px;
     text-align: center;
-    -webkit-animation: mainPagePlanetBoxMove 7s linear infinite;
-            animation: mainPagePlanetBoxMove 7s linear infinite;
-    -webkit-animation-delay: 10s;
-            animation-delay: 10s; }
+    -webkit-animation: mainPagePlanetBoxMove--revers 7s linear infinite;
+            animation: mainPagePlanetBoxMove--revers 7s linear infinite;
+    -webkit-animation-delay: .5s;
+            animation-delay: .5s; }
     .l-bgc__planet--2 img {
       position: relative;
-      left: 15px;
-      -webkit-animation: mainPagePlanetMove 7s linear infinite;
-              animation: mainPagePlanetMove 7s linear infinite;
-      -webkit-animation-delay: 10s;
-              animation-delay: 10s; }
+      left: 3px;
+      -webkit-animation: mainPagePlanetMove--revers 7s linear infinite;
+              animation: mainPagePlanetMove--revers 7s linear infinite;
+      -webkit-animation-delay: .5s;
+              animation-delay: .5s; }
   .l-bgc__planet--3 {
     top: 700px;
     right: 50px;
@@ -3047,15 +3048,15 @@ html {
     text-align: center;
     -webkit-animation: mainPagePlanetBoxMove--revers 10s linear infinite;
             animation: mainPagePlanetBoxMove--revers 10s linear infinite;
-    -webkit-animation-delay: 3s;
-            animation-delay: 3s; }
+    -webkit-animation-delay: .1s;
+            animation-delay: .1s; }
     .l-bgc__planet--3 img {
       position: relative;
       left: 15px;
       -webkit-animation: mainPagePlanetMove--revers 10s linear infinite;
               animation: mainPagePlanetMove--revers 10s linear infinite;
-      -webkit-animation-delay: 3s;
-              animation-delay: 3s; }
+      -webkit-animation-delay: .1s;
+              animation-delay: .1s; }
   .l-bgc__planet--4 {
     top: 800px;
     left: 100px;
@@ -3064,15 +3065,15 @@ html {
     text-align: center;
     -webkit-animation: mainPagePlanetBoxMove 15s linear infinite;
             animation: mainPagePlanetBoxMove 15s linear infinite;
-    -webkit-animation-delay: 1s;
-            animation-delay: 1s; }
+    -webkit-animation-delay: .5s;
+            animation-delay: .5s; }
     .l-bgc__planet--4 img {
       position: relative;
       left: 15px;
       -webkit-animation: mainPagePlanetMove 15s linear infinite;
               animation: mainPagePlanetMove 15s linear infinite;
-      -webkit-animation-delay: 1s;
-              animation-delay: 1s; }
+      -webkit-animation-delay: .5s;
+              animation-delay: .5s; }
 
 @-webkit-keyframes mainPagePlanetBoxMove {
   0% {
