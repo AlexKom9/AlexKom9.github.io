@@ -109,4 +109,6 @@ $(document).ready(function(){
 
 	advantAnimation();
 	techAnimation();
+	new WOW().init();
+
 })

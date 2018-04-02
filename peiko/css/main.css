@@ -619,7 +619,7 @@ a {
     @media only screen and (max-width: 1024px) {
       .tech__item {
         width: calc( (((100% - (20px * (12 - 1))) / 12) * 4) + ( 20px * (4 - 1)));
-        padding: 2.78%; } }
+        padding: 2rem; } }
     @media only screen and (max-width: 767px) {
       .tech__item {
         width: calc( (((100% - (15px * (12 - 1))) / 12) * 6) + ( 15px * (6 - 1)));
@@ -3208,9 +3208,6 @@ html {
   0% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg); }
-  50% {
-    -webkit-transform: rotate(-180deg);
-            transform: rotate(-180deg); }
   100% {
     -webkit-transform: rotate(-360deg);
             transform: rotate(-360deg); } }
@@ -3219,9 +3216,6 @@ html {
   0% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg); }
-  50% {
-    -webkit-transform: rotate(-180deg);
-            transform: rotate(-180deg); }
   100% {
     -webkit-transform: rotate(-360deg);
             transform: rotate(-360deg); } }
