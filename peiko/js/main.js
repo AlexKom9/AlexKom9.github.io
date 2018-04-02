@@ -42,7 +42,7 @@ function openMainMenu(){
 		$('.l-page').toggleClass("l-page--modal-opened");
 		// console.log('scrollWidth='+scrollWidth)
 		let headerMargin = -1*scrollWidth/2;
-		$('.header').css({'margin-left': -4+"px"})
+		$('.header').css({'margin-left': headerMargin+"px"})
 	});
 };
 
@@ -190,7 +190,7 @@ function vacancyTable(){
 
 	//Change padding-bottom and marigin-top on container size case
 	$('.vacancy__table-container').on('containerResize',function(e,size){
-		console.log('subscribe',size)
+		// console.log('subscribe',size)
 		if(size === 'small'){
 			$(this).css({'padding-bottom': 0});
 			$('.vacancy__content').css({'margin-top': 0})
