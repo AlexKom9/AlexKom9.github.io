@@ -92,10 +92,6 @@ techAnimation =function(){
 }
 
 
-
-
-
-
 $(document).ready(function(){
 
 	stars = $('#spaceobj .cls-6');

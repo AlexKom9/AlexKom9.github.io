@@ -1973,7 +1973,8 @@ a {
   -webkit-transition: -webkit-transform 1s;
   transition: -webkit-transform 1s;
   transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s; }
+  transition: transform 1s, -webkit-transform 1s;
+  visibility: hidden; }
   @media only screen and (max-width: 680px) {
     .burger__line {
       width: 30px;
