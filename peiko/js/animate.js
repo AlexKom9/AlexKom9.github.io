@@ -63,9 +63,9 @@ techAnimation =function(){
 			if (!((i+1)%4)) {
 				// console.log(i+1)
 				items.eq(i).attr('data-wow-delay','0s')
-				items.eq(i-1).attr('data-wow-delay',`.3s`)
-				items.eq(i-2).attr('data-wow-delay',`.6s`)
-				items.eq(i-3).attr('data-wow-delay',`.9s`)
+				items.eq(i-1).attr('data-wow-delay','.3s')
+				items.eq(i-2).attr('data-wow-delay','.6s')
+				items.eq(i-3).attr('data-wow-delay','.9s')
 			}
 		}
 		break;
@@ -74,8 +74,8 @@ techAnimation =function(){
 			if (!((i+1)%3)) {
 				// console.log(i+1)
 				items.eq(i).attr('data-wow-delay','0s')
-				items.eq(i-1).attr('data-wow-delay',`.3s`)
-				items.eq(i-2).attr('data-wow-delay',`.6s`)
+				items.eq(i-1).attr('data-wow-delay','.3s')
+				items.eq(i-2).attr('data-wow-delay','.6s')
 			}
 		}
 		break;
@@ -84,7 +84,7 @@ techAnimation =function(){
 			if (!((i+1)%2)) {
 				// console.log(i+1)
 				items.eq(i).attr('data-wow-delay','0s')
-				items.eq(i-1).attr('data-wow-delay',`.3s`)
+				items.eq(i-1).attr('data-wow-delay','.3s')
 			}
 		}
 		break;
