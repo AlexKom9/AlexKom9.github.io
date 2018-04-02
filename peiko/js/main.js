@@ -33,9 +33,9 @@ function scrollBarWidth(){
 // ***OPEN MODAL WINDOW MAIN MENU***
 function openMainMenu(){
 	$(".header__menu").click(function() {
-		console.log('click menu');
+		// console.log('click menu');
 		let menuWidth = $('.header__menu').width();
-		console.log(menuWidth);
+		// console.log(menuWidth);
 		$('.header__close').css({width: menuWidth})
 		$(".header").toggleClass("header--modal-active");
 		$("#m-menu").toggleClass("modal--active");

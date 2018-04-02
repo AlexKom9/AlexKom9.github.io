@@ -867,6 +867,8 @@ a {
         .vacancy__tabs::after {
           display: none; } }
   .vacancy__tab {
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
@@ -880,38 +882,44 @@ a {
             justify-content: center;
     padding: 22px 0;
     background-color: #001a41;
-    border: 1px solid #001d63;
-    border-bottom: none; }
+    position: relative; }
     .vacancy__tab--last {
-      border-radius: 0 10px 0 0; }
+      border-radius: 0 10px 0 0;
+      border-right: 1px solid #001a41; }
+      .vacancy__tab--last::after {
+        display: none !important; }
+      .vacancy__tab--last:hover {
+        border-right: 1px solid #00bbd8 !important; }
       @media only screen and (max-width: 767px) {
         .vacancy__tab--last {
           border-radius: 0;
           border-bottom: 1px solid #001d63; } }
     .vacancy__tab--active {
       background-color: #00bbd8;
-      border: 1px solid #00bbd8; }
+      border-color: #00bbd8; }
+    .vacancy__tab::after {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 100%;
+      width: 1px;
+      background-color: #001d63;
+      top: 0;
+      right: 0; }
+      @media only screen and (max-width: 767px) {
+        .vacancy__tab::after {
+          display: none; } }
     .vacancy__tab:hover {
-      cursor: pointer;
-      background-color: #00bbd8;
-      border: 1px solid #00bbd8; }
+      background-color: #00bbd8; }
     .vacancy__tab:first-child {
       border-radius: 10px 0 0 0; }
       @media only screen and (max-width: 767px) {
         .vacancy__tab:first-child {
           border-radius: 10px 10px 0 0; } }
-    .vacancy__tab:last-child {
-      background-color: red;
-      border-radius: 0 10px 0 0; }
-      @media only screen and (max-width: 767px) {
-        .vacancy__tab:last-child {
-          border-radius: 0;
-          border-bottom: 1px solid #001d63; } }
   .vacancy__content {
     display: none;
     position: absolute;
     width: 100%;
-    border: 1px solid #001d63;
     border-top: none;
     background-color: #001a41; }
     .vacancy__content--active {
@@ -2726,7 +2734,8 @@ a {
     display: flex;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
-            justify-content: flex-end; }
+            justify-content: flex-end;
+    padding-bottom: 20px; }
     @media only screen and (max-width: 767px) {
       .m-menu__social {
         -ms-flex-pack: distribute;

@@ -40,7 +40,7 @@ advantAnimation =function(){
 			// }
 			break;
 	}
-	console.log(contWidth)
+	// console.log(contWidth)
 }
 
 techAnimation =function(){
@@ -53,7 +53,7 @@ techAnimation =function(){
 	} else {
 		amount = 2;
 	}
-	console.log(amount);
+	// console.log(amount);
 	items = $('.tech .tech__item');
 	items.addClass('wow fadeInLeft');
 	items.attr('data-wow-duration','.8s')
