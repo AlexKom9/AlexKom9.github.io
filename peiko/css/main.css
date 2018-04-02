@@ -722,7 +722,7 @@ a {
             -ms-flex-align: center;
                 align-items: center; } }
   .footer__logo {
-    width: calc( (((100% - (20px * (12 - 1))) / 12) * 3) + ( 20px * (3 - 1))); }
+    width: calc( (((100% - (20px * (12 - 1))) / 12) * 2) + ( 20px * (2 - 1))); }
     @media only screen and (max-width: 1244px) {
       .footer__logo {
         width: calc( (((100% - (20px * (12 - 1))) / 12) * 2) + ( 20px * (2 - 1))); } }
@@ -808,7 +808,7 @@ a {
     .footer__phone {
       line-height: 30px; } }
   .footer__social {
-    width: calc( (((100% - (20px * (12 - 1))) / 12) * 2) + ( 20px * (2 - 1)));
+    width: calc( (((100% - (20px * (12 - 1))) / 12) * 3) + ( 20px * (3 - 1)));
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -1921,7 +1921,8 @@ a {
       transition: opacity .2s, transform .2s, -webkit-transform .2s; }
     .social-links__icon:hover {
       -webkit-transform: scale(1.4);
-              transform: scale(1.4); }
+              transform: scale(1.4);
+      z-index: 999; }
       .social-links__icon:hover::before {
         opacity: 1; }
     .social-links__icon:last-child {
@@ -2604,7 +2605,9 @@ a {
     position: relative;
     margin-top: -83px;
     overflow: hidden;
-    height: 100%; }
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
     @media only screen and (max-width: 1023px) {
       .m-menu__syst {
         margin-top: 0; } }
@@ -2651,7 +2654,6 @@ a {
     position: relative;
     overflow: hidden;
     padding: 5px;
-    background-clip: text;
     margin-bottom: 2rem; }
     @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
       .m-menu__link {
