@@ -897,6 +897,9 @@ a {
     .vacancy__tab--active {
       background-color: #00bbd8;
       border-color: #00bbd8; }
+      @media only screen and (max-width: 767px) {
+        .vacancy__tab--active::after {
+          display: none !important; } }
     .vacancy__tab::after {
       content: '';
       display: block;
@@ -908,7 +911,10 @@ a {
       right: 0; }
       @media only screen and (max-width: 767px) {
         .vacancy__tab::after {
-          display: none; } }
+          height: 1px;
+          width: 100%;
+          top: auto;
+          bottom: 0; } }
     .vacancy__tab:hover {
       background-color: #00bbd8; }
     .vacancy__tab:first-child {
