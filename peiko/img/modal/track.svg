@@ -1,7 +1,1 @@
-<svg 
- xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink"
- width="537px" height="537px">
-<path fill-rule="evenodd"  stroke="rgb(0, 108, 177)" stroke-width="2px" stroke-dasharray="8, 4" stroke-linecap="butt" stroke-linejoin="miter" opacity="0.271" fill="none"
- d="M267.723,1.000 C414.875,1.000 534.166,120.540 534.166,268.000 C534.166,415.460 414.875,535.000 267.723,535.000 C120.571,535.000 1.280,415.460 1.280,268.000 C1.280,120.540 120.571,1.000 267.723,1.000 Z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="537" height="537"><path fill-rule="evenodd" stroke="#006CB1" stroke-width="2" stroke-dasharray="8, 4" opacity=".271" fill="none" d="M267.723 1c147.152 0 266.443 119.54 266.443 267 0 147.46-119.291 267-266.443 267S1.28 415.46 1.28 268C1.28 120.54 120.571 1 267.723 1z"/></svg>

@@ -1,17 +1,1 @@
-<svg 
- xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink"
- width="12px" height="17px">
-<defs>
-<filter id="Filter_0">
-    <feFlood flood-color="rgb(67, 186, 214)" flood-opacity="1" result="floodOut" />
-    <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
-    <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
-</filter>
-
-</defs>
-<g filter="url(#Filter_0)">
-<path fill-rule="evenodd"  stroke-width="1px" stroke="rgb(67, 186, 214)" fill="rgb(106, 131, 207)"
- d="M3.495,3.826 L3.807,3.495 L8.215,8.180 L7.903,8.512 L3.495,3.826 ZM8.504,8.682 L3.968,13.504 L3.647,13.163 L8.184,8.341 L8.504,8.682 Z"/>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="17"><defs><filter id="a"><feFlood flood-color="#43BAD6" flood-opacity="1" result="floodOut"/><feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut"/><feBlend in="compOut" in2="SourceGraphic"/></filter></defs><path fill-rule="evenodd" stroke="#43BAD6" fill="#6A83CF" d="M3.495 3.826l.312-.331L8.215 8.18l-.312.332-4.408-4.686zm5.009 4.856l-4.536 4.822-.321-.341 4.537-4.822.32.341z" filter="url(#a)"/></svg>

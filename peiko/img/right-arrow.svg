@@ -1,17 +1,1 @@
-<svg 
- xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink"
- width="18px" height="23px">
-<defs>
-<filter id="Filter_0">
-    <feFlood flood-color="rgb(255, 255, 255)" flood-opacity="1" result="floodOut" />
-    <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
-    <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
-</filter>
-
-</defs>
-<g filter="url(#Filter_0)">
-<path fill-rule="evenodd"  stroke-width="1px" stroke="rgb(255, 255, 255)" fill="rgb(84, 208, 236)"
- d="M6.496,6.826 L6.807,6.495 L11.215,11.180 L10.903,11.511 L6.496,6.826 ZM11.504,11.682 L6.968,16.504 L6.647,16.163 L11.184,11.341 L11.504,11.682 Z"/>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="23"><defs><filter id="a"><feFlood flood-color="#FFF" flood-opacity="1" result="floodOut"/><feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut"/><feBlend in="compOut" in2="SourceGraphic"/></filter></defs><path fill-rule="evenodd" stroke="#FFF" fill="#54D0EC" d="M6.496 6.826l.311-.331 4.408 4.685-.312.331-4.407-4.685zm5.008 4.856l-4.536 4.822-.321-.341 4.537-4.822.32.341z" filter="url(#a)"/></svg>
