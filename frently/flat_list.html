@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Fe-Boiler</title>
+    <link rel="stylesheet" href="libs/flexslider/flexslider.css" type="text/css"/>
+    <link rel="stylesheet" href="libs/slick-carousel/slick/slick.css"/>
+    <link rel="stylesheet" href="libs/slick-carousel/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+  </head>
+  <body class="l-page">
+    <div class="l-wrap">
+      <header class="header">
+        <div class="l-container">
+          <div class="header__inner">
+            <div class="header__logo-box">
+              <div class="header__logo">Frently</div>
+              <div class="header__quote">Умный сервис по подбору комфортного жилья</div>
+            </div>
+            <dev class="header__control-box"><a class="header__login show-modal" data-id="modal-entry">Войти в аккаунт</a>
+              <div class="header__btn header__signup">
+                <button class="l-btn show-modal" data-id="modal-register">Зарегистрироваться</button>
+              </div>
+            </dev>
+          </div>
+        </div>
+      </header>
+      <section class="flat-filter">
+        <div class="l-container">
+          <div class="l-title">Параметры поиска</div>
+          <div class="flat-filter__inner">
+            <div class="flat-filter__address-container">
+              <div class="flat-filter__city l-dropdown-box" data-status="closed" id="cityDropdownBox"> <span>Выберите город</span>
+                <div class="flat-filter__city-dropdown l-dropdown"> 
+                  <ul class="l-dropdown-list">
+                    <li class="dropdown-chose-item">Киев</li>
+                    <li class="dropdown-chose-item">Бердянск</li>
+                    <li class="dropdown-chose-item">Житомер</li>
+                    <li class="dropdown-chose-item">Запорожье</li>
+                    <li class="dropdown-chose-item">Харьков</li>
+                    <li class="dropdown-chose-item">Днепр</li>
+                    <li class="dropdown-chose-item">Львов</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="flat-filter__district l-dropdown-box" data-status="closed" id="districtDropdownBox"><span>Выберите район</span>
+                <div class="flat-filter__district-dropdown l-dropdown"> 
+                  <ul class="l-dropdown-list">
+                    <li class="dropdown-chose-item">Соломянский</li>
+                    <li class="dropdown-chose-item">Святошинский</li>
+                    <li class="dropdown-chose-item">Днепровский</li>
+                    <li class="dropdown-chose-item">Дарницкий</li>
+                    <li class="dropdown-chose-item">Оболонь</li>
+                    <li class="dropdown-chose-item">Шевченковский</li>
+                    <li class="dropdown-chose-item">Троещина</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="flat-filter__street l-dropdown-box" data-status="closed" id="streetDropdownBox"><span>Улица</span>
+                <div class="flat-filter__street-dropdown l-dropdown">
+                  <ul class="l-dropdown-list">
+                    <li class="dropdown-chose-item">пр. Победы</li>
+                    <li class="dropdown-chose-item">Полевая</li>
+                    <li class="dropdown-chose-item">Борщаговская</li>
+                    <li class="dropdown-chose-item">Выборгская</li>
+                    <li class="dropdown-chose-item">Комарова</li>
+                    <li class="dropdown-chose-item">бул. Шевченко</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="flat-filter__rooms l-dropdown-box" data-status="closed" id="roomsDropdownBox"><span>Количество комнат</span>
+              <div class="flat-filter__rooms-dropdown l-dropdown">
+                <form class="l-dropdown__checkboxes-container">
+                        <input class="checkbox checkbox--solid" type="checkbox" id="rooms1" data-any="false"/>
+                        <label for="rooms1">1 комн</label>
+                        <input class="checkbox checkbox--solid" type="checkbox" id="rooms2" data-any="false"/>
+                        <label for="rooms2">2 комн</label>
+                        <input class="checkbox checkbox--solid" type="checkbox" id="rooms3" data-any="false"/>
+                        <label for="rooms3">3 комн</label>
+                        <input class="checkbox checkbox--solid" type="checkbox" id="rooms4" data-any="false"/>
+                        <label for="rooms4">4 комн</label>
+                </form>
+              </div>
+            </div>
+            <div class="flat-filter__budget l-dropdown-box" data-status="closed" id="budgetDropdownBox"><span>Бюджет</span>
+              <div class="flat-filter__budget-dropdown l-dropdown">
+                <ul class="l-dropdown-list">
+                  <li class="dropdown-chose-item">от 3 000 грн</li>
+                  <li class="dropdown-chose-item">от 5 000 грн</li>
+                  <li class="dropdown-chose-item">от 10 000 грн</li>
+                </ul>
+                <div class="flat-filter__budget-price-box">
+                  <input class="flat-filter__budget-price-from" type="number" placeholder="от"/>
+                  <input class="flat-filter__budget-price-to" type="number" placeholder="до"/>
+                </div>
+              </div>
+            </div>
+            <div class="flat-filter__more-filters l-dropdown-box" data-status="closed" id="moreFiltersBtn"><img src="img/icons/more-filters.png"/>Больше фильтров</div>
+            <div class="flat-filter__search-btn l-dropdown-box" id="searchBtn"><img src="img/icons/search.png"/>Искать</div>
+            <div class="flat-filter__additional-container" id="moreFiltersContainer">
+              <div class="flat-filter__type l-dropdown-box" data-status="closed" data-placeholder="Тип дома" id="typeDropdownBox"> <span>Тип дома</span>
+                <div class="flat-filter__type-dropdown l-dropdown">
+                  <form class="l-dropdown__checkboxes-container l-dropdown__checkboxes-container--list">
+                          <input class="checkbox checkbox--list" type="checkbox" id="brickBuild"/>
+                          <label class="dropdown-chose-item dropdown-chose-item--list" for="brickBuild">Кирпичный</label>
+                          <input class="checkbox checkbox--list" type="checkbox" id="panelBuild"/>
+                          <label class="dropdown-chose-item dropdown-chose-item--list" for="panelBuild">Панельный</label>
+                          <input class="checkbox checkbox--list" type="checkbox" id="newBuild"/>
+                          <label class="dropdown-chose-item dropdown-chose-item--list" for="newBuild">Новострой</label>
+                          <input class="checkbox checkbox--list" type="checkbox" id="privatBuild"/>
+                          <label class="dropdown-chose-item dropdown-chose-item--list" for="privatBuild">Частный дом</label>
+                  </form>
+                </div>
+              </div>
+              <div class="flat-filter__sq l-dropdown-box" data-status="closed" data-placeholder="Площадь" id="sqDropdownBox"> <span>Площадь</span>
+                <div class="flat-filter__sq-dropdown l-dropdown">
+                  <form class="l-dropdown__checkboxes-container l-dropdown__checkboxes-container--list">
+                          <input class="checkbox checkbox--list" type="checkbox" id="sq1"/>
+                          <label class="dropdown-chose-item dropdown-chose-item--list" for="sq1">20-30</label>
+                          <input class="checkbox checkbox--list" type="checkbox" id="sq2"/>
+                          <label class="dropdown-chose-item dropdown-chose-item--list" for="sq2">30-40</label>
+                          <input class="checkbox checkbox--list" type="checkbox" id="sq3"/>
+                          <label class="dropdown-chose-item dropdown-chose-item--list" for="sq3">40-50</label>
+                          <input class="checkbox checkbox--list" type="checkbox" id="sq4"/>
+                          <label class="dropdown-chose-item dropdown-chose-item--list" for="sq4">50+</label>
+                  </form>
+                </div>
+              </div>
+              <div class="flat-filter__floor l-dropdown-box" data-status="closed" data-placeholder="Этаж" id="floorDropdwonBox"> <span>Этаж</span>
+                <div class="flat-filter__sq-dropdown l-dropdown">
+                  <form class="l-dropdown__checkboxes-container l-dropdown__checkboxes-container--list">
+                          <input class="checkbox checkbox--list" type="checkbox" id="floor1"/>
+                          <label class="dropdown-chose-item dropdown-chose-item--list" for="floor1">1</label>
+                          <input class="checkbox checkbox--list" type="checkbox" id="floor2"/>
+                          <label class="dropdown-chose-item dropdown-chose-item--list" for="floor2">2</label>
+                          <input class="checkbox checkbox--list" type="checkbox" id="floor3"/>
+                          <label class="dropdown-chose-item dropdown-chose-item--list" for="floor3">3</label>
+                          <input class="checkbox checkbox--list" type="checkbox" id="floor4"/>
+                          <label class="dropdown-chose-item dropdown-chose-item--list" for="floor4">4</label>
+                  </form>
+                </div>
+              </div>
+              <div class="flat-filter__checkboxes">
+                      <input class="checkbox checkbox--sq" type="checkbox" id="childrenCheck"/>
+                      <label for="childrenCheck">Можно с детьми</label>
+                      <input class="checkbox checkbox--sq" type="checkbox" id="petsCheck"/>
+                      <label for="petsCheck">Можно с животными</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="nav-line">
+        <div class="l-container">
+          <div class="nav-line__inner"><a href="#">Главная / </a><a href="#">Квартиры в Киеве /</a><a href="#">Соломенский Район / </a><a href="#">Гарматная  39в</a></div>
+        </div>
+      </section>
+      <section class="flat-list">
+        <div class="l-container">
+          <h1 class="l-title">Результаты поиска</h1>
+          <div class="flat-list__head-line">
+            <h4 class="l-subtitle">Найдено 12 квартир по вашему запросу</h4>
+            <div class="flat-list__check">
+              <input type="checkbox" id="flatListCheapest"/>
+              <label for="flatListCheapest">Самые дешовые сначала</label>
+            </div>
+          </div>
+          <div class="flat-list__inner">
+            <div class="flat-list__items">
+              <div class="flat-list__item">
+                <div class="flat-card">
+                  <div class="flat-card__inner">
+                    <div class="flat-card__head">
+                      <div class="mark mark--checked mark--top"><img src="./img/icons/checked.png"/>Проверено</div>
+                      <div class="mark mark--price mark--bottom">от 10 000 грн</div>
+                      <div class="flat-card__slider-container">
+                        <div class="flat-card__slider-prevArrow"><img src="img/icons/prevArrow--small.png"/></div>
+                        <div class="flat-card__slider-nextArrow"><img src="img/icons/nextArrow--small.png"/></div>
+                        <div class="flat-card__slider">
+                          <div class="flat-card__slide"><img src="img/flat-card/1.png"/></div>
+                          <div class="flat-card__slide"><img src="img/flat-card/2.png"/></div>
+                          <div class="flat-card__slide"><img src="img/flat-card/3.png"/></div>
+                        </div>
+                      </div>
+                    </div><a class="flat-card__body-link" href="#">
+                      <div class="flat-card__body">
+                        <div class="flat-card__views"><img src="img/icons/eye.png"/> 127</div>
+                        <div class="flat-card__district">Соломенский район</div>
+                        <div class="flat-card__addres">Ул. Николая Стражеско, 51<br/><span>м. Политехническая - 5 минут</span></div>
+                        <div class="flat-card__descr">Комнат :<span> 3</span></div>
+                        <div class="flat-card__descr">Площадь :<span> 30 м2</span></div>
+                      </div>
+                      <div class="flat-card__time-view">Ближайшее время просмотра :  <span>01.04.2018 в 18:00</span></div></a>
+                  </div>
+                </div>
+              </div>
+              <div class="flat-list__item">
+                <div class="flat-card">
+                  <div class="flat-card__inner">
+                    <div class="flat-card__head">
+                      <div class="mark mark--checked mark--top"><img src="./img/icons/checked.png"/>Проверено</div>
+                      <div class="mark mark--price mark--bottom">от 10 000 грн</div>
+                      <div class="flat-card__slider-container">
+                        <div class="flat-card__slider-prevArrow"><img src="img/icons/prevArrow--small.png"/></div>
+                        <div class="flat-card__slider-nextArrow"><img src="img/icons/nextArrow--small.png"/></div>
+                        <div class="flat-card__slider">
+                          <div class="flat-card__slide"><img src="img/flat-card/1.png"/></div>
+                          <div class="flat-card__slide"><img src="img/flat-card/2.png"/></div>
+                          <div class="flat-card__slide"><img src="img/flat-card/3.png"/></div>
+                        </div>
+                      </div>
+                    </div><a class="flat-card__body-link" href="#">
+                      <div class="flat-card__body">
+                        <div class="flat-card__views"><img src="img/icons/eye.png"/> 127</div>
+                        <div class="flat-card__district">Соломенский район</div>
+                        <div class="flat-card__addres">Ул. Николая Стражеско, 51<br/><span>м. Политехническая - 5 минут</span></div>
+                        <div class="flat-card__descr">Комнат :<span> 3</span></div>
+                        <div class="flat-card__descr">Площадь :<span> 30 м2</span></div>
+                      </div>
+                      <div class="flat-card__time-view">Ближайшее время просмотра :  <span>01.04.2018 в 18:00</span></div></a>
+                  </div>
+                </div>
+              </div>
+              <div class="flat-list__item">
+                <div class="flat-card">
+                  <div class="flat-card__inner">
+                    <div class="flat-card__head">
+                      <div class="mark mark--checked mark--top"><img src="./img/icons/checked.png"/>Проверено</div>
+                      <div class="mark mark--price mark--bottom">от 10 000 грн</div>
+                      <div class="flat-card__slider-container">
+                        <div class="flat-card__slider-prevArrow"><img src="img/icons/prevArrow--small.png"/></div>
+                        <div class="flat-card__slider-nextArrow"><img src="img/icons/nextArrow--small.png"/></div>
+                        <div class="flat-card__slider">
+                          <div class="flat-card__slide"><img src="img/flat-card/1.png"/></div>
+                          <div class="flat-card__slide"><img src="img/flat-card/2.png"/></div>
+                          <div class="flat-card__slide"><img src="img/flat-card/3.png"/></div>
+                        </div>
+                      </div>
+                    </div><a class="flat-card__body-link" href="#">
+                      <div class="flat-card__body">
+                        <div class="flat-card__views"><img src="img/icons/eye.png"/> 127</div>
+                        <div class="flat-card__district">Соломенский район</div>
+                        <div class="flat-card__addres">Ул. Николая Стражеско, 51<br/><span>м. Политехническая - 5 минут</span></div>
+                        <div class="flat-card__descr">Комнат :<span> 3</span></div>
+                        <div class="flat-card__descr">Площадь :<span> 30 м2</span></div>
+                      </div>
+                      <div class="flat-card__time-view">Ближайшее время просмотра :  <span>01.04.2018 в 18:00</span></div></a>
+                  </div>
+                </div>
+              </div>
+              <div class="flat-list__item">
+                <div class="flat-card">
+                  <div class="flat-card__inner">
+                    <div class="flat-card__head">
+                      <div class="mark mark--checked mark--top"><img src="./img/icons/checked.png"/>Проверено</div>
+                      <div class="mark mark--price mark--bottom">от 10 000 грн</div>
+                      <div class="flat-card__slider-container">
+                        <div class="flat-card__slider-prevArrow"><img src="img/icons/prevArrow--small.png"/></div>
+                        <div class="flat-card__slider-nextArrow"><img src="img/icons/nextArrow--small.png"/></div>
+                        <div class="flat-card__slider">
+                          <div class="flat-card__slide"><img src="img/flat-card/1.png"/></div>
+                          <div class="flat-card__slide"><img src="img/flat-card/2.png"/></div>
+                          <div class="flat-card__slide"><img src="img/flat-card/3.png"/></div>
+                        </div>
+                      </div>
+                    </div><a class="flat-card__body-link" href="#">
+                      <div class="flat-card__body">
+                        <div class="flat-card__views"><img src="img/icons/eye.png"/> 127</div>
+                        <div class="flat-card__district">Соломенский район</div>
+                        <div class="flat-card__addres">Ул. Николая Стражеско, 51<br/><span>м. Политехническая - 5 минут</span></div>
+                        <div class="flat-card__descr">Комнат :<span> 3</span></div>
+                        <div class="flat-card__descr">Площадь :<span> 30 м2</span></div>
+                      </div>
+                      <div class="flat-card__time-view">Ближайшее время просмотра :  <span>01.04.2018 в 18:00</span></div></a>
+                  </div>
+                </div>
+              </div>
+              <div class="flat-list__item">
+                <div class="flat-card">
+                  <div class="flat-card__inner">
+                    <div class="flat-card__head">
+                      <div class="mark mark--checked mark--top"><img src="./img/icons/checked.png"/>Проверено</div>
+                      <div class="mark mark--price mark--bottom">от 10 000 грн</div>
+                      <div class="flat-card__slider-container">
+                        <div class="flat-card__slider-prevArrow"><img src="img/icons/prevArrow--small.png"/></div>
+                        <div class="flat-card__slider-nextArrow"><img src="img/icons/nextArrow--small.png"/></div>
+                        <div class="flat-card__slider">
+                          <div class="flat-card__slide"><img src="img/flat-card/1.png"/></div>
+                          <div class="flat-card__slide"><img src="img/flat-card/2.png"/></div>
+                          <div class="flat-card__slide"><img src="img/flat-card/3.png"/></div>
+                        </div>
+                      </div>
+                    </div><a class="flat-card__body-link" href="#">
+                      <div class="flat-card__body">
+                        <div class="flat-card__views"><img src="img/icons/eye.png"/> 127</div>
+                        <div class="flat-card__district">Соломенский район</div>
+                        <div class="flat-card__addres">Ул. Николая Стражеско, 51<br/><span>м. Политехническая - 5 минут</span></div>
+                        <div class="flat-card__descr">Комнат :<span> 3</span></div>
+                        <div class="flat-card__descr">Площадь :<span> 30 м2</span></div>
+                      </div>
+                      <div class="flat-card__time-view">Ближайшее время просмотра :  <span>01.04.2018 в 18:00</span></div></a>
+                  </div>
+                </div>
+              </div>
+              <div class="flat-list__item">
+                <div class="flat-card">
+                  <div class="flat-card__inner">
+                    <div class="flat-card__head">
+                      <div class="mark mark--checked mark--top"><img src="./img/icons/checked.png"/>Проверено</div>
+                      <div class="mark mark--price mark--bottom">от 10 000 грн</div>
+                      <div class="flat-card__slider-container">
+                        <div class="flat-card__slider-prevArrow"><img src="img/icons/prevArrow--small.png"/></div>
+                        <div class="flat-card__slider-nextArrow"><img src="img/icons/nextArrow--small.png"/></div>
+                        <div class="flat-card__slider">
+                          <div class="flat-card__slide"><img src="img/flat-card/1.png"/></div>
+                          <div class="flat-card__slide"><img src="img/flat-card/2.png"/></div>
+                          <div class="flat-card__slide"><img src="img/flat-card/3.png"/></div>
+                        </div>
+                      </div>
+                    </div><a class="flat-card__body-link" href="#">
+                      <div class="flat-card__body">
+                        <div class="flat-card__views"><img src="img/icons/eye.png"/> 127</div>
+                        <div class="flat-card__district">Соломенский район</div>
+                        <div class="flat-card__addres">Ул. Николая Стражеско, 51<br/><span>м. Политехническая - 5 минут</span></div>
+                        <div class="flat-card__descr">Комнат :<span> 3</span></div>
+                        <div class="flat-card__descr">Площадь :<span> 30 м2</span></div>
+                      </div>
+                      <div class="flat-card__time-view">Ближайшее время просмотра :  <span>01.04.2018 в 18:00</span></div></a>
+                  </div>
+                </div>
+              </div>
+              <div class="flat-list__cant-find"><img src="img/icons/mail-search.png"/><span>Не нашли квартиру ?</span>Выберите свои настройки, дабы мы уведомляли вас о подходящих квартирах.
+                <button class="l-btn">Уведомить меня</button>
+              </div>
+              <div class="flat-list__item">
+                <div class="flat-card">
+                  <div class="flat-card__inner">
+                    <div class="flat-card__head">
+                      <div class="mark mark--checked mark--top"><img src="./img/icons/checked.png"/>Проверено</div>
+                      <div class="mark mark--price mark--bottom">от 10 000 грн</div>
+                      <div class="flat-card__slider-container">
+                        <div class="flat-card__slider-prevArrow"><img src="img/icons/prevArrow--small.png"/></div>
+                        <div class="flat-card__slider-nextArrow"><img src="img/icons/nextArrow--small.png"/></div>
+                        <div class="flat-card__slider">
+                          <div class="flat-card__slide"><img src="img/flat-card/1.png"/></div>
+                          <div class="flat-card__slide"><img src="img/flat-card/2.png"/></div>
+                          <div class="flat-card__slide"><img src="img/flat-card/3.png"/></div>
+                        </div>
+                      </div>
+                    </div><a class="flat-card__body-link" href="#">
+                      <div class="flat-card__body">
+                        <div class="flat-card__views"><img src="img/icons/eye.png"/> 127</div>
+                        <div class="flat-card__district">Соломенский район</div>
+                        <div class="flat-card__addres">Ул. Николая Стражеско, 51<br/><span>м. Политехническая - 5 минут</span></div>
+                        <div class="flat-card__descr">Комнат :<span> 3</span></div>
+                        <div class="flat-card__descr">Площадь :<span> 30 м2</span></div>
+                      </div>
+                      <div class="flat-card__time-view">Ближайшее время просмотра :  <span>01.04.2018 в 18:00</span></div></a>
+                  </div>
+                </div>
+              </div>
+              <div class="flat-list__item">
+                <div class="flat-card">
+                  <div class="flat-card__inner">
+                    <div class="flat-card__head">
+                      <div class="mark mark--checked mark--top"><img src="./img/icons/checked.png"/>Проверено</div>
+                      <div class="mark mark--price mark--bottom">от 10 000 грн</div>
+                      <div class="flat-card__slider-container">
+                        <div class="flat-card__slider-prevArrow"><img src="img/icons/prevArrow--small.png"/></div>
+                        <div class="flat-card__slider-nextArrow"><img src="img/icons/nextArrow--small.png"/></div>
+                        <div class="flat-card__slider">
+                          <div class="flat-card__slide"><img src="img/flat-card/1.png"/></div>
+                          <div class="flat-card__slide"><img src="img/flat-card/2.png"/></div>
+                          <div class="flat-card__slide"><img src="img/flat-card/3.png"/></div>
+                        </div>
+                      </div>
+                    </div><a class="flat-card__body-link" href="#">
+                      <div class="flat-card__body">
+                        <div class="flat-card__views"><img src="img/icons/eye.png"/> 127</div>
+                        <div class="flat-card__district">Соломенский район</div>
+                        <div class="flat-card__addres">Ул. Николая Стражеско, 51<br/><span>м. Политехническая - 5 минут</span></div>
+                        <div class="flat-card__descr">Комнат :<span> 3</span></div>
+                        <div class="flat-card__descr">Площадь :<span> 30 м2</span></div>
+                      </div>
+                      <div class="flat-card__time-view">Ближайшее время просмотра :  <span>01.04.2018 в 18:00</span></div></a>
+                  </div>
+                </div>
+              </div>
+              <div class="flat-list__item">
+                <div class="flat-card">
+                  <div class="flat-card__inner">
+                    <div class="flat-card__head">
+                      <div class="mark mark--checked mark--top"><img src="./img/icons/checked.png"/>Проверено</div>
+                      <div class="mark mark--price mark--bottom">от 10 000 грн</div>
+                      <div class="flat-card__slider-container">
+                        <div class="flat-card__slider-prevArrow"><img src="img/icons/prevArrow--small.png"/></div>
+                        <div class="flat-card__slider-nextArrow"><img src="img/icons/nextArrow--small.png"/></div>
+                        <div class="flat-card__slider">
+                          <div class="flat-card__slide"><img src="img/flat-card/1.png"/></div>
+                          <div class="flat-card__slide"><img src="img/flat-card/2.png"/></div>
+                          <div class="flat-card__slide"><img src="img/flat-card/3.png"/></div>
+                        </div>
+                      </div>
+                    </div><a class="flat-card__body-link" href="#">
+                      <div class="flat-card__body">
+                        <div class="flat-card__views"><img src="img/icons/eye.png"/> 127</div>
+                        <div class="flat-card__district">Соломенский район</div>
+                        <div class="flat-card__addres">Ул. Николая Стражеско, 51<br/><span>м. Политехническая - 5 минут</span></div>
+                        <div class="flat-card__descr">Комнат :<span> 3</span></div>
+                        <div class="flat-card__descr">Площадь :<span> 30 м2</span></div>
+                      </div>
+                      <div class="flat-card__time-view">Ближайшее время просмотра :  <span>01.04.2018 в 18:00</span></div></a>
+                  </div>
+                </div>
+              </div>
+              <div class="flat-list__item">
+                <div class="flat-card">
+                  <div class="flat-card__inner">
+                    <div class="flat-card__head">
+                      <div class="mark mark--checked mark--top"><img src="./img/icons/checked.png"/>Проверено</div>
+                      <div class="mark mark--price mark--bottom">от 10 000 грн</div>
+                      <div class="flat-card__slider-container">
+                        <div class="flat-card__slider-prevArrow"><img src="img/icons/prevArrow--small.png"/></div>
+                        <div class="flat-card__slider-nextArrow"><img src="img/icons/nextArrow--small.png"/></div>
+                        <div class="flat-card__slider">
+                          <div class="flat-card__slide"><img src="img/flat-card/1.png"/></div>
+                          <div class="flat-card__slide"><img src="img/flat-card/2.png"/></div>
+                          <div class="flat-card__slide"><img src="img/flat-card/3.png"/></div>
+                        </div>
+                      </div>
+                    </div><a class="flat-card__body-link" href="#">
+                      <div class="flat-card__body">
+                        <div class="flat-card__views"><img src="img/icons/eye.png"/> 127</div>
+                        <div class="flat-card__district">Соломенский район</div>
+                        <div class="flat-card__addres">Ул. Николая Стражеско, 51<br/><span>м. Политехническая - 5 минут</span></div>
+                        <div class="flat-card__descr">Комнат :<span> 3</span></div>
+                        <div class="flat-card__descr">Площадь :<span> 30 м2</span></div>
+                      </div>
+                      <div class="flat-card__time-view">Ближайшее время просмотра :  <span>01.04.2018 в 18:00</span></div></a>
+                  </div>
+                </div>
+              </div>
+              <div class="flat-list__item">
+                <div class="flat-card">
+                  <div class="flat-card__inner">
+                    <div class="flat-card__head">
+                      <div class="mark mark--checked mark--top"><img src="./img/icons/checked.png"/>Проверено</div>
+                      <div class="mark mark--price mark--bottom">от 10 000 грн</div>
+                      <div class="flat-card__slider-container">
+                        <div class="flat-card__slider-prevArrow"><img src="img/icons/prevArrow--small.png"/></div>
+                        <div class="flat-card__slider-nextArrow"><img src="img/icons/nextArrow--small.png"/></div>
+                        <div class="flat-card__slider">
+                          <div class="flat-card__slide"><img src="img/flat-card/1.png"/></div>
+                          <div class="flat-card__slide"><img src="img/flat-card/2.png"/></div>
+                          <div class="flat-card__slide"><img src="img/flat-card/3.png"/></div>
+                        </div>
+                      </div>
+                    </div><a class="flat-card__body-link" href="#">
+                      <div class="flat-card__body">
+                        <div class="flat-card__views"><img src="img/icons/eye.png"/> 127</div>
+                        <div class="flat-card__district">Соломенский район</div>
+                        <div class="flat-card__addres">Ул. Николая Стражеско, 51<br/><span>м. Политехническая - 5 минут</span></div>
+                        <div class="flat-card__descr">Комнат :<span> 3</span></div>
+                        <div class="flat-card__descr">Площадь :<span> 30 м2</span></div>
+                      </div>
+                      <div class="flat-card__time-view">Ближайшее время просмотра :  <span>01.04.2018 в 18:00</span></div></a>
+                  </div>
+                </div>
+              </div>
+              <div class="flat-list__item">
+                <div class="flat-card">
+                  <div class="flat-card__inner">
+                    <div class="flat-card__head">
+                      <div class="mark mark--checked mark--top"><img src="./img/icons/checked.png"/>Проверено</div>
+                      <div class="mark mark--price mark--bottom">от 10 000 грн</div>
+                      <div class="flat-card__slider-container">
+                        <div class="flat-card__slider-prevArrow"><img src="img/icons/prevArrow--small.png"/></div>
+                        <div class="flat-card__slider-nextArrow"><img src="img/icons/nextArrow--small.png"/></div>
+                        <div class="flat-card__slider">
+                          <div class="flat-card__slide"><img src="img/flat-card/1.png"/></div>
+                          <div class="flat-card__slide"><img src="img/flat-card/2.png"/></div>
+                          <div class="flat-card__slide"><img src="img/flat-card/3.png"/></div>
+                        </div>
+                      </div>
+                    </div><a class="flat-card__body-link" href="#">
+                      <div class="flat-card__body">
+                        <div class="flat-card__views"><img src="img/icons/eye.png"/> 127</div>
+                        <div class="flat-card__district">Соломенский район</div>
+                        <div class="flat-card__addres">Ул. Николая Стражеско, 51<br/><span>м. Политехническая - 5 минут</span></div>
+                        <div class="flat-card__descr">Комнат :<span> 3</span></div>
+                        <div class="flat-card__descr">Площадь :<span> 30 м2</span></div>
+                      </div>
+                      <div class="flat-card__time-view">Ближайшее время просмотра :  <span>01.04.2018 в 18:00</span></div></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flat-list__pagination">
+              <div class="pagination">
+                <div class="pagination__item pagination__item--back"><img src="img/icons/pagination-back.png"/></div>
+                <div class="pagination__item pagination__item--active">1</div>
+                <div class="pagination__item">2</div>
+                <div class="pagination__item">3</div>
+                <div class="pagination__item">4</div>
+                <div class="pagination__item">5</div>
+                <div class="pagination__item">6</div>
+                <div class="pagination__item pagination__item--next"><img src="img/icons/pagination-next.png"/></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="modal-container" id="modal-entry">
+        <div class="modal-box">
+          <div class="modal modal-sign">
+            <div class="modal__close-icon modal__close-icon--sign"><img src="img/icons/icon-close.png"/></div>
+            <div class="modal-sign__inner">
+              <h4 class="modal-sign__title">Войти</h4>
+              <form class="modal-sign__form modal-sign__form--entry">
+                <div class="modal-sign__form-group">
+                  <input class="modal-sign__input modal-sign__input--login" type="mail" placeholder="Логин" name="input-login"/>
+                  <label for="input-login">Логин</label>
+                </div>
+                <div class="modal-sign__form-group">
+                  <input class="modal-sign__input modal-sign__input--password" type="password" placeholder="Пароль" name="input-password"/>
+                  <label for="input-password">Пароль</label>
+                  <div class="modal-sign__show-password"><img src="img/icons/visibility-button.png"/>Показать пароль</div>
+                  <div class="modal-sign__form-prompt modal-sign__form-prompt--danger">Логин или пароль введены неверно. Попробуйте еще раз :)</div>
+                </div>
+                <div class="modal-sign__entry-btn">
+                  <button class="l-btn">Войти</button>
+                </div>
+                <div class="modal-sign__entry-footer"><a class="modal-sign__link-register show-modal" data-id="modal-register">Регистрация аккаунта</a><a class="modal-sign__link-fargot">Забыли пароль</a></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-container" id="modal-register">
+        <div class="modal-box">
+          <div class="modal modal-sign modal-sign--register">
+            <div class="modal__close-icon modal__close-icon--sign"><img src="img/icons/icon-close.png"/></div>
+            <div class="modal-sign__inner">
+              <h4 class="modal-sign__title">Создать аккаунт</h4>
+              <p class="modal-sign__acc-type">Тип аккаунта</p>
+              <form class="modal-sign__form modal-sign__form--entry">
+                <div class="modal-sign__acc-type-choose">
+                  <input type="radio" name="acc-type" id="tenant" checked="checked"/>
+                  <label for="tenant">Арендосьемщик</label>
+                  <input type="radio" name="acc-type" id="landlord"/>
+                  <label for="landlord">Арендодатель</label>
+                </div>
+                <div class="modal-sign__form-group">
+                  <input class="modal-sign__input modal-sign__input--name" type="" placeholder="Имя" name="input-name"/>
+                  <label for="input-name">Имя</label>
+                </div>
+                <div class="modal-sign__form-group">
+                  <input class="modal-sign__input modal-sign__input--name" type="" placeholder="Фамилия" name="input-lastname"/>
+                  <label for="input-lastname">Фамилия</label>
+                </div>
+                <div class="modal-sign__form-group">
+                  <input class="modal-sign__input modal-sign__input--name" type="tel" placeholder="Ваш номер телефона" name="input-phone"/>
+                  <label for="input-phone">Ваш номер телефона</label>
+                </div>
+                <div class="modal-sign__form-group">
+                  <input class="modal-sign__input modal-sign__input--login" type="mail" placeholder="Логин" name="input-login"/>
+                  <label for="input-login">Логин</label>
+                </div>
+                <div class="modal-sign__form-group">
+                  <input class="modal-sign__input modal-sign__input--password" type="password" placeholder="Пароль" name="input-password"/>
+                  <label for="input-password">Пароль</label>
+                  <div class="modal-sign__show-password"><img src="img/icons/visibility-button.png"/>Показать пароль</div>
+                  <div class="modal-sign__form-prompt modal-sign__form-prompt--danger">Логин или пароль введены неверно. Попробуйте еще раз :)</div>
+                </div>
+                <div class="modal-sign__form-group">
+                  <input class="modal-sign__input modal-sign__input--password" type="password" placeholder="Пароль" name="input-password"/>
+                  <label for="input-password">Пароль</label>
+                  <div class="modal-sign__show-password"><img src="img/icons/visibility-button.png"/>Показать пароль</div>
+                  <div class="modal-sign__form-prompt modal-sign__form-prompt--danger">Ошибка. Убедитесь, что пароли совпадают</div>
+                </div>
+                <div class="modal-sign__entry-btn">
+                  <button class="l-btn">Войти</button>
+                </div>
+                <div class="modal-sign__entry-footer modal-sign__entry-footer--center"><a class="modal-sign__link-entry show-modal" data-id="modal-entry">Уже есть аккаунт ?<span> Войдите в свою учетную запись</span></a></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="l-container">
+          <div class="footer__inner">
+            <div class="footer__logo-container"><span class="footer__logo">Frently</span>
+              <div class="footer__socials">
+                <div><a href="#"><img src="img/icons/instagram.png"/></a><a href="#"><img src="img/icons/facebook.png"/></a></div>
+              </div>
+            </div>
+            <div class="footer__text-container">
+              Frently - то сервис который делает процес снять квартиру в Киеве намного удобнее.Без переплачивания коммиссии риелтору и агенству, квартиры только провереные и близко к метро. Мы лично проверяем 
+              и отвечаем за безопасность сделок... (Текст для SEO)
+            </div>
+            <div class="footer__nav-container"><a class="footer__nav-item" href="#">Как это работает </a><a class="footer__nav-item" href="#">Города </a><a class="footer__nav-item" href="#">Часто задаваемые вопросы </a><a class="footer__nav-item" href="#">Вход</a><a class="footer__nav-item" href="#">Регистрация </a><a class="footer__nav-item" href="#">Условия использования </a></div>
+            <div class="footer__contacts-container">
+              <h6 class="footer__contacts-title">Контакты</h6>
+              <div class="footer__contacts-phone"><img src="img/icons/phone-call.png"/>+380 93-551-30-30</div>
+              <div class="footer__contacts-email"><img src="img/icons/email.png"/>be.frently@gmail.com</div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="./libs/jquery.min.js"></script>
+    <script src="libs/flexslider/jquery.flexslider.js"></script>
+    <script src="./libs/slick-carousel/slick/slick.min.js"></script>
+    <script src="./js/signModals.js"></script>
+    <script src="./js/separate_flat/separate_flat.js"></script>
+    <script src="./js/flatFilter.js"></script>
+    <script src="./js/openModals.js"></script>
+    <script src="./js/dropdown.js"></script>
+  </body>
+</html>

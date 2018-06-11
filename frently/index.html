@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Fe-Boiler</title>
+    <link rel="stylesheet" href="libs/flexslider/flexslider.css" type="text/css"/>
+    <link rel="stylesheet" href="libs/slick-carousel/slick/slick.css"/>
+    <link rel="stylesheet" href="libs/slick-carousel/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+  </head>
+  <body class="l-page">
+    <div class="l-wrap">
+      <header class="header">
+        <div class="l-container">
+          <div class="header__inner">
+            <div class="header__logo-box">
+              <div class="header__logo">Frently</div>
+              <div class="header__quote">Умный сервис по подбору комфортного жилья</div>
+            </div>
+            <dev class="header__control-box"><a class="header__login show-modal" data-id="modal-entry">Войти в аккаунт</a>
+              <div class="header__btn header__signup">
+                <button class="l-btn show-modal" data-id="modal-register">Зарегистрироваться</button>
+              </div>
+            </dev>
+          </div>
+        </div>
+      </header>
+      <div class="main-content">
+        <section class="hero">
+          <div class="l-container">
+            <div class="hero__inner"><img class="hero__cloud" src="img/hero/cloud.png"/><img class="hero__cloud" src="img/hero/cloud-1.png"/><img class="hero__cloud" src="img/hero/cloud-2.png"/>
+              <h1 class="l-title">Найди свое уютное место в Киеве</h1>
+              <h2 class="l-subtitle">Поиск самого удобного жилья для аренды из более чем 300 000 тысяч доступных вариантов</h2>
+              <div class="hero__filter">
+                <section class="flat-filter flat-filter--hero">
+                  <div class="flat-filter__inner flat-filter__inner--hero">
+                    <div class="flat-filter__address-container flat-filter__address-container--hero">
+                      <div class="flat-filter__city flat-filter__city--hero l-dropdown-box" data-status="closed" id="cityDropdownBox"><span>Выберите город</span>
+                        <div class="flat-filter__city-dropdown l-dropdown"> 
+                          <ul class="l-dropdown-list">
+                            <li class="dropdown-chose-item">Киев</li>
+                            <li class="dropdown-chose-item">Бердянск</li>
+                            <li class="dropdown-chose-item">Житомер</li>
+                            <li class="dropdown-chose-item">Запорожье</li>
+                            <li class="dropdown-chose-item">Харьков</li>
+                            <li class="dropdown-chose-item">Днепр</li>
+                            <li class="dropdown-chose-item">Львов</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="flat-filter__district flat-filter__district--hero l-dropdown-box" data-status="closed" id="districtDropdownBox"><span>Выберите район</span>
+                        <div class="flat-filter__district-dropdown l-dropdown"> 
+                          <ul class="l-dropdown-list">
+                            <li class="dropdown-chose-item">Соломянский</li>
+                            <li class="dropdown-chose-item">Святошинский</li>
+                            <li class="dropdown-chose-item">Днепровский</li>
+                            <li class="dropdown-chose-item">Дарницкий</li>
+                            <li class="dropdown-chose-item">Оболонь</li>
+                            <li class="dropdown-chose-item">Шевченковский</li>
+                            <li class="dropdown-chose-item">Троещина</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flat-filter__rooms flat-filter__rooms--hero l-dropdown-box" data-status="closed" id="roomsDropdownBox"><span>Количество комнат</span>
+                      <div class="flat-filter__rooms-dropdown l-dropdown">
+                        <form class="l-dropdown__checkboxes-container">
+                                          <input class="checkbox checkbox--solid" type="checkbox" id="rooms1" data-any="false"/>
+                                          <label for="rooms1">1 комн</label>
+                                          <input class="checkbox checkbox--solid" type="checkbox" id="rooms2" data-any="false"/>
+                                          <label for="rooms2">2 комн</label>
+                                          <input class="checkbox checkbox--solid" type="checkbox" id="rooms3" data-any="false"/>
+                                          <label for="rooms3">3 комн</label>
+                                          <input class="checkbox checkbox--solid" type="checkbox" id="rooms4" data-any="false"/>
+                                          <label for="rooms4">4 комн</label>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="flat-filter__budget flat-filter__budget--hero l-dropdown-box" data-status="closed" id="budgetDropdownBox"><span>Бюджет</span>
+                      <div class="flat-filter__budget-dropdown l-dropdown">
+                        <ul class="l-dropdown-list">
+                          <li class="dropdown-chose-item">от 3 000 грн</li>
+                          <li class="dropdown-chose-item">от 5 000 грн</li>
+                          <li class="dropdown-chose-item">от 10 000 грн</li>
+                        </ul>
+                        <div class="flat-filter__budget-price-box">
+                          <input class="flat-filter__budget-price-from" type="number" placeholder="от"/>
+                          <input class="flat-filter__budget-price-to" type="number" placeholder="до"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flat-filter__search-btn flat-filter__search-btn--hero l-dropdown-box" data-status="closed" id="searchBtn"><img src="img/icons/search.png"/>Искать</div>
+                  </div>
+                </section>
+              </div><a class="hero__add-flat-link show-section" data-id="flat-edit--add">Добавить свою квартиру</a>
+            </div>
+          </div>
+        </section>
+                <section class="offers-sec">
+                  <div class="l-container">
+                    <h2 class="l-title">Последние предложения</h2>
+                    <div class="offers-sec__inner">
+                      <div class="offers-sec__items">
+                        <div class="offers-sec__item-box">
+                          <div class="offers-sec__item">
+                            <div class="flat-card">
+                              <div class="flat-card__inner">
+                                <div class="flat-card__head">
+                                  <div class="mark mark--checked mark--top"><img src="./img/icons/checked.png"/>Проверено</div>
+                                  <div class="mark mark--price mark--bottom">от 10 000 грн</div>
+                                  <div class="flat-card__slider-container">
+                                    <div class="flat-card__slider-prevArrow"><img src="img/icons/prevArrow--small.png"/></div>
+                                    <div class="flat-card__slider-nextArrow"><img src="img/icons/nextArrow--small.png"/></div>
+                                    <div class="flat-card__slider">
+                                      <div class="flat-card__slide"><img src="img/flat-card/1.png"/></div>
+                                      <div class="flat-card__slide"><img src="img/flat-card/2.png"/></div>
+                                      <div class="flat-card__slide"><img src="img/flat-card/3.png"/></div>
+                                    </div>
+                                  </div>
+                                </div><a class="flat-card__body-link" href="#">
+                                  <div class="flat-card__body">
+                                    <div class="flat-card__views"><img src="img/icons/eye.png"/> 127</div>
+                                    <div class="flat-card__district">Соломенский район</div>
+                                    <div class="flat-card__addres">Ул. Николая Стражеско, 51<br/><span>м. Политехническая - 5 минут</span></div>
+                                    <div class="flat-card__descr">Комнат :<span> 3</span></div>
+                                    <div class="flat-card__descr">Площадь :<span> 30 м2</span></div>
+                                  </div>
+                                  <div class="flat-card__time-view">Ближайшее время просмотра :  <span>01.04.2018 в 18:00</span></div></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="offers-sec__item-box">
+                          <div class="offers-sec__item">
+                            <div class="flat-card">
+                              <div class="flat-card__inner">
+                                <div class="flat-card__head">
+                                  <div class="mark mark--checked mark--top"><img src="./img/icons/checked.png"/>Проверено</div>
+                                  <div class="mark mark--price mark--bottom">от 10 000 грн</div>
+                                  <div class="flat-card__slider-container">
+                                    <div class="flat-card__slider-prevArrow"><img src="img/icons/prevArrow--small.png"/></div>
+                                    <div class="flat-card__slider-nextArrow"><img src="img/icons/nextArrow--small.png"/></div>
+                                    <div class="flat-card__slider">
+                                      <div class="flat-card__slide"><img src="img/flat-card/1.png"/></div>
+                                      <div class="flat-card__slide"><img src="img/flat-card/2.png"/></div>
+                                      <div class="flat-card__slide"><img src="img/flat-card/3.png"/></div>
+                                    </div>
+                                  </div>
+                                </div><a class="flat-card__body-link" href="#">
+                                  <div class="flat-card__body">
+                                    <div class="flat-card__views"><img src="img/icons/eye.png"/> 127</div>
+                                    <div class="flat-card__district">Соломенский район</div>
+                                    <div class="flat-card__addres">Ул. Николая Стражеско, 51<br/><span>м. Политехническая - 5 минут</span></div>
+                                    <div class="flat-card__descr">Комнат :<span> 3</span></div>
+                                    <div class="flat-card__descr">Площадь :<span> 30 м2</span></div>
+                                  </div>
+                                  <div class="flat-card__time-view">Ближайшее время просмотра :  <span>01.04.2018 в 18:00</span></div></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="offers-sec__item-box">
+                          <div class="offers-sec__item">
+                            <div class="flat-card">
+                              <div class="flat-card__inner">
+                                <div class="flat-card__head">
+                                  <div class="mark mark--checked mark--top"><img src="./img/icons/checked.png"/>Проверено</div>
+                                  <div class="mark mark--price mark--bottom">от 10 000 грн</div>
+                                  <div class="flat-card__slider-container">
+                                    <div class="flat-card__slider-prevArrow"><img src="img/icons/prevArrow--small.png"/></div>
+                                    <div class="flat-card__slider-nextArrow"><img src="img/icons/nextArrow--small.png"/></div>
+                                    <div class="flat-card__slider">
+                                      <div class="flat-card__slide"><img src="img/flat-card/1.png"/></div>
+                                      <div class="flat-card__slide"><img src="img/flat-card/2.png"/></div>
+                                      <div class="flat-card__slide"><img src="img/flat-card/3.png"/></div>
+                                    </div>
+                                  </div>
+                                </div><a class="flat-card__body-link" href="#">
+                                  <div class="flat-card__body">
+                                    <div class="flat-card__views"><img src="img/icons/eye.png"/> 127</div>
+                                    <div class="flat-card__district">Соломенский район</div>
+                                    <div class="flat-card__addres">Ул. Николая Стражеско, 51<br/><span>м. Политехническая - 5 минут</span></div>
+                                    <div class="flat-card__descr">Комнат :<span> 3</span></div>
+                                    <div class="flat-card__descr">Площадь :<span> 30 м2</span></div>
+                                  </div>
+                                  <div class="flat-card__time-view">Ближайшее время просмотра :  <span>01.04.2018 в 18:00</span></div></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="offers-sec__btn">
+                      <button class="l-btn l-btn--large l-btn--success">Показать еще варианты</button>
+                    </div>
+                  </div>
+                </section>
+        <section class="districts">
+          <div class="l-container">
+            <h2 class="l-title">Поиск по районам</h2>
+            <div class="districts__inner">
+              <div class="districts__items">
+                <div class="districts__item"><a class="dist-item" href="#"><img class="dist-item__img" src="img/districts/darnickiy.png"/>
+                    <h4 class="dist-item__name">Дарницкий<br/><span>454 предложений</span></h4></a></div>
+                <div class="districts__item"><a class="dist-item" href="#"><img class="dist-item__img" src="img/districts/desnyanskiy.png"/>
+                    <h4 class="dist-item__name">Деснянский<br/><span>454 предложений</span></h4></a></div>
+                <div class="districts__item"><a class="dist-item" href="#"><img class="dist-item__img" src="img/districts/dniprovskyi.png"/>
+                    <h4 class="dist-item__name">Днипровский<br/><span>454 предложений</span></h4></a></div>
+                <div class="districts__item"><a class="dist-item" href="#"><img class="dist-item__img" src="img/districts/golosiyvskiy.png"/>
+                    <h4 class="dist-item__name">Голосеевский<br/><span>454 предложений</span></h4></a></div>
+                <div class="districts__item"><a class="dist-item" href="#"><img class="dist-item__img" src="img/districts/obolonskiy.png"/>
+                    <h4 class="dist-item__name">Оболонский<br/><span>454 предложений</span></h4></a></div>
+                <div class="districts__item"><a class="dist-item" href="#"><img class="dist-item__img" src="img/districts/pecherskiy.png"/>
+                    <h4 class="dist-item__name">Печерский<br/><span>454 предложений</span></h4></a></div>
+                <div class="districts__item"><a class="dist-item" href="#"><img class="dist-item__img" src="img/districts/podilskiy.png"/>
+                    <h4 class="dist-item__name">Подолский<br/><span>454 предложений</span></h4></a></div>
+                <div class="districts__item"><a class="dist-item" href="#"><img class="dist-item__img" src="img/districts/shevchenkivskyi.png"/>
+                    <h4 class="dist-item__name">Шевченковский<br/><span>454 предложений</span></h4></a></div>
+                <div class="districts__item"><a class="dist-item" href="#"><img class="dist-item__img" src="img/districts/solomianskyi.png"/>
+                    <h4 class="dist-item__name">Соломяский<br/><span>454 предложений</span></h4></a></div>
+                <div class="districts__item"><a class="dist-item" href="#"><img class="dist-item__img" src="img/districts/sviatoshynskyi.png"/>
+                    <h4 class="dist-item__name">Святошинский<br/><span>454 предложений</span></h4></a></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="sample">
+          <div class="l-container">
+            <h2 class="l-title">Как это работает?</h2>
+            <div class="sample__inner">
+              <div class="sample__container">
+                <h4 class="sample__title">Арендосьемщик</h4>
+                <ol class="sample__list">
+                  <li class="sample__li"> <span>1.</span>Мы проверяем документы владельца</li>
+                  <li class="sample__li"><span>2. </span>Ты выбираешь понравившиеся проверенные квартиры и отправляешь заявку на просмотр</li>
+                  <li class="sample__li"><span>3.</span>Согласовывешь с владельцем время просмотра</li>
+                </ol>
+              </div>
+              <div class="sample__container sample__container--center"><img src="img/dif/contract.png"/>
+                <p class="sample__contract-text">Подписываете контракт</p>
+              </div>
+              <div class="sample__container">
+                <h4 class="sample__title">Арендосьемщик</h4>
+                <ol class="sample__list"> 
+                  <li class="sample__li"> <span>1.</span>Мы проверяем документы владельца</li>
+                  <li class="sample__li"><span>2. </span>Ты выбираешь понравившиеся проверенные квартиры и отправляешь заявку на просмотр</li>
+                  <li class="sample__li"><span>3.</span>Согласовывешь с владельцем время просмотра</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="register">
+          <div class="l-container">
+            <div class="register__inner">
+              <h2 class="l-title l-title--small">Зарегистрируйтесь на сервисе</h2>
+              <p class="l-subtitle">И подавайте обьявления о сдаче жилья или ищите оптимальный вариант для аренды жалья</p>
+              <div class="register__btn">
+                <button class="l-btn l-btn--large show-modal" data-id="modal-register">Регистрация аккаунта</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="advants">
+          <div class="l-container">
+            <h2 class="l-title">Наши преимущества</h2>
+            <div class="advants__inner">
+              <div class="advants__items">
+                <div class="advants__item">
+                  <div class="advants__item-box">
+                    <div class="advants__item-icon"><img src="img/icons/security.png"/></div>
+                    <h5 class="advants__item-title">Наши преимущества</h5>
+                    <p class="advants__item-descr">
+                      Мы проверяем все квартиры на нашем сервисе,
+                      чтобы вы не натолкнулись на мошенников. 
+                      Обратите внимание на комментарии - их могут 
+                      оставлять только те, у кого снимали эту квартиру 
+                      (или те у кого снимали квартиру)
+                    </p>
+                  </div>
+                </div>
+                <div class="advants__item">
+                  <div class="advants__item-box">
+                    <div class="advants__item-icon"><img src="img/icons/home.png"/></div>
+                    <h5 class="advants__item-title">Удобство</h5>
+                    <p class="advants__item-descr">Выбери несколько понравившихся квартир среди только актуальных вариантов, полу</p>
+                  </div>
+                </div>
+                <div class="advants__item">
+                  <div class="advants__item-box">
+                    <div class="advants__item-icon"><img src="img/icons/savings.png"/></div>
+                    <h5 class="advants__item-title">Выгодные цены</h5>
+                    <p class="advants__item-descr">Мы берем всего 10% от суммы оплаты за первый месяц и даем надежных владельцев/съемщиков. Теперь тебе не стоит переплачивать от 50% за услуги риелторам без какой-либо безопасности для себя</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="advants__btn">
+              <button class="l-btn l-btn--large">Начать поиск жилья</button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <section class="flat-edit flat-edit--add additional-section" id="flat-edit--add">
+        <section class="back">
+          <div class="l-container">
+            <div class="back__inner"><img src="img/icons/back-arrow--black.png"/>Назад</div>
+          </div>
+        </section>
+        <div class="l-container">
+          <div class="flat-edit__header">
+            <h1 class="l-title">Додавить квартиру</h1>
+          </div>
+          <div class="flat-edit__inner">
+            <h4 class="flat-edit__subtitle">Общая информация</h4>
+            <div class="flat-edit__common">
+              <div class="flat-edit__side">
+                <div class="flat-edit__side-inner">
+                  <div class="flat-edit__dropdown-box flat-edit__dropdown-box-day">
+                    <div class="l-dropdown-box l-dropdown-box--moda l-dropdown-box--arrow" id="choseDay"><span>Выберите город</span>
+                      <div class="l-dropdown"> 
+                        <ul class="l-dropdown-list">
+                          <li class="dropdown-chose-item">Киев</li>
+                          <li class="dropdown-chose-item">Бердянск</li>
+                          <li class="dropdown-chose-item">Львов</li>
+                          <li class="dropdown-chose-item">Запорожье</li>
+                          <li class="dropdown-chose-item">Одесса</li>
+                          <li class="dropdown-chose-item">Мукачево</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flat-edit__dropdown-box flat-edit__dropdown-box-district">
+                    <div class="l-dropdown-box l-dropdown-box--arrow" id="choseDistrict"><span>Выберите район</span>
+                      <div class="l-dropdown"> 
+                        <ul class="l-dropdown-list">
+                          <li class="dropdown-chose-item">Киев</li>
+                          <li class="dropdown-chose-item">Бердянск</li>
+                          <li class="dropdown-chose-item">Львов</li>
+                          <li class="dropdown-chose-item">Запорожье</li>
+                          <li class="dropdown-chose-item">Одесса</li>
+                          <li class="dropdown-chose-item">Мукачево</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flat-edit__dropdown-box flat-edit__dropdown-box-addres">
+                    <div class="l-dropdown-box l-dropdown-box--arrow" id="choseAddress"><span>Ввведите адресс</span>
+                      <div class="l-dropdown"> 
+                        <ul class="l-dropdown-list">
+                          <li class="dropdown-chose-item">Киев</li>
+                          <li class="dropdown-chose-item">Бердянск</li>
+                          <li class="dropdown-chose-item">Львов</li>
+                          <li class="dropdown-chose-item">Запорожье</li>
+                          <li class="dropdown-chose-item">Одесса</li>
+                          <li class="dropdown-chose-item">Мукачево</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <hr/>
+                  <div class="flat-edit__input-box">
+                    <input class="flat-edit__input" type="number" min="1" step="any" placeholder="Стоимость" name="value"/>
+                  </div>
+                  <div class="flat-edit__input-box">
+                    <input class="flat-edit__input" type="number" min="1" step="any" placeholder="Депозит" name="deposit"/>
+                  </div>
+                </div>
+              </div>
+              <div class="flat-edit__main">
+                <div class="flat-edit__map-container">
+                  <div id="map"></div>
+                </div>
+              </div>
+            </div>
+            <hr/>
+            <h4 class="flat-edit__subtitle">Добавить фотографии</h4>
+            <div class="flat-edit__photos">
+              <div class="flat-edit__photo-item">
+                <input class="flat-edit__photo-upload" type="file" id="imgInput-0"/>
+                <div class="flat-edit__photo-circle"></div>
+                <div class="flat-edit__photo-img-container"></div>
+                <div class="flat-edit__photo-edit">
+                  <div class="flat-edit__photo-delete"><img src="img/icons/icon-delete.png"/></div>
+                  <div class="flat-edit__photo-rotate"><img src="img/icons/rotate.png"/></div>
+                </div>
+              </div>
+              <div class="flat-edit__photo-item">
+                <input class="flat-edit__photo-upload" type="file" id="imgInput-1"/>
+                <div class="flat-edit__photo-circle"></div>
+                <div class="flat-edit__photo-img-container"></div>
+                <div class="flat-edit__photo-edit">
+                  <div class="flat-edit__photo-delete"><img src="img/icons/icon-delete.png"/></div>
+                  <div class="flat-edit__photo-rotate"><img src="img/icons/rotate.png"/></div>
+                </div>
+              </div>
+              <div class="flat-edit__photo-item">
+                <input class="flat-edit__photo-upload" type="file" id="imgInput-2"/>
+                <div class="flat-edit__photo-circle"></div>
+                <div class="flat-edit__photo-img-container"></div>
+                <div class="flat-edit__photo-edit">
+                  <div class="flat-edit__photo-delete"><img src="img/icons/icon-delete.png"/></div>
+                  <div class="flat-edit__photo-rotate"><img src="img/icons/rotate.png"/></div>
+                </div>
+              </div>
+              <div class="flat-edit__photo-item">
+                <input class="flat-edit__photo-upload" type="file" id="imgInput-3"/>
+                <div class="flat-edit__photo-circle"></div>
+                <div class="flat-edit__photo-img-container"></div>
+                <div class="flat-edit__photo-edit">
+                  <div class="flat-edit__photo-delete"><img src="img/icons/icon-delete.png"/></div>
+                  <div class="flat-edit__photo-rotate"><img src="img/icons/rotate.png"/></div>
+                </div>
+              </div>
+              <div class="flat-edit__photo-item">
+                <input class="flat-edit__photo-upload" type="file" id="imgInput-4"/>
+                <div class="flat-edit__photo-circle"></div>
+                <div class="flat-edit__photo-img-container"></div>
+                <div class="flat-edit__photo-edit">
+                  <div class="flat-edit__photo-delete"><img src="img/icons/icon-delete.png"/></div>
+                  <div class="flat-edit__photo-rotate"><img src="img/icons/rotate.png"/></div>
+                </div>
+              </div>
+              <div class="flat-edit__photo-item">
+                <input class="flat-edit__photo-upload" type="file" id="imgInput-5"/>
+                <div class="flat-edit__photo-circle"></div>
+                <div class="flat-edit__photo-img-container"></div>
+                <div class="flat-edit__photo-edit">
+                  <div class="flat-edit__photo-delete"><img src="img/icons/icon-delete.png"/></div>
+                  <div class="flat-edit__photo-rotate"><img src="img/icons/rotate.png"/></div>
+                </div>
+              </div>
+              <div class="flat-edit__photo-item">
+                <input class="flat-edit__photo-upload" type="file" id="imgInput-6"/>
+                <div class="flat-edit__photo-circle"></div>
+                <div class="flat-edit__photo-img-container"></div>
+                <div class="flat-edit__photo-edit">
+                  <div class="flat-edit__photo-delete"><img src="img/icons/icon-delete.png"/></div>
+                  <div class="flat-edit__photo-rotate"><img src="img/icons/rotate.png"/></div>
+                </div>
+              </div>
+              <div class="flat-edit__photo-item">
+                <input class="flat-edit__photo-upload" type="file" id="imgInput-7"/>
+                <div class="flat-edit__photo-circle"></div>
+                <div class="flat-edit__photo-img-container"></div>
+                <div class="flat-edit__photo-edit">
+                  <div class="flat-edit__photo-delete"><img src="img/icons/icon-delete.png"/></div>
+                  <div class="flat-edit__photo-rotate"><img src="img/icons/rotate.png"/></div>
+                </div>
+              </div>
+            </div>
+            <hr/>
+            <h4 class="flat-edit__subtitle">Детальная информация</h4>
+            <div class="flat-edit__detail">
+              <div class="flat-edit__side">
+                <div class="flat-edit__side-inner">
+                  <div class="flat-edit__dropdown-box flat-edit__dropdown-box-day">
+                    <div class="l-dropdown-box l-dropdown-box--moda l-dropdown-box--arrow" id="choseDay"><span>Тип дома</span>
+                      <div class="l-dropdown"> 
+                        <ul class="l-dropdown-list">
+                          <li class="dropdown-chose-item">Киев</li>
+                          <li class="dropdown-chose-item">Бердянск</li>
+                          <li class="dropdown-chose-item">Львов</li>
+                          <li class="dropdown-chose-item">Запорожье</li>
+                          <li class="dropdown-chose-item">Одесса</li>
+                          <li class="dropdown-chose-item">Мукачево</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flat-edit__dropdown-box flat-edit__dropdown-box-district">
+                    <div class="l-dropdown-box l-dropdown-box--arrow" id="choseDistrict"><span>Количество сдач</span>
+                      <div class="l-dropdown"> 
+                        <ul class="l-dropdown-list">
+                          <li class="dropdown-chose-item">Киев</li>
+                          <li class="dropdown-chose-item">Бердянск</li>
+                          <li class="dropdown-chose-item">Львов</li>
+                          <li class="dropdown-chose-item">Запорожье</li>
+                          <li class="dropdown-chose-item">Одесса</li>
+                          <li class="dropdown-chose-item">Мукачево</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flat-edit__dropdown-box flat-edit__dropdown-box-addres">
+                    <div class="l-dropdown-box l-dropdown-box--arrow" id="choseAddress"><span>Количество комнат</span>
+                      <div class="l-dropdown"> 
+                        <ul class="l-dropdown-list">
+                          <li class="dropdown-chose-item">Киев</li>
+                          <li class="dropdown-chose-item">Бердянск</li>
+                          <li class="dropdown-chose-item">Львов</li>
+                          <li class="dropdown-chose-item">Запорожье</li>
+                          <li class="dropdown-chose-item">Одесса</li>
+                          <li class="dropdown-chose-item">Мукачево</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <hr/>
+                  <div class="flat-edit__input-box">
+                    <input class="flat-edit__input" type="number" min="1" step="any" placeholder="Метраж" name="value"/>
+                  </div>
+                  <div class="flat-edit__input-box">
+                    <textarea class="flat-edit__input" type="text" min="1" step="any" placeholder="Введите описание" name="deposit"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="flat-edit__main">
+                <div class="flat-edit__features">
+                  <h4 class="flat-edit__subtitle">Выберите технику, которая есть в квартире</h4>
+                  <div class="flat-edit__features-check">
+                          <input class="checkbox checkbox--sq" type="checkbox" id="add-flat-ref"/>
+                          <label for="add-flat-ref">Холодильник</label>
+                  </div>
+                  <div class="flat-edit__features-check">
+                          <input class="checkbox checkbox--sq" type="checkbox" id="add-flat-wifi"/>
+                          <label for="add-flat-wifi">WIFI</label>
+                  </div>
+                  <div class="flat-edit__features-check">
+                          <input class="checkbox checkbox--sq" type="checkbox" id="add-flat-condition"/>
+                          <label for="add-flat-condition">Кондиционер</label>
+                  </div>
+                  <div class="flat-edit__features-check">
+                          <input class="checkbox checkbox--sq" type="checkbox" id="add-flat-microwave"/>
+                          <label for="add-flat-microwave">Микроволновка</label>
+                  </div>
+                  <div class="flat-edit__features-check">
+                          <input class="checkbox checkbox--sq" type="checkbox" id="add-flat-internet"/>
+                          <label for="add-flat-internet">Проведен интенет</label>
+                  </div>
+                  <div class="flat-edit__features-check">
+                          <input class="checkbox checkbox--sq" type="checkbox" id="add-flat-gas-stove"/>
+                          <label for="add-flat-gas-stove">Газ плита</label>
+                  </div>
+                  <div class="flat-edit__features-check">
+                          <input class="checkbox checkbox--sq" type="checkbox" id="add-flat-old-tv"/>
+                          <label for="add-flat-old-tv">ТВ кинескоп</label>
+                  </div>
+                  <div class="flat-edit__features-check">
+                          <input class="checkbox checkbox--sq" type="checkbox" id="add-flat-dishhwasher"/>
+                          <label for="add-flat-dishhwasher">Посудомойка</label>
+                  </div>
+                  <div class="flat-edit__features-check">
+                          <input class="checkbox checkbox--sq" type="checkbox" id="add-flat-elctric-stove"/>
+                          <label for="add-flat-elctric-stove">Электроплита</label>
+                  </div>
+                  <div class="flat-edit__features-check">
+                          <input class="checkbox checkbox--sq" type="checkbox" id="add-flat-new-tv"/>
+                          <label for="add-flat-new-tv">ТВ плазма</label>
+                  </div>
+                  <div class="flat-edit__features-check">
+                          <input class="checkbox checkbox--sq" type="checkbox" id="add-flat-boiler"/>
+                          <label for="add-flat-boiler">Бойлер</label>
+                  </div>
+                  <div class="flat-edit__features-check">
+                          <input class="checkbox checkbox--sq" type="checkbox" id="add-flat-convection-stove"/>
+                          <label for="add-flat-convection-stove">Конвекционная плита</label>
+                  </div>
+                  <h4 class="flat-edit__subtitle">Укажите внутренние особености жилья</h4>
+                  <div class="flat-edit__features-check">
+                          <input class="checkbox checkbox--sq" type="checkbox" id="add-flat-bad"/>
+                          <label for="add-flat-bad">Кровать</label>
+                  </div>
+                  <div class="flat-edit__features-check">
+                          <input class="checkbox checkbox--sq" type="checkbox" id="add-flat-separate-wc"/>
+                          <label for="add-flat-separate-wc">Раздельная уборная</label>
+                  </div>
+                  <div class="flat-edit__features-check">
+                          <input class="checkbox checkbox--sq" type="checkbox" id="add-flat-individual-heating"/>
+                          <label for="add-flat-individual-heating">Нндивидуальное отопление</label>
+                  </div>
+                  <div class="flat-edit__features-check">
+                          <input class="checkbox checkbox--sq" type="checkbox" id="add-flat-bathroom"/>
+                          <label for="add-flat-bathroom">Ванная</label>
+                  </div>
+                  <div class="flat-edit__features-check">
+                          <input class="checkbox checkbox--sq" type="checkbox" id="add-flat-first-change"/>
+                          <label for="add-flat-first-change">Первая сдача</label>
+                  </div>
+                  <div class="flat-edit__features-check">
+                          <input class="checkbox checkbox--sq" type="checkbox" id="add-flat-ghildren-garden"/>
+                          <label for="add-flat-ghildren-garden">Детская площадка</label>
+                  </div>
+                  <div class="flat-edit__features-check">
+                          <input class="checkbox checkbox--sq" type="checkbox" id="add-flat-shower"/>
+                          <label for="add-flat-shower">Душевая</label>
+                  </div>
+                  <div class="flat-edit__features-check">
+                          <input class="checkbox checkbox--sq" type="checkbox" id="add-flat-closet"/>
+                          <label for="add-flat-closet">Шкаф-купе</label>
+                  </div>
+                  <div class="flat-edit__features-check">
+                          <input class="checkbox checkbox--sq" type="checkbox" id="add-flat-suitatble-disabilities"/>
+                          <label for="add-flat-suitatble-disabilities">Подходит людям с инвалидностью</label>
+                  </div>
+                  <div class="flat-edit__features-check">
+                          <input class="checkbox checkbox--sq" type="checkbox" id="add-flat-no-tax"/>
+                          <label for="add-flat-no-tax">Без оплаты комунальных услуг</label>
+                  </div>
+                  <h4 class="flat-edit__subtitle">Укажите внешние особенности</h4>
+                  <div class="flat-edit__features-check">
+                          <input class="checkbox checkbox--sq" type="checkbox" id="add-flat-markets"/>
+                          <label for="add-flat-markets">Супермаркеты до 10 мин.</label>
+                  </div>
+                  <div class="flat-edit__features-check">
+                          <input class="checkbox checkbox--sq" type="checkbox" id="add-flat-cafe"/>
+                          <label for="add-flat-cafe">Рядом кафе</label>
+                  </div>
+                  <div class="flat-edit__features-check">
+                          <input class="checkbox checkbox--sq" type="checkbox" id="add-flat-parking"/>
+                          <label for="add-flat-parking">Парковка</label>
+                  </div>
+                  <div class="flat-edit__features-check">
+                          <input class="checkbox checkbox--sq" type="checkbox" id="add-flat-stadium"/>
+                          <label for="add-flat-stadium">Рядом стадион</label>
+                  </div>
+                  <div class="flat-edit__features-check">
+                          <input class="checkbox checkbox--sq" type="checkbox" id="add-flat-park"/>
+                          <label for="add-flat-park">Рядом парк</label>
+                  </div>
+                  <div class="flat-edit__features-check">
+                          <input class="checkbox checkbox--sq" type="checkbox" id="add-flat-concierge"/>
+                          <label for="add-flat-concierge">Консьерж</label>
+                  </div>
+                  <h4 class="flat-edit__subtitle">Дополнительно</h4>
+                  <div class="flat-edit__features-check">
+                          <input class="checkbox checkbox--sq" type="checkbox" id="add-flat-pets"/>
+                          <label for="add-flat-pets">Можно с животными</label>
+                  </div>
+                  <div class="flat-edit__features-check">
+                          <input class="checkbox checkbox--sq" type="checkbox" id="add-flat-Children"/>
+                          <label for="add-flat-Children">Можно с детьми</label>
+                  </div>
+                  <div class="flat-edit__features-check">
+                          <input class="checkbox checkbox--sq" type="checkbox" id="add-flat-smoking"/>
+                          <label for="add-flat-smoking">Не против курения</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flat-edit__footer--add-flat">
+              <div class="flat-edit__side">
+                <div class="flat-edit__footer-btn">
+                  <button class="show-modal l-btn l-btn--large l-btn--success" data-id="modal-time-add-flat">Cохранить Изменения</button>
+                </div>
+              </div>
+              <div class="flat-edit__side">
+                <div class="flat-edit__footer-btn">
+                  <button class="l-btn l-btn--large l-btn--transparent">Отложить в неактивные</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="modal-container" id="modal-time-add-flat">
+        <div class="modal-box">
+          <div class="modal modal--time-add-flat">
+            <div class="modal__close-icon modal__close-icon--book"><img src="img/icons/icon-close.png"/></div>
+            <h4 class="flat-edit__subtitle">Выбор времени просмотра</h4>
+            <hr/>
+            <p class="flat-edit__descr">
+              Данная секция не обязательна к заполнению, но указав удобное время просмотра, процес сдачи квартиры ускоряется в несколько раз
+              Вы можете добавить удобный вам день, или несколько  временной диапазон.
+            </p>
+            <div class="flat-edit__meet-date-box">
+              <div class="flat-edit__meet-date">
+                <div class="meet-date"><img src="img/icons/office-briefcase-accent-color.png"/>Понедельник 16.12.2018 в 19:45</div>
+              </div>
+              <button class="l-btn l-btn--transparent l-btn--diss">Удалить интервал</button>
+            </div>
+            <h4 class="flat-edit__subtitle">Добавить еще дату просмотра</h4>
+                        <div class="view-book">
+                          <div class="view-book__choose-container">
+                            <div class="view-book__choose-day">Выберите день
+                              <div class="l-dropdown-box l-dropdown-box--modal l-dropdown-box--arrow" data-placeholder="Выберите день" data-status="closed" id="choseDay"><span>Выберите день</span>
+                                <div class="view-book__day-dropdown l-dropdown l-dropdown--modal"> 
+                                  <ul class="l-dropdown-list l-dropdown-list--modal">
+                                    <li class="l-dropdown-list__info">Эта неделя</li>
+                                    <li class="dropdown-chose-item">Понедельник 24.08</li>
+                                    <li class="dropdown-chose-item">Вторник 24.08</li>
+                                    <li class="dropdown-chose-item">Среда 24.08</li>
+                                    <li class="dropdown-chose-item">Четверг 24.08</li>
+                                    <li class="l-dropdown-list__info">Следующая неделя</li>
+                                    <li class="dropdown-chose-item">Понедельник 24.08</li>
+                                    <li class="dropdown-chose-item">Понедельник 24.08</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="view-book__choose-time">Выберите время
+                              <div class="l-dropdown-box l-dropdown-box--modal l-dropdown-box--arrow" data-placeholder="Выберите время" data-status="closed" id="choseTime"><span>Выберите время</span>
+                                <div class="view-book__day-dropdown l-dropdown l-dropdown--modal"> 
+                                  <form class="l-dropdown__checkboxes-container">
+                                          <input class="checkbox checkbox--solid" type="checkbox" id="time1-addFlat" data-any="false"/>
+                                          <label for="time1-addFlat">10:00</label>
+                                          <input class="checkbox checkbox--solid" type="checkbox" id="time2-addFlat" data-any="false"/>
+                                          <label for="time2-addFlat">11:00</label>
+                                          <input class="checkbox checkbox--solid" type="checkbox" id="time3-addFlat" data-any="false"/>
+                                          <label for="time3-addFlat">12.00</label>
+                                          <input class="checkbox checkbox--solid" type="checkbox" id="time4-addFlat" data-any="false"/>
+                                          <label for="time4-addFlat">13:00</label>
+                                          <input class="checkbox checkbox--solid" type="checkbox" id="anyTime" data-any="true"/>
+                                          <label for="anyTime">Любое время</label>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="view-book__add-date"></div>
+                          <div class="view-book__add-date-link"><img src="img/icons/plus.png"/>Добавить еще дату</div>
+                        </div>
+            <p class="flat-edit__descr">Выберите “только выходные” или “только будни” если вам не принципиален конкретный день</p>
+            <div class="flat-edit__day-type-container">
+              <div class="flat-edit__day-type">
+                      <input class="checkbox checkbox--solid checkbox--mid" type="radio" id="weekends-addFlat"/>
+                      <label class="dropdown-chose-item" for="weekends-addFlat">Только выходные</label>
+              </div>
+              <div class="flat-edit__day-type">
+                      <input class="checkbox checkbox--solid checkbox--mid" type="radio" id="weekdays-addFlat"/>
+                      <label class="dropdown-chose-item" for="weekdays-addFlat">Только будни</label>
+              </div>
+            </div>
+            <div class="flat-edit__footer flat-edit__footer--modal">
+              <div class="flat-edit__footer-btn flat-edit__footer-btn--modal">
+                <button class="l-btn l-btn--large l-btn--success show-modal" data-id="success-add-flat">Cохранить Изменения</button>
+              </div>
+              <div class="flat-edit__footer-btn flat-edit__footer-btn--modal">
+                <button class="l-btn l-btn--large l-btn--transparent">Отложить в неактивные</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+            <div class="modal-container" id="success-add-flat">
+              <div class="modal-box">
+                <div class="modal modal-book-succes">
+                  <div class="modal__close-icon modal__close-icon--book"><img src="img/icons/icon-close.png"/></div>
+                  <div class="modal-book-succes__inner"><img class="modal-book-succes__icon" src="img/icons/success-add-flat.png"/>
+                    <h6 class="modal-book-succes__title">Ваша квартира успешно добавлена !</h6>
+                    <p class="modal-book-succes__descr">Ваши объявления и встречи на просмотр будут отобрпжаться в личном кабинете</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+      <footer class="footer">
+        <div class="l-container">
+          <div class="footer__inner">
+            <div class="footer__logo-container"><span class="footer__logo">Frently</span>
+              <div class="footer__socials">
+                <div><a href="#"><img src="img/icons/instagram.png"/></a><a href="#"><img src="img/icons/facebook.png"/></a></div>
+              </div>
+            </div>
+            <div class="footer__text-container">
+              Frently - то сервис который делает процес снять квартиру в Киеве намного удобнее.Без переплачивания коммиссии риелтору и агенству, квартиры только провереные и близко к метро. Мы лично проверяем 
+              и отвечаем за безопасность сделок... (Текст для SEO)
+            </div>
+            <div class="footer__nav-container"><a class="footer__nav-item" href="#">Как это работает </a><a class="footer__nav-item" href="#">Города </a><a class="footer__nav-item" href="#">Часто задаваемые вопросы </a><a class="footer__nav-item" href="#">Вход</a><a class="footer__nav-item" href="#">Регистрация </a><a class="footer__nav-item" href="#">Условия использования </a></div>
+            <div class="footer__contacts-container">
+              <h6 class="footer__contacts-title">Контакты</h6>
+              <div class="footer__contacts-phone"><img src="img/icons/phone-call.png"/>+380 93-551-30-30</div>
+              <div class="footer__contacts-email"><img src="img/icons/email.png"/>be.frently@gmail.com</div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="modal-container" id="modal-entry">
+        <div class="modal-box">
+          <div class="modal modal-sign">
+            <div class="modal__close-icon modal__close-icon--sign"><img src="img/icons/icon-close.png"/></div>
+            <div class="modal-sign__inner">
+              <h4 class="modal-sign__title">Войти</h4>
+              <form class="modal-sign__form modal-sign__form--entry">
+                <div class="modal-sign__form-group">
+                  <input class="modal-sign__input modal-sign__input--login" type="mail" placeholder="Логин" name="input-login"/>
+                  <label for="input-login">Логин</label>
+                </div>
+                <div class="modal-sign__form-group">
+                  <input class="modal-sign__input modal-sign__input--password" type="password" placeholder="Пароль" name="input-password"/>
+                  <label for="input-password">Пароль</label>
+                  <div class="modal-sign__show-password"><img src="img/icons/visibility-button.png"/>Показать пароль</div>
+                  <div class="modal-sign__form-prompt modal-sign__form-prompt--danger">Логин или пароль введены неверно. Попробуйте еще раз :)</div>
+                </div>
+                <div class="modal-sign__entry-btn">
+                  <button class="l-btn">Войти</button>
+                </div>
+                <div class="modal-sign__entry-footer"><a class="modal-sign__link-register show-modal" data-id="modal-register">Регистрация аккаунта</a><a class="modal-sign__link-fargot">Забыли пароль</a></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-container" id="modal-register">
+        <div class="modal-box">
+          <div class="modal modal-sign modal-sign--register">
+            <div class="modal__close-icon modal__close-icon--sign"><img src="img/icons/icon-close.png"/></div>
+            <div class="modal-sign__inner">
+              <h4 class="modal-sign__title">Создать аккаунт</h4>
+              <p class="modal-sign__acc-type">Тип аккаунта</p>
+              <form class="modal-sign__form modal-sign__form--entry">
+                <div class="modal-sign__acc-type-choose">
+                  <input type="radio" name="acc-type" id="tenant" checked="checked"/>
+                  <label for="tenant">Арендосьемщик</label>
+                  <input type="radio" name="acc-type" id="landlord"/>
+                  <label for="landlord">Арендодатель</label>
+                </div>
+                <div class="modal-sign__form-group">
+                  <input class="modal-sign__input modal-sign__input--name" type="" placeholder="Имя" name="input-name"/>
+                  <label for="input-name">Имя</label>
+                </div>
+                <div class="modal-sign__form-group">
+                  <input class="modal-sign__input modal-sign__input--name" type="" placeholder="Фамилия" name="input-lastname"/>
+                  <label for="input-lastname">Фамилия</label>
+                </div>
+                <div class="modal-sign__form-group">
+                  <input class="modal-sign__input modal-sign__input--name" type="tel" placeholder="Ваш номер телефона" name="input-phone"/>
+                  <label for="input-phone">Ваш номер телефона</label>
+                </div>
+                <div class="modal-sign__form-group">
+                  <input class="modal-sign__input modal-sign__input--login" type="mail" placeholder="Логин" name="input-login"/>
+                  <label for="input-login">Логин</label>
+                </div>
+                <div class="modal-sign__form-group">
+                  <input class="modal-sign__input modal-sign__input--password" type="password" placeholder="Пароль" name="input-password"/>
+                  <label for="input-password">Пароль</label>
+                  <div class="modal-sign__show-password"><img src="img/icons/visibility-button.png"/>Показать пароль</div>
+                  <div class="modal-sign__form-prompt modal-sign__form-prompt--danger">Логин или пароль введены неверно. Попробуйте еще раз :)</div>
+                </div>
+                <div class="modal-sign__form-group">
+                  <input class="modal-sign__input modal-sign__input--password" type="password" placeholder="Пароль" name="input-password"/>
+                  <label for="input-password">Пароль</label>
+                  <div class="modal-sign__show-password"><img src="img/icons/visibility-button.png"/>Показать пароль</div>
+                  <div class="modal-sign__form-prompt modal-sign__form-prompt--danger">Ошибка. Убедитесь, что пароли совпадают</div>
+                </div>
+                <div class="modal-sign__entry-btn">
+                  <button class="l-btn">Войти</button>
+                </div>
+                <div class="modal-sign__entry-footer modal-sign__entry-footer--center"><a class="modal-sign__link-entry show-modal" data-id="modal-entry">Уже есть аккаунт ?<span> Войдите в свою учетную запись</span></a></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./libs/jquery.min.js"></script>
+    <script src="libs/flexslider/jquery.flexslider.js"></script>
+    <script src="./libs/slick-carousel/slick/slick.min.js"></script>
+    <script src="js/flatFilter.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/signModals.js"></script>
+    <script src="js/openModals.js"></script>
+    <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUoNirpa4x4izvG3IQ-TAkxXCMridQHu4&amp;callback=initMap"></script>
+    <script src="js/index/index.js"></script>
+  </body>
+</html>
