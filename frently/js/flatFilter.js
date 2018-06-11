@@ -67,9 +67,12 @@ function flatFilter(){
 		// },
 		clickMoreFilters: function(){
 			$('#moreFiltersBtn').click(function(){
+				// $(this).html()
 				if($('#moreFiltersContainer').css('display') == 'flex') {
+					$(this).find('span').html('Меньше фильтров');
 					$('#moreFiltersContainer').css('display', 'none')
 				} else {
+					$(this).find('span').html('Больше фильтров');
 					$('#moreFiltersContainer').css('display', 'flex')
 				}
 			})

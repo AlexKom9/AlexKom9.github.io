@@ -34,7 +34,9 @@ function DropDown(){
 				var status = $(this).data('status')
 				console.log(status)
 				$('.l-dropdown').hide()
-				// $('.l-dropdown-box').attr('data-status','closed')
+				$('.l-dropdown__input-text-filter').hide()
+				$('.l-dropdown-box').find('span').show()
+				$('.l-dropdown-box').data('status', 'closed')
 				if (status == 'closed'){
 					console.log('openning')
 					$(this).find('.l-dropdown').show()

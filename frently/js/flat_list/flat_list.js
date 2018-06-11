@@ -2,15 +2,19 @@
 console.log('separate-flat.js')
 
 $(document).ready(function(){
-	console.log('ready')
-	$('.flat-card__slider').each(function(index){
-		console.log(this)
-		console.log(index)
+	$('.flat-card__slider-container').each(function(index){
 		var self = this
-		console.log( $(self).find('.lalla'))
-		$(this).slick({
-			prevArrow: $(self).parent().find('.flat-card__slider-prevArrow'),
-			nextArrow: $(self).parent().find('.flat-card__slider-nextArrow'),
+		var nextId = 'nextSlickArrow' + index
+		var prevId = 'prevSlickArrow' + index
+		var slickSliderId = 'slick' + index
+
+		$(this).children('.flat-card__slider-nextArrow').attr('id', nextId)
+		$(this).children('.flat-card__slider-prevArrow').attr('id', prevId)
+		$(this).children('.flat-card__slider').attr('id', slickSliderId)
+
+		$('#'+slickSliderId).slick({
+			prevArrow: $(this).children('#'+prevId),
+			nextArrow: $(this).children('#'+nextId),
 			// autoplay: true,
 			// autoplaySpeed: 2000,
 		})

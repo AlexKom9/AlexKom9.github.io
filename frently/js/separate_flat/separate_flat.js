@@ -21,23 +21,41 @@ function separateFlat(){
 				})
 			})
 			// $('.flexslider').flexslider();
-			$('#carousel').flexslider({
-				animation: "slide",
-				controlNav: false,
-				animationLoop: false,
-				slideshow: false,
-				itemWidth: 210,
-				itemMargin: 5,
-				asNavFor: '#slider'
+			// $('#carousel').flexslider({
+			// 	animation: "slide",
+			// 	controlNav: false,
+			// 	animationLoop: false,
+			// 	slideshow: false,
+			// 	itemWidth: 210,
+			// 	itemMargin: 5,
+			// 	asNavFor: '#slider'
+			// });
+			// $('#slider').flexslider({
+			// 	animation: "slide",
+			// 	controlNav: false,
+			// 	animationLoop: false,
+			// 	slideshow: false,
+			// 	sync: "#carousel"
+			// });
+			// INIT Big slider
+			 $('.slider-for').slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				arrows: true,
+				// fade: true,
+				asNavFor: '.slider-nav',
+				prevArrow: $('#bigSliderPrevArrow'),
+				nextArrow: $('#bigSliderNextArrow'),
 			});
-			$('#slider').flexslider({
-				animation: "slide",
-				controlNav: false,
-				animationLoop: false,
-				slideshow: false,
-				sync: "#carousel"
+			$('.slider-nav').slick({
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				asNavFor: '.slider-for',
+				// dots: true,
+				centerMode: true,
+				focusOnSelect: true
 			});
-			// stopPropagination
+
 			$('.flat-card__body').on('click', function(event){
 				console.log('click slick arrow')
 				event.stopPropagation()
