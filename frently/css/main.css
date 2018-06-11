@@ -226,6 +226,9 @@ a {
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden; }
+    .l-dropdown-box--edit span {
+      font-size: 14px;
+      font-weight: normal; }
     .l-dropdown-box:hover, .flat-edit__input:hover {
       cursor: pointer; }
     .l-dropdown-box--arrow {
@@ -267,6 +270,19 @@ a {
     .l-dropdown__checkboxes-container--list {
       padding: 0;
       margin: 0; }
+  .l-dropdown__input-text-filter {
+    border: none;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #333333; }
+    .l-dropdown__input-text-filter::placeholder {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.4;
+      color: #000;
+      opacity: 1; }
+    .l-dropdown__input-text-filter:active::placeholder, .l-dropdown__input-text-filter:focus::placeholder {
+      opacity: .5; }
 
 #map {
   position: absolute;
@@ -1074,14 +1090,14 @@ a {
         cursor: pointer; }
 
 .hero {
-  background-position: center center;
-  background-repeat: no-repeat;
+  background-size: cover;
   margin-top: -30px;
   margin-bottom: 36px;
   position: relative;
   min-height: 764px;
   background-image: url("../img/hero/city.png");
-  position: relative; }
+  background-position: bottom center;
+  background-repeat: no-repeat; }
   .hero__inner {
     padding-top: 160px;
     text-align: center;
@@ -1287,12 +1303,18 @@ a {
   margin-right: -20px; }
 
 .districts__item {
-  width: calc( (((100% - (25px * (12 - 1))) / 12) * 2.4) + ( 25px * (2.4 - 1)));
-  margin-right: 20px;
+  width: calc( (((100% - (50px * (12 - 1))) / 12) * 2.4) + ( 50px * (2.4 - 1)));
+  margin-right: 30px;
   margin-bottom: 70px; }
+  @media only screen and (max-width: 1223px) {
+    .districts__item {
+      width: calc( (((100% - (60px * (12 - 1))) / 12) * 2.7) + ( 60px * (2.7 - 1)));
+      margin-right: 15px; } }
   @media only screen and (max-width: 1023px) {
     .districts__item {
-      width: calc( (((100% - (27px * (12 - 1))) / 12) * 3) + ( 27px * (3 - 1))); } }
+      width: calc( (((100% - (40px * (12 - 1))) / 12) * 3) + ( 40px * (3 - 1)));
+      margin-right: 20px;
+      margin-bottom: 30px; } }
   @media only screen and (max-width: 766px) {
     .districts__item {
       width: calc( (((100% - (40px * (12 - 1))) / 12) * 6) + ( 40px * (6 - 1))); } }
@@ -1664,6 +1686,8 @@ a {
     background-image: url("../img/icons/down-arrow.png");
     background-repeat: no-repeat;
     background-position: right 10px center; }
+    .flat-filter__rooms-form label {
+      width: calc( (((100% - (20px * (12 - 1))) / 12) * 6) + ( 20px * (6 - 1))); }
     .flat-filter__rooms--hero {
       margin-bottom: 0;
       border: none;
@@ -2419,6 +2443,9 @@ a {
   .flat-edit__main {
     width: calc( (((100% - (20px * (12 - 1))) / 12) * 8) + ( 20px * (8 - 1))); }
   .flat-edit__dropdown-box, .flat-edit__input {
+    font-size: 14px;
+    font-family: "HelveticaNeueCyr", sans-serif !important;
+    color: #333333 !important;
     border: 1px solid #e2e2e2;
     border-radius: 5px;
     margin-bottom: 20px; }
@@ -2428,6 +2455,7 @@ a {
       color: #e2e2e2;
       opacity: 0.5; }
   .flat-edit__input-box textarea {
+    font-size: 14px;
     line-height: 1.4;
     padding-top: 10px;
     height: auto; }

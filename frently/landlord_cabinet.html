@@ -34,8 +34,8 @@
           <div class="cabinet__header">
             <div class="cabinet__container-main cabinet__container-main--header">
               <div class="cabinet__tabs">
-                <div class="cabinet__tab" data-area="my-objects">Мои обьекты</div>
-                <div class="cabinet__tab cabinet__tab--active" data-area="my-meetings">Мои встречи</div>
+                <div class="cabinet__tab cabinet__tab--active" data-area="my-objects">Мои обьекты</div>
+                <div class="cabinet__tab" data-area="my-meetings">Мои встречи</div>
                 <div class="cabinet__tab" data-area="my-profile">Мой профиль	</div>
                 <div class="cabinet__tab" data-area="my-settings">Настройки	</div>
               </div>
@@ -802,11 +802,12 @@
               <div class="flat-edit__side">
                 <div class="flat-edit__side-inner">
                   <div class="flat-edit__dropdown-box flat-edit__dropdown-box-day">
-                    <div class="l-dropdown-box l-dropdown-box--moda l-dropdown-box--arrow" id="choseDay"><span>Выберите город</span>
+                    <div class="l-dropdown-box l-dropdown-box--arrow l-dropdown-box--edit" id="choseDay"><span>Выберите город</span>
+                      <input class="l-dropdown__input-text-filter" type="text" placeholder="Выберите город"/>
                       <div class="l-dropdown"> 
                         <ul class="l-dropdown-list">
                           <li class="dropdown-chose-item">Киев</li>
-                          <li class="dropdown-chose-item">Бердянск</li>
+                          <li class="dropdown-chose-item">Ужгород</li>
                           <li class="dropdown-chose-item">Львов</li>
                           <li class="dropdown-chose-item">Запорожье</li>
                           <li class="dropdown-chose-item">Одесса</li>
@@ -816,25 +817,25 @@
                     </div>
                   </div>
                   <div class="flat-edit__dropdown-box flat-edit__dropdown-box-district">
-                    <div class="l-dropdown-box l-dropdown-box--arrow" id="choseDistrict"><span>Выберите район</span>
+                    <div class="l-dropdown-box l-dropdown-box--arrow l-dropdown-box--edit" id="choseDistrict"><span>Выберите район</span>
+                      <input class="l-dropdown__input-text-filter" type="text" placeholder="Выберите район"/>
                       <div class="l-dropdown"> 
                         <ul class="l-dropdown-list">
-                          <li class="dropdown-chose-item">Киев</li>
-                          <li class="dropdown-chose-item">Бердянск</li>
-                          <li class="dropdown-chose-item">Львов</li>
-                          <li class="dropdown-chose-item">Запорожье</li>
-                          <li class="dropdown-chose-item">Одесса</li>
-                          <li class="dropdown-chose-item">Мукачево</li>
+                          <li class="dropdown-chose-item">Деснянский</li>
+                          <li class="dropdown-chose-item">Днепровский</li>
+                          <li class="dropdown-chose-item">Соломянский</li>
+                          <li class="dropdown-chose-item">Шевченковский</li>
                         </ul>
                       </div>
                     </div>
                   </div>
                   <div class="flat-edit__dropdown-box flat-edit__dropdown-box-addres">
-                    <div class="l-dropdown-box l-dropdown-box--arrow" id="choseAddress"><span>Ввведите адресс</span>
+                    <div class="l-dropdown-box l-dropdown-box--arrow l-dropdown-box--edit" id="choseAddress"><span>Введите адресс</span>
+                      <input class="l-dropdown__input-text-filter" type="text" placeholder="Введите адресс"/>
                       <div class="l-dropdown"> 
                         <ul class="l-dropdown-list">
                           <li class="dropdown-chose-item">Киев</li>
-                          <li class="dropdown-chose-item">Бердянск</li>
+                          <li class="dropdown-chose-item">Париж</li>
                           <li class="dropdown-chose-item">Львов</li>
                           <li class="dropdown-chose-item">Запорожье</li>
                           <li class="dropdown-chose-item">Одесса</li>
@@ -943,12 +944,9 @@
                     <div class="l-dropdown-box l-dropdown-box--moda l-dropdown-box--arrow" id="choseDay"><span>Тип дома</span>
                       <div class="l-dropdown"> 
                         <ul class="l-dropdown-list">
-                          <li class="dropdown-chose-item">Киев</li>
-                          <li class="dropdown-chose-item">Бердянск</li>
-                          <li class="dropdown-chose-item">Львов</li>
-                          <li class="dropdown-chose-item">Запорожье</li>
-                          <li class="dropdown-chose-item">Одесса</li>
-                          <li class="dropdown-chose-item">Мукачево</li>
+                          <li class="dropdown-chose-item">Кирпич</li>
+                          <li class="dropdown-chose-item">Многоэтажка</li>
+                          <li class="dropdown-chose-item">Панельный дом</li>
                         </ul>
                       </div>
                     </div>
@@ -957,12 +955,12 @@
                     <div class="l-dropdown-box l-dropdown-box--arrow" id="choseDistrict"><span>Количество сдач</span>
                       <div class="l-dropdown"> 
                         <ul class="l-dropdown-list">
-                          <li class="dropdown-chose-item">Киев</li>
-                          <li class="dropdown-chose-item">Бердянск</li>
-                          <li class="dropdown-chose-item">Львов</li>
-                          <li class="dropdown-chose-item">Запорожье</li>
-                          <li class="dropdown-chose-item">Одесса</li>
-                          <li class="dropdown-chose-item">Мукачево</li>
+                          <li class="dropdown-chose-item">1</li>
+                          <li class="dropdown-chose-item">2</li>
+                          <li class="dropdown-chose-item">3</li>
+                          <li class="dropdown-chose-item">4</li>
+                          <li class="dropdown-chose-item">5</li>
+                          <li class="dropdown-chose-item">6</li>
                         </ul>
                       </div>
                     </div>
@@ -971,12 +969,12 @@
                     <div class="l-dropdown-box l-dropdown-box--arrow" id="choseAddress"><span>Количество комнат</span>
                       <div class="l-dropdown"> 
                         <ul class="l-dropdown-list">
-                          <li class="dropdown-chose-item">Киев</li>
-                          <li class="dropdown-chose-item">Бердянск</li>
-                          <li class="dropdown-chose-item">Львов</li>
-                          <li class="dropdown-chose-item">Запорожье</li>
-                          <li class="dropdown-chose-item">Одесса</li>
-                          <li class="dropdown-chose-item">Мукачево</li>
+                          <li class="dropdown-chose-item">1</li>
+                          <li class="dropdown-chose-item">2</li>
+                          <li class="dropdown-chose-item">3</li>
+                          <li class="dropdown-chose-item">4</li>
+                          <li class="dropdown-chose-item">5</li>
+                          <li class="dropdown-chose-item">6</li>
                         </ul>
                       </div>
                     </div>
@@ -1223,11 +1221,12 @@
               <div class="flat-edit__side">
                 <div class="flat-edit__side-inner">
                   <div class="flat-edit__dropdown-box flat-edit__dropdown-box-day">
-                    <div class="l-dropdown-box l-dropdown-box--moda l-dropdown-box--arrow" id="choseDay"><span>Выберите город</span>
+                    <div class="l-dropdown-box l-dropdown-box--arrow l-dropdown-box--edit" id="choseDay"><span>Выберите город</span>
+                      <input class="l-dropdown__input-text-filter" type="text" placeholder="Выберите город"/>
                       <div class="l-dropdown"> 
                         <ul class="l-dropdown-list">
                           <li class="dropdown-chose-item">Киев</li>
-                          <li class="dropdown-chose-item">Бердянск</li>
+                          <li class="dropdown-chose-item">Ужгород</li>
                           <li class="dropdown-chose-item">Львов</li>
                           <li class="dropdown-chose-item">Запорожье</li>
                           <li class="dropdown-chose-item">Одесса</li>
@@ -1237,25 +1236,25 @@
                     </div>
                   </div>
                   <div class="flat-edit__dropdown-box flat-edit__dropdown-box-district">
-                    <div class="l-dropdown-box l-dropdown-box--arrow" id="choseDistrict"><span>Выберите район</span>
+                    <div class="l-dropdown-box l-dropdown-box--arrow l-dropdown-box--edit" id="choseDistrict"><span>Выберите район</span>
+                      <input class="l-dropdown__input-text-filter" type="text" placeholder="Выберите район"/>
                       <div class="l-dropdown"> 
                         <ul class="l-dropdown-list">
-                          <li class="dropdown-chose-item">Киев</li>
-                          <li class="dropdown-chose-item">Бердянск</li>
-                          <li class="dropdown-chose-item">Львов</li>
-                          <li class="dropdown-chose-item">Запорожье</li>
-                          <li class="dropdown-chose-item">Одесса</li>
-                          <li class="dropdown-chose-item">Мукачево</li>
+                          <li class="dropdown-chose-item">Деснянский</li>
+                          <li class="dropdown-chose-item">Днепровский</li>
+                          <li class="dropdown-chose-item">Соломянский</li>
+                          <li class="dropdown-chose-item">Шевченковский</li>
                         </ul>
                       </div>
                     </div>
                   </div>
                   <div class="flat-edit__dropdown-box flat-edit__dropdown-box-addres">
-                    <div class="l-dropdown-box l-dropdown-box--arrow" id="choseAddress"><span>Ввведите адресс</span>
+                    <div class="l-dropdown-box l-dropdown-box--arrow l-dropdown-box--edit" id="choseAddress"><span>Введите адресс</span>
+                      <input class="l-dropdown__input-text-filter" type="text" placeholder="Введите адресс"/>
                       <div class="l-dropdown"> 
                         <ul class="l-dropdown-list">
                           <li class="dropdown-chose-item">Киев</li>
-                          <li class="dropdown-chose-item">Бердянск</li>
+                          <li class="dropdown-chose-item">Париж</li>
                           <li class="dropdown-chose-item">Львов</li>
                           <li class="dropdown-chose-item">Запорожье</li>
                           <li class="dropdown-chose-item">Одесса</li>
@@ -1365,7 +1364,7 @@
                       <div class="l-dropdown"> 
                         <ul class="l-dropdown-list">
                           <li class="dropdown-chose-item">Киев</li>
-                          <li class="dropdown-chose-item">Бердянск</li>
+                          <li class="dropdown-chose-item">Коблево</li>
                           <li class="dropdown-chose-item">Львов</li>
                           <li class="dropdown-chose-item">Запорожье</li>
                           <li class="dropdown-chose-item">Одесса</li>
@@ -1379,7 +1378,7 @@
                       <div class="l-dropdown"> 
                         <ul class="l-dropdown-list">
                           <li class="dropdown-chose-item">Киев</li>
-                          <li class="dropdown-chose-item">Бердянск</li>
+                          <li class="dropdown-chose-item">Изюм</li>
                           <li class="dropdown-chose-item">Львов</li>
                           <li class="dropdown-chose-item">Запорожье</li>
                           <li class="dropdown-chose-item">Одесса</li>
@@ -1393,7 +1392,7 @@
                       <div class="l-dropdown"> 
                         <ul class="l-dropdown-list">
                           <li class="dropdown-chose-item">Киев</li>
-                          <li class="dropdown-chose-item">Бердянск</li>
+                          <li class="dropdown-chose-item">Луцк</li>
                           <li class="dropdown-chose-item">Львов</li>
                           <li class="dropdown-chose-item">Запорожье</li>
                           <li class="dropdown-chose-item">Одесса</li>
