@@ -12,32 +12,126 @@
   </head>
   <body class="l-page">
     <div class="l-wrap">
-      <header class="header">
-        <div class="l-container">
-          <div class="header__inner">
-            <div class="header__logo-box">
-              <div class="header__logo">Frently</div>
-              <div class="header__quote">Умный сервис по подбору комфортного жилья</div>
-            </div>
-            <dev class="header__control-box">
-              <div class="header__btn">
-                <button class="l-btn show-section" data-id="flat-edit--add">Добавить квартиру</button>
+      <div class="header-wrap">
+        <header class="header">
+          <div class="l-container">
+            <div class="header__inner">
+              <div class="header__logo-box">
+                <div class="header__logo">Frently</div>
+                <div class="header__quote">Умный сервис по подбору комфортного жилья</div>
               </div>
-              <div class="header__note"><img src="img/icons/alarm.png"/>Уведомления</div>
-              <div class="header__user"><img src="img/users/small/1.png"/>Богдан</div>
-            </dev>
+              <div class="header__control-box">
+                <div class="header__btn">
+                  <button class="l-btn show-section" data-id="flat-edit--add">Добавить квартиру</button>
+                </div>
+                <div class="popup-wrap" data-id="popup-notifications" status="closed">
+                  <div class="header__note"><img src="img/icons/alarm.png"/>Уведомления</div>
+                  <div class="popup" id="popup-notifications">
+                    <div class="popup-not">
+                      <div class="popup-not__item">
+                        <div class="popup-not__user popup-not__user--conf"><img src="img/users/2.png"/></div>
+                        <div class="popup-not__body">
+                          <div class="popup-not__head"><span>Андрей Заморин </span>подтвердил встречу</div>
+                          <div class="popup-not__info">
+                            <div class="popup-not__data"><span>13.03.2018 в 18:00</span></div>
+                            <div class="popup-not__address"><span>Ул. Гетьмана 31</span></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="popup-not__item">
+                        <div class="popup-not__user popup-not__user--diss"><img src="img/users/2.png"/></div>
+                        <div class="popup-not__body">
+                          <div class="popup-not__head"><span>Андрей Заморин </span>отменил встречу</div>
+                          <div class="popup-not__info">
+                            <div class="popup-not__data"><span>13.03.2018 в 18:00</span></div>
+                            <div class="popup-not__address"><span>Ул. Гетьмана 31</span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="popup-wrap" data-id="popup-user" status="closed">
+                  <div class="header__user"><img src="img/users/small/1.png"/>Богдан</div>
+                  <div class="popup" id="popup-user">
+                    <div class="popup-user">
+                      <div class="popup-user__item cabinet-tab" data-area="my-objects"><span>Мои обекты</span></div>
+                      <div class="popup-user__item cabinet-tab" data-area="my-meetings"><span>Мои встречи</span></div>
+                      <div class="popup-user__item cabinet-tab" data-area="my-profile"><span>Мой профиль</span></div>
+                      <div class="popup-user__item cabinet-tab" data-area="my-settings"><span>Настройки</span></div>
+                      <div class="popup-user__item popup-user__item--quit"><span>Выход</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="header__burger show-menu" data-id="main-mobile-menu">
+                <div class="burger"></div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="header header--mobile-menu header--mobile-menu-cabinet" id="main-mobile-menu">
+          <div class="l-container">
+            <div class="header__mobile-menu">
+              <div class="header__control-box header__control-box--mobile">
+                <div class="header__btn">
+                  <button class="l-btn show-section" data-id="flat-edit--add">Добавить квартиру</button>
+                </div>
+                <div class="header__mobile-menu-box">
+                  <div class="popup-wrap" data-id="popup-notifications--mobile" status="closed">
+                    <div class="header__note"><img src="img/icons/alarm.png"/>Уведомления</div>
+                    <div class="popup" id="popup-notifications--mobile">
+                      <div class="popup-not">
+                        <div class="popup-not__item">
+                          <div class="popup-not__user popup-not__user--conf"><img src="img/users/2.png"/></div>
+                          <div class="popup-not__body">
+                            <div class="popup-not__head"><span>Андрей Заморин </span>подтвердил встречу</div>
+                            <div class="popup-not__info">
+                              <div class="popup-not__data"><span>13.03.2018 в 18:00</span></div>
+                              <div class="popup-not__address"><span>Ул. Гетьмана 31</span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="popup-not__item">
+                          <div class="popup-not__user popup-not__user--diss"><img src="img/users/2.png"/></div>
+                          <div class="popup-not__body">
+                            <div class="popup-not__head"><span>Андрей Заморин </span>отменил встречу</div>
+                            <div class="popup-not__info">
+                              <div class="popup-not__data"><span>13.03.2018 в 18:00</span></div>
+                              <div class="popup-not__address"><span>Ул. Гетьмана 31</span></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="popup-wrap" data-id="popup-user--mobile" status="closed">
+                    <div class="header__user"><img src="img/users/small/1.png"/>Богдан</div>
+                    <div class="popup" id="popup-user--mobile">
+                      <div class="popup-user">
+                        <div class="popup-user__item cabinet-tab" data-area="my-objects"><span>Мои обекты</span></div>
+                        <div class="popup-user__item cabinet-tab" data-area="my-meetings"><span>Мои встречи</span></div>
+                        <div class="popup-user__item cabinet-tab" data-area="my-profile"><span>Мой профиль</span></div>
+                        <div class="popup-user__item cabinet-tab" data-area="my-settings"><span>Настройки</span></div>
+                        <div class="popup-user__item popup-user__item--quit"><span>Выход</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </header>
+      </div>
       <section class="cabinet main-content">
         <div class="l-container">
           <div class="cabinet__header">
             <div class="cabinet__container-main cabinet__container-main--header">
               <div class="cabinet__tabs">
-                <div class="cabinet__tab cabinet__tab--active" data-area="my-objects">Мои обьекты</div>
-                <div class="cabinet__tab" data-area="my-meetings">Мои встречи</div>
-                <div class="cabinet__tab" data-area="my-profile">Мой профиль	</div>
-                <div class="cabinet__tab" data-area="my-settings">Настройки	</div>
+                <div class="cabinet__tab cabinet-tab" data-area="my-objects">Мои обьекты</div>
+                <div class="cabinet__tab cabinet-tab" data-area="my-profile">Мой профиль	</div>
+                <div class="cabinet__tab cabinet-tab" data-area="my-meetings">Мои встречи</div>
+                <div class="cabinet__tab cabinet__tab--active cabinet-tab" data-area="my-settings">Настройки	</div>
               </div>
             </div>
             <div class="cabinet__container-side cabinet__container-side--header">
@@ -51,10 +145,12 @@
             <div class="cabinet__objs cabinet__area" id="my-objects-area">
               <div class="cabinet__objs-header">
                 <div class="cabinet__container-main">
-                  <div class="cabinet__subtubs">
-                    <div class="cabinet__subtub cabinet__subtub--active">Активные</div>
-                    <div class="cabinet__subtub">Неактивные</div>
-                    <div class="cabinet__subtub">Сдаются</div>
+                  <div class="cabinet__subtubs-wrap">
+                    <div class="cabinet__subtubs">
+                      <div class="cabinet__subtub cabinet__subtub--active">Активные</div>
+                      <div class="cabinet__subtub">Неактивные</div>
+                      <div class="cabinet__subtub">Сдаются</div>
+                    </div>
                   </div>
                 </div>
                 <div class="cabinet__container-side">
@@ -165,10 +261,12 @@
             </div>
             <div class="cabinet__meetings cabinet__area" id="my-meetings-area">
               <div class="cabinet__container-main">
-                <div class="cabinet__subtubs">
-                  <div class="cabinet__subtub cabinet__subtub--active" data-status="all">Заявки</div>
-                  <div class="cabinet__subtub" data-status="approved">Утвержденные встречи</div>
-                  <div class="cabinet__subtub" data-status="abolished">Отмененные</div>
+                <div class="cabinet__subtubs-wrap">
+                  <div class="cabinet__subtubs">
+                    <div class="cabinet__subtub cabinet__subtub--not cabinet__subtub--active" data-status="all">Заявки</div>
+                    <div class="cabinet__subtub" data-status="approved">Утвержденные встречи</div>
+                    <div class="cabinet__subtub" data-status="abolished">Отмененные</div>
+                  </div>
                 </div>
                 <div class="cabinet__meetings-content">
                   <div class="cabinet-meet">
@@ -384,12 +482,15 @@
                       <div class="cabinet-meet__pagination">
                         <div class="pagination">
                           <div class="pagination__item pagination__item--back"><img src="img/icons/pagination-back.png"/></div>
-                          <div class="pagination__item pagination__item--active">1</div>
-                          <div class="pagination__item">2</div>
-                          <div class="pagination__item">3</div>
-                          <div class="pagination__item">4</div>
-                          <div class="pagination__item">5</div>
-                          <div class="pagination__item">6</div>
+                          <div class="pagination__numbers">
+                            <div class="pagination__item pagination__item--active">1</div>
+                            <div class="pagination__item">2</div>
+                            <div class="pagination__item">3</div>
+                            <div class="pagination__item">4</div>
+                            <div class="pagination__item">5</div>
+                            <div class="pagination__item">6</div>
+                            <div class="pagination__item pagination__item--dots">...</div>
+                          </div>
                           <div class="pagination__item pagination__item--next"><img src="img/icons/pagination-next.png"/></div>
                         </div>
                       </div>
@@ -1137,12 +1238,13 @@
                   </div>
                 </div>
               </div>
-              <button class="l-btn l-btn--transparent l-btn--diss">Удалить интервал</button>
+              <button class="l-btn l-btn--transparent l-btn--diss delete-meet">Удалить интервал</button>
+              <button class="flat-edit__meet-date-delete delete-meet"></button>
             </div>
             <h4 class="flat-edit__subtitle">Добавить еще дату просмотра</h4>
                         <div class="view-book">
                           <div class="view-book__choose-container">
-                            <div class="view-book__choose-day">Выберите день
+                            <div class="view-book__choose-day"><span>Выберите день</span>
                               <div class="l-dropdown-box l-dropdown-box--modal l-dropdown-box--arrow" data-placeholder="Выберите день" data-status="closed" id="choseDay"><span>Выберите день</span>
                                 <div class="view-book__day-dropdown l-dropdown l-dropdown--modal"> 
                                   <ul class="l-dropdown-list l-dropdown-list--modal">
@@ -1158,7 +1260,7 @@
                                 </div>
                               </div>
                             </div>
-                            <div class="view-book__choose-time">Выберите время
+                            <div class="view-book__choose-time"><span>Выберите время</span>
                               <div class="l-dropdown-box l-dropdown-box--modal l-dropdown-box--arrow" data-placeholder="Выберите время" data-status="closed" id="choseTime"><span>Выберите время</span>
                                 <div class="view-book__day-dropdown l-dropdown l-dropdown--modal"> 
                                   <form class="l-dropdown__checkboxes-container">
@@ -1544,15 +1646,11 @@
               </div>
             </div>
             <div class="flat-edit__footer--add-flat">
-              <div class="flat-edit__side">
-                <div class="flat-edit__footer-btn">
-                  <button class="show-modal l-btn l-btn--large l-btn--success" data-id="modal-time-add-flat">Cохранить Изменения</button>
-                </div>
+              <div class="flat-edit__footer-btn">
+                <button class="show-modal l-btn l-btn--large l-btn--success" data-id="modal-time-add-flat">Cохранить Изменения</button>
               </div>
-              <div class="flat-edit__side">
-                <div class="flat-edit__footer-btn">
-                  <button class="l-btn l-btn--large l-btn--transparent">Отложить в неактивные</button>
-                </div>
+              <div class="flat-edit__footer-btn">
+                <button class="l-btn l-btn--large l-btn--transparent">Отложить в неактивные</button>
               </div>
             </div>
           </div>
@@ -1562,7 +1660,7 @@
         <div class="modal-box">
           <div class="modal modal--time-add-flat">
             <div class="modal__close-icon modal__close-icon--book"><img src="img/icons/icon-close.png"/></div>
-            <h4 class="flat-edit__subtitle">Выбор времени просмотра</h4>
+            <h4 class="flat-edit__subtitle flat-edit__subtitle--modal">Выбор времени просмотра</h4>
             <hr/>
             <p class="flat-edit__descr">
               Данная секция не обязательна к заполнению, но указав удобное время просмотра, процес сдачи квартиры ускоряется в несколько раз
@@ -1579,11 +1677,12 @@
                 </div>
               </div>
               <button class="l-btn l-btn--transparent l-btn--diss">Удалить интервал</button>
+              <button class="flat-edit__meet-date-delete delete-meet"></button>
             </div>
-            <h4 class="flat-edit__subtitle">Добавить еще дату просмотра</h4>
+            <h4 class="flat-edit__subtitle flat-edit__subtitle--modal">Добавить еще дату просмотра</h4>
                         <div class="view-book">
                           <div class="view-book__choose-container">
-                            <div class="view-book__choose-day">Выберите день
+                            <div class="view-book__choose-day"><span>Выберите день</span>
                               <div class="l-dropdown-box l-dropdown-box--modal l-dropdown-box--arrow" data-placeholder="Выберите день" data-status="closed" id="choseDay"><span>Выберите день</span>
                                 <div class="view-book__day-dropdown l-dropdown l-dropdown--modal"> 
                                   <ul class="l-dropdown-list l-dropdown-list--modal">
@@ -1599,7 +1698,7 @@
                                 </div>
                               </div>
                             </div>
-                            <div class="view-book__choose-time">Выберите время
+                            <div class="view-book__choose-time"><span>Выберите время</span>
                               <div class="l-dropdown-box l-dropdown-box--modal l-dropdown-box--arrow" data-placeholder="Выберите время" data-status="closed" id="choseTime"><span>Выберите время</span>
                                 <div class="view-book__day-dropdown l-dropdown l-dropdown--modal"> 
                                   <form class="l-dropdown__checkboxes-container">
@@ -1649,7 +1748,7 @@
                   <div class="modal__close-icon modal__close-icon--book"><img src="img/icons/icon-close.png"/></div>
                   <div class="modal-book-succes__inner"><img class="modal-book-succes__icon" src="img/icons/success-add-flat.png"/>
                     <h6 class="modal-book-succes__title">Ваша квартира успешно добавлена !</h6>
-                    <p class="modal-book-succes__descr">Ваши объявления и встречи на просмотр будут отобрпжаться в личном кабинете</p>
+                    <p class="modal-book-succes__descr">Ваши объявления и встречи на просмотр будут отображаться в личном кабинете</p>
                   </div>
                 </div>
               </div>
@@ -1760,6 +1859,7 @@
     <script src="./libs/jquery.min.js"></script>
     <script src="libs/flexslider/jquery.flexslider.js"></script>
     <script src="./libs/slick-carousel/slick/slick.min.js">	 	</script>
+    <script src="./js/header.js">	 	</script>
     <script src="./js/mainCabinet.js"></script>
     <script src="./js/bookFlatModal.js"></script>
     <script src="./js/dropdown.js"></script>

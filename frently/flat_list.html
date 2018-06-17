@@ -12,163 +12,189 @@
   </head>
   <body class="l-page">
     <div class="l-wrap">
-      <header class="header">
-        <div class="l-container">
-          <div class="header__inner">
-            <div class="header__logo-box">
-              <div class="header__logo">Frently</div>
-              <div class="header__quote">Умный сервис по подбору комфортного жилья</div>
-            </div>
-            <dev class="header__control-box"><a class="header__login show-modal" data-id="modal-entry">Войти в аккаунт</a>
-              <div class="header__btn header__signup">
-                <button class="l-btn show-modal" data-id="modal-register">Зарегистрироваться</button>
+      <div class="header-wrap">
+        <header class="header">
+          <div class="l-container">
+            <div class="header__inner">
+              <div class="header__logo-box">
+                <div class="header__logo">Frently</div>
+                <div class="header__quote">Умный сервис по подбору комфортного жилья</div>
               </div>
-            </dev>
+              <div class="header__control-box"><a class="header__login show-modal" data-id="modal-entry">Войти в аккаунт</a>
+                <div class="header__btn header__signup">
+                  <button class="l-btn show-modal" data-id="modal-register">Зарегистрироваться</button>
+                </div>
+              </div>
+              <div class="header__burger show-menu" data-id="main-mobile-menu">
+                <div class="burger"></div>
+              </div>
+            </div>
           </div>
-        </div>
-      </header>
-      <section class="flat-filter">
-        <div class="l-container">
-          <div class="l-title">Параметры поиска</div>
-          <div class="flat-filter__inner">
-            <div class="flat-filter__address-container">
-              <div class="flat-filter__city l-dropdown-box" data-status="closed" id="cityDropdownBox"> <span>Выберите город</span>
-                <input class="l-dropdown__input-text-filter" type="text" placeholder="Выберите город"/>
-                <div class="flat-filter__city-dropdown l-dropdown"> 
-                  <ul class="l-dropdown-list">
-                    <li class="dropdown-chose-item">Киев</li>
-                    <li class="dropdown-chose-item">Одесса</li>
-                    <li class="dropdown-chose-item">Житомир</li>
-                    <li class="dropdown-chose-item">Запорожье</li>
-                    <li class="dropdown-chose-item">Харьков</li>
-                    <li class="dropdown-chose-item">Днепр</li>
-                    <li class="dropdown-chose-item">Львов</li>
-                  </ul>
+        </header>
+        <div class="header header--mobile-menu" id="main-mobile-menu">
+          <div class="l-container">
+            <div class="header__mobile-menu">
+              <div class="header__control-box header__control-box--mobile"><a class="header__login header__login--mobile show-modal" data-id="modal-entry">Войти в аккаунт</a>
+                <div class="header__btn header__signup header__signup--mobile">
+                  <button class="l-btn show-modal" data-id="modal-register">Зарегистрироваться</button>
                 </div>
-              </div>
-              <div class="flat-filter__district l-dropdown-box" data-status="closed" id="districtDropdownBox"><span>Выберите район</span>
-                <input class="l-dropdown__input-text-filter" type="text" placeholder="Выберите район"/>
-                <div class="flat-filter__district-dropdown l-dropdown"> 
-                  <ul class="l-dropdown-list">
-                    <li class="dropdown-chose-item">Соломянский</li>
-                    <li class="dropdown-chose-item">Святошинский</li>
-                    <li class="dropdown-chose-item">Днепровский</li>
-                    <li class="dropdown-chose-item">Дарницкий</li>
-                    <li class="dropdown-chose-item">Оболонь</li>
-                    <li class="dropdown-chose-item">Шевченковский</li>
-                    <li class="dropdown-chose-item">Троещина</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="flat-filter__street l-dropdown-box" data-status="closed" id="streetDropdownBox"><span>Улица</span>
-                <input class="l-dropdown__input-text-filter" type="text" placeholder="Введите улицу"/>
-                <div class="flat-filter__street-dropdown l-dropdown">
-                  <ul class="l-dropdown-list">
-                    <li class="dropdown-chose-item">пр. Победы</li>
-                    <li class="dropdown-chose-item">Полевая</li>
-                    <li class="dropdown-chose-item">Борщаговская</li>
-                    <li class="dropdown-chose-item">Выборгская</li>
-                    <li class="dropdown-chose-item">Комарова</li>
-                    <li class="dropdown-chose-item">бул. Шевченко</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="flat-filter__rooms l-dropdown-box" data-status="closed" id="roomsDropdownBox"><span>Количество комнат</span>
-              <div class="flat-filter__rooms-dropdown l-dropdown">
-                <form class="l-dropdown__checkboxes-container flat-filter__rooms-form">
-                        <input class="checkbox checkbox--solid" type="checkbox" id="rooms1" data-any="false"/>
-                        <label for="rooms1">1 комн</label>
-                        <input class="checkbox checkbox--solid" type="checkbox" id="rooms2" data-any="false"/>
-                        <label for="rooms2">2 комн</label>
-                        <input class="checkbox checkbox--solid" type="checkbox" id="rooms3" data-any="false"/>
-                        <label for="rooms3">3 комн</label>
-                        <input class="checkbox checkbox--solid" type="checkbox" id="rooms4" data-any="false"/>
-                        <label for="rooms4">4 комн</label>
-                </form>
-              </div>
-            </div>
-            <div class="flat-filter__budget l-dropdown-box" data-status="closed" id="budgetDropdownBox"><span>Бюджет</span>
-              <div class="flat-filter__budget-dropdown l-dropdown">
-                <ul class="l-dropdown-list">
-                  <li class="dropdown-chose-item">от 3 000 грн</li>
-                  <li class="dropdown-chose-item">от 5 000 грн</li>
-                  <li class="dropdown-chose-item">от 10 000 грн</li>
-                </ul>
-                <div class="flat-filter__budget-price-box">
-                  <input class="flat-filter__budget-price-from" type="number" placeholder="от"/>
-                  <input class="flat-filter__budget-price-to" type="number" placeholder="до"/>
-                </div>
-              </div>
-            </div>
-            <div class="flat-filter__more-filters l-dropdown-box" data-status="closed" id="moreFiltersBtn"><span>Больше фильтров</span></div>
-            <div class="flat-filter__search-btn l-dropdown-box" id="searchBtn"><span>Искать</span></div>
-            <div class="flat-filter__additional-container" id="moreFiltersContainer">
-              <div class="flat-filter__type l-dropdown-box" data-status="closed" data-placeholder="Тип дома" id="typeDropdownBox"> <span>Тип дома</span>
-                <div class="flat-filter__type-dropdown l-dropdown">
-                  <form class="l-dropdown__checkboxes-container l-dropdown__checkboxes-container--list">
-                          <input class="checkbox checkbox--list" type="checkbox" id="brickBuild"/>
-                          <label class="dropdown-chose-item dropdown-chose-item--list" for="brickBuild">Кирпичный</label>
-                          <input class="checkbox checkbox--list" type="checkbox" id="panelBuild"/>
-                          <label class="dropdown-chose-item dropdown-chose-item--list" for="panelBuild">Панельный</label>
-                          <input class="checkbox checkbox--list" type="checkbox" id="newBuild"/>
-                          <label class="dropdown-chose-item dropdown-chose-item--list" for="newBuild">Новострой</label>
-                          <input class="checkbox checkbox--list" type="checkbox" id="privatBuild"/>
-                          <label class="dropdown-chose-item dropdown-chose-item--list" for="privatBuild">Частный дом</label>
-                  </form>
-                </div>
-              </div>
-              <div class="flat-filter__sq l-dropdown-box" data-status="closed" data-placeholder="Площадь" id="sqDropdownBox"> <span>Площадь</span>
-                <div class="flat-filter__sq-dropdown l-dropdown">
-                  <form class="l-dropdown__checkboxes-container l-dropdown__checkboxes-container--list">
-                          <input class="checkbox checkbox--list" type="checkbox" id="sq1"/>
-                          <label class="dropdown-chose-item dropdown-chose-item--list" for="sq1">20-30</label>
-                          <input class="checkbox checkbox--list" type="checkbox" id="sq2"/>
-                          <label class="dropdown-chose-item dropdown-chose-item--list" for="sq2">30-40</label>
-                          <input class="checkbox checkbox--list" type="checkbox" id="sq3"/>
-                          <label class="dropdown-chose-item dropdown-chose-item--list" for="sq3">40-50</label>
-                          <input class="checkbox checkbox--list" type="checkbox" id="sq4"/>
-                          <label class="dropdown-chose-item dropdown-chose-item--list" for="sq4">50+</label>
-                  </form>
-                </div>
-              </div>
-              <div class="flat-filter__floor l-dropdown-box" data-status="closed" data-placeholder="Этаж" id="floorDropdwonBox"> <span>Этаж</span>
-                <div class="flat-filter__sq-dropdown l-dropdown">
-                  <form class="l-dropdown__checkboxes-container l-dropdown__checkboxes-container--list">
-                          <input class="checkbox checkbox--list" type="checkbox" id="floor1"/>
-                          <label class="dropdown-chose-item dropdown-chose-item--list" for="floor1">1</label>
-                          <input class="checkbox checkbox--list" type="checkbox" id="floor2"/>
-                          <label class="dropdown-chose-item dropdown-chose-item--list" for="floor2">2</label>
-                          <input class="checkbox checkbox--list" type="checkbox" id="floor3"/>
-                          <label class="dropdown-chose-item dropdown-chose-item--list" for="floor3">3</label>
-                          <input class="checkbox checkbox--list" type="checkbox" id="floor4"/>
-                          <label class="dropdown-chose-item dropdown-chose-item--list" for="floor4">4</label>
-                  </form>
-                </div>
-              </div>
-              <div class="flat-filter__checkboxes">
-                      <input class="checkbox checkbox--sq" type="checkbox" id="childrenCheck"/>
-                      <label for="childrenCheck">Можно с детьми</label>
-                      <input class="checkbox checkbox--sq" type="checkbox" id="petsCheck"/>
-                      <label for="petsCheck">Можно с животными</label>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <section class="nav-line">
-        <div class="l-container">
-          <div class="nav-line__inner"><a href="#">Главная / </a><a href="#">Квартиры в Киеве /</a><a href="#">Соломенский Район / </a><a href="#">Гарматная  39в</a></div>
+      </div>
+      <div class="flat-filter-wrap">
+        <section class="flat-filter flat-filter--flat-list" id="filter-sec">
+          <div class="l-container">
+            <div class="l-title">Параметры поиска</div>
+            <div class="flat-filter__inner">
+              <div class="flat-filter__address-container">
+                <div class="flat-filter__city l-dropdown-box" data-status="closed" id="cityDropdownBox"> <span>Выберите город</span>
+                  <input class="l-dropdown__input-text-filter" type="text" placeholder="Выберите город"/>
+                  <div class="flat-filter__city-dropdown l-dropdown"> 
+                    <ul class="l-dropdown-list">
+                      <li class="dropdown-chose-item">Киев</li>
+                      <li class="dropdown-chose-item">Одесса</li>
+                      <li class="dropdown-chose-item">Житомир</li>
+                      <li class="dropdown-chose-item">Запорожье</li>
+                      <li class="dropdown-chose-item">Харьков</li>
+                      <li class="dropdown-chose-item">Днепр</li>
+                      <li class="dropdown-chose-item">Львов</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="flat-filter__district l-dropdown-box" data-status="closed" id="districtDropdownBox"><span>Выберите район</span>
+                  <input class="l-dropdown__input-text-filter" type="text" placeholder="Выберите район"/>
+                  <div class="flat-filter__district-dropdown l-dropdown"> 
+                    <ul class="l-dropdown-list">
+                      <li class="dropdown-chose-item">Соломянский</li>
+                      <li class="dropdown-chose-item">Святошинский</li>
+                      <li class="dropdown-chose-item">Днепровский</li>
+                      <li class="dropdown-chose-item">Дарницкий</li>
+                      <li class="dropdown-chose-item">Оболонь</li>
+                      <li class="dropdown-chose-item">Шевченковский</li>
+                      <li class="dropdown-chose-item">Троещина</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="flat-filter__street l-dropdown-box" data-status="closed" id="streetDropdownBox"><span>Улица</span>
+                  <input class="l-dropdown__input-text-filter" type="text" placeholder="Введите улицу"/>
+                  <div class="flat-filter__street-dropdown l-dropdown">
+                    <ul class="l-dropdown-list">
+                      <li class="dropdown-chose-item">пр. Победы</li>
+                      <li class="dropdown-chose-item">Полевая</li>
+                      <li class="dropdown-chose-item">Борщаговская</li>
+                      <li class="dropdown-chose-item">Выборгская</li>
+                      <li class="dropdown-chose-item">Комарова</li>
+                      <li class="dropdown-chose-item">бул. Шевченко</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="flat-filter__rooms l-dropdown-box" data-status="closed" data-placeholder="Количесвто комнат" id="roomsDropdownBox"><span>Количество комнат</span>
+                <div class="flat-filter__rooms-dropdown l-dropdown">
+                  <form class="l-dropdown__checkboxes-container flat-filter__rooms-form">
+                          <input class="checkbox checkbox--solid" type="checkbox" id="rooms1" data-any="false"/>
+                          <label for="rooms1">1 комн</label>
+                          <input class="checkbox checkbox--solid" type="checkbox" id="rooms2" data-any="false"/>
+                          <label for="rooms2">2 комн</label>
+                          <input class="checkbox checkbox--solid" type="checkbox" id="rooms3" data-any="false"/>
+                          <label for="rooms3">3 комн</label>
+                          <input class="checkbox checkbox--solid" type="checkbox" id="rooms4" data-any="false"/>
+                          <label for="rooms4">4 комн</label>
+                  </form>
+                </div>
+              </div>
+              <div class="flat-filter__budget l-dropdown-box" data-status="closed" data-placeholder="Бюджет" id="budgetDropdownBox"><span>Бюджет</span>
+                <div class="flat-filter__budget-dropdown l-dropdown">
+                  <ul class="l-dropdown-list">
+                    <li class="dropdown-chose-item">от 3 000 грн</li>
+                    <li class="dropdown-chose-item">от 5 000 грн</li>
+                    <li class="dropdown-chose-item">от 10 000 грн</li>
+                  </ul>
+                  <div class="flat-filter__budget-price-box">
+                    <input class="flat-filter__budget-price-from" type="number" placeholder="от"/>
+                    <input class="flat-filter__budget-price-to" type="number" placeholder="до"/>
+                  </div>
+                </div>
+              </div>
+              <div class="flat-filter__check">
+                <input type="checkbox" id="flatListCheapest"/>
+                <label for="flatListCheapest">Самые дешевые сначала</label>
+              </div>
+              <div class="flat-filter__more-filters l-dropdown-box" data-status="closed" id="moreFiltersBtn"><span>Больше фильтров</span></div>
+              <div class="flat-filter__search-btn l-dropdown-box" id="searchBtn"><span>Искать</span></div>
+              <div class="flat-filter__reset-btn l-dropdown-box" id="resetFilters"><span>Сбросить все фильтры</span></div>
+              <div class="flat-filter__additional-container" id="moreFiltersContainer">
+                <div class="flat-filter__type l-dropdown-box" data-status="closed" data-placeholder="Тип дома" id="typeDropdownBox"> <span>Тип дома</span>
+                  <div class="flat-filter__type-dropdown l-dropdown">
+                    <form class="l-dropdown__checkboxes-container l-dropdown__checkboxes-container--list">
+                            <input class="checkbox checkbox--list" type="checkbox" id="brickBuild"/>
+                            <label class="dropdown-chose-item dropdown-chose-item--list" for="brickBuild">Кирпичный</label>
+                            <input class="checkbox checkbox--list" type="checkbox" id="panelBuild"/>
+                            <label class="dropdown-chose-item dropdown-chose-item--list" for="panelBuild">Панельный</label>
+                            <input class="checkbox checkbox--list" type="checkbox" id="newBuild"/>
+                            <label class="dropdown-chose-item dropdown-chose-item--list" for="newBuild">Новострой</label>
+                            <input class="checkbox checkbox--list" type="checkbox" id="privatBuild"/>
+                            <label class="dropdown-chose-item dropdown-chose-item--list" for="privatBuild">Частный дом</label>
+                    </form>
+                  </div>
+                </div>
+                <div class="flat-filter__sq l-dropdown-box" data-status="closed" data-placeholder="Площадь" id="sqDropdownBox"> <span>Площадь</span>
+                  <div class="flat-filter__sq-dropdown l-dropdown">
+                    <form class="l-dropdown__checkboxes-container l-dropdown__checkboxes-container--list">
+                            <input class="checkbox checkbox--list" type="checkbox" id="sq1"/>
+                            <label class="dropdown-chose-item dropdown-chose-item--list" for="sq1">20-30</label>
+                            <input class="checkbox checkbox--list" type="checkbox" id="sq2"/>
+                            <label class="dropdown-chose-item dropdown-chose-item--list" for="sq2">30-40</label>
+                            <input class="checkbox checkbox--list" type="checkbox" id="sq3"/>
+                            <label class="dropdown-chose-item dropdown-chose-item--list" for="sq3">40-50</label>
+                            <input class="checkbox checkbox--list" type="checkbox" id="sq4"/>
+                            <label class="dropdown-chose-item dropdown-chose-item--list" for="sq4">50+</label>
+                    </form>
+                  </div>
+                </div>
+                <div class="flat-filter__floor l-dropdown-box" data-status="closed" data-placeholder="Этаж" id="floorDropdwonBox"> <span>Этаж</span>
+                  <div class="flat-filter__sq-dropdown l-dropdown">
+                    <form class="l-dropdown__checkboxes-container l-dropdown__checkboxes-container--list">
+                            <input class="checkbox checkbox--list" type="checkbox" id="floor1"/>
+                            <label class="dropdown-chose-item dropdown-chose-item--list" for="floor1">1</label>
+                            <input class="checkbox checkbox--list" type="checkbox" id="floor2"/>
+                            <label class="dropdown-chose-item dropdown-chose-item--list" for="floor2">2</label>
+                            <input class="checkbox checkbox--list" type="checkbox" id="floor3"/>
+                            <label class="dropdown-chose-item dropdown-chose-item--list" for="floor3">3</label>
+                            <input class="checkbox checkbox--list" type="checkbox" id="floor4"/>
+                            <label class="dropdown-chose-item dropdown-chose-item--list" for="floor4">4</label>
+                    </form>
+                  </div>
+                </div>
+                <div class="flat-filter__checkboxes">
+                        <input class="checkbox checkbox--sq" type="checkbox" id="childrenCheck"/>
+                        <label for="childrenCheck">Можно с детьми</label>
+                        <input class="checkbox checkbox--sq" type="checkbox" id="petsCheck"/>
+                        <label for="petsCheck">Можно с животными</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="flat-filter__rollup">
+          <button data-nameActive="Спрятать" data-name="Показать фильтры" id="rolleUpFilters">Показать фильтры</button>
         </div>
-      </section>
+      </div>
       <section class="flat-list">
+        <section class="nav-line">
+          <div class="l-container">
+            <div class="nav-line__inner"><a href="#">Главная / </a><a href="#">Квартиры в Киеве /</a><a href="#">Соломенский Район / </a><a href="#">Гарматная  39в</a></div>
+          </div>
+        </section>
         <div class="l-container">
           <h1 class="l-title">Результаты поиска</h1>
           <div class="flat-list__head-line">
             <h4 class="l-subtitle">Найдено 12 квартир по вашему запросу</h4>
             <div class="flat-list__check">
               <input type="checkbox" id="flatListCheapest"/>
-              <label for="flatListCheapest">Самые дешовые сначала</label>
+              <label for="flatListCheapest">Самые дешевые сначала</label>
             </div>
           </div>
           <div class="flat-list__inner">
@@ -177,8 +203,9 @@
                 <div class="flat-card">
                   <div class="flat-card__inner">
                     <div class="flat-card__head">
-                      <div class="mark mark--checked mark--top"><img src="./img/icons/checked.png"/>Проверено</div>
+                      <div class="mark mark--checked mark--top"><span>Проверено</span></div>
                       <div class="mark mark--price mark--bottom">от 10 000 грн</div>
+                      <div class="flat-card__dots"></div>
                       <div class="flat-card__slider-container">
                         <div class="flat-card__slider-prevArrow"><img src="img/icons/prevArrow--small.png"/></div>
                         <div class="flat-card__slider-nextArrow"><img src="img/icons/nextArrow--small.png"/></div>
@@ -204,8 +231,9 @@
                 <div class="flat-card">
                   <div class="flat-card__inner">
                     <div class="flat-card__head">
-                      <div class="mark mark--checked mark--top"><img src="./img/icons/checked.png"/>Проверено</div>
+                      <div class="mark mark--checked mark--top"><span>Проверено</span></div>
                       <div class="mark mark--price mark--bottom">от 10 000 грн</div>
+                      <div class="flat-card__dots"></div>
                       <div class="flat-card__slider-container">
                         <div class="flat-card__slider-prevArrow"><img src="img/icons/prevArrow--small.png"/></div>
                         <div class="flat-card__slider-nextArrow"><img src="img/icons/nextArrow--small.png"/></div>
@@ -231,8 +259,9 @@
                 <div class="flat-card">
                   <div class="flat-card__inner">
                     <div class="flat-card__head">
-                      <div class="mark mark--checked mark--top"><img src="./img/icons/checked.png"/>Проверено</div>
+                      <div class="mark mark--checked mark--top"><span>Проверено</span></div>
                       <div class="mark mark--price mark--bottom">от 10 000 грн</div>
+                      <div class="flat-card__dots"></div>
                       <div class="flat-card__slider-container">
                         <div class="flat-card__slider-prevArrow"><img src="img/icons/prevArrow--small.png"/></div>
                         <div class="flat-card__slider-nextArrow"><img src="img/icons/nextArrow--small.png"/></div>
@@ -258,8 +287,9 @@
                 <div class="flat-card">
                   <div class="flat-card__inner">
                     <div class="flat-card__head">
-                      <div class="mark mark--checked mark--top"><img src="./img/icons/checked.png"/>Проверено</div>
+                      <div class="mark mark--checked mark--top"><span>Проверено</span></div>
                       <div class="mark mark--price mark--bottom">от 10 000 грн</div>
+                      <div class="flat-card__dots"></div>
                       <div class="flat-card__slider-container">
                         <div class="flat-card__slider-prevArrow"><img src="img/icons/prevArrow--small.png"/></div>
                         <div class="flat-card__slider-nextArrow"><img src="img/icons/nextArrow--small.png"/></div>
@@ -285,8 +315,9 @@
                 <div class="flat-card">
                   <div class="flat-card__inner">
                     <div class="flat-card__head">
-                      <div class="mark mark--checked mark--top"><img src="./img/icons/checked.png"/>Проверено</div>
+                      <div class="mark mark--checked mark--top"><span>Проверено</span></div>
                       <div class="mark mark--price mark--bottom">от 10 000 грн</div>
+                      <div class="flat-card__dots"></div>
                       <div class="flat-card__slider-container">
                         <div class="flat-card__slider-prevArrow"><img src="img/icons/prevArrow--small.png"/></div>
                         <div class="flat-card__slider-nextArrow"><img src="img/icons/nextArrow--small.png"/></div>
@@ -312,8 +343,9 @@
                 <div class="flat-card">
                   <div class="flat-card__inner">
                     <div class="flat-card__head">
-                      <div class="mark mark--checked mark--top"><img src="./img/icons/checked.png"/>Проверено</div>
+                      <div class="mark mark--checked mark--top"><span>Проверено</span></div>
                       <div class="mark mark--price mark--bottom">от 10 000 грн</div>
+                      <div class="flat-card__dots"></div>
                       <div class="flat-card__slider-container">
                         <div class="flat-card__slider-prevArrow"><img src="img/icons/prevArrow--small.png"/></div>
                         <div class="flat-card__slider-nextArrow"><img src="img/icons/nextArrow--small.png"/></div>
@@ -342,8 +374,9 @@
                 <div class="flat-card">
                   <div class="flat-card__inner">
                     <div class="flat-card__head">
-                      <div class="mark mark--checked mark--top"><img src="./img/icons/checked.png"/>Проверено</div>
+                      <div class="mark mark--checked mark--top"><span>Проверено</span></div>
                       <div class="mark mark--price mark--bottom">от 10 000 грн</div>
+                      <div class="flat-card__dots"></div>
                       <div class="flat-card__slider-container">
                         <div class="flat-card__slider-prevArrow"><img src="img/icons/prevArrow--small.png"/></div>
                         <div class="flat-card__slider-nextArrow"><img src="img/icons/nextArrow--small.png"/></div>
@@ -369,8 +402,9 @@
                 <div class="flat-card">
                   <div class="flat-card__inner">
                     <div class="flat-card__head">
-                      <div class="mark mark--checked mark--top"><img src="./img/icons/checked.png"/>Проверено</div>
+                      <div class="mark mark--checked mark--top"><span>Проверено</span></div>
                       <div class="mark mark--price mark--bottom">от 10 000 грн</div>
+                      <div class="flat-card__dots"></div>
                       <div class="flat-card__slider-container">
                         <div class="flat-card__slider-prevArrow"><img src="img/icons/prevArrow--small.png"/></div>
                         <div class="flat-card__slider-nextArrow"><img src="img/icons/nextArrow--small.png"/></div>
@@ -396,8 +430,9 @@
                 <div class="flat-card">
                   <div class="flat-card__inner">
                     <div class="flat-card__head">
-                      <div class="mark mark--checked mark--top"><img src="./img/icons/checked.png"/>Проверено</div>
+                      <div class="mark mark--checked mark--top"><span>Проверено</span></div>
                       <div class="mark mark--price mark--bottom">от 10 000 грн</div>
+                      <div class="flat-card__dots"></div>
                       <div class="flat-card__slider-container">
                         <div class="flat-card__slider-prevArrow"><img src="img/icons/prevArrow--small.png"/></div>
                         <div class="flat-card__slider-nextArrow"><img src="img/icons/nextArrow--small.png"/></div>
@@ -423,8 +458,9 @@
                 <div class="flat-card">
                   <div class="flat-card__inner">
                     <div class="flat-card__head">
-                      <div class="mark mark--checked mark--top"><img src="./img/icons/checked.png"/>Проверено</div>
+                      <div class="mark mark--checked mark--top"><span>Проверено</span></div>
                       <div class="mark mark--price mark--bottom">от 10 000 грн</div>
+                      <div class="flat-card__dots"></div>
                       <div class="flat-card__slider-container">
                         <div class="flat-card__slider-prevArrow"><img src="img/icons/prevArrow--small.png"/></div>
                         <div class="flat-card__slider-nextArrow"><img src="img/icons/nextArrow--small.png"/></div>
@@ -450,8 +486,9 @@
                 <div class="flat-card">
                   <div class="flat-card__inner">
                     <div class="flat-card__head">
-                      <div class="mark mark--checked mark--top"><img src="./img/icons/checked.png"/>Проверено</div>
+                      <div class="mark mark--checked mark--top"><span>Проверено</span></div>
                       <div class="mark mark--price mark--bottom">от 10 000 грн</div>
+                      <div class="flat-card__dots"></div>
                       <div class="flat-card__slider-container">
                         <div class="flat-card__slider-prevArrow"><img src="img/icons/prevArrow--small.png"/></div>
                         <div class="flat-card__slider-nextArrow"><img src="img/icons/nextArrow--small.png"/></div>
@@ -477,8 +514,9 @@
                 <div class="flat-card">
                   <div class="flat-card__inner">
                     <div class="flat-card__head">
-                      <div class="mark mark--checked mark--top"><img src="./img/icons/checked.png"/>Проверено</div>
+                      <div class="mark mark--checked mark--top"><span>Проверено</span></div>
                       <div class="mark mark--price mark--bottom">от 10 000 грн</div>
+                      <div class="flat-card__dots"></div>
                       <div class="flat-card__slider-container">
                         <div class="flat-card__slider-prevArrow"><img src="img/icons/prevArrow--small.png"/></div>
                         <div class="flat-card__slider-nextArrow"><img src="img/icons/nextArrow--small.png"/></div>
@@ -504,12 +542,15 @@
             <div class="flat-list__pagination">
               <div class="pagination">
                 <div class="pagination__item pagination__item--back"><img src="img/icons/pagination-back.png"/></div>
-                <div class="pagination__item pagination__item--active">1</div>
-                <div class="pagination__item">2</div>
-                <div class="pagination__item">3</div>
-                <div class="pagination__item">4</div>
-                <div class="pagination__item">5</div>
-                <div class="pagination__item">6</div>
+                <div class="pagination__numbers">
+                  <div class="pagination__item pagination__item--active">1</div>
+                  <div class="pagination__item">2</div>
+                  <div class="pagination__item">3</div>
+                  <div class="pagination__item">4</div>
+                  <div class="pagination__item">5</div>
+                  <div class="pagination__item">6</div>
+                  <div class="pagination__item pagination__item--dots">...</div>
+                </div>
                 <div class="pagination__item pagination__item--next"><img src="img/icons/pagination-next.png"/></div>
               </div>
             </div>
@@ -618,6 +659,7 @@
     <script src="./libs/jquery.min.js"></script>
     <script src="libs/flexslider/jquery.flexslider.js"></script>
     <script src="./libs/slick-carousel/slick/slick.min.js"></script>
+    <script src="./js/header.js"></script>
     <script src="./js/signModals.js"></script>
     <script src="./js/flat_list/flat_list.js"></script>
     <script src="./js/flatFilter.js"></script>

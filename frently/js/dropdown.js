@@ -10,7 +10,7 @@ function DropDown(){
 				$('.l-dropdown-box').data('status','closed')
 			})
 			$(document).on('click', function(){
-				console.log('clickOut')
+				// console.log('clickOut')
 				$('.l-dropdown').hide()
 				$('.l-dropdown-box').data('status','closed')
 				$('.l-dropdown-box').each(function(){
@@ -30,7 +30,8 @@ function DropDown(){
 		clickDropdownBox: function(){
 			$('.l-dropdown-box').on('click', function(event){
 				event.stopPropagation();
-
+				// close heder-menu
+				$(window).trigger('closeMobileMenu');
 				var status = $(this).data('status')
 				console.log(status)
 				$('.l-dropdown').hide()
@@ -66,6 +67,9 @@ function DropDown(){
 		clickChoseItems: function(){
 			$('.dropdown-chose-item').on('mouseup', function(event){
 				event.stopPropagation();
+				// closeMobileMenu
+				$(window).trigger('closeMobileMenu');
+
 				var val = $(this).html()
 				var placeholder = $(this).closest('.l-dropdown-box').data('placeholder')
 
@@ -80,12 +84,69 @@ function DropDown(){
 				$(box).children('span').html(val)
 				$(box).data('filled', true)
 				$(this).closest('.l-dropdown').hide()
-
 			})
+		},
+		changeInterval: function(){
+			$('.flat-filter__budget-price-from').on('keyup', function(){
+				var box = $(this).closest('.l-dropdown-box')
+				var parent = $(this).closest('.flat-filter__budget-price-box');
+				var priceFrom = $(this).val()
+				console.log(priceFrom)
+				var priceTo = parent.find('.flat-filter__budget-price-to').val()
+				data = {
+					from: priceFrom,
+					to: priceTo,
+					box: box
+				}
+				$(window).trigger('changeInputPrice', data)
+			})
+
+			$('.flat-filter__budget-price-to').on('keyup', function(){
+				var box = $(this).closest('.l-dropdown-box')
+				console.log(box)
+				var parent = $(this).closest('.flat-filter__budget-price-box');
+				var priceTo = $(this).val()
+				console.log(priceFrom)
+				var priceFrom = parent.find('.flat-filter__budget-price-from').val()
+				data = {
+					from: priceFrom,
+					to: priceTo,
+					box: box
+				}
+				$(window).trigger('changeInputPrice', data)
+			})
+
+			$(window).on('changeInputPrice', function(event, data){
+
+				var box = data.box
+				var placeholder = box.data('placeholder')
+
+				if (!!data.from) {
+					var priceFrom  = 'от '+ data.from + ' грн '
+				} else {
+					priceFrom = ''
+				}
+
+				if (!!data.to){
+					var priceTo = ' до ' + data.to + ' грн '
+				} else {
+					priceTo = ''
+				}
+				var res = priceFrom + priceTo
+				// console.log($(box).attr('id'))
+				// box.css('background-color', 'red')
+				if(res) {
+					$(box).children('span').html(res)
+					$(box).data('filled', true)
+				} else {
+					$(box).children('span').html(placeholder)
+
+				}
+			})
+
 		},
 		onCheckBoxChange: function(){
 			$('.l-dropdown__checkboxes-container input[type="checkbox"]').on('change',function(){
-
 				// console.log($(this).data('any'))
 				if( $(this).data('any') === true && (this.checked === true)){
 					$('input[type=checkbox]').each(function() {
@@ -178,6 +239,7 @@ function DropDown(){
 			this.initialState()
 			this.inputTextFilter()
 			this.resetInput()
+			this.changeInterval()
 		}
 	}
 }

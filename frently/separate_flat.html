@@ -12,50 +12,133 @@
   </head>
   <body class="l-page">
     <div class="l-wrap">
-      <header class="header">
-        <div class="l-container">
-          <div class="header__inner">
-            <div class="header__logo-box">
-              <div class="header__logo">Frently</div>
-              <div class="header__quote">Умный сервис по подбору комфортного жилья</div>
-            </div>
-            <dev class="header__control-box"><a class="header__login show-modal" data-id="modal-entry">Войти в аккаунт</a>
-              <div class="header__btn header__signup">
-                <button class="l-btn show-modal" data-id="modal-register">Зарегистрироваться</button>
+      <div class="header-wrap">
+        <header class="header">
+          <div class="l-container">
+            <div class="header__inner">
+              <div class="header__logo-box">
+                <div class="header__logo">Frently</div>
+                <div class="header__quote">Умный сервис по подбору комфортного жилья</div>
               </div>
-            </dev>
+              <div class="header__control-box"><a class="header__login show-modal" data-id="modal-entry">Войти в аккаунт</a>
+                <div class="header__btn header__signup">
+                  <button class="l-btn show-modal" data-id="modal-register">Зарегистрироваться</button>
+                </div>
+              </div>
+              <div class="header__burger show-menu" data-id="main-mobile-menu">
+                <div class="burger"></div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="header header--mobile-menu" id="main-mobile-menu">
+          <div class="l-container">
+            <div class="header__mobile-menu">
+              <div class="header__control-box header__control-box--mobile"><a class="header__login header__login--mobile show-modal" data-id="modal-entry">Войти в аккаунт</a>
+                <div class="header__btn header__signup header__signup--mobile">
+                  <button class="l-btn show-modal" data-id="modal-register">Зарегистрироваться</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </header>
-      <section class="nav-line">
-        <div class="l-container">
-          <div class="nav-line__inner"><a href="#">Главная / </a><a href="#">Квартиры в Киеве /</a><a href="#">Соломенский Район / </a><a href="#">Гарматная  39в</a></div>
-        </div>
-      </section>
+      </div>
       <section class="separate-flat">
-        <div class="l-container">
-          <div class="separate-flat__inner">
-            <div class="separate-flat__main-col">
-              <div class="separate-flat__slider">
+        <section class="nav-line">
+          <div class="l-container">
+            <div class="nav-line__inner"><a href="#">Главная / </a><a href="#">Квартиры в Киеве /</a><a href="#">Соломенский Район / </a><a href="#">Гарматная  39в</a></div>
+          </div>
+        </section>
+        <div class="separate-flat__slider separate-flat__slider--desktop">
+          <div class="l-container">
+            <div class="separate-flat__slider-inner">
+              <div class="separate-flat__main-col">
                 <div class="big-slider">
                   <div class="big-slider__slider-container">
                     <div class="big-slider__prev-arrow" id="bigSliderPrevArrow"><img src="img/icons/prevArrow--big.png"/></div>
                     <div class="big-slider__next-arrow" id="bigSliderNextArrow"><img src="img/icons/nextArrow--big.png"/></div>
-                    <div class="slider-for">
+                    <div class="big-slider__sliede slider-for">
                       <div class="slide-item big-slider__slide"><img src="img/separate_flat/slider/1.png"/></div>
                       <div class="slide-item big-slider__slide"><img src="img/separate_flat/slider/1.png"/></div>
                       <div class="slide-item big-slider__slide"><img src="img/separate_flat/slider/1.png"/></div>
                       <div class="slide-item big-slider__slide"><img src="img/separate_flat/slider/1.png"/></div>
                     </div>
                   </div>
-                  <div class="slider-nav">
+                  <div class="big-slider__nav slider-nav">
                     <div class="nav-item big-slider__nav-slide" style="background-image: url('img/separate_flat/slider/1.png');"></div>
                     <div class="nav-item big-slider__nav-slide" style="background-image: url('img/separate_flat/slider/1.png');"></div>
                     <div class="nav-item big-slider__nav-slide" style="background-image: url('img/separate_flat/slider/1.png');"></div>
                     <div class="nav-item big-slider__nav-slide" style="background-image: url('img/separate_flat/slider/1.png');"></div>
                   </div>
                 </div>
+                <hr/>
               </div>
+              <div class="separate-flat__side-col">
+                <div class="flat-card flat-card--side">
+                  <div class="flat-card__inner">
+                    <div class="flat-card__mark">
+                      <div class="mark mark--price">от 10 000 грн</div>
+                    </div>
+                    <div class="flat-card__body">
+                      <div class="flat-card__status"> 
+                        <div></div><span>Сейчас свободна</span>
+                      </div>
+                      <div class="flat-card__views"> <img src="img/icons/eye.png"/> Просмотры объявления :  127</div>
+                      <div class="flat-card__district">Соломенский район</div>
+                      <div class="flat-card__addres">Ул. Николая Стражеско, 51<br/><span>м. Политехническая - 5 минут</span></div>
+                      <div class="flat-card__descr">Комнат :<span> 3</span></div>
+                      <div class="flat-card__descr">Площадь :<span> 30 м2</span></div>
+                      <div class="flat-card__descr flat-card__descr--deposite">Депозит :<span> 28000</span></div>
+                      <div class="flat-card__time-view">Время просмотрп не указано арендодателем  </div>
+                      <div class="flat-card__btn">
+                        <button class="l-btn l-btn--large show-book-modal">Уточнить время просмотра</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="separate-flat__slider separate-flat__slider--mobile">
+          <div class="l-container">
+            <div class="flat-card--mobile-hero">
+              <div class="flat-card__inner">
+                <div class="flat-card__head">
+                  <div class="mark mark--checked mark--top"><span>Проверено</span></div>
+                  <div class="mark mark--price mark--bottom">от 10 000 грн</div>
+                  <div class="flat-card__dots"></div>
+                  <div class="flat-card__slider-container">
+                    <div class="flat-card__slider-prevArrow"><img src="img/icons/prevArrow--small.png"/></div>
+                    <div class="flat-card__slider-nextArrow"><img src="img/icons/nextArrow--small.png"/></div>
+                    <div class="flat-card__slider">
+                      <div class="flat-card__slide"><img src="img/flat-card/1.png"/></div>
+                      <div class="flat-card__slide"><img src="img/flat-card/2.png"/></div>
+                      <div class="flat-card__slide"><img src="img/flat-card/3.png"/></div>
+                    </div>
+                  </div>
+                </div><a class="flat-card__body-link" href="#">
+                  <div class="flat-card__body flat-card__body--mobile-hero">
+                    <div class="flat-card__status"> 
+                      <div></div><span>Сейчас свободна</span>
+                    </div>
+                    <div class="flat-card__views"><img src="img/icons/eye.png"/> 127</div>
+                    <div class="flat-card__district">Соломенский район</div>
+                    <div class="flat-card__addres">Ул. Николая Стражеско, 51<br/><span>м. Политехническая - 5 минут</span></div>
+                    <div class="flat-card__descr">Комнат :<span> 3</span></div>
+                    <div class="flat-card__descr">Площадь :<span> 30 м2</span></div>
+                  </div>
+                  <div class="flat-card__time-view">Ближайшее время просмотра :  <span>01.04.2018 в 18:00</span></div>
+                  <div class="flat-card__btn flat-card__btn--mobile-hero">
+                    <button class="l-btn l-btn--large show-book-modal">Уточнить время просмотра</button>
+                  </div></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="l-container">
+          <div class="separate-flat__inner">
+            <div class="separate-flat__main-col">
               <div class="separate-flat__descr-sec">
                 <div class="separate-flat__title-box">
                   <h3 class="separate-flat__title">Арендодатель :</h3>
@@ -110,30 +193,6 @@
                 </div>
               </div>
             </div>
-            <div class="separate-flat__side-col">
-              <div class="flat-card flat-card--side">
-                <div class="flat-card__inner">
-                  <div class="flat-card__mark">
-                    <div class="mark mark--price">от 10 000 грн</div>
-                  </div>
-                  <div class="flat-card__body">
-                    <div class="flat-card__status"> 
-                      <div></div>Сейчас свободна
-                    </div>
-                    <div class="flat-card__views"> <img src="img/icons/eye.png"/> Просмотры объявления :  127</div>
-                    <div class="flat-card__district">Соломенский район</div>
-                    <div class="flat-card__addres">Ул. Николая Стражеско, 51<br/><span>м. Политехническая - 5 минут</span></div>
-                    <div class="flat-card__descr">Комнат :<span> 3</span></div>
-                    <div class="flat-card__descr">Площадь :<span> 30 м2</span></div>
-                    <div class="flat-card__descr flat-card__descr--deposite">Депозит :<span> 28000</span></div>
-                    <div class="flat-card__time-view">Время просмотрп не указано арендодателем  </div>
-                    <div class="flat-card__btn">
-                      <button class="l-btn l-btn--large show-book-modal">Уточнить время просмотра</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
           <div class="separate-flat__comments-sec">
             <h3 class="separate-flat__title">Отзывы :</h3>
@@ -176,7 +235,7 @@
                   <div class="separate-flat__comment-user-name">Андрей Заморин<br/><span>На сайте 2 года</span></div>
                 </div>
                 <div class="separate-flat__comment-main">
-                  <textarea placeholder="Ваш коментарий" rows="1"></textarea>
+                  <textarea placeholder="Ваш коментарий" rows="3"></textarea>
                   <button class="l-btn l-btn--success">Отправить коментарий</button>
                 </div>
               </div>
@@ -194,8 +253,9 @@
                         <div class="flat-card">
                           <div class="flat-card__inner">
                             <div class="flat-card__head">
-                              <div class="mark mark--checked mark--top"><img src="./img/icons/checked.png"/>Проверено</div>
+                              <div class="mark mark--checked mark--top"><span>Проверено</span></div>
                               <div class="mark mark--price mark--bottom">от 10 000 грн</div>
+                              <div class="flat-card__dots"></div>
                               <div class="flat-card__slider-container">
                                 <div class="flat-card__slider-prevArrow"><img src="img/icons/prevArrow--small.png"/></div>
                                 <div class="flat-card__slider-nextArrow"><img src="img/icons/nextArrow--small.png"/></div>
@@ -223,8 +283,9 @@
                         <div class="flat-card">
                           <div class="flat-card__inner">
                             <div class="flat-card__head">
-                              <div class="mark mark--checked mark--top"><img src="./img/icons/checked.png"/>Проверено</div>
+                              <div class="mark mark--checked mark--top"><span>Проверено</span></div>
                               <div class="mark mark--price mark--bottom">от 10 000 грн</div>
+                              <div class="flat-card__dots"></div>
                               <div class="flat-card__slider-container">
                                 <div class="flat-card__slider-prevArrow"><img src="img/icons/prevArrow--small.png"/></div>
                                 <div class="flat-card__slider-nextArrow"><img src="img/icons/nextArrow--small.png"/></div>
@@ -252,8 +313,9 @@
                         <div class="flat-card">
                           <div class="flat-card__inner">
                             <div class="flat-card__head">
-                              <div class="mark mark--checked mark--top"><img src="./img/icons/checked.png"/>Проверено</div>
+                              <div class="mark mark--checked mark--top"><span>Проверено</span></div>
                               <div class="mark mark--price mark--bottom">от 10 000 грн</div>
+                              <div class="flat-card__dots"></div>
                               <div class="flat-card__slider-container">
                                 <div class="flat-card__slider-prevArrow"><img src="img/icons/prevArrow--small.png"/></div>
                                 <div class="flat-card__slider-nextArrow"><img src="img/icons/nextArrow--small.png"/></div>
@@ -308,7 +370,7 @@
                 <div class="modal-book__choose-container">
                                     <div class="view-book">
                                       <div class="view-book__choose-container">
-                                        <div class="view-book__choose-day">Выберите день
+                                        <div class="view-book__choose-day"><span>Выберите день</span>
                                           <div class="l-dropdown-box l-dropdown-box--modal l-dropdown-box--arrow" data-placeholder="Выберите день" data-status="closed" id="choseDay"><span>Выберите день</span>
                                             <div class="view-book__day-dropdown l-dropdown l-dropdown--modal"> 
                                               <ul class="l-dropdown-list l-dropdown-list--modal">
@@ -324,7 +386,7 @@
                                             </div>
                                           </div>
                                         </div>
-                                        <div class="view-book__choose-time">Выберите время
+                                        <div class="view-book__choose-time"><span>Выберите время</span>
                                           <div class="l-dropdown-box l-dropdown-box--modal l-dropdown-box--arrow" data-placeholder="Выберите время" data-status="closed" id="choseTime"><span>Выберите время</span>
                                             <div class="view-book__day-dropdown l-dropdown l-dropdown--modal"> 
                                               <form class="l-dropdown__checkboxes-container">
@@ -468,6 +530,7 @@
     <script src="./libs/jquery.min.js"></script>
     <script src="libs/flexslider/jquery.flexslider.js"></script>
     <script src="./libs/slick-carousel/slick/slick.min.js"></script>
+    <script src="./js/header.js"></script>
     <script src="./js/bookFlatModal.js"></script>
     <script src="./js/openModals.js"></script>
     <script src="./js/dropdown.js"></script>

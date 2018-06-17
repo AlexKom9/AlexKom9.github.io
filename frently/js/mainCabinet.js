@@ -4,10 +4,18 @@ function mainCabinet(){
 	var curentTab = false;
 	return {
 		switchMainTabs: function(){
-			$('.cabinet__tab').on('click', function(){
+			$('.cabinet-tab').on('click', function(){
 				var area = $(this).data('area');
-				$('.cabinet__tab').removeClass('cabinet__tab--active')
-				$(this).addClass('cabinet__tab--active')
+				$('.cabinet-tab').removeClass('cabinet__tab--active')
+				// $('cabinet__tab[data-area="'+area+'"]').addClass('cabinet__tab--active')
+				$('.cabinet__tab').each(function(){
+					key = $(this).data('area');
+					console.log(key)
+					console.log(area)
+					if (key === area){
+						$(this).addClass('cabinet__tab--active')
+					}
+				})
 				$('.cabinet__area').hide()
 				$('#'+area+'-area').show()
 			})
@@ -132,6 +140,9 @@ function mainCabinet(){
 			$('.calendar__days li:eq(2)').addClass('calendar__day--solid')
 			$('.calendar__days li:eq(10)').addClass('calendar__day--dashed')
 			$('.calendar__days li:eq(25)').addClass('calendar__day--dashed')
+			// temp
+			// $('.cabinet').hide()
+			// $('.flat-edit--add').show()
 
 
 

@@ -18,6 +18,8 @@ function separateFlat(){
 				$(this).slick({
 					prevArrow: $(self).parent().find('.flat-card__slider-prevArrow'),
 					nextArrow: $(self).parent().find('.flat-card__slider-nextArrow'),
+					dots: true,
+					appendDots: $(self).closest('.flat-card__head').find('.flat-card__dots')
 				})
 			})
 			// $('.flexslider').flexslider();

@@ -34,6 +34,7 @@ function openModals(){
 				console.log('id=',id)
 				$('.additional-section').hide()
 				$('#'+id).show()
+				$(window).trigger('closeMobileMenu')
 			})
 		},
 		backToMainContent: function(){
@@ -45,6 +46,7 @@ function openModals(){
 		initialState: function(){
 			$('.additional-section').hide()
 			// temp
+
 			// $('.l-page').addClass('l-page--modal-active')
 			// $('#modal-profile').show()
 		},

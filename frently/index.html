@@ -12,21 +12,37 @@
   </head>
   <body class="l-page">
     <div class="l-wrap">
-      <header class="header">
-        <div class="l-container">
-          <div class="header__inner">
-            <div class="header__logo-box">
-              <div class="header__logo">Frently</div>
-              <div class="header__quote">Умный сервис по подбору комфортного жилья</div>
-            </div>
-            <dev class="header__control-box"><a class="header__login show-modal" data-id="modal-entry">Войти в аккаунт</a>
-              <div class="header__btn header__signup">
-                <button class="l-btn show-modal" data-id="modal-register">Зарегистрироваться</button>
+      <div class="header-wrap">
+        <header class="header">
+          <div class="l-container">
+            <div class="header__inner">
+              <div class="header__logo-box">
+                <div class="header__logo">Frently</div>
+                <div class="header__quote">Умный сервис по подбору комфортного жилья</div>
               </div>
-            </dev>
+              <div class="header__control-box"><a class="header__login show-modal" data-id="modal-entry">Войти в аккаунт</a>
+                <div class="header__btn header__signup">
+                  <button class="l-btn show-modal" data-id="modal-register">Зарегистрироваться</button>
+                </div>
+              </div>
+              <div class="header__burger show-menu" data-id="main-mobile-menu">
+                <div class="burger"></div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="header header--mobile-menu" id="main-mobile-menu">
+          <div class="l-container">
+            <div class="header__mobile-menu">
+              <div class="header__control-box header__control-box--mobile"><a class="header__login header__login--mobile show-modal" data-id="modal-entry">Войти в аккаунт</a>
+                <div class="header__btn header__signup header__signup--mobile">
+                  <button class="l-btn show-modal" data-id="modal-register">Зарегистрироваться</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </header>
+      </div>
       <div class="main-content">
         <section class="hero">
           <div class="l-container">
@@ -99,6 +115,7 @@
               </div><a class="hero__add-flat-link show-section" data-id="flat-edit--add">Добавить свою квартиру</a>
             </div>
           </div>
+          <div class="hero__mobile-img"></div>
         </section>
                 <section class="offers-sec">
                   <div class="l-container">
@@ -110,8 +127,9 @@
                             <div class="flat-card">
                               <div class="flat-card__inner">
                                 <div class="flat-card__head">
-                                  <div class="mark mark--checked mark--top"><img src="./img/icons/checked.png"/>Проверено</div>
+                                  <div class="mark mark--checked mark--top"><span>Проверено</span></div>
                                   <div class="mark mark--price mark--bottom">от 10 000 грн</div>
+                                  <div class="flat-card__dots"></div>
                                   <div class="flat-card__slider-container">
                                     <div class="flat-card__slider-prevArrow"><img src="img/icons/prevArrow--small.png"/></div>
                                     <div class="flat-card__slider-nextArrow"><img src="img/icons/nextArrow--small.png"/></div>
@@ -139,8 +157,9 @@
                             <div class="flat-card">
                               <div class="flat-card__inner">
                                 <div class="flat-card__head">
-                                  <div class="mark mark--checked mark--top"><img src="./img/icons/checked.png"/>Проверено</div>
+                                  <div class="mark mark--checked mark--top"><span>Проверено</span></div>
                                   <div class="mark mark--price mark--bottom">от 10 000 грн</div>
+                                  <div class="flat-card__dots"></div>
                                   <div class="flat-card__slider-container">
                                     <div class="flat-card__slider-prevArrow"><img src="img/icons/prevArrow--small.png"/></div>
                                     <div class="flat-card__slider-nextArrow"><img src="img/icons/nextArrow--small.png"/></div>
@@ -168,8 +187,9 @@
                             <div class="flat-card">
                               <div class="flat-card__inner">
                                 <div class="flat-card__head">
-                                  <div class="mark mark--checked mark--top"><img src="./img/icons/checked.png"/>Проверено</div>
+                                  <div class="mark mark--checked mark--top"><span>Проверено</span></div>
                                   <div class="mark mark--price mark--bottom">от 10 000 грн</div>
+                                  <div class="flat-card__dots"></div>
                                   <div class="flat-card__slider-container">
                                     <div class="flat-card__slider-prevArrow"><img src="img/icons/prevArrow--small.png"/></div>
                                     <div class="flat-card__slider-nextArrow"><img src="img/icons/nextArrow--small.png"/></div>
@@ -856,6 +876,7 @@
     <script src="./libs/jquery.min.js"></script>
     <script src="libs/flexslider/jquery.flexslider.js"></script>
     <script src="./libs/slick-carousel/slick/slick.min.js"></script>
+    <script src="js/header.js"></script>
     <script src="js/flatFilter.js"></script>
     <script src="js/dropdown.js"></script>
     <script src="js/signModals.js"></script>

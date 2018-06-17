@@ -15,8 +15,8 @@ $(document).ready(function(){
 		$('#'+slickSliderId).slick({
 			prevArrow: $(this).children('#'+prevId),
 			nextArrow: $(this).children('#'+nextId),
-			// autoplay: true,
-			// autoplaySpeed: 2000,
+			dots: true,
+			appendDots: $(self).closest('.flat-card__head').find('.flat-card__dots')
 		})
 	})
 
