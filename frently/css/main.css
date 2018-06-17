@@ -3549,6 +3549,7 @@ html {
       margin-bottom: 20px; }
     .flat-edit__header-btns {
       display: flex;
+      justify-content: flex-end;
       flex-wrap: wrap;
       flex-grow: 1; }
     .flat-edit__header-btn {
