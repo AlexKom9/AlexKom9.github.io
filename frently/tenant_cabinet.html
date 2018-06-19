@@ -1136,12 +1136,13 @@
                   </div>
                 </div>
               </div>
-              <button class="l-btn l-btn--transparent l-btn--diss">Удалить интервал</button>
+              <button class="l-btn l-btn--transparent l-btn--diss delete-meet">Удалить интервал</button>
+              <button class="flat-edit__meet-date-delete delete-meet"></button>
             </div>
             <h4 class="flat-edit__subtitle">Добавить еще дату просмотра</h4>
                         <div class="view-book">
                           <div class="view-book__choose-container">
-                            <div class="view-book__choose-day">Выберите день
+                            <div class="view-book__choose-day"><span>Выберите день</span>
                               <div class="l-dropdown-box l-dropdown-box--modal l-dropdown-box--arrow" data-placeholder="Выберите день" data-status="closed" id="choseDay"><span>Выберите день</span>
                                 <div class="view-book__day-dropdown l-dropdown l-dropdown--modal"> 
                                   <ul class="l-dropdown-list l-dropdown-list--modal">
@@ -1157,7 +1158,7 @@
                                 </div>
                               </div>
                             </div>
-                            <div class="view-book__choose-time">Выберите время
+                            <div class="view-book__choose-time"><span>Выберите время</span>
                               <div class="l-dropdown-box l-dropdown-box--modal l-dropdown-box--arrow" data-placeholder="Выберите время" data-status="closed" id="choseTime"><span>Выберите время</span>
                                 <div class="view-book__day-dropdown l-dropdown l-dropdown--modal"> 
                                   <form class="l-dropdown__checkboxes-container">
@@ -1543,15 +1544,11 @@
               </div>
             </div>
             <div class="flat-edit__footer--add-flat">
-              <div class="flat-edit__side">
-                <div class="flat-edit__footer-btn">
-                  <button class="show-modal l-btn l-btn--large l-btn--success" data-id="modal-time-add-flat">Cохранить Изменения</button>
-                </div>
+              <div class="flat-edit__footer-btn">
+                <button class="show-modal l-btn l-btn--large l-btn--success" data-id="modal-time-add-flat">Cохранить Изменения</button>
               </div>
-              <div class="flat-edit__side">
-                <div class="flat-edit__footer-btn">
-                  <button class="l-btn l-btn--large l-btn--transparent">Отложить в неактивные</button>
-                </div>
+              <div class="flat-edit__footer-btn">
+                <button class="l-btn l-btn--large l-btn--transparent">Отложить в неактивные</button>
               </div>
             </div>
           </div>
@@ -1561,7 +1558,7 @@
         <div class="modal-box">
           <div class="modal modal--time-add-flat">
             <div class="modal__close-icon modal__close-icon--book"><img src="img/icons/icon-close.png"/></div>
-            <h4 class="flat-edit__subtitle">Выбор времени просмотра</h4>
+            <h4 class="flat-edit__subtitle flat-edit__subtitle--modal">Выбор времени просмотра</h4>
             <hr/>
             <p class="flat-edit__descr">
               Данная секция не обязательна к заполнению, но указав удобное время просмотра, процес сдачи квартиры ускоряется в несколько раз
@@ -1578,11 +1575,12 @@
                 </div>
               </div>
               <button class="l-btn l-btn--transparent l-btn--diss">Удалить интервал</button>
+              <button class="flat-edit__meet-date-delete delete-meet"></button>
             </div>
-            <h4 class="flat-edit__subtitle">Добавить еще дату просмотра</h4>
+            <h4 class="flat-edit__subtitle flat-edit__subtitle--modal">Добавить еще дату просмотра</h4>
                         <div class="view-book">
                           <div class="view-book__choose-container">
-                            <div class="view-book__choose-day">Выберите день
+                            <div class="view-book__choose-day"><span>Выберите день</span>
                               <div class="l-dropdown-box l-dropdown-box--modal l-dropdown-box--arrow" data-placeholder="Выберите день" data-status="closed" id="choseDay"><span>Выберите день</span>
                                 <div class="view-book__day-dropdown l-dropdown l-dropdown--modal"> 
                                   <ul class="l-dropdown-list l-dropdown-list--modal">
@@ -1598,7 +1596,7 @@
                                 </div>
                               </div>
                             </div>
-                            <div class="view-book__choose-time">Выберите время
+                            <div class="view-book__choose-time"><span>Выберите время</span>
                               <div class="l-dropdown-box l-dropdown-box--modal l-dropdown-box--arrow" data-placeholder="Выберите время" data-status="closed" id="choseTime"><span>Выберите время</span>
                                 <div class="view-book__day-dropdown l-dropdown l-dropdown--modal"> 
                                   <form class="l-dropdown__checkboxes-container">
@@ -1648,7 +1646,7 @@
                   <div class="modal__close-icon modal__close-icon--book"><img src="img/icons/icon-close.png"/></div>
                   <div class="modal-book-succes__inner"><img class="modal-book-succes__icon" src="img/icons/success-add-flat.png"/>
                     <h6 class="modal-book-succes__title">Ваша квартира успешно добавлена !</h6>
-                    <p class="modal-book-succes__descr">Ваши объявления и встречи на просмотр будут отобрпжаться в личном кабинете</p>
+                    <p class="modal-book-succes__descr">Ваши объявления и встречи на просмотр будут отображаться в личном кабинете</p>
                   </div>
                 </div>
               </div>
@@ -1758,9 +1756,9 @@
     </div>
     <script src="./libs/jquery.min.js"></script>
     <script src="libs/flexslider/jquery.flexslider.js"></script>
+    <script src="libs/jquery.maskedinput.js"></script>
     <script src="./libs/slick-carousel/slick/slick.min.js"></script>
     <script src="./js/mainCabinet.js"></script>
-    <script src="./js/bookFlatModal.js"></script>
     <script src="./js/dropdown.js"></script>
     <script src="./js/openModals.js"></script>
   </body>

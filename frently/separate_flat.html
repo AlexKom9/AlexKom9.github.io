@@ -65,10 +65,10 @@
                     </div>
                   </div>
                   <div class="big-slider__nav slider-nav">
-                    <div class="nav-item big-slider__nav-slide" style="background-image: url('img/separate_flat/slider/1.png');"></div>
-                    <div class="nav-item big-slider__nav-slide" style="background-image: url('img/separate_flat/slider/1.png');"></div>
-                    <div class="nav-item big-slider__nav-slide" style="background-image: url('img/separate_flat/slider/1.png');"></div>
-                    <div class="nav-item big-slider__nav-slide" style="background-image: url('img/separate_flat/slider/1.png');"></div>
+                    <div class="nav-item big-slider__nav-slide" style="background-image: url('img/separate_flat/slider/1.png')"></div>
+                    <div class="nav-item big-slider__nav-slide" style="background-image: url('img/separate_flat/slider/1.png')"></div>
+                    <div class="nav-item big-slider__nav-slide" style="background-image: url('img/separate_flat/slider/1.png')"></div>
+                    <div class="nav-item big-slider__nav-slide" style="background-image: url('img/separate_flat/slider/1.png')"></div>
                   </div>
                 </div>
                 <hr/>
@@ -91,7 +91,8 @@
                       <div class="flat-card__descr flat-card__descr--deposite">Депозит :<span> 28000</span></div>
                       <div class="flat-card__time-view">Время просмотрп не указано арендодателем  </div>
                       <div class="flat-card__btn">
-                        <button class="l-btn l-btn--large show-book-modal">Уточнить время просмотра</button>
+                        <button class="l-btn l-btn--large show-modal" data-id="modal-book">Уточнить время просмотра</button>
+                        <p class="show-modal" style="margin-top: 10px" data-id="modal-book-bespecified">Запросить двату просмотра</p>
                       </div>
                     </div>
                   </div>
@@ -130,7 +131,7 @@
                   </div>
                   <div class="flat-card__time-view flat-card__time-view--separate-flat">Ближайшее время просмотра :  <span>01.04.2018 в 18:00</span></div>
                   <div class="flat-card__btn flat-card__btn--separate-flat-mobile">
-                    <button class="l-btn l-btn--large show-book-modal">Уточнить время просмотра</button>
+                    <button class="l-btn l-btn--large show-modal" data-id="modal-book">Уточнить время просмотра</button>
                   </div></a>
               </div>
             </div>
@@ -411,7 +412,37 @@
                                     </div>
                 </div>
                 <div class="modal-book__enroll">
-                  <buttom class="l-btn show-modal-book-succes">Записаться</buttom>
+                  <buttom class="l-btn show-modal" data-id="modal-book-succes">Записаться</buttom>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-container" id="modal-book-bespecified">
+        <div class="modal-box">
+          <div class="modal modal-book">
+            <div class="modal__close-icon modal__close-icon--book"><img src="img/icons/icon-close.png"/></div>
+            <h4 class="l-subtitle">Запись на просмотр</h4>
+            <div class="modal-book__inner">
+              <div class="modal-book__side"><img class="modal-book__flat-img" src="img/separate_flat/slider/1.png"/>
+                <div class="modal-book__side-descr">Цена за месяц : <span>13 000 грн	</span></div>
+                <div class="modal-book__side-descr">Первый взнос : <span>30 000 грн	</span></div>
+                <div class="modal-book__address">Ул. Гарматная 14</div>
+                <div class="modal-book__owner">
+                  <div class="modal-book__owner-img"><img src="img/users/2.png"/></div>
+                  <div class="modal-book__owner-text">Владелец :<br/><span>Максим Привалов</span></div>
+                </div>
+              </div>
+              <div class="modal-book__content">
+                <h6 class="modal-book__title">Дата просмотра уточняеется</h6>
+                <p class="modal-book__descr">
+                  Арендодатель не указал возможное время просмотра квартиры.
+                  Если вы щаинтересованы в просмотре - запросите возможное время просмотра,
+                  и мы свяжемся с вами в ближайшее время и сообщим детальную информацию о просмотре. 
+                </p>
+                <div class="modal-book__request">
+                  <buttom class="l-btn show-modal-book-succes">Запросить время просмотра</buttom>
                 </div>
               </div>
             </div>
@@ -474,11 +505,11 @@
                   <label for="input-name">Имя</label>
                 </div>
                 <div class="modal-sign__form-group">
-                  <input class="modal-sign__input modal-sign__input--name" type="" placeholder="Фамилия" name="input-lastname"/>
+                  <input class="modal-sign__input modal-sign__input--lastname" type="" placeholder="Фамилия" name="input-lastname"/>
                   <label for="input-lastname">Фамилия</label>
                 </div>
                 <div class="modal-sign__form-group">
-                  <input class="modal-sign__input modal-sign__input--name" type="tel" placeholder="Ваш номер телефона" name="input-phone"/>
+                  <input class="modal-sign__input modal-sign__input--phone" type="tel" placeholder="Ваш номер телефона" name="input-phone"/>
                   <label for="input-phone">Ваш номер телефона</label>
                 </div>
                 <div class="modal-sign__form-group">
@@ -530,9 +561,9 @@
     </div>
     <script src="./libs/jquery.min.js"></script>
     <script src="libs/flexslider/jquery.flexslider.js"></script>
+    <script src="libs/jquery.maskedinput.js"></script>
     <script src="./libs/slick-carousel/slick/slick.min.js"></script>
     <script src="./js/header.js"></script>
-    <script src="./js/bookFlatModal.js"></script>
     <script src="./js/openModals.js"></script>
     <script src="./js/dropdown.js"></script>
     <script src="./js/viewBook.js"></script>

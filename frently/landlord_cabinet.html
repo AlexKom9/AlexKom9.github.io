@@ -124,23 +124,29 @@
         </div>
       </div>
       <section class="cabinet main-content">
-        <div class="l-container">
-          <div class="cabinet__header">
-            <div class="cabinet__container-main cabinet__container-main--header">
-              <div class="cabinet__tabs">
-                <div class="cabinet__tab cabinet__tab--active cabinet-tab" data-area="my-objects">Мои обьекты</div>
-                <div class="cabinet__tab cabinet-tab" data-area="my-profile">Мой профиль	</div>
-                <div class="cabinet__tab cabinet-tab" data-area="my-meetings">Мои встречи</div>
-                <div class="cabinet__tab cabinet-tab" data-area="my-settings">Настройки	</div>
+        <div class="cabinet__header">
+          <div class="l-container">
+            <div class="cabinet__header-inner">
+              <div class="cabinet__container-main cabinet__container-main--header">
+                <div class="cabinet__tabs-wrap">
+                  <div class="cabinet__tabs">
+                    <div class="cabinet__tab cabinet__tab--active cabinet-tab" data-area="my-objects">Мои обьекты</div>
+                    <div class="cabinet__tab cabinet-tab" data-area="my-profile">Мой профиль	</div>
+                    <div class="cabinet__tab cabinet-tab" data-area="my-meetings">Мои встречи</div>
+                    <div class="cabinet__tab cabinet-tab" data-area="my-settings">Настройки	</div>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="cabinet__container-side cabinet__container-side--header">
-              <div class="cabinet-notification">
-                <div><img src="img/icons/office-briefcase.png"/>У вас утверждена 1 встреча на этой неделе
-                </div><a class="cabinet-notification__link">Посмотреть</a>
+              <div class="cabinet__container-side cabinet__container-side--header">
+                <div class="cabinet-notification">
+                  <div><img src="img/icons/office-briefcase.png"/>У вас утверждена 1 встреча на этой неделе
+                  </div><a class="cabinet-notification__link">Посмотреть</a>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+        <div class="l-container">
           <div class="cabinet__content-container">
             <div class="cabinet__objs cabinet__area" id="my-objects-area">
               <div class="cabinet__objs-header">
@@ -1858,6 +1864,7 @@
     </div>
     <script src="./libs/jquery.min.js"></script>
     <script src="libs/flexslider/jquery.flexslider.js"></script>
+    <script src="libs/jquery.maskedinput.js"></script>
     <script src="./libs/slick-carousel/slick/slick.min.js">	 	</script>
     <script src="./js/header.js">	 	</script>
     <script src="./js/mainCabinet.js"></script>

@@ -94,9 +94,10 @@
                                           <input class="checkbox checkbox--solid" type="checkbox" id="rooms4" data-any="false"/>
                                           <label for="rooms4">4 комн</label>
                         </form>
+                        <div class="l-dropdown__take-filter"><span>Применить фильтр</span></div>
                       </div>
                     </div>
-                    <div class="flat-filter__budget flat-filter__budget--hero l-dropdown-box" data-status="closed" id="budgetDropdownBox"><span>Бюджет</span>
+                    <div class="flat-filter__budget flat-filter__budget--hero l-dropdown-box" data-status="closed" data-placeholder="Бюджет" id="budgetDropdownBox"><span>Бюджет</span>
                       <div class="flat-filter__budget-dropdown l-dropdown">
                         <ul class="l-dropdown-list">
                           <li class="dropdown-chose-item">от 3 000 грн</li>
@@ -104,9 +105,10 @@
                           <li class="dropdown-chose-item">от 10 000 грн</li>
                         </ul>
                         <div class="flat-filter__budget-price-box">
-                          <input class="flat-filter__budget-price-from" type="number" placeholder="от"/>
-                          <input class="flat-filter__budget-price-to" type="number" placeholder="до"/>
+                          <input class="flat-filter__budget-price flat-filter__budget-price-from" type="number" placeholder="от"/>
+                          <input class="flat-filter__budget-price flat-filter__budget-price-to" type="number" placeholder="до"/>
                         </div>
+                        <div class="l-dropdown__take-filter"><span>Применить фильтр</span></div>
                       </div>
                     </div>
                     <div class="flat-filter__search-btn flat-filter__search-btn--hero l-dropdown-box" data-status="closed" id="searchBtn"><span>Искать</span></div>
@@ -837,11 +839,11 @@
                   <label for="input-name">Имя</label>
                 </div>
                 <div class="modal-sign__form-group">
-                  <input class="modal-sign__input modal-sign__input--name" type="" placeholder="Фамилия" name="input-lastname"/>
+                  <input class="modal-sign__input modal-sign__input--lastname" type="" placeholder="Фамилия" name="input-lastname"/>
                   <label for="input-lastname">Фамилия</label>
                 </div>
                 <div class="modal-sign__form-group">
-                  <input class="modal-sign__input modal-sign__input--name" type="tel" placeholder="Ваш номер телефона" name="input-phone"/>
+                  <input class="modal-sign__input modal-sign__input--phone" type="tel" placeholder="Ваш номер телефона" name="input-phone"/>
                   <label for="input-phone">Ваш номер телефона</label>
                 </div>
                 <div class="modal-sign__form-group">
@@ -872,11 +874,12 @@
     </div>
     <script src="./libs/jquery.min.js"></script>
     <script src="libs/flexslider/jquery.flexslider.js"></script>
+    <script src="libs/jquery.maskedinput.js"></script>
     <script src="./libs/slick-carousel/slick/slick.min.js"></script>
     <script src="js/mainCabinet.js"></script>
     <script src="js/header.js"></script>
-    <script src="js/flatFilter.js"></script>
     <script src="js/dropdown.js"></script>
+    <script src="js/flatFilter.js"></script>
     <script src="js/signModals.js"></script>
     <script src="js/openModals.js"></script>
     <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUoNirpa4x4izvG3IQ-TAkxXCMridQHu4&amp;callback=initMap"></script>

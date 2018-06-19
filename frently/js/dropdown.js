@@ -3,14 +3,10 @@
 function DropDown(){
 	var currentDropdown = false
 	return {
-		// close all dropdowns on out click
-		clickOut: function(){
-			$('.modal').on('click', function(){
+		closeAllDropdown: function(){
+			$(window).on('closeAllDropdown', function(){
 				$('.l-dropdown').hide()
 				$('.l-dropdown-box').data('status','closed')
-			})
-			$(document).on('click', function(){
-				// console.log('clickOut')
 				$('.l-dropdown').hide()
 				$('.l-dropdown-box').data('status','closed')
 				$('.l-dropdown-box').each(function(){
@@ -20,6 +16,29 @@ function DropDown(){
 						$(this).find('span').show()
 					}
 				})
+			})
+		},
+		clickOut: function(){
+			$('.modal').on('click', function(){
+				$(window).trigger('closeAllDropdown')
+			})
+			$(document).on('click', function(){
+				$(window).trigger('closeAllDropdown')
+				// console.log('clickOut')
+				// $('.l-dropdown').hide()
+				// $('.l-dropdown-box').data('status','closed')
+				// $('.l-dropdown-box').each(function(){
+				// 	$(this).data('status', 'closed')
+				// 	if ($(this).find($('.l-dropdown__input-text-filter')).length != 0){
+				// 		$(this).find('.l-dropdown__input-text-filter').hide()
+				// 		$(this).find('span').show()
+				// 	}
+				// })
+			})
+			$('.l-dropdown__take-filter').on('click', function(){
+				// $('.l-dropdown').hide()
+				// $('.l-dropdown-box').data('status','closed')
+				$(window).trigger('closeAllDropdown')
 			})
 		},
 		clickDropdown: function(){
@@ -85,65 +104,6 @@ function DropDown(){
 				$(box).data('filled', true)
 				$(this).closest('.l-dropdown').hide()
 			})
-		},
-		changeInterval: function(){
-			$('.flat-filter__budget-price-from').on('keyup', function(){
-				var box = $(this).closest('.l-dropdown-box')
-				var parent = $(this).closest('.flat-filter__budget-price-box');
-				var priceFrom = $(this).val()
-				console.log(priceFrom)
-				var priceTo = parent.find('.flat-filter__budget-price-to').val()
-				data = {
-					from: priceFrom,
-					to: priceTo,
-					box: box
-				}
-				$(window).trigger('changeInputPrice', data)
-			})
-
-			$('.flat-filter__budget-price-to').on('keyup', function(){
-				var box = $(this).closest('.l-dropdown-box')
-				console.log(box)
-				var parent = $(this).closest('.flat-filter__budget-price-box');
-				var priceTo = $(this).val()
-				console.log(priceFrom)
-				var priceFrom = parent.find('.flat-filter__budget-price-from').val()
-				data = {
-					from: priceFrom,
-					to: priceTo,
-					box: box
-				}
-				$(window).trigger('changeInputPrice', data)
-			})
-
-			$(window).on('changeInputPrice', function(event, data){
-
-				var box = data.box
-				var placeholder = box.data('placeholder')
-
-				if (!!data.from) {
-					var priceFrom  = 'от '+ data.from + ' грн '
-				} else {
-					priceFrom = ''
-				}
-
-				if (!!data.to){
-					var priceTo = ' до ' + data.to + ' грн '
-				} else {
-					priceTo = ''
-				}
-				var res = priceFrom + priceTo
-				// console.log($(box).attr('id'))
-				// box.css('background-color', 'red')
-				if(res) {
-					$(box).children('span').html(res)
-					$(box).data('filled', true)
-				} else {
-					$(box).children('span').html(placeholder)
-
-				}
-			})
-
 		},
 		onCheckBoxChange: function(){
 			$('.l-dropdown__checkboxes-container input[type="checkbox"]').on('change',function(){
@@ -239,7 +199,8 @@ function DropDown(){
 			this.initialState()
 			this.inputTextFilter()
 			this.resetInput()
-			this.changeInterval()
+			this.closeAllDropdown();
+			// this.changeInterval()
 		}
 	}
 }

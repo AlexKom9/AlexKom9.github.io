@@ -60,7 +60,7 @@ function separateFlat(){
 
 			$('.flat-card__body').on('click', function(event){
 				console.log('click slick arrow')
-				event.stopPropagation()
+				// event.stopPropagation()
 			})
 		},
 		initialHideFeatures: function(){

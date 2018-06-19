@@ -22,6 +22,7 @@ function header(){
 		},
 		popupWrapClick(){
 			$('.popup-wrap').on('click', function(event){
+				$(window).trigger('closeAllDropdown')
 				event.stopPropagation()
 				var id = $(this).data('id')
 				var status = $(this).attr('status')
@@ -29,7 +30,7 @@ function header(){
 				$('.popup-wrap').each(function(index){
 					$(this).attr('status', 'closed')
 				})
-				console.log('---'+status)
+				// console.log('---'+status)
 				switch(status){
 					case 'opened':
 						$(window).trigger('closePopup')
