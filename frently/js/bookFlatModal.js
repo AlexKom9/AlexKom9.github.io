@@ -33,9 +33,9 @@ function bookFlatModal(){
 			})
 		},
 		init: function(){
-			this.showPasword()
-			this.close()
-			this.showModals()
+			// this.showPasword()
+			// this.close()
+			// this.showModals()
 		}
 	}
 }

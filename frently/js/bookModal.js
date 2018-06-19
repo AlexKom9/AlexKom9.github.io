@@ -1,7 +1,7 @@
 
 function modalBook(){
 	return {
-		addDate(){
+		addDate: function(){
 			var num = 0;
 			$(window).on('add-date', function(event, data){
 				console.log(data)
@@ -16,7 +16,7 @@ function modalBook(){
 				)
 			})
 		},
-		deleteMeet(){
+		deleteMeet: function(){
 			console.log('---initdeleteMeet')
 			var num = 0;
 			$('.modal-book__date-meet-container').on('click', '.l-btn', function(){

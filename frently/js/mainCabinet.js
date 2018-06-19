@@ -53,7 +53,7 @@ function mainCabinet(){
 				case 'approved':
 					$('.cabinet-meet__no-meet').hide()
 					$('.cabinet-meet__new-meets').hide()
-					$('.cabinet-meet__filter').hide()
+					$('.cabinet-meet__filter').show()
 					$('.cabinet-meet__all-meets .cabinet-meet__card').hide()
 					$('.cabinet-meet__all-meets .cabinet-meet__card[data-status="approved"]').show()
 					$('.cabinet-meet__address').hide()
@@ -96,6 +96,7 @@ function mainCabinet(){
 			}
 
 			$(".flat-edit__photo-upload").change(function() {
+				console.log('on change work well')
 				var boxImg = $(this).closest('.flat-edit__photo-item').find('.flat-edit__photo-img-container')
 				var boxEdit = $(this).closest('.flat-edit__photo-item').find('.flat-edit__photo-edit')
 				readURL(this, boxImg, boxEdit)
@@ -133,6 +134,7 @@ function mainCabinet(){
 
 		},
 		initialState: function(){
+			console.log('mainCabinet script works')
 			$('.cabinet__area').hide()
 			$('#'+$('.cabinet__tab--active').data('area')+'-area').show()
 			$('#timeline').hide()
