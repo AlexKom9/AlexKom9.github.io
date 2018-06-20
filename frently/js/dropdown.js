@@ -153,6 +153,8 @@ function DropDown(){
 					$(this).children('span').html(placeholder)
 					$('input[type=checkbox]').each(function() {
 								this.checked = false;
+								this.disabled = false;
+
 						})
 				})
 			})

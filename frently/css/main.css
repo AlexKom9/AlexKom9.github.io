@@ -3943,28 +3943,11 @@ html {
             padding-left: 0; } }
   .flat-edit__meet-date-box {
     display: flex;
-    align-items: center;
-    margin-bottom: 26px; }
-    .flat-edit__meet-date-box .flat-edit__meet-date {
-      margin-right: 20px; }
-      .flat-edit__meet-date-box .flat-edit__meet-date .meet-date {
-        border: 1px dashed #26a69a; }
-      .flat-edit__meet-date-box .flat-edit__meet-date-delete {
-        height: 30px;
-        width: 30px;
-        border-radius: 50%;
-        border: none;
-        background-color: transparent;
-        box-shadow: 0px 1px 5px 0 rgba(0, 0, 0, 0.2);
-        background-image: url(../img/icons/icon-delete.png);
-        background-repeat: no-repeat;
-        background-position: center; }
-        @media only screen and (min-width: 581px) {
-          .flat-edit__meet-date-box .flat-edit__meet-date-delete {
-            display: none; } }
-    @media only screen and (max-width: 580px) {
-      .flat-edit__meet-date-box > .l-btn {
-        display: none; } }
+    flex-direction: column;
+    align-items: flex-start; }
+    .flat-edit__meet-date-box .meet-date {
+      border: 1px dashed #26a69a;
+      min-width: 240px; }
   .flat-edit__day-type-container {
     margin-bottom: 3rem; }
   .flat-edit__day-type {
@@ -4046,7 +4029,8 @@ html {
 .view-book__choose-container {
   display: flex;
   flex-wrap: wrap;
-  width: 100%; }
+  width: 100%;
+  max-width: 800px; }
 
 .view-book__choose-day {
   width: calc( (((100% - (20px * (12 - 1))) / 12) * 5.5) + ( 20px * (5.5 - 1)));
@@ -4115,12 +4099,18 @@ html {
         margin-left: 0; } }
 
 .view-book__add-date-link {
+  background-image: url(../img/icons/plus.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 30px;
   display: flex;
   align-items: center;
   color: #26a69a;
   font-size: 14px;
   font-weight: 400;
-  margin-bottom: 18px; }
+  margin-bottom: 18px;
+  display: inline-block;
+  line-height: 24px; }
   .view-book__add-date-link > img {
     margin-right: 15px; }
   .view-book__add-date-link:hover {

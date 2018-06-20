@@ -144,7 +144,7 @@ function mainCabinet(){
 			$('.calendar__days li:eq(25)').addClass('calendar__day--dashed')
 			// temp
 			// $('.cabinet').hide()
-			// $('.flat-edit--add').show()
+			// $('#flat-edit--edit').show()
 
 
 
