@@ -1655,16 +1655,20 @@ html {
         transform: scale(0.5); } }
     .hero__cloud:nth-child(1) {
       top: 130px;
-      left: 5%; }
+      left: 5%;
+      animation: cloudMove 1.5s linear infinite; }
     .hero__cloud:nth-child(2) {
       top: 50px;
-      left: 50%; }
+      left: 50%;
+      animation: cloudMove 2.5s ease-in-out infinite;
+      animation-delay: 1s; }
       @media only screen and (max-width: 480px) {
         .hero__cloud:nth-child(2) {
           left: 10%; } }
     .hero__cloud:nth-child(3) {
       top: 110px;
-      left: 90%; }
+      left: 90%;
+      animation: cloudMove 3s linear infinite; }
       @media only screen and (max-width: 480px) {
         .hero__cloud:nth-child(3) {
           top: 70px; } }
@@ -1678,6 +1682,14 @@ html {
     @media only screen and (min-width: 480px) {
       .hero__mobile-img {
         display: none; } }
+
+@keyframes cloudMove {
+  0% {
+    transform: translateX(-3%); }
+  50% {
+    transform: translateX(3%); }
+  100% {
+    transform: translateX(-3%); } }
 
 .offers-sec {
   margin-bottom: 24px; }
