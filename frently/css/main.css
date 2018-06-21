@@ -1650,6 +1650,12 @@ html {
   .hero__cloud {
     position: absolute;
     z-index: -1; }
+    @media only screen and (max-width: 750px) {
+      .hero__cloud {
+        width: 50px; } }
+    @media only screen and (max-width: 697px) {
+      .hero__cloud {
+        width: 20px; } }
     @media only screen and (max-width: 480px) {
       .hero__cloud {
         transform: scale(0.5); } }
@@ -1657,6 +1663,18 @@ html {
       top: 130px;
       left: 5%;
       animation: cloudMove 1.5s linear infinite; }
+      @media only screen and (max-width: 1023px) {
+        .hero__cloud:nth-child(1) {
+          left: 0; } }
+      @media only screen and (max-width: 766px) {
+        .hero__cloud:nth-child(1) {
+          top: 90px; } }
+      @media only screen and (max-width: 680px) {
+        .hero__cloud:nth-child(1) {
+          top: 40px; } }
+      @media only screen and (max-width: 450px) {
+        .hero__cloud:nth-child(1) {
+          top: 140px; } }
     .hero__cloud:nth-child(2) {
       top: 50px;
       left: 50%;
@@ -1665,13 +1683,25 @@ html {
       @media only screen and (max-width: 480px) {
         .hero__cloud:nth-child(2) {
           left: 10%; } }
+      @media only screen and (max-width: 450px) {
+        .hero__cloud:nth-child(2) {
+          top: 10px; } }
     .hero__cloud:nth-child(3) {
       top: 110px;
       left: 90%;
       animation: cloudMove 3s linear infinite; }
+      @media only screen and (max-width: 766px) {
+        .hero__cloud:nth-child(3) {
+          top: 80px; } }
+      @media only screen and (max-width: 640px) {
+        .hero__cloud:nth-child(3) {
+          top: 150px; } }
       @media only screen and (max-width: 480px) {
         .hero__cloud:nth-child(3) {
-          top: 70px; } }
+          top: 100px; } }
+      @media only screen and (max-width: 450px) {
+        .hero__cloud:nth-child(3) {
+          top: 60px; } }
   .hero__mobile-img {
     margin-top: -30px;
     height: 160px;
