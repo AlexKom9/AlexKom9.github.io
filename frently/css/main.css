@@ -361,7 +361,8 @@ html {
       .separate-flat__slider--desktop {
         display: none; } }
     .separate-flat__slider--mobile {
-      width: calc( (((100% - (20px * (12 - 1))) / 12) * 12) + ( 20px * (12 - 1))); }
+      width: calc( (((100% - (20px * (12 - 1))) / 12) * 12) + ( 20px * (12 - 1)));
+      margin-bottom: 0 !important; }
       @media only screen and (min-width: 481px) {
         .separate-flat__slider--mobile {
           display: none; } }
@@ -1801,7 +1802,8 @@ html {
     bottom: 0;
     right: 0;
     height: 30px;
-    width: 40%; }
+    width: 40%;
+    z-index: 101; }
     .flat-card__dots .slick-dots {
       position: relative;
       bottom: 0;
@@ -1816,53 +1818,64 @@ html {
       border: 1px solid #fff !important;
       opacity: 1 !important;
       background-color: transparent; }
+  .flat-card__arrow-wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    top: 0;
+    left: 0; }
   .flat-card__slider {
     width: 100%;
     font-size: 0 !important; }
-    .flat-card__slider img {
-      width: 100%; }
     .flat-card__slider-prevArrow {
       width: 40px;
       height: 40px;
-      display: flex;
+      display: block;
       border-radius: 50%;
       position: absolute;
       top: 50%;
-      z-index: 20;
+      z-index: 120;
       transform: translateY(-50%);
       background-color: transparent;
       transition: background-color .275s;
-      opacity: 1 !important;
       left: 15px; }
       .flat-card__slider-prevArrow > img {
-        margin: auto; }
+        position: absolute;
+        top: 50%;
+        left: 50%; }
       .flat-card__slider-prevArrow:hover {
         cursor: pointer;
         background-color: rgba(100, 216, 203, 0.5); }
       .flat-card__slider-prevArrow > img {
-        transform: translateX(-2px); }
+        transform: translate(-67%, -50%); }
+    .flat-card__slider-container {
+      position: relative; }
     .flat-card__slider-nextArrow {
       width: 40px;
       height: 40px;
-      display: flex;
+      display: block;
       border-radius: 50%;
       position: absolute;
       top: 50%;
-      z-index: 20;
+      z-index: 120;
       transform: translateY(-50%);
       background-color: transparent;
       transition: background-color .275s;
-      opacity: 1 !important;
       right: 15px; }
       .flat-card__slider-nextArrow > img {
-        margin: auto; }
+        position: absolute;
+        top: 50%;
+        left: 50%; }
       .flat-card__slider-nextArrow:hover {
         cursor: pointer;
         background-color: rgba(100, 216, 203, 0.5); }
       .flat-card__slider-nextArrow > img {
-        transform: translateX(2px); }
+        transform: translate(-32%, -50%); }
   .flat-card__slide:active, .flat-card__slide:focus {
     outline: none; }
+  .flat-card__slide > img {
+    width: 100%; }
   .flat-card__body {
     padding: 18px; }
     .flat-card__body--mobile-hero {
@@ -1941,22 +1954,31 @@ html {
         font-size: 18px;
         font-weight: 700;
         background-color: #64d8cb; }
-  .flat-card__btn {
-    margin: 21px 0; }
-    .flat-card__btn--separate-flat-mobile {
-      text-align: center;
+  .flat-card__btn--separate-flat-mobile {
+    text-align: center;
+    width: 100%;
+    box-shadow: 0px 3px 9.6px 0.4px rgba(0, 0, 0, 0.09);
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .flat-card__btn--separate-flat-mobile-wrap {
+      margin-top: 21px;
+      position: relative;
+      height: 50px;
+      width: 100%; }
+    .flat-card__btn--separate-flat-mobile button {
+      line-height: 20px;
+      font-size: 15px;
+      font-weight: 400 !important;
       width: 100%;
-      position: fixed;
-      z-index: 100;
-      bottom: -22px; }
-      .flat-card__btn--separate-flat-mobile button {
-        line-height: 20px;
-        font-size: 15px;
-        font-weight: 400 !important;
-        width: 100%;
-        border-radius: 0;
-        font-weight: 700;
-        background-color: #64d8cb; }
+      border-radius: 0;
+      font-weight: 700;
+      background-color: #64d8cb; }
+
+.fixed {
+  position: fixed;
+  z-index: 200;
+  top: 0; }
 
 .districts .l-title {
   margin-bottom: 44px; }
@@ -2719,7 +2741,7 @@ html {
           position: absolute;
           right: 18px;
           top: 1px;
-          z-index: 999;
+          z-index: 10;
           transition: all .275s; }
       .flat-filter__check input[type="checkbox"]:checked + label::after {
         background-color: #64d8cb;
@@ -3877,7 +3899,7 @@ html {
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 9999; }
+    z-index: 998; }
   .flat-edit__photo-rotate, .flat-edit__photo-delete {
     float: right;
     display: inline-block;

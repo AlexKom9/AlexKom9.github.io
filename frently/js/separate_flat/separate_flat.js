@@ -22,23 +22,6 @@ function separateFlat(){
 					appendDots: $(self).closest('.flat-card__head').find('.flat-card__dots')
 				})
 			})
-			// $('.flexslider').flexslider();
-			// $('#carousel').flexslider({
-			// 	animation: "slide",
-			// 	controlNav: false,
-			// 	animationLoop: false,
-			// 	slideshow: false,
-			// 	itemWidth: 210,
-			// 	itemMargin: 5,
-			// 	asNavFor: '#slider'
-			// });
-			// $('#slider').flexslider({
-			// 	animation: "slide",
-			// 	controlNav: false,
-			// 	animationLoop: false,
-			// 	slideshow: false,
-			// 	sync: "#carousel"
-			// });
 			// INIT Big slider
 			 $('.slider-for').slick({
 				slidesToShow: 1,
@@ -62,6 +45,18 @@ function separateFlat(){
 				console.log('click slick arrow')
 				// event.stopPropagation()
 			})
+		},
+		mobileButton: function(){
+			var buttonElem = document.getElementById('fixed-mobile-btn');
+			console.log(buttonElem.getBoundingClientRect())
+			var buttonSourceBottom = buttonElem.getBoundingClientRect().top + window.pageYOffset;
+			window.onscroll = function() {
+				if (buttonElem.classList.contains('fixed') && window.pageYOffset < buttonSourceBottom) {
+					buttonElem.classList.remove('fixed');
+				} else if (window.pageYOffset > buttonSourceBottom) {
+					buttonElem.classList.add('fixed');
+				}
+			}
 		},
 		initialHideFeatures: function(){
 			$(s.features).each(function(elem){
@@ -113,6 +108,7 @@ function separateFlat(){
 			this.slidersActivate();
 			this.initialHideFeatures();
 			this.clickShowFeatures();
+			this.mobileButton();
 		}
 	}
 }
