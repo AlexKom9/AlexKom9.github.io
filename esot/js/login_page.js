@@ -60,17 +60,82 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 11);
+/******/ 	return __webpack_require__(__webpack_require__.s = 16);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+// var reg = "Registration script"
+// import $ from 'jquery';
+// const jQuery = $;
+// import Inputmask from "inputmask";
+
+var mask = function mask() {
+	return {
+		phoneMask: function phoneMask() {
+			$('.phone-mask').mask('+380(99) 999-9999');
+			$('.phone-mask').attr('placeholder', "+380(__) ___-____");
+		},
+		initialState: function initialState() {},
+		init: function init() {
+			this.phoneMask();
+			this.initialState();
+		}
+	};
+};
+exports.default = mask;
+
+/***/ }),
+
+/***/ 1:
 /***/ (function(module, exports) {
 
 module.exports = jQuery;
 
 /***/ }),
-/* 1 */
+
+/***/ 16:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(17);
+
+
+/***/ }),
+
+/***/ 17:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _reg = __webpack_require__(3);
+
+var _reg2 = _interopRequireDefault(_reg);
+
+var _mask = __webpack_require__(0);
+
+var _mask2 = _interopRequireDefault(_mask);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+$(document).ready(function () {
+	(0, _reg2.default)().init();
+	(0, _mask2.default)().init();
+	// console.log(reg)
+});
+
+/***/ }),
+
+/***/ 3:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -80,7 +145,7 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
-var _jquery = __webpack_require__(0);
+var _jquery = __webpack_require__(1);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -116,40 +181,7 @@ var reg = function reg() {
 }; // var reg = "Registration script"
 exports.default = reg;
 
-/***/ }),
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(12);
-
-
-/***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _reg = __webpack_require__(1);
-
-var _reg2 = _interopRequireDefault(_reg);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-$(document).ready(function () {
-	(0, _reg2.default)().init();
-	// console.log(reg)
-});
-
 /***/ })
-/******/ ]);
+
+/******/ });
 //# sourceMappingURL=login_page.js.map

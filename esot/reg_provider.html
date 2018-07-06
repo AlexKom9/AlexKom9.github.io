@@ -17,16 +17,17 @@
             <div class="header__inner">
               <nav class="header__nav">
                 <div class="header__nav-item"><a class="header__nav-link" href="#">Доставка и оплата</a></div>
-                <div class="header__nav-item"><a class="header__nav-link" href="#">Доставка и оплата</a></div>
-                <div class="header__nav-item"><a class="header__nav-link" href="#">Доставка и оплата</a></div>
-                <div class="header__nav-item"><a class="header__nav-link" href="#">Доставка и оплата</a></div>
+                <div class="header__nav-item"><a class="header__nav-link" href="#">Вопрос ответ</a></div>
+                <div class="header__nav-item"><a class="header__nav-link" href="#">Отзывы</a></div>
+                <div class="header__nav-item"><a class="header__nav-link" href="#">Контакты</a></div>
                 <div class="header__nav-item"><a class="header__nav-link" href="#">Регистрация и вход</a></div>
               </nav>
               <div class="header__main">
-                <div class="header__search-box">
-                  <input class="header__input" type="text" name="search" placeholder="текст запроса..."/>
+                <div class="header__search-box in-input">
+                  <input class="header__input" type="text" name="search" placeholder="текст запроса"/>
                   <div class="header__search-btns">
                     <select class="l-btn header__search-select">
+                      <option class="header__serach-option" value="Some option" default="default">Поставщики</option>
                       <option class="header__serach-option" value="Some option">Some option</option>
                       <option class="header__serach-option" value="Some option">Some option</option>
                       <option class="header__serach-option" value="Some option">Some option</option>
@@ -36,8 +37,8 @@
                   </div>
                 </div>
                 <div class="header__icons">
-                  <div class="header__idea"><img src="img/header/idea.png"/></div>
-                  <div class="header__fovor"><img src="img/header/favor.png"/></div>
+                  <div class="header__idea"><img src="img/header/idea.png"/><img class="header__idea-glow" src="img/header/idea-bg.png"/></div>
+                  <div class="header__favor"><img src="img/header/favor.png"/><span class="header__favor-popup">Избранные товары</span></div>
                   <div class="header__basket">
                     <div class="header__basket-note">3</div><img src="img/header/basket.png"/>
                   </div>
@@ -47,7 +48,7 @@
           </div>
         </div>
       </header>
-      <div class="large-container">
+      <div class="l-container">
         <div class="center-container">
           <section class="reg">
             <div class="reg__inner">
@@ -64,7 +65,7 @@
                             <label>тел. : </label>
                           </td>
                           <td>
-                            <input id="phone" type="tel"/>
+                            <input class="phone-mask" type="tel"/>
                           </td>
                         </tr>
                         <tr class="reg-window__form-group">
@@ -198,8 +199,8 @@
         </div>
       </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"></script>
     <script src="js/reg_provider.js"></script>
   </body>
 </html>

@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -192,14 +192,16 @@ exports.default = interfaceUnit;
 /* 3 */,
 /* 4 */,
 /* 5 */,
-/* 6 */
+/* 6 */,
+/* 7 */,
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(7);
+module.exports = __webpack_require__(9);
 
 
 /***/ }),
-/* 7 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -215,11 +217,31 @@ var _interfaceUnit2 = _interopRequireDefault(_interfaceUnit);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+(function () {
+	$('#cabProdCatalog').find('.cab__prod-cat').each(function (index) {
+		console.log(index);
+		var k = $(this).data("nesting");
+		$(this).css('padding-left', 40 * k);
+	});
+	// .data('nesting');
+	// console.log('')
+})();
+
+var tabSwitch = function tabSwitch() {
+	$('.cab-side__tab').on('click', function () {
+		$('.cab-side__tab').removeClass('cab-side__tab--active');
+		$(this).addClass('cab-side__tab--active');
+	});
+};
+
+console.log('cab_prov_doc');
 $(document).ready(function () {
 	(0, _mask2.default)().init();
 	(0, _interfaceUnit2.default)().init();
+	tabSwitch();
+	// console.log(reg)
 });
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=basket.js.map
+//# sourceMappingURL=cab_seller.js.map
