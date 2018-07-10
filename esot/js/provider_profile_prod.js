@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 24);
+/******/ 	return __webpack_require__(__webpack_require__.s = 25);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -166,19 +166,25 @@ var hexGrid = function hexGrid() {
 			console.log('---init resize');
 			var containerSize = $('.hexGrid').width();
 			$(window).resize(function () {
-				console.log('resize');
-				self.grid();
+				// console.log('resize')
+				// self.grid();
+				$(window).trigger('hexGrid');
 			});
 		},
-		showGrid: function showGrid() {
-			// $('.hexGrid-wrap').show();
+		gridInit: function gridInit() {
+			var _this = this;
+
+			this.grid();
+			$(window).on('hexGrid', function () {
+				_this.grid();
+			});
 		},
 		initialState: function initialState() {
 			// this.grid()
 		},
 
 		init: function init() {
-			this.grid();
+			this.gridInit();
 			this.resize();
 			// this.showGrid();
 		}
@@ -189,15 +195,15 @@ exports.default = hexGrid;
 
 /***/ }),
 
-/***/ 24:
+/***/ 25:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(25);
+module.exports = __webpack_require__(26);
 
 
 /***/ }),
 
-/***/ 25:
+/***/ 26:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -211,18 +217,39 @@ var _hexGrid = __webpack_require__(1);
 
 var _hexGrid2 = _interopRequireDefault(_hexGrid);
 
+var _prodList = __webpack_require__(4);
+
+var _prodList2 = _interopRequireDefault(_prodList);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+(0, _jquery2.default)(document).ready(function () {
+	(0, _hexGrid2.default)().init();
+	(0, _prodList2.default)().init();
+});
+
+/***/ }),
+
+/***/ 4:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
 var prodList = function prodList() {
 	return {
 		viewSwitcher: function viewSwitcher() {
 			console.log('--init viewSwither');
-			(0, _jquery2.default)('.prod-head__switch').on('click', function () {
-				console.log('-------- click');
-				var viewId = (0, _jquery2.default)(this).data('id');
+			$('.prod-head__switch').on('click', function () {
+				// console.log('-------- click')
+				var viewId = $(this).data('id');
 				console.log(viewId);
-				(0, _jquery2.default)('.product-list__container').removeClass('product-list__container--active');
-				(0, _jquery2.default)('#' + viewId).addClass('product-list__container--active');
+				$('.product-list__container').removeClass('product-list__container--active');
+				$('#' + viewId).addClass('product-list__container--active');
+				$(window).trigger('hexGrid');
 			});
 		},
 		init: function init() {
@@ -231,10 +258,7 @@ var prodList = function prodList() {
 	};
 };
 
-(0, _jquery2.default)(document).ready(function () {
-	(0, _hexGrid2.default)().init();
-	prodList().init();
-});
+exports.default = prodList;
 
 /***/ })
 

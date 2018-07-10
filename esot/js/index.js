@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 13);
+/******/ 	return __webpack_require__(__webpack_require__.s = 14);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -164,19 +164,25 @@ var hexGrid = function hexGrid() {
 			console.log('---init resize');
 			var containerSize = $('.hexGrid').width();
 			$(window).resize(function () {
-				console.log('resize');
-				self.grid();
+				// console.log('resize')
+				// self.grid();
+				$(window).trigger('hexGrid');
 			});
 		},
-		showGrid: function showGrid() {
-			// $('.hexGrid-wrap').show();
+		gridInit: function gridInit() {
+			var _this = this;
+
+			this.grid();
+			$(window).on('hexGrid', function () {
+				_this.grid();
+			});
 		},
 		initialState: function initialState() {
 			// this.grid()
 		},
 
 		init: function init() {
-			this.grid();
+			this.gridInit();
 			this.resize();
 			// this.showGrid();
 		}
@@ -290,14 +296,15 @@ exports.default = interfaceUnit;
 /* 10 */,
 /* 11 */,
 /* 12 */,
-/* 13 */
+/* 13 */,
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(14);
+module.exports = __webpack_require__(15);
 
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
