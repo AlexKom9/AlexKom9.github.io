@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 20);
+/******/ 	return __webpack_require__(__webpack_require__.s = 24);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -189,15 +189,15 @@ exports.default = hexGrid;
 
 /***/ }),
 
-/***/ 20:
+/***/ 24:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(21);
+module.exports = __webpack_require__(25);
 
 
 /***/ }),
 
-/***/ 21:
+/***/ 25:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -239,4 +239,4 @@ var prodList = function prodList() {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=product_list_page.js.map
+//# sourceMappingURL=provider_profile_prod.js.map

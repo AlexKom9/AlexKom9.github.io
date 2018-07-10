@@ -60,35 +60,169 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 23);
+/******/ 	return __webpack_require__(__webpack_require__.s = 22);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 23:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ 0:
+/***/ (function(module, exports) {
 
-module.exports = __webpack_require__(24);
-
+module.exports = jQuery;
 
 /***/ }),
 
-/***/ 24:
+/***/ 1:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+// import $ from 'jquery';
+
+var hexGrid = function hexGrid() {
+	return {
+		grid: function grid() {
+			var width = $('.hexGrid').width();
+			var styleBox = $('.hex-style');
+			var hexList = $('.hex-container');
+			var hexListLength = hexList.length;
+			var k = 0;
+			console.log(hexList, length);
+			console.log(width);
+			var hexBox = $('.hex-container').width();
+			// let hexBox = 185;
+			console.log(hexBox);
+			if (width > hexBox * 6) {
+				console.log('width <= 1110 && width > 925');
+				console.log('--this');
+				var _k = 6;
+				// hexList.css('width', width/6.1)
+				for (var i = 0; i < hexListLength; i++) {
+					$(hexList[i * _k]).find('.hex').css({ "transform": "translate(0, 0)" });
+					$(hexList[i * _k + 1]).find('.hex').css({ "transform": "translate(-25%, 50%" });
+					$(hexList[i * _k + 2]).find('.hex').css({ "transform": "translate(-50%, 0)" });
+					$(hexList[i * _k + 3]).find('.hex').css({ "transform": "translate(-75%, 50%)" });
+					$(hexList[i * _k + 4]).find('.hex').css({ "transform": "translate(-100%, 0)" });
+					$(hexList[i * _k + 5]).find('.hex').css({ "transform": "translate(-125%, 50%)" });
+				}
+			}
+			if (width <= hexBox * 6 && width > hexBox * 5) {
+				console.log('width <= 1110 && width > 925');
+				console.log('--this');
+				// hexList.css('width', width/5.1)
+				var _k2 = 5;
+				for (var i = 0; i < hexListLength; i++) {
+					$(hexList[i * _k2]).find('.hex').css({ "transform": "translate(0, 0)" });
+					$(hexList[i * _k2 + 1]).find('.hex').css({ "transform": "translate(-25%, 50%" });
+					$(hexList[i * _k2 + 2]).find('.hex').css({ "transform": "translate(-50%, 0)" });
+					$(hexList[i * _k2 + 3]).find('.hex').css({ "transform": "translate(-75%, 50%)" });
+					$(hexList[i * _k2 + 4]).find('.hex').css({ "transform": "translate(-100%, 0)" });
+				}
+			}
+			if (width <= hexBox * 5 && width > hexBox * 4) {
+				console.log('width <= 925 && width > 740');
+				// hexList.css('width', width/4.1)
+				var _k3 = 4;
+				for (var i = 0; i < hexListLength; i++) {
+					$(hexList[i * _k3]).find('.hex').css({ "transform": "translate(0, 0)" });
+					$(hexList[i * _k3 + 1]).find('.hex').css({ "transform": "translate(-25%, 50%" });
+					$(hexList[i * _k3 + 2]).find('.hex').css({ "transform": "translate(-50%, 0)" });
+					$(hexList[i * _k3 + 3]).find('.hex').css({ "transform": "translate(-75%, 50%)" });
+				}
+			}
+			if (width <= hexBox * 4 && width > hexBox * 3) {
+				console.log('width <= 740 && width > 555');
+				// hexList.css('width', width/3.1)
+				var _k4 = 3;
+				for (var i = 0; i < hexListLength; i++) {
+					$(hexList[i * _k4]).find('.hex').css({ "transform": "translate(0, 0)" });
+					$(hexList[i * _k4 + 1]).find('.hex').css({ "transform": "translate(-25%, 50%" });
+					$(hexList[i * _k4 + 2]).find('.hex').css({ "transform": "translate(-50%, 0)" });
+				}
+			}
+			if (width <= hexBox * 3 && width > hexBox * 2) {
+				console.log('width <= 555 && width > 370');
+				// hexList.css('width', width/2.1)
+				var _k5 = 2;
+				for (var i = 0; i < hexListLength; i++) {
+					$(hexList[i * _k5]).find('.hex').css({ "transform": "translate(0, 0)" });
+					$(hexList[i * _k5 + 1]).find('.hex').css({ "transform": "translate(-25%, 50%" });
+				}
+			}
+			if (width <= hexBox * 2) {
+				console.log('width <= 555 && width > 370');
+				var _k6 = 1;
+				for (var i = 0; i < hexListLength; i++) {
+					$(hexList[i * _k6]).find('.hex').css({ "transform": "translate(0, 0)" });
+				}
+			}
+		},
+		resize: function resize() {
+			var self = this;
+			console.log('---init resize');
+			var containerSize = $('.hexGrid').width();
+			$(window).resize(function () {
+				console.log('resize');
+				self.grid();
+			});
+		},
+		showGrid: function showGrid() {
+			// $('.hexGrid-wrap').show();
+		},
+		initialState: function initialState() {
+			// this.grid()
+		},
+
+		init: function init() {
+			this.grid();
+			this.resize();
+			// this.showGrid();
+		}
+	};
+};
+
+exports.default = hexGrid;
+
+/***/ }),
+
+/***/ 22:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(23);
+
+
+/***/ }),
+
+/***/ 23:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _hexGrid = __webpack_require__(1);
+
+var _hexGrid2 = _interopRequireDefault(_hexGrid);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 var prodList = function prodList() {
 	return {
 		viewSwitcher: function viewSwitcher() {
 			console.log('--init viewSwither');
-			$('.prod-head__switch').on('click', function () {
+			(0, _jquery2.default)('.prod-head__switch').on('click', function () {
 				console.log('-------- click');
-				var viewId = $(this).data('id');
+				var viewId = (0, _jquery2.default)(this).data('id');
 				console.log(viewId);
-				$('.product-list__container').removeClass('product-list__container--active');
-				$('#' + viewId).addClass('product-list__container--active');
+				(0, _jquery2.default)('.product-list__container').removeClass('product-list__container--active');
+				(0, _jquery2.default)('#' + viewId).addClass('product-list__container--active');
 			});
 		},
 		init: function init() {
@@ -97,7 +231,8 @@ var prodList = function prodList() {
 	};
 };
 
-$(document).ready(function () {
+(0, _jquery2.default)(document).ready(function () {
+	(0, _hexGrid2.default)().init();
 	prodList().init();
 });
 

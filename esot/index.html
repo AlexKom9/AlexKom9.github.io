@@ -12,8 +12,8 @@
   <body class="l-page">
     <div class="l-wrap">
       <header class="header">
-        <div class="l-container">
-          <div class="left-container"></div>
+        <div class="large-container">
+          <div class="left-container left-container--header"></div>
           <div class="center-container">
             <div class="header__inner">
               <nav class="header__nav">
@@ -24,6 +24,11 @@
                 <div class="header__nav-item"><a class="header__nav-link" href="#">Регистрация и вход</a></div>
               </nav>
               <div class="header__main">
+                <div class="header__burger">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
                 <div class="header__search-box in-input">
                   <input class="header__input" type="text" name="search" placeholder="текст запроса"/>
                   <div class="header__search-btns">
@@ -51,37 +56,116 @@
       </header>
       <div class="large-container">
         <div class="left-container">
-          <section class="side-bar">
-            <div class="side-bar__inner">
-              <ul class="side-bar__items">
-                <li class="side-bar__item">
-                  <div class="side-bar__tab side-bar__tab--acc side-bar__tab--arr">Каталог товаров</div>
-                </li>
-                <li class="side-bar__item">
-                  <div class="side-bar__tab side-bar__tab--acc side-bar__tab--arr">Поставщики</div>
-                </li>
-                <li class="side-bar__item">
-                  <div class="side-bar__tab">Новости</div>
-                </li>
-                <li class="side-bar__item">
-                  <div class="side-bar__tab">Тендера</div>
-                </li>
-                <li class="side-bar__item">
-                  <div class="side-bar__tab">Кредит</div>
-                </li>
-                <li class="side-bar__item">
-                  <div class="side-bar__tab">Акции</div>
-                </li>
-              </ul>
+          <div class="side-bar-wrap">
+            <section class="side-bar">
+              <div class="side-bar__inner">
+                <ul class="side-bar__items">
+                  <li class="side-bar__item">
+                    <div class="side-bar__tab side-bar__tab--acc side-bar__tab--arr">Каталог товаров</div>
+                  </li>
+                  <li class="side-bar__item">
+                    <div class="side-bar__tab-wrap in-tab-wrap">
+                      <input type="checkbox" id="side-providers"/>
+                      <label class="side-bar__tab side-bar__tab--acc side-bar__tab--arr" for="side-providers">Поставщики</label>
+                      <div class="in-tab-inner side-bar__tab-inner">
+                        <ul>
+                          <li>Provider</li>
+                          <li>Provider</li>
+                          <li>Provider</li>
+                          <li>Provider</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="side-bar__item">
+                    <div class="side-bar__tab">Новости</div>
+                  </li>
+                  <li class="side-bar__item">
+                    <div class="side-bar__tab">Тендера</div>
+                  </li>
+                  <li class="side-bar__item">
+                    <div class="side-bar__tab">Кредит</div>
+                  </li>
+                  <li class="side-bar__item">
+                    <div class="side-bar__tab">Акции</div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <div class="side-bar__popup side-bar__popup--catalog">
+              <div class="side-bar__popup-inner">
+                <h3 class="side-bar__popup-title l-title">Поставщики по категориям</h3>
+                <div class="side-bar__popup-providers">
+                  <div class="hexGrid-wrap">
+                    <div class="hexGrid">
+                      <div class="hex-container hex-container--popup-cat">
+                        <div class="hex">
+                          <div class="side-bar__popup-cat"><a href="#">Бытовые товары</a></div>
+                        </div>
+                      </div>
+                      <div class="hex-container hex-container--popup-cat">
+                        <div class="hex">
+                          <div class="side-bar__popup-cat"><a href="#">Бытовые товары</a></div>
+                        </div>
+                      </div>
+                      <div class="hex-container hex-container--popup-cat">
+                        <div class="hex">
+                          <div class="side-bar__popup-cat"><a href="#">Бытовые товары</a></div>
+                        </div>
+                      </div>
+                      <div class="hex-container hex-container--popup-cat">
+                        <div class="hex">
+                          <div class="side-bar__popup-cat"><a href="#">Бытовые товары</a></div>
+                        </div>
+                      </div>
+                      <div class="hex-container hex-container--popup-cat">
+                        <div class="hex">
+                          <div class="side-bar__popup-cat"><a href="#">Бытовые товары</a></div>
+                        </div>
+                      </div>
+                      <div class="hex-container hex-container--popup-cat">
+                        <div class="hex">
+                          <div class="side-bar__popup-cat"><a href="#">Бытовые товары</a></div>
+                        </div>
+                      </div>
+                      <div class="hex-container hex-container--popup-cat">
+                        <div class="hex">
+                          <div class="side-bar__popup-cat"><a href="#">Бытовые товары</a></div>
+                        </div>
+                      </div>
+                      <div class="hex-container hex-container--popup-cat">
+                        <div class="hex">
+                          <div class="side-bar__popup-cat"><a href="#">Бытовые товары</a></div>
+                        </div>
+                      </div>
+                      <div class="hex-container hex-container--popup-cat">
+                        <div class="hex">
+                          <div class="side-bar__popup-cat"><a href="#">Бытовые товары</a></div>
+                        </div>
+                      </div>
+                      <div class="hex-container hex-container--popup-cat">
+                        <div class="hex">
+                          <div class="side-bar__popup-cat"><a href="#">Бытовые товары</a></div>
+                        </div>
+                      </div>
+                      <div class="hex-container hex-container--popup-cat">
+                        <div class="hex">
+                          <div class="side-bar__popup-cat"><a href="#">Бытовые товары</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </section>
+          </div>
         </div>
         <div class="center-container">
-          <section class="hero-slider">
-            <div class="hero-slider__slider" id="hero-slider">
-              <div class="hero-slider__slide"><img src="img/hero-slider/slide1.png"/></div>
-              <div class="hero-slider__slide"><img src="img/hero-slider/slide1.png"/></div>
-              <div class="hero-slider__slide"><img src="img/hero-slider/slide1.png"/></div>
+          <section class="hero">
+            <div class="hero__slider" id="hero-slider">
+              <div class="hero__slide"><img src="img/hero-slider/slide1.png"/></div>
+              <div class="hero__slide"><img src="img/hero-slider/slide1.png"/></div>
+              <div class="hero__slide"><img src="img/hero-slider/slide1.png"/></div>
             </div>
           </section>
           <section class="sample">
@@ -183,10 +267,16 @@
           </section>
         </div>
         <div class="right-container">
+          <div class="adver-right"></div>
+          <div class="adver-right"></div>
+          <div class="adver-right"></div>
+          <div class="adver-right"></div>
+          <div class="adver-right"></div>
         </div>
       </div>
       <div class="footer">
-        <div class="l-container">
+        <div class="large-container">
+          <div class="left-container left-container--header"></div>
           <div class="footer__inner">
             <div class="footer__info">
               <h6 class="footer__info-title">Информция</h6>
@@ -208,7 +298,7 @@
             </div>
             <div class="footer__info">
               <h6 class="footer__info-title">Подписка</h6>
-              <input class="footer__info-email" type="email" placeholder="Ваш email"/>
+              <input class="footer__info-email" type="tel" placeholder="Ваш email"/>
               <button class="footer__info-btn l-btn">Подписаться</button>
             </div>
           </div>
