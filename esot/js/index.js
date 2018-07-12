@@ -60,17 +60,65 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 14);
+/******/ 	return __webpack_require__(__webpack_require__.s = 15);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+var mobileMenu = function mobileMenu() {
+	return {
+		clickBurger: function clickBurger() {
+			self = this;
+			$('.header__burger').on('click', function (event) {
+				event.stopPropagation();
+				$(this).toggleClass('header__burger--active');
+				var hasClass = $('.header__burger').hasClass('header__burger--active');
+				if (hasClass) {
+					self.openMenu();
+				} else {
+					self.closeMenu();
+				}
+			});
+		},
+		openMenu: function openMenu() {
+			$('#mobileMenu').show();
+		},
+		closeMenu: function closeMenu() {
+			$('#mobileMenu').hide();
+		},
+		otherClick: function otherClick() {
+			var _this = this;
+
+			$(window).on('click', function () {
+				_this.closeMenu();
+				$('.header__burger').removeClass('header__burger--active');
+			});
+		},
+		init: function init() {
+			this.clickBurger();
+			this.otherClick();
+		}
+	};
+};
+
+exports.default = mobileMenu;
+
+/***/ }),
+/* 1 */
 /***/ (function(module, exports) {
 
 module.exports = jQuery;
 
 /***/ }),
-/* 1 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -80,7 +128,6 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 // import $ from 'jquery';
-
 var hexGrid = function hexGrid() {
 	return {
 		grid: function grid() {
@@ -94,6 +141,9 @@ var hexGrid = function hexGrid() {
 			var hexBox = $('.hex-container').width();
 			// let hexBox = 185;
 			console.log(hexBox);
+			for (var i = 0; i < hexListLength; i++) {
+				$(hexList[hexListLength - i - 1]).css('z-index', i + 10);
+			}
 			if (width > hexBox * 6) {
 				console.log('width <= 1110 && width > 925');
 				console.log('--this');
@@ -192,8 +242,8 @@ var hexGrid = function hexGrid() {
 exports.default = hexGrid;
 
 /***/ }),
-/* 2 */,
-/* 3 */
+/* 3 */,
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -287,7 +337,6 @@ var interfaceUnit = function interfaceUnit() {
 exports.default = interfaceUnit;
 
 /***/ }),
-/* 4 */,
 /* 5 */,
 /* 6 */,
 /* 7 */,
@@ -297,28 +346,33 @@ exports.default = interfaceUnit;
 /* 11 */,
 /* 12 */,
 /* 13 */,
-/* 14 */
+/* 14 */,
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(15);
+module.exports = __webpack_require__(16);
 
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _interfaceUnit = __webpack_require__(3);
+var _interfaceUnit = __webpack_require__(4);
 
 var _interfaceUnit2 = _interopRequireDefault(_interfaceUnit);
 
-var _hexGrid = __webpack_require__(1);
+var _hexGrid = __webpack_require__(2);
 
 var _hexGrid2 = _interopRequireDefault(_hexGrid);
 
-var _jquery = __webpack_require__(0);
+var _mobileMenu = __webpack_require__(0);
+
+var _mobileMenu2 = _interopRequireDefault(_mobileMenu);
+
+var _jquery = __webpack_require__(1);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -331,9 +385,68 @@ console.log('index.js');
 // import 'jquery.inputmask';
 
 // node_modules\inputmask\dist\inputmask\jquery.inputmask.js
+var popup = function popup() {
+	// console.log()
+	var s = {
+		tab: '.popup-tab',
+		content: '.popup-content'
+	};
+	var tab = (0, _jquery2.default)(s.tab);
+	var conent = (0, _jquery2.default)(s.window);
+	var timer;
+
+	return {
+		main: function main() {
+			var self = this;
+			(0, _jquery2.default)(s.tab).on('mouseover', function (event) {
+				event.stopPropagation();
+				var id = (0, _jquery2.default)(this).data('id');
+				console.log('------------', id);
+				(0, _jquery2.default)(window).trigger('closePopoup');
+				self.showContent(id);
+				(0, _jquery2.default)(window).trigger('hexGrid');
+				clearTimeout(timer);
+			});
+
+			(0, _jquery2.default)('.popup-content').on('mouseover', function (event) {
+				event.stopPropagation();
+				console.log('-------contetn');
+				clearTimeout(timer);
+			});
+
+			(0, _jquery2.default)(window).on('mouseover', function (event) {
+				console.log('------- leave');
+				timer = setTimeout(function () {
+					(0, _jquery2.default)(window).trigger('closePopoup');
+				}, 500);
+			});
+		},
+		// close: function(){
+		// 	$(window)
+		//
+		// },
+		showContent: function showContent(id) {
+			(0, _jquery2.default)('#' + id).show();
+		},
+		content: function content() {},
+
+		events: function events() {
+			(0, _jquery2.default)(window).on('closePopoup', function () {
+				(0, _jquery2.default)(s.content).hide();
+				console.log('close');
+			});
+		},
+		init: function init() {
+			console.log('---------popup');
+			this.main();
+			this.events();
+		}
+	};
+};
 
 (0, _jquery2.default)(document).ready(function () {
 	(0, _interfaceUnit2.default)().init();
+	(0, _mobileMenu2.default)().init();
 	(0, _hexGrid2.default)().init();
 	(0, _jquery2.default)('#hero-slider').slick({
 		infinite: true,
@@ -341,7 +454,7 @@ console.log('index.js');
 		arrows: false
 		// centerMode: true
 	});
-
+	popup().init();
 	// $('.footer__info-email').inputmask("+38(99)-999-9999");
 });
 

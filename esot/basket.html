@@ -52,6 +52,24 @@
             </div>
           </div>
         </div>
+        <div class="heder__mobile-menu">
+          <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu__close"><span>x</span></div>
+            <div class="mobile-menu__header"></div>
+            <div class="mobile-menu__inner">
+              <ul class="mobile-menu__nav">
+                <li class="mobile-menu__nav-item"><a href="#">Вход/Регистрация</a></li>
+                <li class="mobile-menu__nav-item"> <a href="#">Главная</a></li>
+                <li class="mobile-menu__nav-item"><a href="#">Каталог товаров</a></li>
+                <li class="mobile-menu__nav-item"><a href="#">Акции</a></li>
+                <li class="mobile-menu__nav-item"> <a href="#">Корзина (3)</a></li>
+                <li class="mobile-menu__nav-item"><a href="#">Мои заказы</a></li>
+                <li class="mobile-menu__nav-item"><a href="#">Обратная связь</a></li>
+                <li class="mobile-menu__nav-item"><a href="#">Информация</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </header>
       <div class="l-container">
         <div class="center-container">
@@ -231,32 +249,61 @@
                       <td><span>50</span></td>
                     </tr>
                   </table>
-                  <div class="basket__form-container">
-                    <form class="basket__form">
-                      <div class="basket__form-group basket__form-group--phone">
-                        <label>Телефон продовца :</label>
-                        <input class="basket__form-phone phone-mask" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"/><br/><span>Оставьте пустым, если у вас нет персонального Продавца на ESOT</span>
-                      </div>
-                      <div class="basket__form-group basket__form-group--comment">
-                        <textarea class="basket__form-textarea" rows="3" cols="30" placeholder="Комментарий к заказу..."></textarea>
-                      </div>
-                      <div class="basket__form-group basket__form-group--select">
-                        <select class="basket__form-select" placeholder="Выберите область">
-                          <option value="" disabled="disabled" selected="selected">Выберите область</option>
-                          <option>Область</option>
-                          <option>Область</option>
-                          <option>Область</option>
-                          <option>Область</option>
-                          <option>Область</option>
+                  <div class="basket__form">
+                    <form class="basket-form">
+                      <h4>Адрес доставки :</h4>
+                      <div class="basket-form__address-container">
+                        <select>
+                          <option default="default">-страна-</option>
+                          <option>Украина</option>
+                          <option>Украина</option>
+                          <option>Украина</option>
+                          <option>Украина</option>
+                          <option>Украина</option>
                         </select>
+                        <select>
+                          <option default="default">-область-</option>
+                          <option>Украина</option>
+                          <option>Украина</option>
+                          <option>Украина</option>
+                          <option>Украина</option>
+                          <option>Украина</option>
+                        </select>
+                        <select>
+                          <option default="default">-район-</option>
+                          <option>Украина</option>
+                          <option>Украина</option>
+                          <option>Украина</option>
+                          <option>Украина</option>
+                          <option>Украина</option>
+                        </select>
+                        <select>
+                          <option default="default">-нас. пункт-</option>
+                          <option>Украина</option>
+                          <option>Украина</option>
+                          <option>Украина</option>
+                          <option>Украина</option>
+                          <option>Украина</option>
+                        </select>
+                        <input placeholder="Ваша улица или № отделения первозчика"/>
                       </div>
-                      <div class="basket__form-footer"><span class="active">Заказ можно офрмлять, все условия соблюдены</span>
-                        <button class="basket__form-btn"><span>Оформить заказ</span></button>
+                      <div class="basket-form__footer">
+                        <div class="basket-form__comment">
+                          <h4>Комментарий :</h4>
+                          <textarea rows="3" cols="30" placeholder="Комментарий к заказу..."></textarea>
+                          <p class="active">Заказ можно офрмлять, все условия соблюдены</p>
+                        </div>
+                        <button class="basket-form__btn"><span>Оформить заказ</span></button>
                       </div>
                     </form>
                   </div>
                 </div>
                 <div class="basket-order-right right-container">
+                  <div class="basket-order-right__phone">
+                    <label>Телефон продовца :</label>
+                    <input class="phone-mask" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
+                    <p>Оставьте пустым, если у вас нет персонального Продавца на ESOT</p>
+                  </div>
                   <div class="prod-card-info">
                     <p>Поставщик «ТОВ Черниговский хлебокомбинат»</p>
                     <p><strong>На ESOT:</strong>3 года</p>
@@ -456,32 +503,61 @@
                       <td><span>50</span></td>
                     </tr>
                   </table>
-                  <div class="basket__form-container">
-                    <form class="basket__form">
-                      <div class="basket__form-group basket__form-group--phone">
-                        <label>Телефон продовца :</label>
-                        <input class="basket__form-phone phone-mask" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"/><br/><span>Оставьте пустым, если у вас нет персонального Продавца на ESOT</span>
-                      </div>
-                      <div class="basket__form-group basket__form-group--comment">
-                        <textarea class="basket__form-textarea" rows="3" cols="30" placeholder="Комментарий к заказу..."></textarea>
-                      </div>
-                      <div class="basket__form-group basket__form-group--select">
-                        <select class="basket__form-select" placeholder="Выберите область">
-                          <option value="" disabled="disabled" selected="selected">Выберите область</option>
-                          <option>Область</option>
-                          <option>Область</option>
-                          <option>Область</option>
-                          <option>Область</option>
-                          <option>Область</option>
+                  <div class="basket__form">
+                    <form class="basket-form">
+                      <h4>Адрес доставки :</h4>
+                      <div class="basket-form__address-container">
+                        <select>
+                          <option default="default">-страна-</option>
+                          <option>Украина</option>
+                          <option>Украина</option>
+                          <option>Украина</option>
+                          <option>Украина</option>
+                          <option>Украина</option>
                         </select>
+                        <select>
+                          <option default="default">-область-</option>
+                          <option>Украина</option>
+                          <option>Украина</option>
+                          <option>Украина</option>
+                          <option>Украина</option>
+                          <option>Украина</option>
+                        </select>
+                        <select>
+                          <option default="default">-район-</option>
+                          <option>Украина</option>
+                          <option>Украина</option>
+                          <option>Украина</option>
+                          <option>Украина</option>
+                          <option>Украина</option>
+                        </select>
+                        <select>
+                          <option default="default">-нас. пункт-</option>
+                          <option>Украина</option>
+                          <option>Украина</option>
+                          <option>Украина</option>
+                          <option>Украина</option>
+                          <option>Украина</option>
+                        </select>
+                        <input placeholder="Ваша улица или № отделения первозчика"/>
                       </div>
-                      <div class="basket__form-footer"><span class="diss">Минимальная сумма заказа у Поставщика «Аркуш» 10000грн, добавьте в корзину ещё на 1547,2</span>
-                        <button class="basket__form-btn"><span>Добавить товаров</span></button>
+                      <div class="basket-form__footer">
+                        <div class="basket-form__comment">
+                          <h4>Комментарий :</h4>
+                          <textarea rows="3" cols="30" placeholder="Комментарий к заказу..."></textarea>
+                          <p class="diss">Минимальная сумма заказа у Поставщика "Аркуш" 10 000 грн, добавте в корзину еще на 1547,2 грн </p>
+                        </div>
+                        <button class="basket-form__btn"><span>Оформить заказ</span></button>
                       </div>
                     </form>
                   </div>
                 </div>
                 <div class="basket-order-right right-container">
+                  <div class="basket-order-right__phone">
+                    <label>Телефон продовца :</label>
+                    <input class="phone-mask" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
+                    <p>Оставьте пустым, если у вас нет персонального Продавца на ESOT</p>
+                  </div>
                   <div class="prod-card-info">
                     <p>Поставщик «ТОВ Черниговский хлебокомбинат»</p>
                     <p><strong>На ESOT:</strong>3 года</p>

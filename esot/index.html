@@ -53,6 +53,24 @@
             </div>
           </div>
         </div>
+        <div class="heder__mobile-menu">
+          <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu__close"><span>x</span></div>
+            <div class="mobile-menu__header"></div>
+            <div class="mobile-menu__inner">
+              <ul class="mobile-menu__nav">
+                <li class="mobile-menu__nav-item"><a href="#">Вход/Регистрация</a></li>
+                <li class="mobile-menu__nav-item"> <a href="#">Главная</a></li>
+                <li class="mobile-menu__nav-item"><a href="#">Каталог товаров</a></li>
+                <li class="mobile-menu__nav-item"><a href="#">Акции</a></li>
+                <li class="mobile-menu__nav-item"> <a href="#">Корзина (3)</a></li>
+                <li class="mobile-menu__nav-item"><a href="#">Мои заказы</a></li>
+                <li class="mobile-menu__nav-item"><a href="#">Обратная связь</a></li>
+                <li class="mobile-menu__nav-item"><a href="#">Информация</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </header>
       <div class="large-container">
         <div class="left-container">
@@ -61,96 +79,89 @@
               <div class="side-bar__inner">
                 <ul class="side-bar__items">
                   <li class="side-bar__item">
-                    <div class="side-bar__tab side-bar__tab--acc side-bar__tab--arr">Каталог товаров</div>
+                    <div class="side-bar__tab side-bar__tab--acc side-bar__tab--arr popup-tab" data-id="popup-cat"> <span>Каталог товаров</span></div>
                   </li>
                   <li class="side-bar__item">
-                    <div class="side-bar__tab-wrap in-tab-wrap">
-                      <input type="checkbox" id="side-providers"/>
-                      <label class="side-bar__tab side-bar__tab--acc side-bar__tab--arr" for="side-providers">Поставщики</label>
-                      <div class="in-tab-inner side-bar__tab-inner">
-                        <ul>
-                          <li>Provider</li>
-                          <li>Provider</li>
-                          <li>Provider</li>
-                          <li>Provider</li>
-                        </ul>
-                      </div>
-                    </div>
+                    <div class="side-bar__tab side-bar__tab--acc side-bar__tab--arr popup-tab" data-id="popup-providers"><span>Поставщики</span></div>
                   </li>
                   <li class="side-bar__item">
-                    <div class="side-bar__tab">Новости</div>
+                    <div class="side-bar__tab"><span>Новости</span></div>
                   </li>
                   <li class="side-bar__item">
-                    <div class="side-bar__tab">Тендера</div>
+                    <div class="side-bar__tab"> <span>Тендера</span></div>
                   </li>
                   <li class="side-bar__item">
-                    <div class="side-bar__tab">Кредит</div>
+                    <div class="side-bar__tab"><span>Кредит</span></div>
                   </li>
                   <li class="side-bar__item">
-                    <div class="side-bar__tab">Акции</div>
+                    <div class="side-bar__tab"><span>Акции</span></div>
                   </li>
                 </ul>
               </div>
             </section>
-            <div class="side-bar__popup side-bar__popup--catalog">
-              <div class="side-bar__popup-inner">
-                <h3 class="side-bar__popup-title l-title">Поставщики по категориям</h3>
-                <div class="side-bar__popup-providers">
+          </div>
+        </div>
+        <div class="center-container">
+          <div class="bar-popup-wrap">
+            <div class="bar-popup bar-popup--providers popup-content" id="popup-providers">
+              <div class="bar-popup__inner">
+                <h3 class="bar-popup__title l-title">Поставщики по категориям</h3>
+                <div class="bar-popup__providers">
                   <div class="hexGrid-wrap">
                     <div class="hexGrid">
                       <div class="hex-container hex-container--popup-cat">
                         <div class="hex">
-                          <div class="side-bar__popup-cat"><a href="#">Бытовые товары</a></div>
+                          <div class="bar-popup__cat"><a href="#">Бытовые товары</a></div>
                         </div>
                       </div>
                       <div class="hex-container hex-container--popup-cat">
                         <div class="hex">
-                          <div class="side-bar__popup-cat"><a href="#">Бытовые товары</a></div>
+                          <div class="bar-popup__cat"><a href="#">Бытовые товары</a></div>
                         </div>
                       </div>
                       <div class="hex-container hex-container--popup-cat">
                         <div class="hex">
-                          <div class="side-bar__popup-cat"><a href="#">Бытовые товары</a></div>
+                          <div class="bar-popup__cat"><a href="#">Бытовые товары</a></div>
                         </div>
                       </div>
                       <div class="hex-container hex-container--popup-cat">
                         <div class="hex">
-                          <div class="side-bar__popup-cat"><a href="#">Бытовые товары</a></div>
+                          <div class="bar-popup__cat"><a href="#">Бытовые товары</a></div>
                         </div>
                       </div>
                       <div class="hex-container hex-container--popup-cat">
                         <div class="hex">
-                          <div class="side-bar__popup-cat"><a href="#">Бытовые товары</a></div>
+                          <div class="bar-popup__cat"><a href="#">Бытовые товары</a></div>
                         </div>
                       </div>
                       <div class="hex-container hex-container--popup-cat">
                         <div class="hex">
-                          <div class="side-bar__popup-cat"><a href="#">Бытовые товары</a></div>
+                          <div class="bar-popup__cat"><a href="#">Бытовые товары</a></div>
                         </div>
                       </div>
                       <div class="hex-container hex-container--popup-cat">
                         <div class="hex">
-                          <div class="side-bar__popup-cat"><a href="#">Бытовые товары</a></div>
+                          <div class="bar-popup__cat"><a href="#">Бытовые товары</a></div>
                         </div>
                       </div>
                       <div class="hex-container hex-container--popup-cat">
                         <div class="hex">
-                          <div class="side-bar__popup-cat"><a href="#">Бытовые товары</a></div>
+                          <div class="bar-popup__cat"><a href="#">Бытовые товары</a></div>
                         </div>
                       </div>
                       <div class="hex-container hex-container--popup-cat">
                         <div class="hex">
-                          <div class="side-bar__popup-cat"><a href="#">Бытовые товары</a></div>
+                          <div class="bar-popup__cat"><a href="#">Бытовые товары</a></div>
                         </div>
                       </div>
                       <div class="hex-container hex-container--popup-cat">
                         <div class="hex">
-                          <div class="side-bar__popup-cat"><a href="#">Бытовые товары</a></div>
+                          <div class="bar-popup__cat"><a href="#">Бытовые товары</a></div>
                         </div>
                       </div>
                       <div class="hex-container hex-container--popup-cat">
                         <div class="hex">
-                          <div class="side-bar__popup-cat"><a href="#">Бытовые товары</a></div>
+                          <div class="bar-popup__cat"><a href="#">Бытовые товары</a></div>
                         </div>
                       </div>
                     </div>
@@ -158,9 +169,121 @@
                 </div>
               </div>
             </div>
+            <div class="bar-popup bar-popup--cat popup-content" id="popup-cat">
+              <div class="bar-popup__inner">
+                <div class="bar-popup__prods">
+                  <div class="bar-popup__prod-group">
+                    <p class="bar-popup__prod-name">Бытовая Химия</p>
+                    <ul>
+                      <li>моющие</li>
+                      <li>чистиющие</li>
+                      <li>губки</li>
+                      <li>мочалки</li>
+                    </ul>
+                  </div>
+                  <div class="bar-popup__prod-group">
+                    <p class="bar-popup__prod-name">Бытовая Химия</p>
+                    <ul>
+                      <li>моющие</li>
+                      <li>чистиющие</li>
+                      <li>губки</li>
+                      <li>мочалки</li>
+                    </ul>
+                  </div>
+                  <div class="bar-popup__prod-group">
+                    <p class="bar-popup__prod-name">Бытовая Химия</p>
+                    <ul>
+                      <li>моющие</li>
+                      <li>чистиющие</li>
+                      <li>губки</li>
+                      <li>мочалки</li>
+                    </ul>
+                  </div>
+                  <div class="bar-popup__prod-group">
+                    <p class="bar-popup__prod-name">Бытовая Химия</p>
+                    <ul>
+                      <li>моющие</li>
+                      <li>чистиющие</li>
+                      <li>губки</li>
+                      <li>мочалки</li>
+                    </ul>
+                  </div>
+                  <div class="bar-popup__prod-group">
+                    <p class="bar-popup__prod-name">Бытовая Химия</p>
+                    <ul>
+                      <li>моющие</li>
+                      <li>чистиющие</li>
+                      <li>губки</li>
+                      <li>мочалки</li>
+                    </ul>
+                  </div>
+                  <div class="bar-popup__prod-group">
+                    <p class="bar-popup__prod-name">Бытовая Химия</p>
+                    <ul>
+                      <li>моющие</li>
+                      <li>чистиющие</li>
+                      <li>губки</li>
+                      <li>мочалки</li>
+                    </ul>
+                  </div>
+                  <div class="bar-popup__prod-group">
+                    <p class="bar-popup__prod-name">Бытовая Химия</p>
+                    <ul>
+                      <li>моющие</li>
+                      <li>чистиющие</li>
+                      <li>губки</li>
+                      <li>мочалки</li>
+                    </ul>
+                  </div>
+                  <div class="bar-popup__prod-group">
+                    <p class="bar-popup__prod-name">Бытовая Химия</p>
+                    <ul>
+                      <li>моющие</li>
+                      <li>чистиющие</li>
+                      <li>губки</li>
+                      <li>мочалки</li>
+                    </ul>
+                  </div>
+                  <div class="bar-popup__prod-group">
+                    <p class="bar-popup__prod-name">Бытовая Химия</p>
+                    <ul>
+                      <li>моющие</li>
+                      <li>чистиющие</li>
+                      <li>губки</li>
+                      <li>мочалки</li>
+                    </ul>
+                  </div>
+                  <div class="bar-popup__prod-group">
+                    <p class="bar-popup__prod-name">Бытовая Химия</p>
+                    <ul>
+                      <li>моющие</li>
+                      <li>чистиющие</li>
+                      <li>губки</li>
+                      <li>мочалки</li>
+                    </ul>
+                  </div>
+                  <div class="bar-popup__prod-group">
+                    <p class="bar-popup__prod-name">Бытовая Химия</p>
+                    <ul>
+                      <li>моющие</li>
+                      <li>чистиющие</li>
+                      <li>губки</li>
+                      <li>мочалки</li>
+                    </ul>
+                  </div>
+                  <div class="bar-popup__prod-group">
+                    <p class="bar-popup__prod-name">Бытовая Химия</p>
+                    <ul>
+                      <li>моющие</li>
+                      <li>чистиющие</li>
+                      <li>губки</li>
+                      <li>мочалки</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="center-container">
           <section class="hero">
             <div class="hero__slider" id="hero-slider">
               <div class="hero__slide"><img src="img/hero-slider/slide1.png"/></div>
@@ -180,7 +303,7 @@
                     <li>3. Платите за совршенные покпки</li>
                   </ul>
                 </div>
-                <button class="sample__item-btn l-btn">Начать продавать</button>
+                <button class="sample__item-btn">Начать продавать</button>
               </div>
               <div class="sample__item">
                 <div class="sample__item-head"> <span>Продовец продает товар</span></div>
@@ -191,10 +314,10 @@
                     <li>3. Получаете вознаграждение</li>
                   </ul>
                 </div>
-                <button class="sample__item-btn l-btn">Разместить товар</button>
+                <button class="sample__item-btn">Разместить товар</button>
               </div>
               <div class="sample__item">
-                <div class="sample__item-head"> <span>Клиент покупае товар</span></div>
+                <div class="sample__item-head"> <span>Клиент покупает товар</span></div>
                 <div class="sample__item-body">
                   <ul>
                     <li>1. Получает доступ к уенам поставщика</li>
@@ -202,7 +325,7 @@
                     <li>3. Покупаете все в одном месте</li>
                   </ul>
                 </div>
-                <button class="sample__item-btn l-btn">Получить доступ</button>
+                <button class="sample__item-btn">Получить доступ</button>
               </div>
             </div>
           </section>

@@ -60,13 +60,61 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ([
-/* 0 */,
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+var mobileMenu = function mobileMenu() {
+	return {
+		clickBurger: function clickBurger() {
+			self = this;
+			$('.header__burger').on('click', function (event) {
+				event.stopPropagation();
+				$(this).toggleClass('header__burger--active');
+				var hasClass = $('.header__burger').hasClass('header__burger--active');
+				if (hasClass) {
+					self.openMenu();
+				} else {
+					self.closeMenu();
+				}
+			});
+		},
+		openMenu: function openMenu() {
+			$('#mobileMenu').show();
+		},
+		closeMenu: function closeMenu() {
+			$('#mobileMenu').hide();
+		},
+		otherClick: function otherClick() {
+			var _this = this;
+
+			$(window).on('click', function () {
+				_this.closeMenu();
+				$('.header__burger').removeClass('header__burger--active');
+			});
+		},
+		init: function init() {
+			this.clickBurger();
+			this.otherClick();
+		}
+	};
+};
+
+exports.default = mobileMenu;
+
+/***/ }),
 /* 1 */,
-/* 2 */
+/* 2 */,
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -96,7 +144,7 @@ var mask = function mask() {
 exports.default = mask;
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -190,32 +238,39 @@ var interfaceUnit = function interfaceUnit() {
 exports.default = interfaceUnit;
 
 /***/ }),
-/* 4 */,
 /* 5 */,
-/* 6 */
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(7);
+module.exports = __webpack_require__(10);
 
 
 /***/ }),
-/* 7 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _mask = __webpack_require__(2);
+var _mask = __webpack_require__(3);
 
 var _mask2 = _interopRequireDefault(_mask);
 
-var _interfaceUnit = __webpack_require__(3);
+var _interfaceUnit = __webpack_require__(4);
 
 var _interfaceUnit2 = _interopRequireDefault(_interfaceUnit);
+
+var _mobileMenu = __webpack_require__(0);
+
+var _mobileMenu2 = _interopRequireDefault(_mobileMenu);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 $(document).ready(function () {
+	(0, _mobileMenu2.default)().init();
 	(0, _mask2.default)().init();
 	(0, _interfaceUnit2.default)().init();
 });

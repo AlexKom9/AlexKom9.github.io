@@ -60,19 +60,65 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 18);
+/******/ 	return __webpack_require__(__webpack_require__.s = 17);
 /******/ })
 /************************************************************************/
-/******/ ({
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
 
-/***/ 0:
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+var mobileMenu = function mobileMenu() {
+	return {
+		clickBurger: function clickBurger() {
+			self = this;
+			$('.header__burger').on('click', function (event) {
+				event.stopPropagation();
+				$(this).toggleClass('header__burger--active');
+				var hasClass = $('.header__burger').hasClass('header__burger--active');
+				if (hasClass) {
+					self.openMenu();
+				} else {
+					self.closeMenu();
+				}
+			});
+		},
+		openMenu: function openMenu() {
+			$('#mobileMenu').show();
+		},
+		closeMenu: function closeMenu() {
+			$('#mobileMenu').hide();
+		},
+		otherClick: function otherClick() {
+			var _this = this;
+
+			$(window).on('click', function () {
+				_this.closeMenu();
+				$('.header__burger').removeClass('header__burger--active');
+			});
+		},
+		init: function init() {
+			this.clickBurger();
+			this.otherClick();
+		}
+	};
+};
+
+exports.default = mobileMenu;
+
+/***/ }),
+/* 1 */
 /***/ (function(module, exports) {
 
 module.exports = jQuery;
 
 /***/ }),
-
-/***/ 1:
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -82,7 +128,6 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 // import $ from 'jquery';
-
 var hexGrid = function hexGrid() {
 	return {
 		grid: function grid() {
@@ -96,6 +141,9 @@ var hexGrid = function hexGrid() {
 			var hexBox = $('.hex-container').width();
 			// let hexBox = 185;
 			console.log(hexBox);
+			for (var i = 0; i < hexListLength; i++) {
+				$(hexList[hexListLength - i - 1]).css('z-index', i + 10);
+			}
 			if (width > hexBox * 6) {
 				console.log('width <= 1110 && width > 925');
 				console.log('--this');
@@ -194,32 +242,48 @@ var hexGrid = function hexGrid() {
 exports.default = hexGrid;
 
 /***/ }),
-
-/***/ 18:
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */,
+/* 13 */,
+/* 14 */,
+/* 15 */,
+/* 16 */,
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(19);
+module.exports = __webpack_require__(18);
 
 
 /***/ }),
-
-/***/ 19:
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _jquery = __webpack_require__(0);
+var _jquery = __webpack_require__(1);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _dropdown = __webpack_require__(20);
+var _dropdown = __webpack_require__(19);
 
 var _dropdown2 = _interopRequireDefault(_dropdown);
 
-var _hexGrid = __webpack_require__(1);
+var _hexGrid = __webpack_require__(2);
 
 var _hexGrid2 = _interopRequireDefault(_hexGrid);
+
+var _mobileMenu = __webpack_require__(0);
+
+var _mobileMenu2 = _interopRequireDefault(_mobileMenu);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -239,13 +303,13 @@ console.log('group.js');
 			(0, _jquery2.default)('#' + contentId).show();
 		});
 	})();
+	(0, _mobileMenu2.default)().init();
 	(0, _dropdown2.default)().init();
 	(0, _hexGrid2.default)().init();
 });
 
 /***/ }),
-
-/***/ 20:
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -276,6 +340,5 @@ var dropdown = function dropdown() {
 exports.default = dropdown;
 
 /***/ })
-
-/******/ });
+/******/ ]);
 //# sourceMappingURL=product_card.js.map
