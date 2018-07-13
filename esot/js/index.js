@@ -60,11 +60,19 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 15);
+/******/ 	return __webpack_require__(__webpack_require__.s = 20);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
+/***/ (function(module, exports) {
+
+module.exports = jQuery;
+
+/***/ }),
+
+/***/ 1:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -112,13 +120,120 @@ var mobileMenu = function mobileMenu() {
 exports.default = mobileMenu;
 
 /***/ }),
-/* 1 */
-/***/ (function(module, exports) {
 
-module.exports = jQuery;
+/***/ 20:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(21);
+
 
 /***/ }),
-/* 2 */
+
+/***/ 21:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interfaceUnit = __webpack_require__(9);
+
+var _interfaceUnit2 = _interopRequireDefault(_interfaceUnit);
+
+var _hexGrid = __webpack_require__(5);
+
+var _hexGrid2 = _interopRequireDefault(_hexGrid);
+
+var _mobileMenu = __webpack_require__(1);
+
+var _mobileMenu2 = _interopRequireDefault(_mobileMenu);
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+console.log('index.js');
+
+
+var popup = function popup() {
+	// console.log()
+	var s = {
+		tab: '.popup-tab',
+		content: '.popup-content'
+	};
+	var tab = (0, _jquery2.default)(s.tab);
+	var conent = (0, _jquery2.default)(s.window);
+	var timer;
+	return {
+		main: function main() {
+			var self = this;
+			(0, _jquery2.default)(s.tab).on('mouseover', function (event) {
+				event.stopPropagation();
+				var id = (0, _jquery2.default)(this).data('id');
+				console.log('------------', id);
+				(0, _jquery2.default)(window).trigger('closePopoup');
+				self.showContent(id);
+				(0, _jquery2.default)(window).trigger('hexGrid');
+				clearTimeout(timer);
+			});
+
+			(0, _jquery2.default)('.popup-content').on('mouseover', function (event) {
+				event.stopPropagation();
+				console.log('-------contetn');
+				clearTimeout(timer);
+			});
+
+			(0, _jquery2.default)(window).on('mouseover', function (event) {
+				console.log('------- leave');
+				clearTimeout(timer);
+				timer = setTimeout(function () {
+					(0, _jquery2.default)(window).trigger('closePopoup');
+				}, 500);
+			});
+			(0, _jquery2.default)(window).on('resize', function () {
+				(0, _jquery2.default)(window).trigger('closePopoup');
+			});
+		},
+		// close: function(){
+		// 	$(window)
+		//
+		// },
+		showContent: function showContent(id) {
+			(0, _jquery2.default)('#' + id).show();
+		},
+		content: function content() {},
+
+		events: function events() {
+			(0, _jquery2.default)(window).on('closePopoup', function () {
+				(0, _jquery2.default)(s.content).hide();
+				console.log('close');
+			});
+		},
+		init: function init() {
+			console.log('---------popup');
+			this.main();
+			this.events();
+		}
+	};
+};
+
+(0, _jquery2.default)(document).ready(function () {
+	(0, _interfaceUnit2.default)().init();
+	(0, _mobileMenu2.default)().init();
+	(0, _hexGrid2.default)().init();
+	(0, _jquery2.default)('#hero-slider').slick({
+		infinite: true,
+		dots: true,
+		arrows: false
+		// centerMode: true
+	});
+	popup().init();
+});
+
+/***/ }),
+
+/***/ 5:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -131,6 +246,10 @@ Object.defineProperty(exports, "__esModule", {
 var hexGrid = function hexGrid() {
 	return {
 		grid: function grid() {
+			var realSize = $('.hexGrid').parent().width();
+			console.log('realSize -------- ', realSize);
+			var hexBox = $('.hex-container').width();
+			// $('.hexGrid-wrap').css('margin-right', -hexBox)
 			var width = $('.hexGrid').width();
 			var styleBox = $('.hex-style');
 			var hexList = $('.hex-container');
@@ -138,76 +257,87 @@ var hexGrid = function hexGrid() {
 			var k = 0;
 			console.log(hexList, length);
 			console.log(width);
-			var hexBox = $('.hex-container').width();
 			// let hexBox = 185;
 			console.log(hexBox);
 			for (var i = 0; i < hexListLength; i++) {
 				$(hexList[hexListLength - i - 1]).css('z-index', i + 10);
 			}
-			if (width > hexBox * 6) {
-				console.log('width <= 1110 && width > 925');
-				console.log('--this');
-				var _k = 6;
-				// hexList.css('width', width/6.1)
-				for (var i = 0; i < hexListLength; i++) {
-					$(hexList[i * _k]).find('.hex').css({ "transform": "translate(0, 0)" });
-					$(hexList[i * _k + 1]).find('.hex').css({ "transform": "translate(-25%, 50%" });
-					$(hexList[i * _k + 2]).find('.hex').css({ "transform": "translate(-50%, 0)" });
-					$(hexList[i * _k + 3]).find('.hex').css({ "transform": "translate(-75%, 50%)" });
-					$(hexList[i * _k + 4]).find('.hex').css({ "transform": "translate(-100%, 0)" });
-					$(hexList[i * _k + 5]).find('.hex').css({ "transform": "translate(-125%, 50%)" });
+
+			// conditions
+			var conditions = function conditions() {
+
+				if (width > hexBox * 6) {
+					console.log('width <= 1110 && width > 925');
+					console.log('--this');
+					var _k = 6;
+					var size = 0;
+					// for (var i = 0; i <= 6; i++) {
+					// 	size += hexBox*0.2*i
+					// }
+					// hexList.css('width', width/6.1)
+					var rest = width - size;
+					for (var i = 0; i < hexListLength; i++) {
+						$(hexList[i * _k]).find('.hex').css({ "transform": "translate(0, 0)" });
+						$(hexList[i * _k + 1]).find('.hex').css({ "transform": "translate(-25%, 50%" });
+						$(hexList[i * _k + 2]).find('.hex').css({ "transform": "translate(-50%, 0)" });
+						$(hexList[i * _k + 3]).find('.hex').css({ "transform": "translate(-75%, 50%)" });
+						$(hexList[i * _k + 4]).find('.hex').css({ "transform": "translate(-100%, 0)" });
+						$(hexList[i * _k + 5]).find('.hex').css({ "transform": "translate(-125%, 50%)" });
+					}
 				}
-			}
-			if (width <= hexBox * 6 && width > hexBox * 5) {
-				console.log('width <= 1110 && width > 925');
-				console.log('--this');
-				// hexList.css('width', width/5.1)
-				var _k2 = 5;
-				for (var i = 0; i < hexListLength; i++) {
-					$(hexList[i * _k2]).find('.hex').css({ "transform": "translate(0, 0)" });
-					$(hexList[i * _k2 + 1]).find('.hex').css({ "transform": "translate(-25%, 50%" });
-					$(hexList[i * _k2 + 2]).find('.hex').css({ "transform": "translate(-50%, 0)" });
-					$(hexList[i * _k2 + 3]).find('.hex').css({ "transform": "translate(-75%, 50%)" });
-					$(hexList[i * _k2 + 4]).find('.hex').css({ "transform": "translate(-100%, 0)" });
+				if (width <= hexBox * 6 && width > hexBox * 5) {
+					console.log('width <= 1110 && width > 925');
+					console.log('--this');
+					// hexList.css('width', width/5.1)
+					var _k2 = 5;
+					for (var i = 0; i < hexListLength; i++) {
+						$(hexList[i * _k2]).find('.hex').css({ "transform": "translate(0, 0)" });
+						$(hexList[i * _k2 + 1]).find('.hex').css({ "transform": "translate(-25%, 50%" });
+						$(hexList[i * _k2 + 2]).find('.hex').css({ "transform": "translate(-50%, 0)" });
+						$(hexList[i * _k2 + 3]).find('.hex').css({ "transform": "translate(-75%, 50%)" });
+						$(hexList[i * _k2 + 4]).find('.hex').css({ "transform": "translate(-100%, 0)" });
+					}
 				}
-			}
-			if (width <= hexBox * 5 && width > hexBox * 4) {
-				console.log('width <= 925 && width > 740');
-				// hexList.css('width', width/4.1)
-				var _k3 = 4;
-				for (var i = 0; i < hexListLength; i++) {
-					$(hexList[i * _k3]).find('.hex').css({ "transform": "translate(0, 0)" });
-					$(hexList[i * _k3 + 1]).find('.hex').css({ "transform": "translate(-25%, 50%" });
-					$(hexList[i * _k3 + 2]).find('.hex').css({ "transform": "translate(-50%, 0)" });
-					$(hexList[i * _k3 + 3]).find('.hex').css({ "transform": "translate(-75%, 50%)" });
+				if (width <= hexBox * 5 && width > hexBox * 4) {
+					console.log('width <= 925 && width > 740');
+					// hexList.css('width', width/4.1)
+					var _k3 = 4;
+					for (var i = 0; i < hexListLength; i++) {
+						$(hexList[i * _k3]).find('.hex').css({ "transform": "translate(0, 0)" });
+						$(hexList[i * _k3 + 1]).find('.hex').css({ "transform": "translate(-25%, 50%" });
+						$(hexList[i * _k3 + 2]).find('.hex').css({ "transform": "translate(-50%, 0)" });
+						$(hexList[i * _k3 + 3]).find('.hex').css({ "transform": "translate(-75%, 50%)" });
+					}
 				}
-			}
-			if (width <= hexBox * 4 && width > hexBox * 3) {
-				console.log('width <= 740 && width > 555');
-				// hexList.css('width', width/3.1)
-				var _k4 = 3;
-				for (var i = 0; i < hexListLength; i++) {
-					$(hexList[i * _k4]).find('.hex').css({ "transform": "translate(0, 0)" });
-					$(hexList[i * _k4 + 1]).find('.hex').css({ "transform": "translate(-25%, 50%" });
-					$(hexList[i * _k4 + 2]).find('.hex').css({ "transform": "translate(-50%, 0)" });
+				if (width <= hexBox * 4 && width > hexBox * 3) {
+					console.log('width <= 740 && width > 555');
+					// hexList.css('width', width/3.1)
+					var _k4 = 3;
+					for (var i = 0; i < hexListLength; i++) {
+						$(hexList[i * _k4]).find('.hex').css({ "transform": "translate(0, 0)" });
+						$(hexList[i * _k4 + 1]).find('.hex').css({ "transform": "translate(-25%, 50%" });
+						$(hexList[i * _k4 + 2]).find('.hex').css({ "transform": "translate(-50%, 0)" });
+					}
 				}
-			}
-			if (width <= hexBox * 3 && width > hexBox * 2) {
-				console.log('width <= 555 && width > 370');
-				// hexList.css('width', width/2.1)
-				var _k5 = 2;
-				for (var i = 0; i < hexListLength; i++) {
-					$(hexList[i * _k5]).find('.hex').css({ "transform": "translate(0, 0)" });
-					$(hexList[i * _k5 + 1]).find('.hex').css({ "transform": "translate(-25%, 50%" });
+				if (width <= hexBox * 3 && width > hexBox * 2) {
+					console.log('width <= 555 && width > 370');
+					// hexList.css('width', width/2.1)
+					var _k5 = 2;
+					for (var i = 0; i < hexListLength; i++) {
+						$(hexList[i * _k5]).find('.hex').css({ "transform": "translate(0, 0)" });
+						$(hexList[i * _k5 + 1]).find('.hex').css({ "transform": "translate(-25%, 50%" });
+					}
 				}
-			}
-			if (width <= hexBox * 2) {
-				console.log('width <= 555 && width > 370');
-				var _k6 = 1;
-				for (var i = 0; i < hexListLength; i++) {
-					$(hexList[i * _k6]).find('.hex').css({ "transform": "translate(0, 0)" });
+				if (width <= hexBox * 2) {
+					console.log('width <= 555 && width > 370');
+					var _k6 = 1;
+					for (var i = 0; i < hexListLength; i++) {
+						$(hexList[i * _k6]).find('.hex').css({ "transform": "translate(0, 0)" });
+					}
 				}
-			}
+			};
+
+			conditions();
 		},
 		resize: function resize() {
 			var self = this;
@@ -242,8 +372,8 @@ var hexGrid = function hexGrid() {
 exports.default = hexGrid;
 
 /***/ }),
-/* 3 */,
-/* 4 */
+
+/***/ 9:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -336,128 +466,7 @@ var interfaceUnit = function interfaceUnit() {
 
 exports.default = interfaceUnit;
 
-/***/ }),
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */,
-/* 14 */,
-/* 15 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(16);
-
-
-/***/ }),
-/* 16 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interfaceUnit = __webpack_require__(4);
-
-var _interfaceUnit2 = _interopRequireDefault(_interfaceUnit);
-
-var _hexGrid = __webpack_require__(2);
-
-var _hexGrid2 = _interopRequireDefault(_hexGrid);
-
-var _mobileMenu = __webpack_require__(0);
-
-var _mobileMenu2 = _interopRequireDefault(_mobileMenu);
-
-var _jquery = __webpack_require__(1);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-console.log('index.js');
-// import Inputmask from "inputmask";
-// import 'jquery.inputmask';
-
-// import 'jquery.inputmask';
-
-// node_modules\inputmask\dist\inputmask\jquery.inputmask.js
-var popup = function popup() {
-	// console.log()
-	var s = {
-		tab: '.popup-tab',
-		content: '.popup-content'
-	};
-	var tab = (0, _jquery2.default)(s.tab);
-	var conent = (0, _jquery2.default)(s.window);
-	var timer;
-
-	return {
-		main: function main() {
-			var self = this;
-			(0, _jquery2.default)(s.tab).on('mouseover', function (event) {
-				event.stopPropagation();
-				var id = (0, _jquery2.default)(this).data('id');
-				console.log('------------', id);
-				(0, _jquery2.default)(window).trigger('closePopoup');
-				self.showContent(id);
-				(0, _jquery2.default)(window).trigger('hexGrid');
-				clearTimeout(timer);
-			});
-
-			(0, _jquery2.default)('.popup-content').on('mouseover', function (event) {
-				event.stopPropagation();
-				console.log('-------contetn');
-				clearTimeout(timer);
-			});
-
-			(0, _jquery2.default)(window).on('mouseover', function (event) {
-				console.log('------- leave');
-				timer = setTimeout(function () {
-					(0, _jquery2.default)(window).trigger('closePopoup');
-				}, 500);
-			});
-		},
-		// close: function(){
-		// 	$(window)
-		//
-		// },
-		showContent: function showContent(id) {
-			(0, _jquery2.default)('#' + id).show();
-		},
-		content: function content() {},
-
-		events: function events() {
-			(0, _jquery2.default)(window).on('closePopoup', function () {
-				(0, _jquery2.default)(s.content).hide();
-				console.log('close');
-			});
-		},
-		init: function init() {
-			console.log('---------popup');
-			this.main();
-			this.events();
-		}
-	};
-};
-
-(0, _jquery2.default)(document).ready(function () {
-	(0, _interfaceUnit2.default)().init();
-	(0, _mobileMenu2.default)().init();
-	(0, _hexGrid2.default)().init();
-	(0, _jquery2.default)('#hero-slider').slick({
-		infinite: true,
-		dots: true,
-		arrows: false
-		// centerMode: true
-	});
-	popup().init();
-	// $('.footer__info-email').inputmask("+38(99)-999-9999");
-});
-
 /***/ })
-/******/ ]);
+
+/******/ });
 //# sourceMappingURL=index.js.map
