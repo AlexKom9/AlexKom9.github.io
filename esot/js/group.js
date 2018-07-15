@@ -139,7 +139,7 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _hexGrid = __webpack_require__(5);
+var _hexGrid = __webpack_require__(8);
 
 var _hexGrid2 = _interopRequireDefault(_hexGrid);
 
@@ -159,7 +159,7 @@ console.log('group.js');
 
 /***/ }),
 
-/***/ 5:
+/***/ 8:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

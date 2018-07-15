@@ -139,9 +139,9 @@ var _interfaceUnit = __webpack_require__(9);
 
 var _interfaceUnit2 = _interopRequireDefault(_interfaceUnit);
 
-var _hexGrid = __webpack_require__(5);
+var _new_hexGrid = __webpack_require__(22);
 
-var _hexGrid2 = _interopRequireDefault(_hexGrid);
+var _new_hexGrid2 = _interopRequireDefault(_new_hexGrid);
 
 var _mobileMenu = __webpack_require__(1);
 
@@ -218,10 +218,12 @@ var popup = function popup() {
 	};
 };
 
+console.clear();
+
 (0, _jquery2.default)(document).ready(function () {
 	(0, _interfaceUnit2.default)().init();
 	(0, _mobileMenu2.default)().init();
-	(0, _hexGrid2.default)().init();
+	(0, _new_hexGrid2.default)().init();
 	(0, _jquery2.default)('#hero-slider').slick({
 		infinite: true,
 		dots: true,
@@ -233,7 +235,7 @@ var popup = function popup() {
 
 /***/ }),
 
-/***/ 5:
+/***/ 22:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -259,13 +261,26 @@ var hexGrid = function hexGrid() {
 			console.log(width);
 			// let hexBox = 185;
 			console.log(hexBox);
-			for (var i = 0; i < hexListLength; i++) {
-				$(hexList[hexListLength - i - 1]).css('z-index', i + 10);
-			}
-
+			// for (var i = 0; i < hexListLength; i++) {
+			// 	$(hexList[hexListLength - i - 1]).css('z-index', i+10)
+			// }
+			var hexContWidth = 0;
+			var hexCount = 0;
+			(function () {
+				var i = 0;
+				hexCount = 0;
+				hexContWidth = 0;
+				while (hexContWidth < width) {
+					i++;
+					hexCount = i;
+					hexContWidth += i * 0.25 * hexBox;
+				}
+			})();
 			// conditions
-			var conditions = function conditions() {
+			console.log('----hexContWidth----', hexContWidth);
+			console.log('----hexCont----', hexCount);
 
+			var conditions = function conditions() {
 				if (width > hexBox * 6) {
 					console.log('width <= 1110 && width > 925');
 					console.log('--this');
@@ -348,6 +363,9 @@ var hexGrid = function hexGrid() {
 				// self.grid();
 				$(window).trigger('hexGrid');
 			});
+		},
+		getHexContainerSize: function getHexContainerSize() {
+			for (var i = 0; i < array.length; i++) {}
 		},
 		gridInit: function gridInit() {
 			var _this = this;
