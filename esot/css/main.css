@@ -452,6 +452,8 @@ button {
     justify-content: flex-end;
     align-items: center;
     margin-bottom: 20px; }
+    .header__icons a {
+      color: #483a15; }
     @media only screen and (max-width: 600px) {
       .header__icons {
         margin-bottom: 0; } }
@@ -773,6 +775,8 @@ button {
     font-size: 24px;
     color: #483a15;
     text-align: center; }
+    .group__item a:hover {
+      text-decoration: underline; }
 
 .price {
   text-align: center;
@@ -953,9 +957,13 @@ button {
       background: url(../img/icons/switch-plate.png) no-repeat top left; }
       .prod-head__switch--plate:hover {
         background: url(../img/icons/switch-plate-shadow.png) no-repeat top left; }
+      .prod-head__switch--plate-active {
+        background: url(../img/icons/switch-plate-shadow.png) no-repeat top left; }
     .prod-head__switch--list {
       background: url(../img/icons/switch-list.png) no-repeat top left; }
       .prod-head__switch--list:hover {
+        background: url(../img/icons/switch-list-shadow.png) no-repeat top left; }
+      .prod-head__switch--list-active {
         background: url(../img/icons/switch-list-shadow.png) no-repeat top left; }
 
 .hex-product {
@@ -1392,8 +1400,7 @@ button {
 .rat {
   width: 330px;
   height: 50px;
-  font-size: 0;
-  transform: translateX(-5px); }
+  font-size: 0; }
   .rat__item {
     display: inline-block;
     width: 33px;
@@ -1517,6 +1524,8 @@ button {
       font-weight: 300;
       text-align: left;
       box-sizing: border-box; }
+      .cab__table th:hover {
+        cursor: pointer; }
     .cab__table tr {
       font-size: 18px;
       color: #483a15;
@@ -1649,6 +1658,8 @@ button {
       background-image: url(../img/icons/checkbox-empty.png);
       background-repeat: no-repeat;
       background-position: left center; }
+      .cab__prov-head-chekboxes label:hover {
+        cursor: pointer; }
     .cab__prov-head-chekboxes input[type="checkbox"] {
       display: none; }
       .cab__prov-head-chekboxes input[type="checkbox"]:checked + label {
@@ -1843,6 +1854,10 @@ button {
   padding-right: 15px;
   font-weight: 100;
   padding: 20px 10px 10px 10px; }
+  .bar-popup a {
+    color: #f7cd00; }
+    .bar-popup a:hover {
+      text-decoration: underline; }
   .bar-popup-wrap {
     position: relative; }
   .bar-popup:hover {
@@ -1852,6 +1867,8 @@ button {
   .bar-popup::placeholder {
     font-weight: 300;
     color: #f7cd00; }
+  .bar-popup:hover {
+    cursor: auto; }
   .bar-popup::before {
     content: '';
     display: block;
@@ -1883,10 +1900,10 @@ button {
     text-align: center; }
     .bar-popup__cat a {
       font-size: 18px;
-      font-weight: 300;
+      font-weight: 500;
       color: #f7cd00; }
       .bar-popup__cat a:hover {
-        text-decoration: none; }
+        text-decoration: underline; }
   .bar-popup__prods {
     display: flex;
     justify-content: space-between;
@@ -2248,12 +2265,19 @@ li.slick-active {
     justify-content: center;
     align-items: center;
     margin-bottom: 13px; }
+    .show__item-head a {
+      display: block;
+      width: 55%;
+      height: 55%;
+      text-align: center; }
     .show__item-head img {
-      max-width: 55%;
-      max-height: 55%; }
+      max-width: 100%;
+      max-height: 100%; }
   .show__item-name {
     font-size: 18px;
     text-align: center; }
+    .show__item-name a {
+      color: #483a15; }
 
 .product-card__inner {
   display: flex;

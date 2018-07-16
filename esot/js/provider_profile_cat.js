@@ -136,6 +136,14 @@ var prodList = function prodList() {
 			console.log('--init viewSwither');
 			$('.prod-head__switch').on('click', function () {
 				// console.log('-------- click')
+				$('.prod-head__switch').removeClass('prod-head__switch--plate-active prod-head__switch--list-active');
+
+				if ($(this).hasClass('prod-head__switch--plate')) {
+					$(this).addClass('prod-head__switch--plate-active');
+				} else {
+					$(this).addClass('prod-head__switch--list-active');
+				}
+
 				var viewId = $(this).data('id');
 				console.log(viewId);
 				$('.product-list__container').removeClass('product-list__container--active');
