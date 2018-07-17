@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 18);
+/******/ 	return __webpack_require__(__webpack_require__.s = 19);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -121,15 +121,15 @@ exports.default = mobileMenu;
 
 /***/ }),
 
-/***/ 18:
+/***/ 19:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(19);
+module.exports = __webpack_require__(20);
 
 
 /***/ }),
 
-/***/ 19:
+/***/ 20:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -168,7 +168,13 @@ console.log('group.js');
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-// import $ from 'jquery';
+
+var _natNum = __webpack_require__(9);
+
+var _natNum2 = _interopRequireDefault(_natNum);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 var hexGrid = function hexGrid() {
 	return {
 		grid: function grid() {
@@ -191,7 +197,6 @@ var hexGrid = function hexGrid() {
 
 			// conditions
 			var conditions = function conditions() {
-
 				if (width > hexBox * 6) {
 					console.log('width <= 1110 && width > 925');
 					console.log('--this');
@@ -202,6 +207,10 @@ var hexGrid = function hexGrid() {
 					// }
 					// hexList.css('width', width/6.1)
 					var rest = width - size;
+
+					var rHexGridWidth = 0.25 * hexBox * (0, _natNum2.default)(6);
+
+					console.log('--rHexGridWidth--', rHexGridWidth);
 					for (var i = 0; i < hexListLength; i++) {
 						$(hexList[i * _k]).find('.hex').css({ "transform": "translate(0, 0)" });
 						$(hexList[i * _k + 1]).find('.hex').css({ "transform": "translate(-25%, 50%" });
@@ -293,9 +302,26 @@ var hexGrid = function hexGrid() {
 			// this.showGrid();
 		}
 	};
+}; // import $ from 'jquery';
+exports.default = hexGrid;
+
+/***/ }),
+
+/***/ 9:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+var natNum = function natNum(n) {
+	if (n <= 1) return 1;
+	return n + natNum(n - 1);
 };
 
-exports.default = hexGrid;
+exports.default = natNum;
 
 /***/ })
 

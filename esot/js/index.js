@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 20);
+/******/ 	return __webpack_require__(__webpack_require__.s = 21);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -121,25 +121,120 @@ exports.default = mobileMenu;
 
 /***/ }),
 
-/***/ 20:
+/***/ 10:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(21);
+"use strict";
 
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+var interfaceUnit = function interfaceUnit() {
+	var s = {
+		loadFile: 'cab__load-file',
+		loadFilePlaceholder: 'cab__load-file-placeholder',
+		tab: 'in-tab',
+		tabContent: 'in-content-container'
+	};
+	return {
+		loadFile: function loadFile() {
+			// var placeholder = $(`.${s.loadFile}`).find(`.${s.loadFilePlaceholder}`).data('placeholder');
+			var placeholder = 'Выберите файл';
+			// $(`.${s.loadFile}`).find(`.${s.loadFilePlaceholder}`).html(placeholder)
+			// $(`.${s.loadFile}`).find()
+			$('.' + s.loadFile).find('input[type="file"]').on('change', function (event) {
+				var fileName = this.files[0].name;
+				console.dir(fileName);
+				// console.log('file was changed')
+				if (fileName) {
+					$('.' + s.loadFile).find('.' + s.loadFilePlaceholder).html(fileName);
+				} else {
+					$('.' + s.loadFile).find('.' + s.loadFilePlaceholder).html(placeholder);
+				}
+			});
+		},
+		tabSwitch: function tabSwitch() {
+			// initialShow content
+			var currentId = $('.in-tab--active').data('id');
+			this.showContent(currentId);
+			var self = this;
+			$('.' + s.tab).on('click', function () {
+				// console.log('---- tab click')
+				$('.' + s.tab).removeClass('in-tab--active');
+				$(this).addClass('in-tab--active');
+				currentId = false;
+				currentId = $(this).data('id');
+				if (!currentId) {
+					currentId = $(this).parent().find('input:checked').data('id');
+				}
+				console.log('currentId ----- ', currentId);
+				self.hideContent();
+				self.showContent(currentId);
+			});
+		},
+		switchSubtab: function switchSubtab() {
+			var self = this;
+			$('.in-tab-inner input[type="radio"]').on('change', function () {
+				var currentId = $(this).data('id');
+				self.hideContent();
+				self.showContent(currentId);
+			});
+		},
+		hideContent: function hideContent(id) {
+			// console.log('-----id----',id)
+			if (id) {
+				// console.log('hereerere')
+				$('#' + id).hide();
+				return;
+			}
+			// console.log('away hereerere')
+			$('.' + s.tabContent).hide();
+		},
+		showContent: function showContent(id) {
+			console.log(id);
+			$('#' + id).show();
+		},
+		inputPlaceholder: function inputPlaceholder() {
+			$('input,textarea').focus(function () {
+				if ($(this).attr('type') === 'tel') return;
+				$(this).data('placeholder', $(this).attr('placeholder')).attr('placeholder', '');
+			}).blur(function () {
+				$(this).attr('placeholder', $(this).data('placeholder'));
+			});
+		},
+		init: function init() {
+			this.loadFile();
+			this.tabSwitch();
+			this.switchSubtab();
+			this.inputPlaceholder();
+		}
+	};
+};
+
+exports.default = interfaceUnit;
 
 /***/ }),
 
 /***/ 21:
 /***/ (function(module, exports, __webpack_require__) {
 
+module.exports = __webpack_require__(22);
+
+
+/***/ }),
+
+/***/ 22:
+/***/ (function(module, exports, __webpack_require__) {
+
 "use strict";
 
 
-var _interfaceUnit = __webpack_require__(9);
+var _interfaceUnit = __webpack_require__(10);
 
 var _interfaceUnit2 = _interopRequireDefault(_interfaceUnit);
 
-var _new_hexGrid = __webpack_require__(22);
+var _new_hexGrid = __webpack_require__(23);
 
 var _new_hexGrid2 = _interopRequireDefault(_new_hexGrid);
 
@@ -235,7 +330,7 @@ console.clear();
 
 /***/ }),
 
-/***/ 22:
+/***/ 23:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -388,101 +483,6 @@ var hexGrid = function hexGrid() {
 };
 
 exports.default = hexGrid;
-
-/***/ }),
-
-/***/ 9:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-var interfaceUnit = function interfaceUnit() {
-	var s = {
-		loadFile: 'cab__load-file',
-		loadFilePlaceholder: 'cab__load-file-placeholder',
-		tab: 'in-tab',
-		tabContent: 'in-content-container'
-	};
-	return {
-		loadFile: function loadFile() {
-			// var placeholder = $(`.${s.loadFile}`).find(`.${s.loadFilePlaceholder}`).data('placeholder');
-			var placeholder = 'Выберите файл';
-			// $(`.${s.loadFile}`).find(`.${s.loadFilePlaceholder}`).html(placeholder)
-			// $(`.${s.loadFile}`).find()
-			$('.' + s.loadFile).find('input[type="file"]').on('change', function (event) {
-				var fileName = this.files[0].name;
-				console.dir(fileName);
-				// console.log('file was changed')
-				if (fileName) {
-					$('.' + s.loadFile).find('.' + s.loadFilePlaceholder).html(fileName);
-				} else {
-					$('.' + s.loadFile).find('.' + s.loadFilePlaceholder).html(placeholder);
-				}
-			});
-		},
-		tabSwitch: function tabSwitch() {
-			// initialShow content
-			var currentId = $('.in-tab--active').data('id');
-			this.showContent(currentId);
-			var self = this;
-			$('.' + s.tab).on('click', function () {
-				// console.log('---- tab click')
-				$('.' + s.tab).removeClass('in-tab--active');
-				$(this).addClass('in-tab--active');
-				currentId = false;
-				currentId = $(this).data('id');
-				if (!currentId) {
-					currentId = $(this).parent().find('input:checked').data('id');
-				}
-				console.log('currentId ----- ', currentId);
-				self.hideContent();
-				self.showContent(currentId);
-			});
-		},
-		switchSubtab: function switchSubtab() {
-			var self = this;
-			$('.in-tab-inner input[type="radio"]').on('change', function () {
-				var currentId = $(this).data('id');
-				self.hideContent();
-				self.showContent(currentId);
-			});
-		},
-		hideContent: function hideContent(id) {
-			// console.log('-----id----',id)
-			if (id) {
-				// console.log('hereerere')
-				$('#' + id).hide();
-				return;
-			}
-			// console.log('away hereerere')
-			$('.' + s.tabContent).hide();
-		},
-		showContent: function showContent(id) {
-			console.log(id);
-			$('#' + id).show();
-		},
-		inputPlaceholder: function inputPlaceholder() {
-			$('input,textarea').focus(function () {
-				if ($(this).attr('type') === 'tel') return;
-				$(this).data('placeholder', $(this).attr('placeholder')).attr('placeholder', '');
-			}).blur(function () {
-				$(this).attr('placeholder', $(this).data('placeholder'));
-			});
-		},
-		init: function init() {
-			this.loadFile();
-			this.tabSwitch();
-			this.switchSubtab();
-			this.inputPlaceholder();
-		}
-	};
-};
-
-exports.default = interfaceUnit;
 
 /***/ })
 
