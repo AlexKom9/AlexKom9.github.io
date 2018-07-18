@@ -149,7 +149,7 @@ button {
       width: 1210px; } }
   @media (min-width: 1500px) {
     .l-container {
-      width: 1460px;
+      width: 1480px;
       padding: 0; } }
 
 .in-tab-inner {
@@ -158,9 +158,9 @@ button {
 .in-tab--active + .in-tab-inner {
   display: block; }
 
-.in-tab-wrap > input[type="checkbox"] {
+.in-tab-wrap > input[type="checkbox"], .in-tab-wrap input[type="radio"] {
   display: none; }
-  .in-tab-wrap > input[type="checkbox"]:checked + label + .in-tab-inner {
+  .in-tab-wrap > input[type="checkbox"]:checked + label + .in-tab-inner, .in-tab-wrap input[type="radio"]:checked + label + .in-tab-inner {
     display: block; }
 
 .in-content-container {
@@ -267,8 +267,7 @@ button {
   border: 2px solid #f7cd00;
   color: #f7cd00;
   font-size: 18px;
-  padding-left: 10px;
-  padding-right: 15px;
+  padding: 10px 15px 10px 10px;
   font-weight: 100;
   padding: 10px; }
   .l-btn:hover {
@@ -324,18 +323,27 @@ button {
 
 .header {
   background-color: #000;
-  background-image: url(../img/header/header_sot1.png);
-  background-position: left -20px top -70px;
-  background-repeat: no-repeat;
-  padding: 24px 16px 10px 16px;
-  margin-bottom: 16px;
   position: relative; }
-  @media only screen and (max-width: 940px) {
-    .header {
-      background-position: left -300px top -10px; } }
-  @media only screen and (max-width: 600px) {
-    .header {
-      padding: 10px 0 10px 0; } }
+  .header .large-container {
+    background-image: url(../img/header/header_sot1.png);
+    background-position: left -20px top -50px;
+    background-repeat: no-repeat;
+    margin-bottom: 16px;
+    position: relative;
+    padding: 24px 16px 10px 16px;
+    height: 100%; }
+    @media only screen and (max-width: 1500px) {
+      .header .large-container {
+        padding: 24px 16px 40px 16px; } }
+    @media only screen and (max-width: 990px) {
+      .header .large-container {
+        padding: 24px 16px 10px 16px; } }
+    @media only screen and (max-width: 940px) {
+      .header .large-container {
+        background-position: left -300px top -10px; } }
+    @media only screen and (max-width: 600px) {
+      .header .large-container {
+        padding: 10px 0 10px 0; } }
   .header--cab {
     margin-bottom: 0;
     min-height: 160px;
@@ -634,6 +642,10 @@ button {
       font-size: 18px;
       width: 100%; }
 
+.hexGrid-wrap {
+  margin-right: -20%;
+  max-width: 900px; }
+
 .hexGrid {
   border: none;
   padding: 0;
@@ -679,8 +691,7 @@ button {
   border: 2px solid #f7cd00;
   color: #f7cd00;
   font-size: 18px;
-  padding-left: 10px;
-  padding-right: 15px;
+  padding: 10px 15px 10px 10px;
   font-weight: 100;
   padding: 10px; }
   .side-bar:hover {
@@ -851,8 +862,7 @@ button {
       border: 2px solid #f7cd00;
       color: #f7cd00;
       font-size: 18px;
-      padding-left: 10px;
-      padding-right: 15px;
+      padding: 10px 15px 10px 10px;
       font-weight: 100;
       padding: 10px; }
       .product-list__paginator--mobile button:hover {
@@ -873,8 +883,7 @@ button {
       border: 2px solid #f7cd00;
       color: #f7cd00;
       font-size: 18px;
-      padding-left: 10px;
-      padding-right: 15px;
+      padding: 10px 15px 10px 10px;
       font-weight: 100;
       padding: 10px;
       max-width: 300px; }
@@ -911,8 +920,7 @@ button {
     border: 2px solid #f7cd00;
     color: #f7cd00;
     font-size: 18px;
-    padding-left: 10px;
-    padding-right: 15px;
+    padding: 10px 15px 10px 10px;
     font-weight: 100;
     margin-right: 20px; }
     .prod-head__select:hover {
@@ -1384,8 +1392,7 @@ button {
       border: 2px solid #f7cd00;
       color: #f7cd00;
       font-size: 18px;
-      padding-left: 10px;
-      padding-right: 15px;
+      padding: 10px 15px 10px 10px;
       font-weight: 100;
       width: 100%;
       height: 53px;
@@ -1479,8 +1486,7 @@ button {
     border: 2px solid #f7cd00;
     color: #f7cd00;
     font-size: 18px;
-    padding-left: 10px;
-    padding-right: 15px;
+    padding: 10px 15px 10px 10px;
     font-weight: 100;
     background-image: linear-gradient(#000, 65%, #fff);
     text-align: center;
@@ -1499,8 +1505,7 @@ button {
     border: 2px solid #f7cd00;
     color: #f7cd00;
     font-size: 18px;
-    padding-left: 10px;
-    padding-right: 15px;
+    padding: 10px 15px 10px 10px;
     font-weight: 100;
     padding: 5px; }
     .cab__set-input:hover {
@@ -1542,6 +1547,8 @@ button {
       .cab__table td .cab__btn-box {
         width: 100%;
         text-align: center; }
+      .cab__table td td {
+        padding-left: 0; }
       .cab__table td button {
         margin-top: 10px; }
       .cab__table td p {
@@ -1566,15 +1573,15 @@ button {
       border: 2px solid #f7cd00;
       color: #f7cd00;
       font-size: 18px;
-      padding-left: 10px;
-      padding-right: 15px;
+      padding: 10px 15px 10px 10px;
       font-weight: 100;
       display: flex;
       justify-content: space-between;
       padding: 5px 15px;
       font-size: 24px;
       margin-right: 5px;
-      min-width: 100px; }
+      min-width: 100px;
+      max-width: 130px; }
       .cab__table-amount:hover {
         cursor: pointer; }
       .cab__table-amount option {
@@ -1602,8 +1609,7 @@ button {
         border: 2px solid #f7cd00;
         color: #f7cd00;
         font-size: 18px;
-        padding-left: 10px;
-        padding-right: 15px;
+        padding: 10px 15px 10px 10px;
         font-weight: 100;
         height: 40px; }
         .cab__table-header-currency:hover {
@@ -1637,8 +1643,7 @@ button {
         border: 2px solid #f7cd00;
         color: #f7cd00;
         font-size: 18px;
-        padding-left: 10px;
-        padding-right: 15px;
+        padding: 10px 15px 10px 10px;
         font-weight: 100;
         height: 40px; }
         .cab__table-hist button:hover {
@@ -1748,8 +1753,7 @@ button {
   border: 2px solid #f7cd00;
   color: #f7cd00;
   font-size: 18px;
-  padding-left: 10px;
-  padding-right: 15px;
+  padding: 10px 15px 10px 10px;
   font-weight: 100;
   padding: 7px;
   width: 100%; }
@@ -1852,8 +1856,7 @@ button {
   border: 2px solid #f7cd00;
   color: #f7cd00;
   font-size: 18px;
-  padding-left: 10px;
-  padding-right: 15px;
+  padding: 10px 15px 10px 10px;
   font-weight: 100;
   padding: 20px 10px 10px 10px; }
   .bar-popup a {
@@ -2006,8 +2009,7 @@ button {
     border: 2px solid #f7cd00;
     color: #f7cd00;
     font-size: 18px;
-    padding-left: 10px;
-    padding-right: 15px;
+    padding: 10px 15px 10px 10px;
     font-weight: 100;
     padding: 10px; }
     .side-review__inner:hover {
@@ -2073,8 +2075,7 @@ button {
         border: 2px solid #f7cd00;
         color: #f7cd00;
         font-size: 18px;
-        padding-left: 10px;
-        padding-right: 15px;
+        padding: 10px 15px 10px 10px;
         font-weight: 100;
         padding: 7px; }
         .reg-window__form-group input:hover {
@@ -2089,8 +2090,7 @@ button {
         border: 2px solid #f7cd00;
         color: #f7cd00;
         font-size: 18px;
-        padding-left: 10px;
-        padding-right: 15px;
+        padding: 10px 15px 10px 10px;
         font-weight: 100;
         padding: 7px; }
         .reg-window__form-group select:hover {
@@ -2100,6 +2100,12 @@ button {
         .reg-window__form-group select::placeholder {
           font-weight: 300;
           color: #f7cd00; }
+    .reg-window__frame-wrap {
+      max-height: 200px;
+      padding: 10px;
+      border: solid 2px #f7cd00;
+      margin-bottom: 20px;
+      overflow-y: auto; }
     .reg-window__table-wrap {
       text-align: center;
       display: flex;
@@ -2113,8 +2119,7 @@ button {
       border: 2px solid #f7cd00;
       color: #f7cd00;
       font-size: 18px;
-      padding-left: 10px;
-      padding-right: 15px;
+      padding: 10px 15px 10px 10px;
       font-weight: 100;
       padding: 10px;
       float: right; }
@@ -2227,8 +2232,7 @@ li.slick-active {
       border: 2px solid #f7cd00;
       color: #f7cd00;
       font-size: 18px;
-      padding-left: 10px;
-      padding-right: 15px;
+      padding: 10px 15px 10px 10px;
       font-weight: 100; }
       .sample__item-btn:hover {
         cursor: pointer; }
@@ -2397,6 +2401,8 @@ li.slick-active {
   margin-bottom: 20px; }
   .product-card__info-group p > strong {
     margin-right: 20px; }
+  .product-card__info-group--price {
+    display: flex; }
 
 .product-card__add-fav {
   display: flex;
@@ -2410,8 +2416,7 @@ li.slick-active {
   border: 2px solid #f7cd00;
   color: #f7cd00;
   font-size: 18px;
-  padding-left: 10px;
-  padding-right: 15px;
+  padding: 10px 15px 10px 10px;
   font-weight: 100;
   display: block;
   margin-right: -30px;
@@ -2433,8 +2438,7 @@ li.slick-active {
   border: 2px solid #f7cd00;
   color: #f7cd00;
   font-size: 18px;
-  padding-left: 10px;
-  padding-right: 15px;
+  padding: 10px 15px 10px 10px;
   font-weight: 100;
   padding: 10px; }
   .product-card__color-dropdown-container:hover {
@@ -2447,6 +2451,9 @@ li.slick-active {
   .product-card__color-dropdown-container table td {
     vertical-align: middle;
     padding: 10px; }
+
+.product-card__order {
+  text-align: center; }
 
 .product-card__table {
   margin-bottom: 20px;
@@ -2532,14 +2539,14 @@ li.slick-active {
 
 .leave-comment .form-group {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  margin-bottom: 10px; }
   .leave-comment .form-group input {
     background-image: linear-gradient(#000, 65%, #fff);
     border: 2px solid #f7cd00;
     color: #f7cd00;
     font-size: 18px;
-    padding-left: 10px;
-    padding-right: 15px;
+    padding: 10px 15px 10px 10px;
     font-weight: 100; }
     .leave-comment .form-group input:hover {
       cursor: pointer; }
@@ -2553,8 +2560,7 @@ li.slick-active {
     border: 2px solid #f7cd00;
     color: #f7cd00;
     font-size: 18px;
-    padding-left: 10px;
-    padding-right: 15px;
+    padding: 10px 15px 10px 10px;
     font-weight: 100; }
     .leave-comment .form-group textarea:hover {
       cursor: pointer; }
@@ -2563,6 +2569,15 @@ li.slick-active {
     .leave-comment .form-group textarea::placeholder {
       font-weight: 300;
       color: #f7cd00; }
+  .leave-comment .form-group label {
+    margin-bottom: 10px; }
+  .leave-comment .form-group--rat {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+    .leave-comment .form-group--rat label {
+      margin-right: 20px; }
 
 .leave-comment button {
   margin-top: 20px;
@@ -2571,8 +2586,7 @@ li.slick-active {
   border: 2px solid #f7cd00;
   color: #f7cd00;
   font-size: 18px;
-  padding-left: 10px;
-  padding-right: 15px;
+  padding: 10px 15px 10px 10px;
   font-weight: 100; }
   .leave-comment button:hover {
     cursor: pointer; }
@@ -2589,7 +2603,8 @@ li.slick-active {
     font-size: 50px;
     margin-bottom: 20px; }
   .basket-order {
-    margin-bottom: 40px; }
+    margin-bottom: 40px;
+    max-width: 80%; }
     .basket-order__inner {
       display: flex;
       justify-content: space-between; }
@@ -2609,8 +2624,7 @@ li.slick-active {
           border: 2px solid #f7cd00;
           color: #f7cd00;
           font-size: 18px;
-          padding-left: 10px;
-          padding-right: 15px;
+          padding: 10px 15px 10px 10px;
           font-weight: 100;
           width: 100%; }
           .basket-order-right__phone input:hover {
@@ -2624,7 +2638,7 @@ li.slick-active {
           font-size: 18px; }
   .basket__table {
     flex-grow: 1;
-    margin-bottom: 60px; }
+    margin-bottom: 20px; }
     .basket__table th {
       border: 2px solid #f7cd00; }
     .basket__table td, .basket__table th {
@@ -2645,8 +2659,7 @@ li.slick-active {
       border: 2px solid #f7cd00;
       color: #f7cd00;
       font-size: 18px;
-      padding-left: 10px;
-      padding-right: 15px;
+      padding: 10px 15px 10px 10px;
       font-weight: 100;
       font-size: 16px; }
       .basket__table-select:hover {
@@ -2672,8 +2685,7 @@ li.slick-active {
       border: 2px solid #f7cd00;
       color: #f7cd00;
       font-size: 18px;
-      padding-left: 10px;
-      padding-right: 15px;
+      padding: 10px 15px 10px 10px;
       font-weight: 100; }
       .basket-form__address-container select:hover, .basket-form__address-container input:hover {
         cursor: pointer; }
@@ -2699,8 +2711,7 @@ li.slick-active {
       border: 2px solid #f7cd00;
       color: #f7cd00;
       font-size: 18px;
-      padding-left: 10px;
-      padding-right: 15px;
+      padding: 10px 15px 10px 10px;
       font-weight: 100; }
       .basket-form__comment textarea:hover {
         cursor: pointer; }

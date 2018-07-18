@@ -81,55 +81,6 @@ module.exports = jQuery;
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-var mobileMenu = function mobileMenu() {
-	return {
-		clickBurger: function clickBurger() {
-			self = this;
-			$('.header__burger').on('click', function (event) {
-				event.stopPropagation();
-				$(this).toggleClass('header__burger--active');
-				var hasClass = $('.header__burger').hasClass('header__burger--active');
-				if (hasClass) {
-					self.openMenu();
-				} else {
-					self.closeMenu();
-				}
-			});
-		},
-		openMenu: function openMenu() {
-			$('#mobileMenu').show();
-		},
-		closeMenu: function closeMenu() {
-			$('#mobileMenu').hide();
-		},
-		otherClick: function otherClick() {
-			var _this = this;
-
-			$(window).on('click', function () {
-				_this.closeMenu();
-				$('.header__burger').removeClass('header__burger--active');
-			});
-		},
-		init: function init() {
-			this.clickBurger();
-			this.otherClick();
-		}
-	};
-};
-
-exports.default = mobileMenu;
-
-/***/ }),
-
-/***/ 10:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
 var interfaceUnit = function interfaceUnit() {
 	var s = {
 		loadFile: 'cab__load-file',
@@ -216,6 +167,55 @@ exports.default = interfaceUnit;
 
 /***/ }),
 
+/***/ 2:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+var mobileMenu = function mobileMenu() {
+	return {
+		clickBurger: function clickBurger() {
+			self = this;
+			$('.header__burger').on('click', function (event) {
+				event.stopPropagation();
+				$(this).toggleClass('header__burger--active');
+				var hasClass = $('.header__burger').hasClass('header__burger--active');
+				if (hasClass) {
+					self.openMenu();
+				} else {
+					self.closeMenu();
+				}
+			});
+		},
+		openMenu: function openMenu() {
+			$('#mobileMenu').show();
+		},
+		closeMenu: function closeMenu() {
+			$('#mobileMenu').hide();
+		},
+		otherClick: function otherClick() {
+			var _this = this;
+
+			$(window).on('click', function () {
+				_this.closeMenu();
+				$('.header__burger').removeClass('header__burger--active');
+			});
+		},
+		init: function init() {
+			this.clickBurger();
+			this.otherClick();
+		}
+	};
+};
+
+exports.default = mobileMenu;
+
+/***/ }),
+
 /***/ 21:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -230,7 +230,7 @@ module.exports = __webpack_require__(22);
 "use strict";
 
 
-var _interfaceUnit = __webpack_require__(10);
+var _interfaceUnit = __webpack_require__(1);
 
 var _interfaceUnit2 = _interopRequireDefault(_interfaceUnit);
 
@@ -238,7 +238,7 @@ var _new_hexGrid = __webpack_require__(23);
 
 var _new_hexGrid2 = _interopRequireDefault(_new_hexGrid);
 
-var _mobileMenu = __webpack_require__(1);
+var _mobileMenu = __webpack_require__(2);
 
 var _mobileMenu2 = _interopRequireDefault(_mobileMenu);
 

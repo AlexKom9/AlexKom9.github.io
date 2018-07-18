@@ -81,43 +81,107 @@ module.exports = jQuery;
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-var mobileMenu = function mobileMenu() {
+var interfaceUnit = function interfaceUnit() {
+	var s = {
+		loadFile: 'cab__load-file',
+		loadFilePlaceholder: 'cab__load-file-placeholder',
+		tab: 'in-tab',
+		tabContent: 'in-content-container'
+	};
 	return {
-		clickBurger: function clickBurger() {
-			self = this;
-			$('.header__burger').on('click', function (event) {
-				event.stopPropagation();
-				$(this).toggleClass('header__burger--active');
-				var hasClass = $('.header__burger').hasClass('header__burger--active');
-				if (hasClass) {
-					self.openMenu();
+		loadFile: function loadFile() {
+			// var placeholder = $(`.${s.loadFile}`).find(`.${s.loadFilePlaceholder}`).data('placeholder');
+			var placeholder = 'Выберите файл';
+			// $(`.${s.loadFile}`).find(`.${s.loadFilePlaceholder}`).html(placeholder)
+			// $(`.${s.loadFile}`).find()
+			$('.' + s.loadFile).find('input[type="file"]').on('change', function (event) {
+				var fileName = this.files[0].name;
+				console.dir(fileName);
+				// console.log('file was changed')
+				if (fileName) {
+					$('.' + s.loadFile).find('.' + s.loadFilePlaceholder).html(fileName);
 				} else {
-					self.closeMenu();
+					$('.' + s.loadFile).find('.' + s.loadFilePlaceholder).html(placeholder);
 				}
 			});
 		},
-		openMenu: function openMenu() {
-			$('#mobileMenu').show();
+		tabSwitch: function tabSwitch() {
+			// initialShow content
+			var currentId = $('.in-tab--active').data('id');
+			this.showContent(currentId);
+			var self = this;
+			$('.' + s.tab).on('click', function () {
+				// console.log('---- tab click')
+				$('.' + s.tab).removeClass('in-tab--active');
+				$(this).addClass('in-tab--active');
+				currentId = false;
+				currentId = $(this).data('id');
+				if (!currentId) {
+					currentId = $(this).parent().find('input:checked').data('id');
+				}
+				console.log('currentId ----- ', currentId);
+				self.hideContent();
+				self.showContent(currentId);
+			});
 		},
-		closeMenu: function closeMenu() {
-			$('#mobileMenu').hide();
+		switchSubtab: function switchSubtab() {
+			var self = this;
+			$('.in-tab-inner input[type="radio"]').on('change', function () {
+				var currentId = $(this).data('id');
+				self.hideContent();
+				self.showContent(currentId);
+			});
 		},
-		otherClick: function otherClick() {
-			var _this = this;
-
-			$(window).on('click', function () {
-				_this.closeMenu();
-				$('.header__burger').removeClass('header__burger--active');
+		hideContent: function hideContent(id) {
+			// console.log('-----id----',id)
+			if (id) {
+				// console.log('hereerere')
+				$('#' + id).hide();
+				return;
+			}
+			// console.log('away hereerere')
+			$('.' + s.tabContent).hide();
+		},
+		showContent: function showContent(id) {
+			console.log(id);
+			$('#' + id).show();
+		},
+		inputPlaceholder: function inputPlaceholder() {
+			$('input,textarea').focus(function () {
+				if ($(this).attr('type') === 'tel') return;
+				$(this).data('placeholder', $(this).attr('placeholder')).attr('placeholder', '');
+			}).blur(function () {
+				$(this).attr('placeholder', $(this).data('placeholder'));
 			});
 		},
 		init: function init() {
-			this.clickBurger();
-			this.otherClick();
+			this.loadFile();
+			this.tabSwitch();
+			this.switchSubtab();
+			this.inputPlaceholder();
 		}
 	};
 };
 
-exports.default = mobileMenu;
+exports.default = interfaceUnit;
+
+/***/ }),
+
+/***/ 10:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+var natNum = function natNum(n) {
+	if (n <= 1) return 1;
+	return n + natNum(n - 1);
+};
+
+exports.default = natNum;
 
 /***/ }),
 
@@ -161,6 +225,55 @@ exports.default = prodList;
 
 /***/ }),
 
+/***/ 2:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+var mobileMenu = function mobileMenu() {
+	return {
+		clickBurger: function clickBurger() {
+			self = this;
+			$('.header__burger').on('click', function (event) {
+				event.stopPropagation();
+				$(this).toggleClass('header__burger--active');
+				var hasClass = $('.header__burger').hasClass('header__burger--active');
+				if (hasClass) {
+					self.openMenu();
+				} else {
+					self.closeMenu();
+				}
+			});
+		},
+		openMenu: function openMenu() {
+			$('#mobileMenu').show();
+		},
+		closeMenu: function closeMenu() {
+			$('#mobileMenu').hide();
+		},
+		otherClick: function otherClick() {
+			var _this = this;
+
+			$(window).on('click', function () {
+				_this.closeMenu();
+				$('.header__burger').removeClass('header__burger--active');
+			});
+		},
+		init: function init() {
+			this.clickBurger();
+			this.otherClick();
+		}
+	};
+};
+
+exports.default = mobileMenu;
+
+/***/ }),
+
 /***/ 33:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -179,7 +292,7 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _hexGrid = __webpack_require__(8);
+var _hexGrid = __webpack_require__(9);
 
 var _hexGrid2 = _interopRequireDefault(_hexGrid);
 
@@ -187,9 +300,13 @@ var _prodList = __webpack_require__(11);
 
 var _prodList2 = _interopRequireDefault(_prodList);
 
-var _mobileMenu = __webpack_require__(1);
+var _mobileMenu = __webpack_require__(2);
 
 var _mobileMenu2 = _interopRequireDefault(_mobileMenu);
+
+var _interfaceUnit = __webpack_require__(1);
+
+var _interfaceUnit2 = _interopRequireDefault(_interfaceUnit);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -197,11 +314,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 	(0, _mobileMenu2.default)().init();
 	(0, _hexGrid2.default)().init();
 	(0, _prodList2.default)().init();
+	(0, _interfaceUnit2.default)().init();
 });
 
 /***/ }),
 
-/***/ 8:
+/***/ 9:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -211,7 +329,7 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
-var _natNum = __webpack_require__(9);
+var _natNum = __webpack_require__(10);
 
 var _natNum2 = _interopRequireDefault(_natNum);
 
@@ -239,17 +357,13 @@ var hexGrid = function hexGrid() {
 
 			// conditions
 			var conditions = function conditions() {
-				if (width > hexBox * 6) {
-					console.log('width <= 1110 && width > 925');
+				if (width <= hexBox * 7 && width > hexBox * 6) {
+					console.log('width > 1110');
 					console.log('--this');
-					var _k = 6;
+					var _k = 7;
 					var size = 0;
-					// for (var i = 0; i <= 6; i++) {
-					// 	size += hexBox*0.2*i
-					// }
-					// hexList.css('width', width/6.1)
-					var rest = width - size;
 
+					var rest = width - size;
 					var rHexGridWidth = 0.25 * hexBox * (0, _natNum2.default)(6);
 
 					console.log('--rHexGridWidth--', rHexGridWidth);
@@ -260,6 +374,7 @@ var hexGrid = function hexGrid() {
 						$(hexList[i * _k + 3]).find('.hex').css({ "transform": "translate(-75%, 50%)" });
 						$(hexList[i * _k + 4]).find('.hex').css({ "transform": "translate(-100%, 0)" });
 						$(hexList[i * _k + 5]).find('.hex').css({ "transform": "translate(-125%, 50%)" });
+						$(hexList[i * _k + 6]).find('.hex').css({ "transform": "translate(-150%, 0%)" });
 					}
 				}
 				if (width <= hexBox * 6 && width > hexBox * 5) {
@@ -346,24 +461,6 @@ var hexGrid = function hexGrid() {
 	};
 }; // import $ from 'jquery';
 exports.default = hexGrid;
-
-/***/ }),
-
-/***/ 9:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-var natNum = function natNum(n) {
-	if (n <= 1) return 1;
-	return n + natNum(n - 1);
-};
-
-exports.default = natNum;
 
 /***/ })
 

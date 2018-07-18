@@ -72,7 +72,33 @@ module.exports = jQuery;
 
 /***/ }),
 
-/***/ 1:
+/***/ 10:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+var natNum = function natNum(n) {
+	if (n <= 1) return 1;
+	return n + natNum(n - 1);
+};
+
+exports.default = natNum;
+
+/***/ }),
+
+/***/ 19:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(20);
+
+
+/***/ }),
+
+/***/ 2:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -121,14 +147,6 @@ exports.default = mobileMenu;
 
 /***/ }),
 
-/***/ 19:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(20);
-
-
-/***/ }),
-
 /***/ 20:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -139,13 +157,17 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _hexGrid = __webpack_require__(8);
+var _hexGrid = __webpack_require__(9);
 
 var _hexGrid2 = _interopRequireDefault(_hexGrid);
 
-var _mobileMenu = __webpack_require__(1);
+var _mobileMenu = __webpack_require__(2);
 
 var _mobileMenu2 = _interopRequireDefault(_mobileMenu);
+
+var _interfaceUnitJs = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../../js/interfaceUnit.js.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+var _interfaceUnitJs2 = _interopRequireDefault(_interfaceUnitJs);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -155,11 +177,12 @@ console.log('group.js');
 (0, _jquery2.default)(document).ready(function () {
 	(0, _mobileMenu2.default)().init();
 	(0, _hexGrid2.default)().init();
+	(0, _interfaceUnitJs2.default)().init();
 });
 
 /***/ }),
 
-/***/ 8:
+/***/ 9:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -169,7 +192,7 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
-var _natNum = __webpack_require__(9);
+var _natNum = __webpack_require__(10);
 
 var _natNum2 = _interopRequireDefault(_natNum);
 
@@ -197,17 +220,13 @@ var hexGrid = function hexGrid() {
 
 			// conditions
 			var conditions = function conditions() {
-				if (width > hexBox * 6) {
-					console.log('width <= 1110 && width > 925');
+				if (width <= hexBox * 7 && width > hexBox * 6) {
+					console.log('width > 1110');
 					console.log('--this');
-					var _k = 6;
+					var _k = 7;
 					var size = 0;
-					// for (var i = 0; i <= 6; i++) {
-					// 	size += hexBox*0.2*i
-					// }
-					// hexList.css('width', width/6.1)
-					var rest = width - size;
 
+					var rest = width - size;
 					var rHexGridWidth = 0.25 * hexBox * (0, _natNum2.default)(6);
 
 					console.log('--rHexGridWidth--', rHexGridWidth);
@@ -218,6 +237,7 @@ var hexGrid = function hexGrid() {
 						$(hexList[i * _k + 3]).find('.hex').css({ "transform": "translate(-75%, 50%)" });
 						$(hexList[i * _k + 4]).find('.hex').css({ "transform": "translate(-100%, 0)" });
 						$(hexList[i * _k + 5]).find('.hex').css({ "transform": "translate(-125%, 50%)" });
+						$(hexList[i * _k + 6]).find('.hex').css({ "transform": "translate(-150%, 0%)" });
 					}
 				}
 				if (width <= hexBox * 6 && width > hexBox * 5) {
@@ -304,24 +324,6 @@ var hexGrid = function hexGrid() {
 	};
 }; // import $ from 'jquery';
 exports.default = hexGrid;
-
-/***/ }),
-
-/***/ 9:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-var natNum = function natNum(n) {
-	if (n <= 1) return 1;
-	return n + natNum(n - 1);
-};
-
-exports.default = natNum;
 
 /***/ })
 

@@ -74,6 +74,101 @@
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
+var interfaceUnit = function interfaceUnit() {
+	var s = {
+		loadFile: 'cab__load-file',
+		loadFilePlaceholder: 'cab__load-file-placeholder',
+		tab: 'in-tab',
+		tabContent: 'in-content-container'
+	};
+	return {
+		loadFile: function loadFile() {
+			// var placeholder = $(`.${s.loadFile}`).find(`.${s.loadFilePlaceholder}`).data('placeholder');
+			var placeholder = 'Выберите файл';
+			// $(`.${s.loadFile}`).find(`.${s.loadFilePlaceholder}`).html(placeholder)
+			// $(`.${s.loadFile}`).find()
+			$('.' + s.loadFile).find('input[type="file"]').on('change', function (event) {
+				var fileName = this.files[0].name;
+				console.dir(fileName);
+				// console.log('file was changed')
+				if (fileName) {
+					$('.' + s.loadFile).find('.' + s.loadFilePlaceholder).html(fileName);
+				} else {
+					$('.' + s.loadFile).find('.' + s.loadFilePlaceholder).html(placeholder);
+				}
+			});
+		},
+		tabSwitch: function tabSwitch() {
+			// initialShow content
+			var currentId = $('.in-tab--active').data('id');
+			this.showContent(currentId);
+			var self = this;
+			$('.' + s.tab).on('click', function () {
+				// console.log('---- tab click')
+				$('.' + s.tab).removeClass('in-tab--active');
+				$(this).addClass('in-tab--active');
+				currentId = false;
+				currentId = $(this).data('id');
+				if (!currentId) {
+					currentId = $(this).parent().find('input:checked').data('id');
+				}
+				console.log('currentId ----- ', currentId);
+				self.hideContent();
+				self.showContent(currentId);
+			});
+		},
+		switchSubtab: function switchSubtab() {
+			var self = this;
+			$('.in-tab-inner input[type="radio"]').on('change', function () {
+				var currentId = $(this).data('id');
+				self.hideContent();
+				self.showContent(currentId);
+			});
+		},
+		hideContent: function hideContent(id) {
+			// console.log('-----id----',id)
+			if (id) {
+				// console.log('hereerere')
+				$('#' + id).hide();
+				return;
+			}
+			// console.log('away hereerere')
+			$('.' + s.tabContent).hide();
+		},
+		showContent: function showContent(id) {
+			console.log(id);
+			$('#' + id).show();
+		},
+		inputPlaceholder: function inputPlaceholder() {
+			$('input,textarea').focus(function () {
+				if ($(this).attr('type') === 'tel') return;
+				$(this).data('placeholder', $(this).attr('placeholder')).attr('placeholder', '');
+			}).blur(function () {
+				$(this).attr('placeholder', $(this).data('placeholder'));
+			});
+		},
+		init: function init() {
+			this.loadFile();
+			this.tabSwitch();
+			this.switchSubtab();
+			this.inputPlaceholder();
+		}
+	};
+};
+
+exports.default = interfaceUnit;
+
+/***/ }),
+
+/***/ 2:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
 var mobileMenu = function mobileMenu() {
 	return {
 		clickBurger: function clickBurger() {
@@ -128,14 +223,19 @@ module.exports = __webpack_require__(38);
 "use strict";
 
 
-var _mobileMenu = __webpack_require__(1);
+var _mobileMenu = __webpack_require__(2);
 
 var _mobileMenu2 = _interopRequireDefault(_mobileMenu);
+
+var _interfaceUnit = __webpack_require__(1);
+
+var _interfaceUnit2 = _interopRequireDefault(_interfaceUnit);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 $(document).ready(function () {
 	(0, _mobileMenu2.default)().init();
+	(0, _interfaceUnit2.default)().init();
 });
 
 /***/ })
