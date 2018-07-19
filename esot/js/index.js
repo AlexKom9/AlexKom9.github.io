@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 21);
+/******/ 	return __webpack_require__(__webpack_require__.s = 22);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -86,18 +86,16 @@ var interfaceUnit = function interfaceUnit() {
 		loadFile: 'cab__load-file',
 		loadFilePlaceholder: 'cab__load-file-placeholder',
 		tab: 'in-tab',
-		tabContent: 'in-content-container'
+		tabContent: 'in-content-container',
+		numLimit: 'in-input-num--limit'
 	};
 	return {
 		loadFile: function loadFile() {
 			// var placeholder = $(`.${s.loadFile}`).find(`.${s.loadFilePlaceholder}`).data('placeholder');
 			var placeholder = 'Выберите файл';
-			// $(`.${s.loadFile}`).find(`.${s.loadFilePlaceholder}`).html(placeholder)
-			// $(`.${s.loadFile}`).find()
 			$('.' + s.loadFile).find('input[type="file"]').on('change', function (event) {
 				var fileName = this.files[0].name;
 				console.dir(fileName);
-				// console.log('file was changed')
 				if (fileName) {
 					$('.' + s.loadFile).find('.' + s.loadFilePlaceholder).html(fileName);
 				} else {
@@ -111,7 +109,6 @@ var interfaceUnit = function interfaceUnit() {
 			this.showContent(currentId);
 			var self = this;
 			$('.' + s.tab).on('click', function () {
-				// console.log('---- tab click')
 				$('.' + s.tab).removeClass('in-tab--active');
 				$(this).addClass('in-tab--active');
 				currentId = false;
@@ -142,10 +139,12 @@ var interfaceUnit = function interfaceUnit() {
 			// console.log('away hereerere')
 			$('.' + s.tabContent).hide();
 		},
+
 		showContent: function showContent(id) {
 			console.log(id);
 			$('#' + id).show();
 		},
+
 		inputPlaceholder: function inputPlaceholder() {
 			$('input,textarea').focus(function () {
 				if ($(this).attr('type') === 'tel') return;
@@ -154,11 +153,31 @@ var interfaceUnit = function interfaceUnit() {
 				$(this).attr('placeholder', $(this).data('placeholder'));
 			});
 		},
+		inputNumLimit: function inputNumLimit() {
+			// console.log()
+			$('.' + s.numLimit).on('keypress, keydown', function (e) {
+				if (e.ctrlKey || e.altKey || e.metaKey) return;
+				console.log('----char');
+				var chr = String.fromCharCode(e.keyCode).toLowerCase();
+				console.log(chr);
+				console.log(e.keyCode);
+				if (chr == null) return;
+				if (chr < '0' || chr > '9' || $(this).val().length >= 5) {
+					if (e.keyCode != 8 && e.keyCode != 46) {
+						if (1) {
+							console.log('false');
+							return false;
+						}
+					}
+				}
+			});
+		},
 		init: function init() {
 			this.loadFile();
 			this.tabSwitch();
 			this.switchSubtab();
 			this.inputPlaceholder();
+			this.inputNumLimit();
 		}
 	};
 };
@@ -216,15 +235,15 @@ exports.default = mobileMenu;
 
 /***/ }),
 
-/***/ 21:
+/***/ 22:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(22);
+module.exports = __webpack_require__(23);
 
 
 /***/ }),
 
-/***/ 22:
+/***/ 23:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -234,7 +253,7 @@ var _interfaceUnit = __webpack_require__(1);
 
 var _interfaceUnit2 = _interopRequireDefault(_interfaceUnit);
 
-var _new_hexGrid = __webpack_require__(23);
+var _new_hexGrid = __webpack_require__(24);
 
 var _new_hexGrid2 = _interopRequireDefault(_new_hexGrid);
 
@@ -252,7 +271,6 @@ console.log('index.js');
 
 
 var popup = function popup() {
-	// console.log()
 	var s = {
 		tab: '.popup-tab',
 		content: '.popup-content'
@@ -290,25 +308,28 @@ var popup = function popup() {
 				(0, _jquery2.default)(window).trigger('closePopoup');
 			});
 		},
-		// close: function(){
-		// 	$(window)
-		//
-		// },
 		showContent: function showContent(id) {
 			(0, _jquery2.default)('#' + id).show();
 		},
-		content: function content() {},
-
 		events: function events() {
 			(0, _jquery2.default)(window).on('closePopoup', function () {
 				(0, _jquery2.default)(s.content).hide();
 				console.log('close');
 			});
 		},
+		regScrol: function regScrol() {
+			(0, _jquery2.default)('.header__nav-link--reg').on('click', function () {
+				// $(window).scrollTo('.sample')
+				(0, _jquery2.default)([document.documentElement, document.body]).animate({
+					scrollTop: (0, _jquery2.default)(".sample").offset().top - 20
+				}, 500);
+			});
+		},
 		init: function init() {
 			console.log('---------popup');
 			this.main();
 			this.events();
+			this.regScrol();
 		}
 	};
 };
@@ -330,7 +351,7 @@ console.clear();
 
 /***/ }),
 
-/***/ 23:
+/***/ 24:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 31);
+/******/ 	return __webpack_require__(__webpack_require__.s = 32);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -86,18 +86,16 @@ var interfaceUnit = function interfaceUnit() {
 		loadFile: 'cab__load-file',
 		loadFilePlaceholder: 'cab__load-file-placeholder',
 		tab: 'in-tab',
-		tabContent: 'in-content-container'
+		tabContent: 'in-content-container',
+		numLimit: 'in-input-num--limit'
 	};
 	return {
 		loadFile: function loadFile() {
 			// var placeholder = $(`.${s.loadFile}`).find(`.${s.loadFilePlaceholder}`).data('placeholder');
 			var placeholder = 'Выберите файл';
-			// $(`.${s.loadFile}`).find(`.${s.loadFilePlaceholder}`).html(placeholder)
-			// $(`.${s.loadFile}`).find()
 			$('.' + s.loadFile).find('input[type="file"]').on('change', function (event) {
 				var fileName = this.files[0].name;
 				console.dir(fileName);
-				// console.log('file was changed')
 				if (fileName) {
 					$('.' + s.loadFile).find('.' + s.loadFilePlaceholder).html(fileName);
 				} else {
@@ -111,7 +109,6 @@ var interfaceUnit = function interfaceUnit() {
 			this.showContent(currentId);
 			var self = this;
 			$('.' + s.tab).on('click', function () {
-				// console.log('---- tab click')
 				$('.' + s.tab).removeClass('in-tab--active');
 				$(this).addClass('in-tab--active');
 				currentId = false;
@@ -142,10 +139,12 @@ var interfaceUnit = function interfaceUnit() {
 			// console.log('away hereerere')
 			$('.' + s.tabContent).hide();
 		},
+
 		showContent: function showContent(id) {
 			console.log(id);
 			$('#' + id).show();
 		},
+
 		inputPlaceholder: function inputPlaceholder() {
 			$('input,textarea').focus(function () {
 				if ($(this).attr('type') === 'tel') return;
@@ -154,11 +153,31 @@ var interfaceUnit = function interfaceUnit() {
 				$(this).attr('placeholder', $(this).data('placeholder'));
 			});
 		},
+		inputNumLimit: function inputNumLimit() {
+			// console.log()
+			$('.' + s.numLimit).on('keypress, keydown', function (e) {
+				if (e.ctrlKey || e.altKey || e.metaKey) return;
+				console.log('----char');
+				var chr = String.fromCharCode(e.keyCode).toLowerCase();
+				console.log(chr);
+				console.log(e.keyCode);
+				if (chr == null) return;
+				if (chr < '0' || chr > '9' || $(this).val().length >= 5) {
+					if (e.keyCode != 8 && e.keyCode != 46) {
+						if (1) {
+							console.log('false');
+							return false;
+						}
+					}
+				}
+			});
+		},
 		init: function init() {
 			this.loadFile();
 			this.tabSwitch();
 			this.switchSubtab();
 			this.inputPlaceholder();
+			this.inputNumLimit();
 		}
 	};
 };
@@ -274,15 +293,15 @@ exports.default = mobileMenu;
 
 /***/ }),
 
-/***/ 31:
+/***/ 32:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(32);
+module.exports = __webpack_require__(33);
 
 
 /***/ }),
 
-/***/ 32:
+/***/ 33:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

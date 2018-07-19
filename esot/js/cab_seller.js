@@ -84,18 +84,16 @@ var interfaceUnit = function interfaceUnit() {
 		loadFile: 'cab__load-file',
 		loadFilePlaceholder: 'cab__load-file-placeholder',
 		tab: 'in-tab',
-		tabContent: 'in-content-container'
+		tabContent: 'in-content-container',
+		numLimit: 'in-input-num--limit'
 	};
 	return {
 		loadFile: function loadFile() {
 			// var placeholder = $(`.${s.loadFile}`).find(`.${s.loadFilePlaceholder}`).data('placeholder');
 			var placeholder = 'Выберите файл';
-			// $(`.${s.loadFile}`).find(`.${s.loadFilePlaceholder}`).html(placeholder)
-			// $(`.${s.loadFile}`).find()
 			$('.' + s.loadFile).find('input[type="file"]').on('change', function (event) {
 				var fileName = this.files[0].name;
 				console.dir(fileName);
-				// console.log('file was changed')
 				if (fileName) {
 					$('.' + s.loadFile).find('.' + s.loadFilePlaceholder).html(fileName);
 				} else {
@@ -109,7 +107,6 @@ var interfaceUnit = function interfaceUnit() {
 			this.showContent(currentId);
 			var self = this;
 			$('.' + s.tab).on('click', function () {
-				// console.log('---- tab click')
 				$('.' + s.tab).removeClass('in-tab--active');
 				$(this).addClass('in-tab--active');
 				currentId = false;
@@ -140,10 +137,12 @@ var interfaceUnit = function interfaceUnit() {
 			// console.log('away hereerere')
 			$('.' + s.tabContent).hide();
 		},
+
 		showContent: function showContent(id) {
 			console.log(id);
 			$('#' + id).show();
 		},
+
 		inputPlaceholder: function inputPlaceholder() {
 			$('input,textarea').focus(function () {
 				if ($(this).attr('type') === 'tel') return;
@@ -152,11 +151,31 @@ var interfaceUnit = function interfaceUnit() {
 				$(this).attr('placeholder', $(this).data('placeholder'));
 			});
 		},
+		inputNumLimit: function inputNumLimit() {
+			// console.log()
+			$('.' + s.numLimit).on('keypress, keydown', function (e) {
+				if (e.ctrlKey || e.altKey || e.metaKey) return;
+				console.log('----char');
+				var chr = String.fromCharCode(e.keyCode).toLowerCase();
+				console.log(chr);
+				console.log(e.keyCode);
+				if (chr == null) return;
+				if (chr < '0' || chr > '9' || $(this).val().length >= 5) {
+					if (e.keyCode != 8 && e.keyCode != 46) {
+						if (1) {
+							console.log('false');
+							return false;
+						}
+					}
+				}
+			});
+		},
 		init: function init() {
 			this.loadFile();
 			this.tabSwitch();
 			this.switchSubtab();
 			this.inputPlaceholder();
+			this.inputNumLimit();
 		}
 	};
 };
@@ -2113,6 +2132,10 @@ var _interfaceUnit = __webpack_require__(1);
 
 var _interfaceUnit2 = _interopRequireDefault(_interfaceUnit);
 
+var _orderCounter = __webpack_require__(19);
+
+var _orderCounter2 = _interopRequireDefault(_orderCounter);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
@@ -2137,8 +2160,58 @@ $(document).ready(function () {
 	(0, _mask2.default)().init();
 	(0, _interfaceUnit2.default)().init();
 	tabSwitch();
+	(0, _orderCounter2.default)().init();
 	// console.log(reg)
 });
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var orderCounter = function orderCounter() {
+	var s = {
+		main: 'order-counter',
+		plus: 'order-counter__plus',
+		minus: 'order-counter__minus',
+		count: 'order-counter__count'
+	};
+	return {
+		main: function main() {
+			console.log('------main');
+			(0, _jquery2.default)('.' + s.main).on('click', '.' + s.minus + ' , .' + s.plus, function () {
+				console.log('----order-click');
+				var input = (0, _jquery2.default)(this).closest('.' + s.main).find('input');
+				var val = 0;
+				val = +input.val();
+				if ((0, _jquery2.default)(this).hasClass(s.minus) && val > 0) {
+					val = val - 1;
+					input.val(val);
+				} else if ((0, _jquery2.default)(this).hasClass(s.plus) && val < 99999) {
+					val = val + 1;
+					input.val(val);
+				}
+			});
+		},
+		init: function init() {
+			this.main();
+		}
+	};
+};
+
+exports.default = orderCounter;
 
 /***/ })
 /******/ ]);

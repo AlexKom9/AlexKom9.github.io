@@ -43,6 +43,8 @@ table {
 
 a {
   text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
 
 * {
   box-sizing: border-box; }
@@ -348,9 +350,15 @@ button {
     margin-bottom: 0;
     min-height: 160px;
     background-position: left -20px top -70px !important; }
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 800px) {
       .header--cab {
-        min-height: 200px; } }
+        min-height: auto; } }
+    .header--cab .large-container {
+      padding: 90px;
+      margin-bottom: 0; }
+      @media only screen and (max-width: 800px) {
+        .header--cab .large-container {
+          padding: 30px; } }
   .header__nav {
     display: flex;
     align-items: baseline; }
@@ -376,6 +384,8 @@ button {
       color: #f7cd00;
       font-size: 18px;
       font-weight: 300; }
+      .header__nav-link:hover {
+        text-decoration: underline; }
   .header__main {
     display: flex;
     justify-content: flex-end;
@@ -591,14 +601,34 @@ button {
 
 .footer {
   background-color: #000;
-  background-image: url(../img/header/header_sot1.png);
-  background-position: left -20px top -40px;
-  background-repeat: no-repeat;
-  padding: 24px 16px 10px 16px;
   position: relative; }
-  @media only screen and (max-width: 940px) {
-    .footer {
-      background-position: left -300px top -10px; } }
+  .footer .left-container {
+    margin-right: 60px;
+    width: auto;
+    min-width: 287px; }
+  .footer .large-container {
+    background-image: url(../img/footer-bg.png);
+    background-position: left 0 top 20px;
+    background-repeat: no-repeat;
+    padding: 24px 16px 10px 16px;
+    position: relative; }
+    @media only screen and (max-width: 940px) {
+      .footer .large-container {
+        background-position: left -300px top -10px; } }
+  .footer__icons {
+    position: absolute;
+    top: 150px;
+    left: 251px; }
+    .footer__icons a {
+      margin: 8px; }
+  .footer__icon--facebook {
+    position: relative;
+    top: -15px;
+    left: -2px; }
+  .footer__icon--youtube {
+    position: relative;
+    top: -2px;
+    left: -2px; }
   .footer__inner {
     display: flex;
     justify-content: space-between;
@@ -1597,6 +1627,16 @@ button {
         flex-wrap: nowrap;
         justify-content: center;
         align-items: center; }
+      .cab__table-amount-counter {
+        background-color: transparent;
+        width: 60px;
+        font-size: 18px;
+        color: #f7cd00;
+        text-align: center;
+        margin: 0 3px;
+        border: none; }
+        .cab__table-amount-counter::placeholder {
+          color: #f7cd00; }
     .cab__table-header {
       padding: 20px;
       border: 1px solid #f9f9f9;
