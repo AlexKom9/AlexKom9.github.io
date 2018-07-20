@@ -275,10 +275,10 @@ var hexGrid = function hexGrid() {
 
 			// conditions
 			var conditions = function conditions() {
-				if (width <= hexBox * 7 && width > hexBox * 6) {
+				if (width > hexBox * 6) {
 					console.log('width > 1110');
 					console.log('--this');
-					var _k = 7;
+					var _k = 6;
 					var size = 0;
 
 					var rest = width - size;

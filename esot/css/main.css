@@ -323,6 +323,9 @@ button {
   justify-content: space-between;
   flex-direction: row-reverse; }
 
+input:hover, textarea:hover {
+  cursor: auto !important; }
+
 .header {
   background-color: #000;
   position: relative; }
@@ -332,14 +335,14 @@ button {
     background-repeat: no-repeat;
     margin-bottom: 16px;
     position: relative;
-    padding: 24px 16px 10px 16px;
+    padding: 15px 16px 20px 16px;
     height: 100%; }
     @media only screen and (max-width: 1500px) {
       .header .large-container {
-        padding: 24px 16px 40px 16px; } }
+        padding: 15px 16px 40px 16px; } }
     @media only screen and (max-width: 990px) {
       .header .large-container {
-        padding: 24px 16px 10px 16px; } }
+        padding: 15px 16px 10px 16px; } }
     @media only screen and (max-width: 940px) {
       .header .large-container {
         background-position: left -300px top -10px; } }
@@ -673,8 +676,11 @@ button {
       width: 100%; }
 
 .hexGrid-wrap {
-  margin-right: -20%;
-  max-width: 900px; }
+  margin-right: -20%; }
+  .hexGrid-wrap--small {
+    max-width: 900px; }
+  .hexGrid-wrap--mid {
+    max-width: 1150px; }
 
 .hexGrid {
   border: none;
@@ -1612,8 +1618,8 @@ button {
       padding: 5px 15px;
       font-size: 24px;
       margin-right: 5px;
-      min-width: 100px;
-      max-width: 130px; }
+      min-width: 135px;
+      max-width: 135px; }
       .cab__table-amount:hover {
         cursor: pointer; }
       .cab__table-amount option {
