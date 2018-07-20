@@ -302,7 +302,7 @@ var popup = function popup() {
 				clearTimeout(timer);
 				timer = setTimeout(function () {
 					(0, _jquery2.default)(window).trigger('closePopoup');
-				}, 500);
+				}, 275);
 			});
 			(0, _jquery2.default)(window).on('resize', function () {
 				(0, _jquery2.default)(window).trigger('closePopoup');
@@ -322,7 +322,7 @@ var popup = function popup() {
 				// $(window).scrollTo('.sample')
 				(0, _jquery2.default)([document.documentElement, document.body]).animate({
 					scrollTop: (0, _jquery2.default)(".sample").offset().top - 20
-				}, 500);
+				}, 275);
 			});
 		},
 		init: function init() {
