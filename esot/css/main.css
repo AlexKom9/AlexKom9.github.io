@@ -552,16 +552,16 @@ input:hover, textarea:hover {
         height: auto; } }
     @media only screen and (max-width: 600px) {
       .header__basket {
-        padding-left: 10px; }
+        padding-left: 5px;
+        margin-left: 5px;
+        padding-right: 10px; }
         .header__basket img {
           width: 70px;
           height: auto; } }
     @media only screen and (max-width: 400px) {
-      .header__basket {
-        padding-left: 10px; }
-        .header__basket img {
-          width: 40px;
-          height: auto; } }
+      .header__basket img {
+        width: 40px;
+        height: auto; } }
     .header__basket-note {
       display: inline-block;
       background-color: #f7cd00;
@@ -641,7 +641,12 @@ input:hover, textarea:hover {
       margin: 8px; }
     @media only screen and (max-width: 940px) {
       .footer__icons {
-        display: none; } }
+        top: unset;
+        left: unset;
+        bottom: 110px;
+        right: 10px; }
+        .footer__icons a {
+          position: static; } }
   .footer__icon--facebook {
     position: relative;
     top: -15px;
