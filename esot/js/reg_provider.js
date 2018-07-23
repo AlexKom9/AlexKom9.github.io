@@ -60,17 +60,19 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 36);
+/******/ 	return __webpack_require__(__webpack_require__.s = 37);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
 /***/ (function(module, exports) {
 
 module.exports = jQuery;
 
 /***/ }),
-/* 1 */
+
+/***/ 1:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -119,7 +121,7 @@ var interfaceUnit = function interfaceUnit() {
 				self.showContent(currentId);
 			});
 		},
-		switchSubtab: function switchSubtab() {
+		switchSabtab: function switchSabtab() {
 			var self = this;
 			$('.in-tab-inner input[type="radio"]').on('change', function () {
 				var currentId = $(this).data('id');
@@ -139,12 +141,12 @@ var interfaceUnit = function interfaceUnit() {
 		},
 
 		showContent: function showContent(id) {
-			console.log(id);
+			// console.log(id);
 			$('#' + id).show();
 		},
 
 		inputPlaceholder: function inputPlaceholder() {
-			$('input,textarea').focus(function () {
+			$('input, textarea').focus(function () {
 				if ($(this).attr('type') === 'tel') return;
 				$(this).data('placeholder', $(this).attr('placeholder')).attr('placeholder', '');
 			}).blur(function () {
@@ -155,7 +157,7 @@ var interfaceUnit = function interfaceUnit() {
 			// console.log()
 			$('.' + s.numLimit).on('keypress, keydown', function (e) {
 				if (e.ctrlKey || e.altKey || e.metaKey) return;
-				console.log('----char');
+				// console.log('----char');
 				var chr = String.fromCharCode(e.keyCode).toLowerCase();
 				console.log(chr);
 				console.log(e.keyCode);
@@ -163,7 +165,7 @@ var interfaceUnit = function interfaceUnit() {
 				if (chr < '0' || chr > '9' || $(this).val().length >= 5) {
 					if (e.keyCode != 8 && e.keyCode != 46) {
 						if (1) {
-							console.log('false');
+							// console.log('false');
 							return false;
 						}
 					}
@@ -173,7 +175,7 @@ var interfaceUnit = function interfaceUnit() {
 		init: function init() {
 			this.loadFile();
 			this.tabSwitch();
-			this.switchSubtab();
+			this.switchSabtab();
 			this.inputPlaceholder();
 			this.inputNumLimit();
 		}
@@ -183,7 +185,8 @@ var interfaceUnit = function interfaceUnit() {
 exports.default = interfaceUnit;
 
 /***/ }),
-/* 2 */
+
+/***/ 12:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -192,14 +195,70 @@ exports.default = interfaceUnit;
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// import jQuery from 'jquery'
+// import Inputmask from "inputmask";
+
+var reg = function reg() {
+	return {
+		clickNext: function clickNext() {
+			var counter = 0;
+			(0, _jquery2.default)('.reg-window__next-btn').on('click', function () {
+				(0, _jquery2.default)('.reg-window__box').hide();
+				counter++;
+				console.log('---click');
+				(0, _jquery2.default)('.reg-window__box').each(function (index) {
+					if (index === counter) (0, _jquery2.default)(this).show();
+				});
+			});
+		},
+		initialState: function initialState() {
+			(0, _jquery2.default)('.reg-window__box').hide();
+			(0, _jquery2.default)('.reg-window__box').each(function (index) {
+				if (index === 0) (0, _jquery2.default)(this).show();
+			});
+		},
+		init: function init() {
+			this.clickNext();
+			this.initialState();
+		}
+	};
+}; // var reg = "Registration script"
+exports.default = reg;
+
+/***/ }),
+
+/***/ 2:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 var mobileMenu = function mobileMenu() {
 	return {
 		clickBurger: function clickBurger() {
 			self = this;
-			$('.header__burger').on('click', function (event) {
+			(0, _jquery2.default)('.header__burger').on('click', function (event) {
 				event.stopPropagation();
-				$(this).toggleClass('header__burger--active');
-				var hasClass = $('.header__burger').hasClass('header__burger--active');
+				(0, _jquery2.default)(this).toggleClass('header__burger--active');
+
+				var hasClass = (0, _jquery2.default)('.header__burger').hasClass('header__burger--active');
 				if (hasClass) {
 					self.openMenu();
 				} else {
@@ -208,17 +267,17 @@ var mobileMenu = function mobileMenu() {
 			});
 		},
 		openMenu: function openMenu() {
-			$('#mobileMenu').show();
+			(0, _jquery2.default)('#mobileMenu').show();
 		},
 		closeMenu: function closeMenu() {
-			$('#mobileMenu').hide();
+			(0, _jquery2.default)('#mobileMenu').hide();
 		},
 		otherClick: function otherClick() {
 			var _this = this;
 
-			$(window).on('click', function () {
+			(0, _jquery2.default)(window).on('click', function () {
 				_this.closeMenu();
-				$('.header__burger').removeClass('header__burger--active');
+				(0, _jquery2.default)('.header__burger').removeClass('header__burger--active');
 			});
 		},
 		init: function init() {
@@ -231,7 +290,8 @@ var mobileMenu = function mobileMenu() {
 exports.default = mobileMenu;
 
 /***/ }),
-/* 3 */
+
+/***/ 3:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -1867,7 +1927,49 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 });
 
 /***/ }),
-/* 4 */
+
+/***/ 37:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(38);
+
+
+/***/ }),
+
+/***/ 38:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _reg = __webpack_require__(12);
+
+var _reg2 = _interopRequireDefault(_reg);
+
+var _mask = __webpack_require__(6);
+
+var _mask2 = _interopRequireDefault(_mask);
+
+var _mobileMenu = __webpack_require__(2);
+
+var _mobileMenu2 = _interopRequireDefault(_mobileMenu);
+
+var _interfaceUnit = __webpack_require__(1);
+
+var _interfaceUnit2 = _interopRequireDefault(_interfaceUnit);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+$(document).ready(function () {
+	(0, _mobileMenu2.default)().init();
+	(0, _reg2.default)().init();
+	(0, _mask2.default)().init();
+	(0, _interfaceUnit2.default)().init();
+});
+
+/***/ }),
+
+/***/ 4:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -1884,7 +1986,8 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/*!
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports && (module.exports = window);
 
 /***/ }),
-/* 5 */
+
+/***/ 5:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -1901,7 +2004,8 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/*!
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports && (module.exports = document);
 
 /***/ }),
-/* 6 */
+
+/***/ 6:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1940,7 +2044,8 @@ var mask = function mask() {
 exports.default = mask;
 
 /***/ }),
-/* 7 */
+
+/***/ 7:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -2080,7 +2185,8 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 });
 
 /***/ }),
-/* 8 */
+
+/***/ 8:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -2149,118 +2255,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     }), $.fn.inputmask;
 });
 
-/***/ }),
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// import jQuery from 'jquery'
-// import Inputmask from "inputmask";
-
-var reg = function reg() {
-	return {
-		clickNext: function clickNext() {
-			var counter = 0;
-			(0, _jquery2.default)('.reg-window__next-btn').on('click', function () {
-				(0, _jquery2.default)('.reg-window__box').hide();
-				counter++;
-				console.log('---click');
-				(0, _jquery2.default)('.reg-window__box').each(function (index) {
-					if (index === counter) (0, _jquery2.default)(this).show();
-				});
-			});
-		},
-		initialState: function initialState() {
-			(0, _jquery2.default)('.reg-window__box').hide();
-			(0, _jquery2.default)('.reg-window__box').each(function (index) {
-				if (index === 0) (0, _jquery2.default)(this).show();
-			});
-		},
-		init: function init() {
-			this.clickNext();
-			this.initialState();
-		}
-	};
-}; // var reg = "Registration script"
-exports.default = reg;
-
-/***/ }),
-/* 13 */,
-/* 14 */,
-/* 15 */,
-/* 16 */,
-/* 17 */,
-/* 18 */,
-/* 19 */,
-/* 20 */,
-/* 21 */,
-/* 22 */,
-/* 23 */,
-/* 24 */,
-/* 25 */,
-/* 26 */,
-/* 27 */,
-/* 28 */,
-/* 29 */,
-/* 30 */,
-/* 31 */,
-/* 32 */,
-/* 33 */,
-/* 34 */,
-/* 35 */,
-/* 36 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(37);
-
-
-/***/ }),
-/* 37 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _reg = __webpack_require__(12);
-
-var _reg2 = _interopRequireDefault(_reg);
-
-var _mask = __webpack_require__(6);
-
-var _mask2 = _interopRequireDefault(_mask);
-
-var _mobileMenu = __webpack_require__(2);
-
-var _mobileMenu2 = _interopRequireDefault(_mobileMenu);
-
-var _interfaceUnit = __webpack_require__(1);
-
-var _interfaceUnit2 = _interopRequireDefault(_interfaceUnit);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-$(document).ready(function () {
-	(0, _mobileMenu2.default)().init();
-	(0, _reg2.default)().init();
-	(0, _mask2.default)().init();
-	(0, _interfaceUnit2.default)().init();
-});
-
 /***/ })
-/******/ ]);
+
+/******/ });
 //# sourceMappingURL=reg_provider.js.map

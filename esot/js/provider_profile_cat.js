@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 32);
+/******/ 	return __webpack_require__(__webpack_require__.s = 33);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -121,7 +121,7 @@ var interfaceUnit = function interfaceUnit() {
 				self.showContent(currentId);
 			});
 		},
-		switchSubtab: function switchSubtab() {
+		switchSabtab: function switchSabtab() {
 			var self = this;
 			$('.in-tab-inner input[type="radio"]').on('change', function () {
 				var currentId = $(this).data('id');
@@ -141,12 +141,12 @@ var interfaceUnit = function interfaceUnit() {
 		},
 
 		showContent: function showContent(id) {
-			console.log(id);
+			// console.log(id);
 			$('#' + id).show();
 		},
 
 		inputPlaceholder: function inputPlaceholder() {
-			$('input,textarea').focus(function () {
+			$('input, textarea').focus(function () {
 				if ($(this).attr('type') === 'tel') return;
 				$(this).data('placeholder', $(this).attr('placeholder')).attr('placeholder', '');
 			}).blur(function () {
@@ -157,7 +157,7 @@ var interfaceUnit = function interfaceUnit() {
 			// console.log()
 			$('.' + s.numLimit).on('keypress, keydown', function (e) {
 				if (e.ctrlKey || e.altKey || e.metaKey) return;
-				console.log('----char');
+				// console.log('----char');
 				var chr = String.fromCharCode(e.keyCode).toLowerCase();
 				console.log(chr);
 				console.log(e.keyCode);
@@ -165,7 +165,7 @@ var interfaceUnit = function interfaceUnit() {
 				if (chr < '0' || chr > '9' || $(this).val().length >= 5) {
 					if (e.keyCode != 8 && e.keyCode != 46) {
 						if (1) {
-							console.log('false');
+							// console.log('false');
 							return false;
 						}
 					}
@@ -175,7 +175,7 @@ var interfaceUnit = function interfaceUnit() {
 		init: function init() {
 			this.loadFile();
 			this.tabSwitch();
-			this.switchSubtab();
+			this.switchSabtab();
 			this.inputPlaceholder();
 			this.inputNumLimit();
 		}
@@ -253,14 +253,22 @@ exports.default = prodList;
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 var mobileMenu = function mobileMenu() {
 	return {
 		clickBurger: function clickBurger() {
 			self = this;
-			$('.header__burger').on('click', function (event) {
+			(0, _jquery2.default)('.header__burger').on('click', function (event) {
 				event.stopPropagation();
-				$(this).toggleClass('header__burger--active');
-				var hasClass = $('.header__burger').hasClass('header__burger--active');
+				(0, _jquery2.default)(this).toggleClass('header__burger--active');
+
+				var hasClass = (0, _jquery2.default)('.header__burger').hasClass('header__burger--active');
 				if (hasClass) {
 					self.openMenu();
 				} else {
@@ -269,17 +277,17 @@ var mobileMenu = function mobileMenu() {
 			});
 		},
 		openMenu: function openMenu() {
-			$('#mobileMenu').show();
+			(0, _jquery2.default)('#mobileMenu').show();
 		},
 		closeMenu: function closeMenu() {
-			$('#mobileMenu').hide();
+			(0, _jquery2.default)('#mobileMenu').hide();
 		},
 		otherClick: function otherClick() {
 			var _this = this;
 
-			$(window).on('click', function () {
+			(0, _jquery2.default)(window).on('click', function () {
 				_this.closeMenu();
-				$('.header__burger').removeClass('header__burger--active');
+				(0, _jquery2.default)('.header__burger').removeClass('header__burger--active');
 			});
 		},
 		init: function init() {
@@ -293,15 +301,15 @@ exports.default = mobileMenu;
 
 /***/ }),
 
-/***/ 32:
+/***/ 33:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(33);
+module.exports = __webpack_require__(34);
 
 
 /***/ }),
 
-/***/ 33:
+/***/ 34:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

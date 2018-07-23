@@ -119,7 +119,7 @@ var interfaceUnit = function interfaceUnit() {
 				self.showContent(currentId);
 			});
 		},
-		switchSubtab: function switchSubtab() {
+		switchSabtab: function switchSabtab() {
 			var self = this;
 			$('.in-tab-inner input[type="radio"]').on('change', function () {
 				var currentId = $(this).data('id');
@@ -139,12 +139,12 @@ var interfaceUnit = function interfaceUnit() {
 		},
 
 		showContent: function showContent(id) {
-			console.log(id);
+			// console.log(id);
 			$('#' + id).show();
 		},
 
 		inputPlaceholder: function inputPlaceholder() {
-			$('input,textarea').focus(function () {
+			$('input, textarea').focus(function () {
 				if ($(this).attr('type') === 'tel') return;
 				$(this).data('placeholder', $(this).attr('placeholder')).attr('placeholder', '');
 			}).blur(function () {
@@ -155,7 +155,7 @@ var interfaceUnit = function interfaceUnit() {
 			// console.log()
 			$('.' + s.numLimit).on('keypress, keydown', function (e) {
 				if (e.ctrlKey || e.altKey || e.metaKey) return;
-				console.log('----char');
+				// console.log('----char');
 				var chr = String.fromCharCode(e.keyCode).toLowerCase();
 				console.log(chr);
 				console.log(e.keyCode);
@@ -163,7 +163,7 @@ var interfaceUnit = function interfaceUnit() {
 				if (chr < '0' || chr > '9' || $(this).val().length >= 5) {
 					if (e.keyCode != 8 && e.keyCode != 46) {
 						if (1) {
-							console.log('false');
+							// console.log('false');
 							return false;
 						}
 					}
@@ -173,7 +173,7 @@ var interfaceUnit = function interfaceUnit() {
 		init: function init() {
 			this.loadFile();
 			this.tabSwitch();
-			this.switchSubtab();
+			this.switchSabtab();
 			this.inputPlaceholder();
 			this.inputNumLimit();
 		}
