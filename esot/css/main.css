@@ -2258,6 +2258,7 @@ input:hover, textarea:hover {
   display: flex;
   justify-content: center; }
   .hero__slider {
+    width: 100%;
     max-width: 570px; }
     @media only screen and (max-width: 1200px) {
       .hero__slider {

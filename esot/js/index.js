@@ -337,7 +337,7 @@ var popup = function popup() {
 // import $ from 'jquery';
 
 
-$(document).ready(function () {
+window.onload = function () {
 	(0, _interfaceUnit2.default)().init();
 	(0, _mobileMenu2.default)().init();
 	(0, _new_hexGrid2.default)().init();
@@ -348,7 +348,7 @@ $(document).ready(function () {
 		arrows: false
 		// centerMode: true
 	});
-});
+};
 
 /***/ }),
 
