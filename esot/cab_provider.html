@@ -100,10 +100,10 @@
                         <div class="cab__table-hist">
                           <h3 class="cab__table-header-title">История операций</h3>
                           <div class="cab__table-hist-dates">
-                            <input type="date"/><span> - </span>
+                            <input type="date"/><span> -</span>
                             <input type="date"/>
                           </div>
-                          <button>Показать	</button>
+                          <button>Показать</button>
                         </div>
                         <div class="cab__table-header-currency-container">
                           <button class="cab__table-header-currency">Вывод средств</button>
@@ -117,9 +117,7 @@
                             <th><span>Вид движения средств</span></th>
                             <th><span>приход</span></th>
                             <th><span>расход</span></th>
-                          </tr>
-                          <tr>
-                            <td class="first-row" colspan="5"></td>
+                            <th><span>итого</span></th>
                           </tr>
                           <tr>
                             <td><span>1</span></td>
@@ -127,6 +125,7 @@
                             <td><span>Пополнение баланса от 10.04.2018</span></td>
                             <td><span>110</span></td>
                             <td><span>32</span></td>
+                            <td><span>142</span></td>
                           </tr>
                           <tr>
                             <td><span>2</span></td>
@@ -134,13 +133,15 @@
                             <td><span>Пополнение баланса от 10.04.2018</span></td>
                             <td><span>110</span></td>
                             <td><span>32</span></td>
+                            <td><span>142</span></td>
                           </tr>
                           <tr>
                             <td><span>3</span></td>
                             <td><span>10.04.2018</span></td>
                             <td><span>Пополнение баланса от 10.04.2018</span></td>
                             <td><span>110</span></td>
-                            <td><span>32	</span></td>
+                            <td><span>32</span></td>
+                            <td><span>142</span></td>
                           </tr>
                           <tr>
                             <td><span>4</span></td>
@@ -148,6 +149,7 @@
                             <td><span>Пополнение баланса от 10.04.2018</span></td>
                             <td><span>110</span></td>
                             <td><span>32</span></td>
+                            <td><span>142</span></td>
                           </tr>
                         </tbody>
                       </table>
@@ -747,10 +749,8 @@
         </div>
       </div>
       <div class="footer">
-        <div class="large-container">
-          <div class="left-container left-container--header">
-            <div class="footer__icons"><a class="footer__icon footer__icon--youtube" href="#"><img src="img/icons/youtube.png"/></a><a class="footer__icon footer__icon--facebook" href="#"><img src="img/icons/facebook.png"/></a><a class="footer__icon footer__icon--insta" href="#"><img src="img/icons/insta.png"/></a></div>
-          </div>
+        <div class="large-container"><a class="left-container left-container--header" href="#">
+            <div class="footer__icons"><a class="footer__icon footer__icon--youtube" href="#"><img src="img/icons/youtube.png"/></a><a class="footer__icon footer__icon--facebook" href="#"><img src="img/icons/facebook.png"/></a><a class="footer__icon footer__icon--insta" href="#"><img src="img/icons/insta.png"/></a></div></a>
           <div class="footer__inner">
             <div class="footer__info">
               <h6 class="footer__info-title">Информция</h6>
@@ -772,7 +772,7 @@
             </div>
             <div class="footer__info">
               <h6 class="footer__info-title">Подписка</h6>
-              <input class="footer__info-email" type="tel" placeholder="Ваш email"/>
+              <input class="footer__info-email" type="email" placeholder="Ваш email"/>
               <button class="footer__info-btn l-btn">Подписаться</button>
             </div>
           </div>

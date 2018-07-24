@@ -838,9 +838,8 @@ input:hover, textarea:hover {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url(../img/forms/group-frame.png);
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url(../img/forms/new_sot.png) no-repeat center;
+  background-size: contain;
   justify-content: center;
   align-items: center;
   padding: 10px;
@@ -1418,6 +1417,7 @@ input:hover, textarea:hover {
     width: 32px;
     height: 28px;
     background: url(../img/icons/paginator-item-bg.png) no-repeat top;
+    background-size: contain;
     display: flex;
     align-items: center;
     justify-content: center; }
@@ -1426,11 +1426,13 @@ input:hover, textarea:hover {
       font-size: 18px; }
     .paginator__item:hover {
       cursor: pointer;
-      background: url(../img/icons/paginator-item-bg-active.png) no-repeat top; }
+      background: url(../img/icons/paginator-item-bg-active.png) no-repeat top;
+      background-size: contain; }
       .paginator__item:hover span {
         color: #483a15; }
     .paginator__item--active {
-      background: url(../img/icons/paginator-item-bg-active.png) no-repeat top; }
+      background: url(../img/icons/paginator-item-bg-active.png) no-repeat top;
+      background-size: contain; }
       .paginator__item--active span {
         color: #483a15; }
 
@@ -1740,15 +1742,14 @@ input:hover, textarea:hover {
       padding-left: 30px;
       color: #483a15;
       font-size: 18px;
-      background-image: url(../img/icons/checkbox-empty.png);
-      background-repeat: no-repeat;
-      background-position: left center; }
+      background: url(../img/icons/checkbox-empty.png) no-repeat left;
+      background-size: contain; }
       .cab__prov-head-chekboxes label:hover {
         cursor: pointer; }
     .cab__prov-head-chekboxes input[type="checkbox"] {
       display: none; }
       .cab__prov-head-chekboxes input[type="checkbox"]:checked + label {
-        background-image: url(../img/icons/checkbox-filled--v.png); }
+        background-image: url(../img/icons/checkbox-filled.png); }
   .cab__load-file {
     width: 100%;
     display: flex;
@@ -1764,6 +1765,23 @@ input:hover, textarea:hover {
     padding-left: 60px !important; }
   .cab__cell-limit {
     max-width: 250px; }
+  .cab__select--stat {
+    background-color: transparent;
+    border: none;
+    color: #f7cd00;
+    font-size: 24px;
+    font-weight: 300;
+    padding: 3px;
+    margin-top: 5px;
+    max-width: 170px;
+    word-wrap: break-spaces; }
+    .cab__select--stat:active, .cab__select--stat:focus {
+      outline: none; }
+    .cab__select--stat:hover {
+      cursor: pointer; }
+    .cab__select--stat option {
+      font-size: 14px;
+      font-weight: 300; }
 
 .cab-side__inner {
   padding: 0; }
@@ -1798,6 +1816,9 @@ input:hover, textarea:hover {
       .cab-side__tab-inner li span:hover {
         cursor: pointer;
         color: #fff; }
+
+.wallet-li {
+  padding: 10px 0 13px 0; }
 
 #cabProdCatalog td {
   padding: 10px; }
@@ -1960,7 +1981,7 @@ input:hover, textarea:hover {
     height: 100%;
     top: 0;
     left: 0;
-    background-image: url(../img/catalog-popup-bg.png);
+    background-image: url(../img/catalog-popup-bg.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right bottom;
@@ -1975,7 +1996,7 @@ input:hover, textarea:hover {
     width: 100%;
     height: 100%;
     padding: 20px;
-    background-image: url(../img/forms/product-card-frame-preview.png);
+    background-image: url(../img/forms/new_sot.png);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -2034,10 +2055,8 @@ input:hover, textarea:hover {
   .profile__img-box {
     width: 206px;
     height: 179px;
-    background-image: url(../img/forms/profile-frame.png);
-    background-repeat: no-repeat;
+    background: url(../img/forms/new_sot.png) no-repeat center center;
     background-size: contain;
-    background-position: center center;
     display: flex;
     justify-content: center;
     align-items: center; }
@@ -2271,7 +2290,8 @@ input:hover, textarea:hover {
     width: 35px;
     height: 35px;
     background-repeat: no-repeat;
-    background-position: center; }
+    background-position: center;
+    background-size: contain; }
   .slick-dots button {
     display: none !important; }
 
@@ -2297,7 +2317,7 @@ li.slick-active {
       .sample__item {
         width: calc( (((100% - (20px * (12 - 1))) / 12) * 12) + ( 20px * (12 - 1))); } }
     .sample__item-head {
-      background-image: url(../img/sample-hexagone.png);
+      background-image: url(../img/forms/new_sot.png);
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
@@ -2365,7 +2385,7 @@ li.slick-active {
   .show__item-head {
     width: 180px;
     height: 160px;
-    background: url(../img/show-hexagone.png) no-repeat center;
+    background: url(../img/forms/new_sot.png) no-repeat center;
     background-size: contain;
     display: flex;
     justify-content: center;
@@ -2410,9 +2430,7 @@ li.slick-active {
 .product-card__img-container {
   width: 450px;
   height: 387px;
-  background-image: url(../img/forms/product-card-frame.png);
-  background-repeat: no-repeat;
-  background-position: center;
+  background: url(../img/forms/new_sot.png) no-repeat center;
   background-size: contain;
   display: flex;
   justify-content: center;
@@ -2451,11 +2469,8 @@ li.slick-active {
   .product-card__preview-item {
     width: 100%;
     height: 100%;
-    background-image: url(../img/forms/product-card-frame-preview.png);
+    background: transparent url(../img/forms/new_sot.png) no-repeat center;
     background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center; }
