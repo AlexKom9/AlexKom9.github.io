@@ -2411,6 +2411,12 @@ li.slick-active {
     .show__item-name a {
       color: #483a15; }
 
+#hero-slider {
+  display: none; }
+
+#hero-slider.slick-initialized {
+  display: block; }
+
 .product-card__inner {
   display: flex;
   justify-content: space-between;
