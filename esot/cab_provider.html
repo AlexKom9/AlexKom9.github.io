@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous"/>
   </head>
   <body class="l-page">
-    <div class="l-wrap">
+    <div class="l-wrap l-wrap--modal">
       <div class="l-content">
         <header class="header header--cab">
           <div class="large-container">
@@ -174,74 +174,94 @@
                         <tbody>
                           <tr>
                             <td colspan="9">
-                              <button class="cab__btn">+ Добавить</button>
+                              <button class="cab__btn show-modal" data-id="filter-modal">Фильтр</button>
                             </td>
                           </tr>
                           <tr>
                             <th><span>№ п/п</span></th>
-                            <th><span>Фото</span></th>
-                            <th><span>Название</span></th>
-                            <th><span>Стаж</span></th>
-                            <th><span>Заказы</span></th>
-                            <th><span>Сумма</span></th>
-                            <th><span>Проверен</span></th>
-                            <th><span>Отзывы</span></th>
-                            <th><span>Действия</span></th>
+                            <th><span>Статус</span></th>
+                            <th><span>Дата</span></th>
+                            <th><span>Примечание</span></th>
+                            <th><span>Сумма, грн</span></th>
+                            <th><span>Клиент</span></th>
+                            <th><span>Продавец</span></th>
+                            <th><span>Действие</span></th>
                           </tr>
                           <tr>
                             <td align="center"><span>1</span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
+                            <td><span>Подтверждён</span></td>
+                            <td><span>13.04.2018</span></td>
+                            <td><span>Просила уточнить размеры трубы</span></td>
+                            <td><span>9356,02</span></td>
+                            <td><span>Адаменко Л.В.</span></td>
+                            <td><span>Клеймок А.С.</span></td>
+                            <td><span>Клиент не берет трубку</span></td>
                           </tr>
                           <tr>
-                            <td align="center"><span>2</span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
+                            <td align="center"><span>1</span></td>
+                            <td><span>Подтверждён</span></td>
+                            <td><span>13.04.2018</span></td>
+                            <td><span>Просила уточнить размеры трубы</span></td>
+                            <td><span>9356,02</span></td>
+                            <td><span>Адаменко Л.В.</span></td>
+                            <td><span>Клеймок А.С.</span></td>
+                            <td>
+                              <div class="cab__action">
+                                <div class="cab__order-action-button-wrap">
+                                  <button class="l-btn show-modal" data-id="reject-modal">Отказаться</button>
+                                </div>
+                                <div class="cab__order-action-foot-wrap">
+                                  <select>
+                                    <option value="nova_poshta" selected="selected">Новая почта</option>
+                                    <option value="nova_poshta">Новая почта</option>
+                                    <option value="nova_poshta">Новая почта</option>
+                                    <option value="nova_poshta">Новая почта</option>
+                                    <option value="nova_poshta">Новая почта</option>
+                                    <option value="nova_poshta">Новая почта</option>
+                                  </select>
+                                  <label>ТТН:</label>
+                                  <input class="ttn l-btn" type="text"/><span>V</span>
+                                </div>
+                              </div>
+                            </td>
                           </tr>
                           <tr>
-                            <td align="center"><span>3</span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
+                            <td align="center"><span>1</span></td>
+                            <td><span>Подтверждён</span></td>
+                            <td><span>13.04.2018</span></td>
+                            <td><span>Просила уточнить размеры трубы</span></td>
+                            <td><span>9356,02</span></td>
+                            <td><span>Адаменко Л.В.</span></td>
+                            <td><span>Клеймок А.С.</span></td>
+                            <td><span>Клиент не берет трубку</span></td>
                           </tr>
                           <tr>
-                            <td align="center"><span>4</span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                          </tr>
-                          <tr>
-                            <td align="center"><span>5</span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
+                            <td align="center"><span>1</span></td>
+                            <td><span>Подтверждён</span></td>
+                            <td><span>13.04.2018</span></td>
+                            <td><span>Просила уточнить размеры трубы</span></td>
+                            <td><span>9356,02</span></td>
+                            <td><span>Адаменко Л.В.</span></td>
+                            <td><span>Клеймок А.С.</span></td>
+                            <td>
+                              <div class="cab__action">
+                                <div class="cab__order-action-button-wrap">
+                                  <button class="l-btn show-modal" data-id="reject-modal">Отказаться</button>
+                                </div>
+                                <div class="cab__order-action-foot-wrap">
+                                  <select>
+                                    <option value="nova_poshta" selected="selected">Новая почта</option>
+                                    <option value="nova_poshta">Новая почта</option>
+                                    <option value="nova_poshta">Новая почта</option>
+                                    <option value="nova_poshta">Новая почта</option>
+                                    <option value="nova_poshta">Новая почта</option>
+                                    <option value="nova_poshta">Новая почта</option>
+                                  </select>
+                                  <label>ТТН:</label>
+                                  <input class="ttn l-btn" type="text"/><span>V</span>
+                                </div>
+                              </div>
+                            </td>
                           </tr>
                         </tbody>
                       </table>
@@ -741,6 +761,137 @@
                         </tbody>
                       </table>
                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="l-modals-wrap-cabinet">
+              <div class="l-modal-cabinet" id="filter-modal">
+                <div class="l-modal">
+                  <h3 class="l-modal__title">Фильтрация заказов</h3>
+                  <form>
+                    <table>
+                      <tr>
+                        <td>
+                          <label>Номер заказа</label>
+                        </td>
+                        <td>
+                          <input class="l-btn" type="number"/>
+                        </td>
+                        <td>
+                          <label>Или диапазон от</label>
+                        </td>
+                        <td>
+                          <input class="l-btn" type="number"/>
+                        </td>
+                        <td>
+                          <label>до</label>
+                        </td>
+                        <td>
+                          <input class="l-btn" type="number"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label>Статус</label>
+                        </td>
+                        <td colspan="5">
+                          <div class="in-checkboxes">
+                            <input type="checkbox" id="stationery"/>
+                            <label for="stationery">Подтвержден</label>
+                            <input type="checkbox" id="food"/>
+                            <label for="food">Подтверждается</label>
+                            <input type="checkbox" id="equip"/>
+                            <label for="equip">Отклонен</label>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label>Дата</label>
+                        </td>
+                        <td>
+                          <input class="l-btn" type="date"/>
+                        </td>
+                        <td>
+                          <label>Или диапазон от</label>
+                        </td>
+                        <td>
+                          <input class="l-btn" type="date"/>
+                        </td>
+                        <td>
+                          <label>до</label>
+                        </td>
+                        <td>
+                          <input class="l-btn" type="date"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label>Сумма, грн</label>
+                        </td>
+                        <td>
+                          <input class="l-btn" type="number"/>
+                        </td>
+                        <td>
+                          <label>Или диапазон от</label>
+                        </td>
+                        <td>
+                          <input class="l-btn" type="number"/>
+                        </td>
+                        <td>
+                          <label>до</label>
+                        </td>
+                        <td>
+                          <input class="l-btn" type="number"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label>Клиент</label>
+                        </td>
+                        <td colspan="5">
+                          <select class="l-btn">
+                            <option value="">- Выберите из списка -</option>
+                            <option value="client">Клиент</option>
+                            <option value="client">Клиент</option>
+                            <option value="client">Клиент</option>
+                            <option value="client">Клиент</option>
+                          </select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label>Клиент</label>
+                        </td>
+                        <td colspan="5">
+                          <select class="l-btn">
+                            <option value="">- Выберите из списка -</option>
+                            <option value="client">Продавец</option>
+                            <option value="client">Продавец</option>
+                            <option value="client">Продавец</option>
+                            <option value="client">Продавец</option>
+                          </select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="6" align="center">
+                          <button class="l-btn l-modal-confirm">Отфильтровать</button>
+                        </td>
+                      </tr>
+                    </table>
+                  </form>
+                </div>
+              </div>
+              <div class="l-modal-cabinet" id="reject-modal">
+                <div class="l-modal">
+                  <h3 class="l-modal__title">Обязательно укажите чёткую причину отказа что бы продавец мог решить вопрос</h3>
+                  <form>
+                    <p>Я отказываюсь от заказа потому что:</p>
+                    <textarea rows="5"></textarea>
+                  </form>
+                  <div class="l-modal__footer">
+                    <button class="l-btn l-modal-confirm">Отправить</button>
                   </div>
                 </div>
               </div>

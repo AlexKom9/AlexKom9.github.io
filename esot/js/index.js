@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 22);
+/******/ 	return __webpack_require__(__webpack_require__.s = 23);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -243,15 +243,15 @@ exports.default = mobileMenu;
 
 /***/ }),
 
-/***/ 22:
+/***/ 23:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(23);
+module.exports = __webpack_require__(24);
 
 
 /***/ }),
 
-/***/ 23:
+/***/ 24:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -261,7 +261,7 @@ var _interfaceUnit = __webpack_require__(1);
 
 var _interfaceUnit2 = _interopRequireDefault(_interfaceUnit);
 
-var _new_hexGrid = __webpack_require__(24);
+var _new_hexGrid = __webpack_require__(25);
 
 var _new_hexGrid2 = _interopRequireDefault(_new_hexGrid);
 
@@ -269,7 +269,7 @@ var _mobileMenu = __webpack_require__(2);
 
 var _mobileMenu2 = _interopRequireDefault(_mobileMenu);
 
-__webpack_require__(25);
+__webpack_require__(26);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -352,7 +352,7 @@ window.onload = function () {
 
 /***/ }),
 
-/***/ 24:
+/***/ 25:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -508,7 +508,7 @@ exports.default = hexGrid;
 
 /***/ }),
 
-/***/ 25:
+/***/ 26:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*

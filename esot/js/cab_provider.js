@@ -2130,6 +2130,10 @@ var _interfaceUnit = __webpack_require__(1);
 
 var _interfaceUnit2 = _interopRequireDefault(_interfaceUnit);
 
+var _cabModals = __webpack_require__(17);
+
+var _cabModals2 = _interopRequireDefault(_cabModals);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
@@ -2153,9 +2157,67 @@ console.log('cab_prov_doc');
 $(document).ready(function () {
 	(0, _mask2.default)().init();
 	(0, _interfaceUnit2.default)().init();
+	(0, _cabModals2.default)().init();
 	tabSwitch();
 	// console.log(reg)
 });
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var cabModals = function cabModals() {
+
+    var state = 'cloosed';
+    return {
+        clickBtn: function clickBtn() {
+            $('.show-modal').on('click', function (event) {
+                event.stopPropagation();
+                $(window).trigger('close-modals');
+
+                state = 'opened';
+                var id = $(this).data('id');
+                $('.l-modals-wrap-cabinet').addClass('l-modals-wrap-cabinet--active');
+                console.log(id);
+                $('#' + id).show();
+            });
+        },
+        sideClick: function sideClick() {
+            $('.l-modal').on('click', function (event) {
+                event.stopPropagation();
+            });
+            $(window).on('click', function () {
+                $(window).trigger('close-modals');
+            });
+        },
+        confirmClick: function confirmClick() {
+            $(".l-modal-confirm").on('click', function () {
+                $(window).trigger('close-modals');
+            });
+        },
+        actions: function actions() {
+            $(window).on('close-modals', function () {
+                $('.l-modals-wrap-cabinet').removeClass('l-modals-wrap-cabinet--active');
+                $('.l-modal-cabinet').hide();
+                state = 'closed';
+            });
+        },
+        init: function init() {
+            this.clickBtn();
+            this.sideClick();
+            this.confirmClick();
+            this.actions();
+        }
+    };
+};
+
+exports.default = cabModals;
 
 /***/ })
 /******/ ]);
