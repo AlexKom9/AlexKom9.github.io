@@ -47,24 +47,25 @@
             <div class="hero__widget">
               <div class="widget">
                 <form class="form">
-                  <div class="widget__tabs">
-                    <div class="widget__tab">
-                      <input type="radio" id="fast-buy" name="widget-tab" checked="checked"/>
-                      <label for="fast-buy">Быстрая покупка</label>
-                    </div>
-                    <div class="widget__tab">
-                      <input type="radio" id="fast-sale" name="widget-tab"/>
-                      <label for="fast-sale">Быстрая продажа</label>
-                    </div>
+                  <!--.widget__tabs-->
+                  <!--	.widget__tab-->
+                  <!--		input(type="radio" id="fast-buy" name="widget-tab" checked)-->
+                  <!--		label(for="fast-buy") Быстрая покупка-->
+                  <!--	.widget__tab-->
+                  <!--		input(type="radio" id="fast-sale" name="widget-tab")-->
+                  <!--		label(for="fast-sale") Быстрая продажа-->
+                  <div class="widget__head">
+                    <h4 class="widget__head-name">Быстрый поиск сделки</h4>
                   </div>
                   <div class="widget__inner">
                     <div class="form__group">
                       <label class="form__label" for="email-log">Логин или Email</label>
                       <div class="form__input-box">
-                        <input id="val" type="number" placeholder="USD"/>
+                        <input id="val" type="number" placeholder="валюта"/>
                         <div class="form__input-sel form__input-sel--side custom-select">
                           <select>
-                            <option value="USD" selected="selected">USD</option>
+                            <option value="unseleceted" selected="selected">валюта</option>
+                            <option value="USD">USD</option>
                             <option value="EUR">EUR</option>
                             <option value="GBP">GBP</option>
                             <option value="JPY">JPY</option>
@@ -73,25 +74,11 @@
                             <option value="RUB">RUB</option>
                             <option value="UAH">UAH</option>
                           </select>
-                          <!--.sel-->
-                          <!--	.sel__box.sel__box--opened-->
-                          <!--		span USD-->
-                          <!--	.sel__drop-->
-                          <!--		ul-->
-                          <!--			li.sel__item USD-->
-                          <!--			li.sel__item EUR-->
-                          <!--			li.sel__item GBP-->
-                          <!--			li.sel__item JPY-->
-                          <!--			li.sel__item CHF-->
-                          <!--			li.sel__item CNY-->
-                          <!--			li.sel__item RUB-->
-                          <!--			li.sel__item UAH-->
                         </div>
                       </div>
-                      <!--p.form__hint Логин может содержать: буквы, цифры, . и _-->
                     </div>
                     <div class="form__group">
-                      <label class="form__label">Валюта</label>
+                      <label class="form__label">Тип сделки</label>
                       <div class="form__input-box">
                         <div class="form__input-sel custom-select">
                           <select>
@@ -104,48 +91,23 @@
                             <option value="RUB">RUB</option>
                             <option value="UAH">UAH</option>
                           </select>
-                          <!--.sel-->
-                          <!--	.sel__premier.sel__premier--opened-->
-                          <!--		span USD-->
-                          <!--	.sel__drop-->
-                          <!--		ul-->
-                          <!--			li.sel__item USD-->
-                          <!--			li.sel__item EUR-->
-                          <!--			li.sel__item GBP-->
-                          <!--			li.sel__item JPY-->
-                          <!--			li.sel__item CHF-->
-                          <!--			li.sel__item CNY-->
-                          <!--			li.sel__item RUB-->
-                          <!--			li.sel__item UAH-->
                         </div>
                       </div>
-                      <!--p.form__hint Логин может содержать: буквы, цифры, . и _-->
                     </div>
                     <div class="form__group">
                       <label class="form__label">Страна</label>
                       <div class="form__input-box">
                         <div class="form__input-sel custom-select">
                           <select>
-                            <option value="USD" selected="selected">USD</option>
-                            <option value="EUR">EUR</option>
-                            <option value="GBP">GBP</option>
-                            <option value="JPY">JPY</option>
-                            <option value="CHF">CHF</option>
-                            <option value="CNY">CNY</option>
-                            <option value="RUB">RUB</option>
-                            <option value="UAH">UAH</option>
+                            <option value="USD" selected="selected">Австралия</option>
+                            <option value="EUR"> Аргентина</option>
+                            <option value="GBP">Уганда</option>
+                            <option value="JPY">Мавритания</option>
+                            <option value="CHF">Чад</option>
+                            <option value="CNY">Мозамбик</option>
+                            <option value="RUB">Судан</option>
                           </select>
-                          <!--.sel-->
-                          <!--	.sel__box.sel__box--opened-->
-                          <!--		span Выбрать-->
-                          <!--	.sel__drop-->
-                          <!--		ul-->
-                          <!--			li.sel__item Укрина-->
-                          <!--			li.sel__item США-->
-                          <!--			li.sel__item Венгрия-->
-                          <!--			li.sel__item Хорватия-->
                         </div>
-                        <!--p.form__hint Логин может содержать: буквы, цифры, . и _-->
                       </div>
                     </div>
                     <div class="form__group">
