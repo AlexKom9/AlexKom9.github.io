@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Bigrate</title>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"/>
+  </head>
+  <body class="l-page">
+    <div class="l-wrap">
+      <!--h1 TITLE-->
+      <header class="header">
+        <div class="l-container">
+          <div class="header__inner">
+            <div class="header__logo"><span class="l-logo">Bigrate.</span></div>
+            <ul class="header__nav">
+              <li class="header__nav-item"><a class="header__nav-link" href="#">Разместить объявление</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="#">Форум</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="#">Блог</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="#">Справка</a></li>
+              <li class="header__nav-item header__nav-item--select">
+                <!--a(href="#").header__nav-link Русский--><img src="img/icons/language.png"/>
+                <div class="custom-select header__custom-select">
+                  <select>
+                    <option value="en">English</option>
+                    <option value="ru" selected="selected">Русский</option>
+                    <option value="uk">Українська</option>
+                  </select>
+                </div>
+              </li>
+              <li class="header__nav-item call-modal" data-id="modal-reg"><img src="img/icons/ic24PxLogin.png"/><a class="header__nav-link" href="#">Регистрация</a></li>
+              <li class="header__nav-item call-modal" data-id="modal-welcome"><img src="img/icons/ic24PxLanguage.png"/><a class="header__nav-link">Вход</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <section class="hero">
+        <div class="l-container l-container--center">
+          <div class="hero__inner">
+            <div class="hero__main">
+              <h1 class="hero__title">Покупка и продажа биткоинов</h1>
+              <p class="hero__subtitle">Совершайте безопасные анонимные сделки рядом с Вами или онлайн</p>
+              <div class="hero__reg-btn"><a class="l-btn l-btn--white" href="#"><span>Зарегестрироваться</span></a></div>
+            </div>
+            <div class="hero__widget">
+              <div class="widget">
+                <form class="form">
+                  <div class="widget__tabs">
+                    <div class="widget__tab">
+                      <input type="radio" id="fast-buy" name="widget-tab" checked="checked"/>
+                      <label for="fast-buy">Быстрая покупка</label>
+                    </div>
+                    <div class="widget__tab">
+                      <input type="radio" id="fast-sale" name="widget-tab"/>
+                      <label for="fast-sale">Быстрая продажа</label>
+                    </div>
+                  </div>
+                  <div class="widget__inner">
+                    <div class="form__group">
+                      <label class="form__label" for="email-log">Логин или Email</label>
+                      <div class="form__input-box">
+                        <input id="val" type="number" placeholder="USD"/>
+                        <div class="form__input-sel form__input-sel--side custom-select">
+                          <select>
+                            <option value="USD" selected="selected">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                            <option value="JPY">JPY</option>
+                            <option value="CHF">CHF</option>
+                            <option value="CNY">CNY</option>
+                            <option value="RUB">RUB</option>
+                            <option value="UAH">UAH</option>
+                          </select>
+                          <!--.sel-->
+                          <!--	.sel__box.sel__box--opened-->
+                          <!--		span USD-->
+                          <!--	.sel__drop-->
+                          <!--		ul-->
+                          <!--			li.sel__item USD-->
+                          <!--			li.sel__item EUR-->
+                          <!--			li.sel__item GBP-->
+                          <!--			li.sel__item JPY-->
+                          <!--			li.sel__item CHF-->
+                          <!--			li.sel__item CNY-->
+                          <!--			li.sel__item RUB-->
+                          <!--			li.sel__item UAH-->
+                        </div>
+                      </div>
+                      <!--p.form__hint Логин может содержать: буквы, цифры, . и _-->
+                    </div>
+                    <div class="form__group">
+                      <label class="form__label">Валюта</label>
+                      <div class="form__input-box">
+                        <div class="form__input-sel custom-select">
+                          <select>
+                            <option value="USD" selected="selected">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                            <option value="JPY">JPY</option>
+                            <option value="CHF">CHF</option>
+                            <option value="CNY">CNY</option>
+                            <option value="RUB">RUB</option>
+                            <option value="UAH">UAH</option>
+                          </select>
+                          <!--.sel-->
+                          <!--	.sel__premier.sel__premier--opened-->
+                          <!--		span USD-->
+                          <!--	.sel__drop-->
+                          <!--		ul-->
+                          <!--			li.sel__item USD-->
+                          <!--			li.sel__item EUR-->
+                          <!--			li.sel__item GBP-->
+                          <!--			li.sel__item JPY-->
+                          <!--			li.sel__item CHF-->
+                          <!--			li.sel__item CNY-->
+                          <!--			li.sel__item RUB-->
+                          <!--			li.sel__item UAH-->
+                        </div>
+                      </div>
+                      <!--p.form__hint Логин может содержать: буквы, цифры, . и _-->
+                    </div>
+                    <div class="form__group">
+                      <label class="form__label">Страна</label>
+                      <div class="form__input-box">
+                        <div class="form__input-sel custom-select">
+                          <select>
+                            <option value="USD" selected="selected">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                            <option value="JPY">JPY</option>
+                            <option value="CHF">CHF</option>
+                            <option value="CNY">CNY</option>
+                            <option value="RUB">RUB</option>
+                            <option value="UAH">UAH</option>
+                          </select>
+                          <!--.sel-->
+                          <!--	.sel__box.sel__box--opened-->
+                          <!--		span Выбрать-->
+                          <!--	.sel__drop-->
+                          <!--		ul-->
+                          <!--			li.sel__item Укрина-->
+                          <!--			li.sel__item США-->
+                          <!--			li.sel__item Венгрия-->
+                          <!--			li.sel__item Хорватия-->
+                        </div>
+                        <!--p.form__hint Логин может содержать: буквы, цифры, . и _-->
+                      </div>
+                    </div>
+                    <div class="form__group">
+                      <label class="form__label">Способ оплаты</label>
+                      <div class="form__input-box">
+                        <div class="form__input-sel custom-select">
+                          <select>
+                            <option value="cash-post" selected="selected">Наличные по почте</option>
+                            <option value="cash-account">Внесение наличных на счет</option>
+                            <option value="inner-bank-transfer">Банковские переводы внутри банка</option>
+                            <option value="pay-pal">Pay Pal</option>
+                            <option value="bank-transfer">Переводы через конкретный банк</option>
+                            <option value="CNY">CNY</option>
+                            <option value="RUB">RUB</option>
+                            <option value="UAH">UAH</option>
+                          </select>
+                        </div>
+                        <!--.sel-->
+                        <!--	.sel__box.sel__box--opened-->
+                        <!--		span Выбрать-->
+                        <!--	.sel__drop-->
+                        <!--		ul-->
+                        <!--			li.sel__item e-->
+                        <!--			li.sel__item Внесение наличных на счет-->
+                        <!--			li.sel__item Банковские переводы внутри банка-->
+                        <!--			li.sel__item Pay Pal-->
+                        <!--			li.sel__item Переводы через конкретный банк-->
+                      </div>
+                    </div>
+                    <div class="form__btn">
+                      <button class="l-btn l-btn--primary l-btn--full" type="submit">Найти</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="orders">
+        <div class="l-container l-container--center">
+          <div class="l-inner l-inner--10">
+            <div class="orders__inner">
+              <div class="orders__h-control">
+                <div class="orders__h-control-switch">
+                  <div class="switch">
+                    <input id="swOnline" type="radio" name="typeSwitch" checked="checked"/>
+                    <label class="switch-state" for="swOnline"><span>Онлайн</span></label>
+                    <input id="swLocal" type="radio" name="typeSwitch"/>
+                    <label class="switch-state" for="swLocal"><span>Локально</span></label>
+                  </div>
+                </div>
+                <div class="orders__h-control-country">
+                  <div class="country"><span>Страна :</span>
+                    <div class="country__box country__box--opened"><span>Европа</span>
+                      <div class="country__drop">
+                        <div class="country__drop-head">
+                          <p>Страна</p>
+                          <input type="text" placeholder="Начните вводить"/>
+                        </div>
+                        <ul>
+                          <li>Австралия</li>
+                          <li>Австралия</li>
+                          <li>Австралия</li>
+                          <li>Австралия</li>
+                          <li>Австралия</li>
+                          <li>Австралия</li>
+                          <li>Австралия</li>
+                          <li>Австралия</li>
+                          <li>Австралия</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="info-tab__table">
+                <div class="i-tab">
+                  <div class="i-tab__tabs">
+                    <div class="i-tab__tabs-wrap">
+                      <div class="i-tab__tab i-tab__tab--active"><span>Купить биткоин онлайн</span></div>
+                      <div class="i-tab__tab"><span>Купить биткоин за наличные</span></div>
+                      <div class="i-tab__tab"><span>Продать биткоин онлайн</span></div>
+                    </div>
+                  </div>
+                  <div class="i-tab__inner">
+                    <div class="i-tab__content">
+                      <div class="i-tab__head i-tab__row">
+                        <div class="i-tab__head-cell i-tab__cell"><span>Продавец</span></div>
+                        <div class="i-tab__head-cell i-tab__cell"><span>Способ оплаты</span></div>
+                        <div class="i-tab__head-cell i-tab__head-cell--sort i-tab__head-cell--up i-tab__cell"><span>Цена /BTC</span></div>
+                        <div class="i-tab__head-cell i-tab__cell"><span>Лимит</span></div>
+                      </div>
+                      <div class="i-tab__row">
+                        <div class="i-tab__cell online">
+                          <p class="i-tab__prod-name">Jugernaut<span class="dot"></span></p>
+                          <div class="i-tab__rat">
+                            <div class="rat">
+                              <div class="rat__str">Рейтинг</div>
+                              <div class="rat__line">
+                                <div class="rat__inner abs"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="i-tab__cell"><span class="i-tab__payment">National Bank Transfer</span></div>
+                        <div class="i-tab__cell">
+                          <p class="i-tab__price-usd">7521.2 USD</p>
+                          <p class="i-tab__price-hint">Наценка</p>
+                          <p class="i-tab__price-markup">-6,4%</p>
+                        </div>
+                        <div class="i-tab__cell">
+                          <p class="i-tab__limit">120 - 180 USD</p>
+                        </div>
+                        <div class="i-tab__cell">
+                          <div class="i-tab__buy"><a class="l-btn l-btn--sec" href="#">Купить</a></div>
+                        </div>
+                      </div>
+                      <div class="i-tab__row">
+                        <div class="i-tab__cell offline">
+                          <p class="i-tab__prod-name">Jugernaut<span class="dot"></span></p>
+                          <div class="i-tab__rat">
+                            <div class="rat">
+                              <div class="rat__str">Рейтинг</div>
+                              <div class="rat__line">
+                                <div class="rat__inner conf"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="i-tab__cell"><span class="i-tab__payment">National Bank Transfer</span></div>
+                        <div class="i-tab__cell">
+                          <p class="i-tab__price-usd">7521.2 USD</p>
+                          <p class="i-tab__price-hint">Наценка</p>
+                          <p class="i-tab__price-markup">-6,4%</p>
+                        </div>
+                        <div class="i-tab__cell">
+                          <p class="i-tab__limit">120 - 180 USD</p>
+                        </div>
+                        <div class="i-tab__cell">
+                          <div class="i-tab__buy"><a class="l-btn l-btn--sec" href="#">Купить</a></div>
+                        </div>
+                      </div>
+                      <div class="i-tab__row">
+                        <div class="i-tab__cell away">
+                          <p class="i-tab__prod-name">Jugernaut<span class="dot"></span></p>
+                          <div class="i-tab__rat">
+                            <div class="rat">
+                              <div class="rat__str">Рейтинг</div>
+                              <div class="rat__line">
+                                <div class="rat__inner mid"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="i-tab__cell"><span class="i-tab__payment">National Bank Transfer</span></div>
+                        <div class="i-tab__cell">
+                          <p class="i-tab__price-usd">7521.2 USD</p>
+                          <p class="i-tab__price-hint">Наценка</p>
+                          <p class="i-tab__price-markup">-6,4%</p>
+                        </div>
+                        <div class="i-tab__cell">
+                          <p class="i-tab__limit">120 - 180 USD</p>
+                        </div>
+                        <div class="i-tab__cell">
+                          <div class="i-tab__buy"><a class="l-btn l-btn--sec" href="#">Купить</a></div>
+                        </div>
+                      </div>
+                      <div class="i-tab__row">
+                        <div class="i-tab__cell online">
+                          <p class="i-tab__prod-name">Jugernaut<span class="dot"></span></p>
+                          <div class="i-tab__rat">
+                            <div class="rat">
+                              <div class="rat__str">Рейтинг</div>
+                              <div class="rat__line">
+                                <div class="rat__inner danger"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="i-tab__cell"><span class="i-tab__payment">National Bank Transfer</span></div>
+                        <div class="i-tab__cell">
+                          <p class="i-tab__price-usd">7521.2 USD</p>
+                          <p class="i-tab__price-hint">Наценка</p>
+                          <p class="i-tab__price-markup">-6,4%</p>
+                        </div>
+                        <div class="i-tab__cell">
+                          <p class="i-tab__limit">120 - 180 USD</p>
+                        </div>
+                        <div class="i-tab__cell">
+                          <div class="i-tab__buy"><a class="l-btn l-btn--sec" href="#">Купить</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="i-tab__footer"><a class="l-btn l-btn--arr" href="#">
+                      <div class="l-btn__inner"><img src="img/icons/reload-more.png"/><span>Показать больше</span></div></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="addition">
+        <div class="l-container l-container--center">
+          <div class="l-inner l-inner--10">
+            <div class="addition__inner">
+              <div class="l-title">
+                <h2>Полезные статьи и новости</h2>
+              </div>
+              <div class="addition__cards">
+                <div class="addition__card">
+                  <div class="prev-card">
+                    <div class="prev-card__head" style="background-image: url(img/card_prev.png)"></div>
+                    <div class="prev-card__info">
+                      <div class="prev-card__info-date"><img src="img/icons/access_time_24px.png" srcset="img/icons/access_time_24px@2x.png 2x,img/icons/access_time_24px@3x.png 3x"/><span>20.03.2017</span></div>
+                      <div class="prev-card__info-views"><img src="img/icons/eye.png" srcset="img/icons/eye@2x.png 2x, img/icons/eye@3x.png 3x,"/><span>153</span></div>
+                    </div>
+                    <div class="prev-card__body">
+                      <h4 class="prev-card__title">More tools for offchain transactions</h4>
+                      <p class="prev-card__descr">We have developed several tools that can help make transacting with Bitcoin cheaper in certain cases.</p>
+                    </div>
+                    <div class="prev-card__footer">
+                      <div class="prev-card__btn"><a class="l-btn l-btn--arr" href="#">
+                          <div class="l-btn__inner"><img src="img/icons/ic24pxarrow-right.png"/><span>Показать больше</span></div></a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="addition__card">
+                  <div class="prev-card">
+                    <div class="prev-card__head" style="background-image: url(img/card_prev.png)"></div>
+                    <div class="prev-card__info">
+                      <div class="prev-card__info-date"><img src="img/icons/access_time_24px.png" srcset="img/icons/access_time_24px@2x.png 2x,img/icons/access_time_24px@3x.png 3x"/><span>20.03.2017</span></div>
+                      <div class="prev-card__info-views"><img src="img/icons/eye.png" srcset="img/icons/eye@2x.png 2x, img/icons/eye@3x.png 3x,"/><span>153</span></div>
+                    </div>
+                    <div class="prev-card__body">
+                      <h4 class="prev-card__title">More tools for offchain transactions</h4>
+                      <p class="prev-card__descr">We have developed several tools that can help make transacting with Bitcoin cheaper in certain cases.</p>
+                    </div>
+                    <div class="prev-card__footer">
+                      <div class="prev-card__btn"><a class="l-btn l-btn--arr" href="#">
+                          <div class="l-btn__inner"><img src="img/icons/ic24pxarrow-right.png"/><span>Показать больше</span></div></a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="addition__card">
+                  <div class="prev-card">
+                    <div class="prev-card__head" style="background-image: url(img/card_prev.png)"></div>
+                    <div class="prev-card__info">
+                      <div class="prev-card__info-date"><img src="img/icons/access_time_24px.png" srcset="img/icons/access_time_24px@2x.png 2x,img/icons/access_time_24px@3x.png 3x"/><span>20.03.2017</span></div>
+                      <div class="prev-card__info-views"><img src="img/icons/eye.png" srcset="img/icons/eye@2x.png 2x, img/icons/eye@3x.png 3x,"/><span>153</span></div>
+                    </div>
+                    <div class="prev-card__body">
+                      <h4 class="prev-card__title">More tools for offchain transactions</h4>
+                      <p class="prev-card__descr">We have developed several tools that can help make transacting with Bitcoin cheaper in certain cases.</p>
+                    </div>
+                    <div class="prev-card__footer">
+                      <div class="prev-card__btn"><a class="l-btn l-btn--arr" href="#">
+                          <div class="l-btn__inner"><img src="img/icons/ic24pxarrow-right.png"/><span>Показать больше</span></div></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="addition__footer">
+                <div class="sim-arr__btn-go"><a class="l-btn" href="#">Перейти ко всем статьям</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="l-container">
+          <div class="footer__inner">
+            <div class="footer__info">
+              <div class="footer__logo">
+                <p class="l-logo">Bigrate.</p>
+              </div>
+              <div class="footer__socials"><a class="footer__socials-icon" href="#"><i class="fab fa-twitter"></i></a><a class="footer__socials-icon" href="#"><i class="fab fa-facebook-f"></i></a><a class="footer__socials-icon" href="#"><i class="fab fa-github"></i></a><a class="footer__socials-icon" href="#"><i class="fab fa-google-plus-g"></i></a></div>
+              <div class="footer__copy">
+                <p>Powered by<a href="//peiko.space">peiko</a></p>
+                <p>© 2018 Bigrate</p>
+              </div>
+            </div>
+            <div class="footer__links">
+              <div class="footer__group col-4"><a class="footer__group-name" href="#">О проекте</a>
+                <ul class="footer__grup-ul">
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">О Нас</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Комиссия</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Конфидециальность</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Условия предоставления услуг</a></li>
+                </ul>
+              </div>
+              <div class="footer__group col-4"><a class="footer__group-name" href="#">Поддержка</a>
+                <ul class="footer__grup-ul">
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Служба поддержки</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">FAQ</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Руководства</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Забыли пароль?</a></li>
+                </ul>
+              </div>
+              <div class="footer__group col-4"><a class="footer__group-name" href="#">Услуги</a>
+                <ul class="footer__grup-ul">
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Документация API</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Партнерская программа</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Руководства</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="modal-wrap" id="modal-welcome">
+      <div class="modal modal--welcome">
+        <div class="rlog">
+          <div class="rlog__title">Добро пожаловать</div>
+          <form class="form">
+            <div class="form__group">
+              <label class="form__label" for="email-log">Логин или Email</label>
+              <input class="form__input" id="email-log" type="email"/>
+              <p class="form__hint">Логин может содержать: буквы, цифры, . и _</p>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="password-log">Пароль</label>
+              <input class="form__input" id="password-log" type="password"/>
+              <div class="form__hint"><a class="form__hint" href="#">Забыл пароль ?</a></div>
+            </div>
+            <div class="form__btn">
+              <button class="l-btn l-btn--primary l-btn--full" type="submit">Войти</button>
+            </div>
+          </form>
+          <div class="rlog__footer">
+            <div><span>Нет аккаунта ? &nbsp</span><a href="#">Зарегистрироваться</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-wrap" id="modal-auth">
+      <div class="modal modal--auth">
+        <div class="rlog">
+          <div class="rlog__title rlog__title--auth">Двухфакторная аутентификация</div>
+          <div class="rlog__subtitle">Попытка войти в систему как Jugernaut</div>
+          <form class="form">
+            <div class="form__horizontal">
+              <div class="form__group">
+                <label class="form__label" for="confirm">Введите полученый код с приложения</label>
+                <input class="form__input" id="confirm" type="number"/>
+                <p class="form__hint">Логин может содержать: буквы, цифры, . и _</p>
+              </div>
+              <div class="form__btn">
+                <button class="l-btn l-btn--primary l-btn--full caption" type="submit">Verify</button>
+              </div>
+            </div>
+          </form>
+          <div class="rlog__footer"><a class="rlog__change-acc" href="#">Сменить учетную запись</a><br/><br/><a class="rlog__link" href="#">Проблемы с двухфакторной аутентификацией?</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-wrap" id="modal-reg">
+      <div class="modal modal--reg">
+        <div class="modal-box">
+          <div class="modal-box__side"></div>
+          <div class="modal-box__main">
+            <div class="rlog">
+              <h2 class="rlog__title">Регистрация</h2>
+              <form class="form">
+                <div class="form__group">
+                  <label class="form__label" for="login-reg">Логин</label>
+                  <input class="form__input" id="login-reg" type="text"/>
+                  <p class="form__hint">Логин может содержать: буквы, цифры, . и _</p>
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="email-reg">Email</label>
+                  <input class="form__input" id="email-reg" type="email" placeholder="example@mail.com"/>
+                  <p class="form__hint form__hint--err">Логин может содержать: буквы, цифры, . и _</p>
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="password-reg">Пароль</label>
+                  <input class="form__input" id="password-reg" type="password"/>
+                  <p class="form__hint">Логин может содержать: буквы, цифры, . и _</p>
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="conf-password-reg">Повторите пароль</label>
+                  <input class="form__input" id="conf-password-reg" type="password"/>
+                  <div class="form__hint"><a href="#">Забыл пароль ?</a></div>
+                </div>
+                <div class="form__group">
+                  <div id="form__capcha"></div>
+                </div>
+                <div class="form__btn">
+                  <button class="l-btn l-btn--primary l-btn--full" type="submit">Зарегистрироваться</button>
+                </div>
+              </form>
+              <div class="rlog__footer">
+                <div><span>Уже есть аккаунт? &nbsp</span><a href="#"> Войти</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-wrap" id="modal-license">
+      <div class="modal modal--license">
+        <div class="rlog">
+          <div class="rlog__title rlog__title--license">Условия использования</div>
+          <div class="rlog__inner">
+            <p>Lorem ipsum dolor.</p><br/>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, ea?</p><br/>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eos nesciunt omnis ratione suscipit. Autem eveniet facere fugit ipsum, non quae quo repudiandae similique voluptas. Ab adipisci delectus nostrum veniam?</p><br/>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, sequi.</p><br/>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab architecto blanditiis doloremque eaque maiores odio ratione rem ut? A ad architecto atque dolores earum esse eum explicabo id, ipsa istelabore molestiae mollitia nisi nobis, odit officiis provident quas quis, quos repudiandae rerumsint soluta tempora temporibus unde voluptatibus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque odit recusandae sapiente tempore? A alias aliquid aperiam asperiores autem commodi dignissimos dolore dolorem eaque, excepturi fuga impedit ipsam laboriosam minima molestiae nam nisi non numquam praesentium quam quibusdam quo quos rem, rerum similique ut vel voluptatem? Architecto, ea, natus?</p><br/>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div class="rlog__footer rlog__footer--license">
+            <div class="l-btn l-btn--shaded">Не согласен</div>
+            <div class="l-btn l-btn--primary">Согласен</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!--common scripts-->
+    <script src="js/modules/modal.js"></script>
+    <script type="text/javascript" src="js/index.min.js"></script>
+    <script type="text/javascript" src="js/modules/select-new.js"></script>
+  </body>
+</html>
