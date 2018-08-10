@@ -22,7 +22,7 @@
               <li class="header__nav-item"><a class="header__nav-link" href="#">Справка</a></li>
               <li class="header__nav-item header__nav-item--select">
                 <!--a(href="#").header__nav-link Русский--><img src="img/icons/language.png"/>
-                <div class="lang-select header__custom-select">
+                <div class="custom-select header__custom-select">
                   <select>
                     <option value="en">English</option>
                     <option value="ru" selected="selected">Русский</option>
@@ -46,21 +46,15 @@
               <div class="h-stat__items">
                 <div class="h-stat__item">
                   <p>Общий баланс кошелька</p>
-                  <p class="h-stat__val">
-                    <spna>1.56987</spna> BTC
-                  </p>
+                  <p class="h-stat__val"><span>1.56987</span> BTC</p>
                 </div>
                 <div class="h-stat__item">
                   <p>Комиссия за транзакцию</p>
-                  <p class="h-stat__val">
-                    <spna>0.00005</spna>  BTC
-                  </p>
+                  <p class="h-stat__val"><span>0.00005</span>  BTC</p>
                 </div>
                 <div class="h-stat__item">
                   <p>Максимальная сумма для отправки</p>
-                  <p class="h-stat__val">
-                    <spna>0.00005</spna> BTC
-                  </p>
+                  <p class="h-stat__val"><span>0.00005</span> BTC</p>
                 </div>
               </div>
             </div>
@@ -76,6 +70,7 @@
             <h1 class="l-title">Создать объявление о биткоин-сделке</h1>
             <div class="cards__inner">
               <div class="cards__main cards__main--full">
+                <!--BANNER-->
                 <div class="card__card">
                   <div class="card card--baner">
                     <div class="card__inner card__inner--smf">
@@ -83,6 +78,7 @@
                     </div>
                   </div>
                 </div>
+                <!--BANNER-->
                 <div class="card__card">
                   <div class="card card--baner card--baner-warn">
                     <div class="card__inner card__inner--smf">
@@ -90,51 +86,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="cards__card">
-                  <div class="card">
-                    <div class="card__head">
-                      <div class="card__title-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <mask id="svg-info" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0C4.47998 0 0 4.47998 0 10C0 15.52 4.47998 20 10 20C15.52 20 20 15.52 20 10C20 4.47998 15.52 0 10 0ZM9 15V9H11V15H9ZM9 5V7H11V5H9Z" transform="translate(2 2)" fill="white"/>
-    </mask>
-    <g mask="url(#svg-info)">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#DFDFDF"/>
-    </g>
-</svg>
-
-                        <h3 class="card__title">Информация о сделке</h3>
-                      </div>
-                    </div>
-                    <div class="card__inner card__inner--smf dark">
-                      <div class="c-tab">
-                        <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-4 col-md-3 c-tab__cell--head"><span>Способ оплаты</span></div>
-                          <div class="c-tab__cell c-tab__cell--between-align col-xs-8 col-md-9">
-                            <p>Банковыский перевод Украины</p>
-                          </div>
-                        </div>
-                        <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-4 col-md-3 c-tab__cell--head"><span>Лимиты сделки</span></div>
-                          <div class="c-tab__cell c-tab__cell--between-align col-xs-8 col-md-9">
-                            <p>3500 - 8000 USD</p>
-                          </div>
-                        </div>
-                        <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-4 col-md-3 c-tab__cell--head"><span>Местоположение</span></div>
-                          <div class="c-tab__cell c-tab__cell--between-align col-xs-8 col-md-9">
-                            <p>Европа, Познань, 214 Goldner Ville Apt. 429</p>
-                          </div>
-                        </div>
-                        <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-4 col-md-3 c-tab__cell--head"><span>Окно оплаты</span></div>
-                          <div class="c-tab__cell c-tab__cell--between-align col-xs-8 col-md-9">
-                            <p>90 минут</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <!--Правила и требования к объявлению-->
                 <div class="cards__card">
                   <div class="card">
                     <div class="card__head">
@@ -146,10 +98,22 @@
         <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#DFDFDF"/>
     </g>
 </svg>
-                        <h3 class="card__title">Условия сделки</h3>
+                        <h3 class="card__title card__title--bold">Правила и требования к объявлению</h3>
+                      </div>
+                      <div class="card__toggle"><span>Читать</span>
+                        <div class="card__arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <mask id="id-down-arrow" mask-type="alpha" maskUnits="userSpaceOnUse" x="6" y="8" width="12" height="8">
+        <path d="M1.41 0L6 4.58L10.59 0L12 1.41L6 7.41L0 1.41L1.41 0Z" transform="translate(6 8.58997)" fill="white"/>
+    </mask>
+    <g mask="url(#id-down-arrow)">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#282828"/>
+    </g>
+</svg>
+
+                        </div>
                       </div>
                     </div>
-                    <div class="card__inner card__inner--smf">
+                    <div class="card__inner card__inner--smf" style="display: none">
                       <ol>
                         <li>Делайте запрос на сделку</li>
                         <li>Высылаете копию паспорта или водительского удостовернеия</li>
@@ -160,212 +124,887 @@
                         <li>Отправляю Вам биткоин</li>
                         <li>Обмениваемся положительными отзывами</li>
                       </ol>
-                      <p>телеграмм: @trueJugernaut</p><br/>
+                      <p>Телеграмм: @trueJugernaut</p><br/>
                       <P>Возможна продажа больших сумм за наличные $</P>
                       <p>Условия обговариваются</p>
                       <p>Подтверждаю настоящее имя</p>
                     </div>
                   </div>
                 </div>
+                <!--Сделка-->
                 <div class="cards__card">
                   <div class="card">
                     <div class="card__head">
                       <div class="card__title-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="svg-security" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="1" width="18" height="22">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 4L9 0L18 4V10C18 15.55 14.1602 20.74 9 22C3.83984 20.74 0 15.55 0 10V4ZM3 12L7 16L15 8L13.5898 6.58002L7 13.17L4.41016 10.59L3 12Z" transform="translate(3 1)" fill="white"/>
-</mask>
-<g mask="url(#svg-security)">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
-</g>
+    <mask id="svg-deal" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="19">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M14 4H18C19.1104 4 20 4.88989 20 6V17C20 18.1101 19.1104 19 18 19H2C0.890137 19 0 18.1101 0 17L0.00976562 6C0.00976562 4.88989 0.890137 4 2 4H6V2C6 0.889893 6.89014 0 8 0H12C13.1104 0 14 0.889893 14 2V4ZM8 4H12V2H8V4Z" transform="translate(2 2)" fill="white"/>
+    </mask>
+    <g mask="url(#svg-deal)">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#DFDFDF"/>
+    </g>
 </svg>
 
-                        <h3 class="card__title">Безопасность</h3>
+                        <h3 class="card__title">Сделка</h3>
                       </div>
                     </div>
                     <div class="card__inner">
-                      <div class="c-tab">
-                        <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-4 col-md-3 c-tab__cell--head"><span>Email</span></div>
-                          <div class="c-tab__cell c-tab__cell--between-align col-xs-8 col-md-9">
-                            <div>
-                              <div class="conf conf--conf"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="svg-security" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="1" width="18" height="22">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 4L9 0L18 4V10C18 15.55 14.1602 20.74 9 22C3.83984 20.74 0 15.55 0 10V4ZM3 12L7 16L15 8L13.5898 6.58002L7 13.17L4.41016 10.59L3 12Z" transform="translate(3 1)" fill="white"/>
+                      <form class="form">
+                        <div class="card__cols">
+                          <div class="card__col">
+                            <h4 class="card__col-title">Тип Сделки</h4>
+                            <div class="form__group">
+                              <div class="form__input-box">
+                                <div class="form__input-sel custom-select">
+                                  <select>
+                                    <option value="unseleceted" selected="selected">Кредитование</option>
+                                    <option value="USD">USD</option>
+                                    <option value="EUR">EUR</option>
+                                    <option value="GBP">GBP</option>
+                                    <option value="JPY">JPY</option>
+                                    <option value="CHF">CHF</option>
+                                    <option value="CNY">CNY</option>
+                                    <option value="RUB">RUB</option>
+                                    <option value="UAH">UAH</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card__col">
+                            <h4 class="card__col-title">Тип Сделки</h4>
+                            <div class="form__group">
+                              <div class="form__input-box">
+                                <div class="form__input-sel custom-select">
+                                  <select>
+                                    <option value="unseleceted" selected="selected">Кредитование</option>
+                                    <option value="USD">USD</option>
+                                    <option value="EUR">EUR</option>
+                                    <option value="GBP">GBP</option>
+                                    <option value="JPY">JPY</option>
+                                    <option value="CHF">CHF</option>
+                                    <option value="CNY">CNY</option>
+                                    <option value="RUB">RUB</option>
+                                    <option value="UAH">UAH</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card__col card__col--full">
+                            <div class="card__cols">
+                              <div class="card__col">
+                                <div class="form__group">
+                                  <label class="form__label">Страна &nbsp<span class="warn">*</span></label>
+                                  <div class="form__input-box">
+                                    <div class="form__input-sel custom-select">
+                                      <select>
+                                        <option value="USD" selected="selected">Австралия</option>
+                                        <option value="EUR"> Аргентина</option>
+                                        <option value="GBP">Уганда</option>
+                                        <option value="JPY">Мавритания</option>
+                                        <option value="CHF">Чад</option>
+                                        <option value="CNY">Мозамбик</option>
+                                        <option value="RUB">Судан</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="form__group">
+                                  <label class="form__label">Город &nbsp<span class="warn">*</span></label>
+                                  <div class="form__input-box">
+                                    <div class="form__input-sel custom-select">
+                                      <select>
+                                        <option value="USD" selected="selected">Австралия</option>
+                                        <option value="EUR"> Аргентина</option>
+                                        <option value="GBP">Уганда</option>
+                                        <option value="JPY">Мавритания</option>
+                                        <option value="CHF">Чад</option>
+                                        <option value="CNY">Мозамбик</option>
+                                        <option value="RUB">Судан</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card__col">
+                                <div class="form__group">
+                                  <label class="form__label">Адрес &nbsp</label>
+                                  <div class="form__input-box">
+                                    <div class="form__input-sel custom-select">
+                                      <select>
+                                        <option value="USD" selected="selected">Австралия</option>
+                                        <option value="EUR"> Аргентина</option>
+                                        <option value="GBP">Уганда</option>
+                                        <option value="JPY">Мавритания</option>
+                                        <option value="CHF">Чад</option>
+                                        <option value="CNY">Мозамбик</option>
+                                        <option value="RUB">Судан</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card__cols">
+                                  <div class="card__col card__col--house">
+                                    <div class="form__group">
+                                      <label class="form__label">Дом &nbsp</label>
+                                      <input class="form__input" type="text"/>
+                                    </div>
+                                  </div>
+                                  <div class="card__col card__col--index">
+                                    <div class="form__group">
+                                      <label class="form__label">Индекс &nbsp</label>
+                                      <input class="form__input" type="text"/>
+                                    </div>
+                                  </div>
+                                  <div class="card__col card__col--deal-btn">
+                                    <div class="card__btn"><a class="l-btn" href="#">
+                                        <div class="l-btn__inner">
+                                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-map" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="3" width="18" height="18">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M17.3398 0.0300293L17.5 0C17.7803 0 18 0.219971 18 0.5V15.6201C18 15.8501 17.8496 16.03 17.6396 16.1001L12 18L6 15.8999L0.660156 17.97L0.5 18C0.219727 18 0 17.78 0 17.5V2.37988C0 2.1499 0.150391 1.96997 0.360352 1.8999L6 0L12 2.1001L17.3398 0.0300293ZM6 13.78L12 15.8901V4.22021L6 2.11011V13.78Z" transform="translate(3 3)" fill="white"/>
 </mask>
-<g mask="url(#svg-security)">
+<g mask="url(#svg-map)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
 </g>
 </svg>
-<span> Подтвержден</span>
+                                          Показать на карте
+                                        </div></a></div>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                        <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-4 col-md-3 c-tab__cell--head"><span>Телефон</span></div>
-                          <div class="c-tab__cell c-tab__cell--between-align col-xs-8 col-md-9">
-                            <div class="c-tab__cell-conf">
-                              <div class="conf conf--not-conf"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="security-lost" mask-type="alpha" maskUnits="userSpaceOnUse" x="1" y="2" width="22" height="19">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M22 19L11 0L0 19H22ZM10 16V14H12V16H10ZM10 12H12V8H10V12Z" transform="translate(1 2)" fill="white"/>
-</mask>
-<g mask="url(#security-lost)">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#EB5757"/>
-</g>
-</svg>
-<span> Не подтвержден</span>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <!--Параметры цены-->
+                <div class="cards__card">
+                  <div class="card">
+                    <div class="card__head">
+                      <div class="card__title-wrap">
+                        <h3 class="card__title">Параметры цены</h3>
+                      </div>
+                    </div>
+                    <div class="card__inner">
+                      <form class="form">
+                        <div class="card__cols">
+                          <div class="card__col">
+                            <div class="form__group">
+                              <label class="form__label">Прибыль</label>
+                              <div class="form__input-box">
+                                <input type="number"/>
+                                <div class="form__input-side"><span>%</span></div>
                               </div>
                             </div>
                           </div>
                         </div>
-                        <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-4 col-md-3 c-tab__cell--head"><span>Удостоверение личности</span></div>
-                          <div class="c-tab__cell c-tab__cell--between-align col-xs-8 col-md-9">
-                            <div>
-                              <div class="conf conf--conf"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="svg-security" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="1" width="18" height="22">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 4L9 0L18 4V10C18 15.55 14.1602 20.74 9 22C3.83984 20.74 0 15.55 0 10V4ZM3 12L7 16L15 8L13.5898 6.58002L7 13.17L4.41016 10.59L3 12Z" transform="translate(3 1)" fill="white"/>
+                        <div class="card__cols">
+                          <div class="card__col card__col--full">
+                            <div class="form__group">
+                              <div class="card__cols">
+                                <div class="card__col">
+                                  <div class="form__group">
+                                    <label class="form__label">Уравнение цены</label>
+                                    <div class="form__input-box form__input-box--double">
+                                      <input type="text"/>
+                                      <div class="form__input-footer"><span class="caption">по текущей рыночной стоимости: &nbsp</span><span class="form__price form__price--small">25,176.31 AED / BTC</span></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card__col">
+                                  <div class="card__descr">Как определяется цена сделки в зависимости от рыночной цены (средней за час). Более подробная информация о расчете цены сделки приводится в  часто задаваемых вопросах по установлению цены. Обратите внимание, что пользователь, разместивший объявление, всегда отвечает за оплату всех сборов за обработку сделки.</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                      <div class="card__cols">
+                        <div class="card__col">
+                          <label class="form__label">Лимит сделки</label>
+                          <div class="card__cols">
+                            <div class="card__col">
+                              <div class="form__input-box">
+                                <input type="number" placeholder="0"/>
+                                <div class="form__input-side"><span>min</span></div>
+                              </div>
+                            </div>
+                            <div class="card__col">
+                              <div class="form__input-box">
+                                <input type="number" placeholder="0"/>
+                                <div class="form__input-side"><span>max</span></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--Дополнительные параметры-->
+                <div class="cards__card">
+                  <div class="card">
+                    <div class="card__head">
+                      <div class="card__title-wrap">
+                        <h3 class="card__title">Дополнительные параметры</h3>
+                      </div>
+                    </div>
+                    <div class="card__inner">
+                      <form class="form">
+                        <h4 class="card__subtitle">Часы работы сделки</h4>
+                        <div class="card__cols">
+                          <div class="card__col">
+                            <div class="form__time form__group">
+                              <div class="form__time-caption"><span>Понедельник</span></div>
+                              <div class="form__input-box">
+                                <div class="form__input-sel custom-select">
+                                  <select>
+                                    <option value="unseleceted" selected="selected">Начало</option>
+                                    <option value="USD">00:00</option>
+                                    <option value="EUR">01:00</option>
+                                    <option value="GBP">02:00</option>
+                                    <option value="JPY">03:00</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="form__input-box">
+                                <div class="form__input-sel custom-select">
+                                  <select>
+                                    <option value="unseleceted" selected="selected">Конец</option>
+                                    <option value="USD">00:00</option>
+                                    <option value="EUR">01:00</option>
+                                    <option value="GBP">02:00</option>
+                                    <option value="JPY">03:00</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form__time form__group">
+                              <div class="form__time-caption"><span>Вторник</span></div>
+                              <div class="form__input-box">
+                                <div class="form__input-sel custom-select">
+                                  <select>
+                                    <option value="unseleceted" selected="selected">Начало</option>
+                                    <option value="USD">00:00</option>
+                                    <option value="EUR">01:00</option>
+                                    <option value="GBP">02:00</option>
+                                    <option value="JPY">03:00</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="form__input-box">
+                                <div class="form__input-sel custom-select">
+                                  <select>
+                                    <option value="unseleceted" selected="selected">Конец</option>
+                                    <option value="USD">00:00</option>
+                                    <option value="EUR">01:00</option>
+                                    <option value="GBP">02:00</option>
+                                    <option value="JPY">03:00</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form__time form__group">
+                              <div class="form__time-caption"><span>Понедельник</span></div>
+                              <div class="form__input-box">
+                                <div class="form__input-sel custom-select">
+                                  <select>
+                                    <option value="unseleceted" selected="selected">Начало</option>
+                                    <option value="USD">00:00</option>
+                                    <option value="EUR">01:00</option>
+                                    <option value="GBP">02:00</option>
+                                    <option value="JPY">03:00</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="form__input-box">
+                                <div class="form__input-sel custom-select">
+                                  <select>
+                                    <option value="unseleceted" selected="selected">Конец</option>
+                                    <option value="USD">00:00</option>
+                                    <option value="EUR">01:00</option>
+                                    <option value="GBP">02:00</option>
+                                    <option value="JPY">03:00</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form__time form__group">
+                              <div class="form__time-caption"><span>Вторник</span></div>
+                              <div class="form__input-box">
+                                <div class="form__input-sel custom-select">
+                                  <select>
+                                    <option value="unseleceted" selected="selected">Начало</option>
+                                    <option value="USD">00:00</option>
+                                    <option value="EUR">01:00</option>
+                                    <option value="GBP">02:00</option>
+                                    <option value="JPY">03:00</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="form__input-box">
+                                <div class="form__input-sel custom-select">
+                                  <select>
+                                    <option value="unseleceted" selected="selected">Конец</option>
+                                    <option value="USD">00:00</option>
+                                    <option value="EUR">01:00</option>
+                                    <option value="GBP">02:00</option>
+                                    <option value="JPY">03:00</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card__col card__col--time-hint">
+                            <div class="card__descr">Необязательный параметр. Дни и часы, в которые объявление будет показываться (в остальное время оно будет скрыто).</div>
+                          </div>
+                          <div class="card__col card__col--full">
+                            <div class="card__cols">
+                              <div class="card__col">
+                                <div class="form__group">
+                                  <label class="form__label">Условия сделки</label>
+                                  <textarea class="form__input" rows="5"></textarea>
+                                </div>
+                              </div>
+                              <div class="card__col">
+                                <div class="card__descr">
+                                  <p>Дополнительная информация о вашей торговле.</p><br/>
+                                  <p>• Пример 1: Эта реклама предназначена только для сделок с наличными. Если вы хотите совершить оплату онлайн, свяжитесь с bigrate.com/ad/1234.</p><br/>
+                                  <p>• Пример 2: Делайте запрос только тогда, когда вы можете осуществить платеж наличными в течение 12 часов</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card__col card__col--full">
+                            <h3 class="card__col-title">Ликвидность</h3>
+                            <div class="form__group">
+                              <div class="form__check-wrap">
+                                <div class="form__check">
+                                  <input type="checkbox" id="liquidity"/>
+                                  <label for="liquidity">Следить за ликвидностью</label>
+                                </div>
+                                <div class="svg-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-tultip" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 4.47998 4.48047 0 10 0C15.5195 0 20 4.47998 20 10C20 15.52 15.5195 20 10 20C4.48047 20 0 15.52 0 10ZM11 14V16H9V14H11ZM10 18C5.58984 18 2 14.4099 2 10C2 5.59009 5.58984 2 10 2C14.4102 2 18 5.59009 18 10C18 14.4099 14.4102 18 10 18ZM6 8C6 5.79004 7.79004 4 10 4C12.21 4 14 5.79004 14 8C14 9.28296 13.21 9.97339 12.4404 10.6455C11.7109 11.2832 11 11.9045 11 13H9C9 11.1787 9.94238 10.4565 10.7705 9.82153C11.4209 9.32349 12 8.87915 12 8C12 6.8999 11.0996 6 10 6C8.90039 6 8 6.8999 8 8H6Z" transform="translate(2 2)" fill="white"/>
 </mask>
-<g mask="url(#svg-security)">
+<g mask="url(#svg-tultip)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
 </g>
 </svg>
-<span> Подтвержден</span>
+
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                        <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-4 col-md-3 c-tab__cell--head"><span>Имя</span></div>
-                          <div class="c-tab__cell c-tab__cell--between-align col-xs-8 col-md-9">
-                            <div>
-                              <div class="conf conf--conf"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="svg-security" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="1" width="18" height="22">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 4L9 0L18 4V10C18 15.55 14.1602 20.74 9 22C3.83984 20.74 0 15.55 0 10V4ZM3 12L7 16L15 8L13.5898 6.58002L7 13.17L4.41016 10.59L3 12Z" transform="translate(3 1)" fill="white"/>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <!--Параметры онлайн оплаты-->
+                <div class="cards__card">
+                  <div class="card">
+                    <div class="card__head">
+                      <div class="card__title-wrap">
+                        <h3 class="card__title">Параметры онлайн оплаты</h3>
+                      </div>
+                    </div>
+                    <div class="card__inner">
+                      <form class="form">
+                        <div class="card__cols">
+                          <div class="card__col">
+                            <div class="form__group">
+                              <div class="form__subtitle"><span>Детали оплаты &nbsp</span>
+                                <div class="svg-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-tultip" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 4.47998 4.48047 0 10 0C15.5195 0 20 4.47998 20 10C20 15.52 15.5195 20 10 20C4.48047 20 0 15.52 0 10ZM11 14V16H9V14H11ZM10 18C5.58984 18 2 14.4099 2 10C2 5.59009 5.58984 2 10 2C14.4102 2 18 5.59009 18 10C18 14.4099 14.4102 18 10 18ZM6 8C6 5.79004 7.79004 4 10 4C12.21 4 14 5.79004 14 8C14 9.28296 13.21 9.97339 12.4404 10.6455C11.7109 11.2832 11 11.9045 11 13H9C9 11.1787 9.94238 10.4565 10.7705 9.82153C11.4209 9.32349 12 8.87915 12 8C12 6.8999 11.0996 6 10 6C8.90039 6 8 6.8999 8 8H6Z" transform="translate(2 2)" fill="white"/>
 </mask>
-<g mask="url(#svg-security)">
+<g mask="url(#svg-tultip)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
 </g>
 </svg>
-<span> Подтвержден</span>
+
+                                </div>
+                              </div>
+                              <textarea class="form__input" rows="5"></textarea>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card__cols">
+                          <div class="card__col">
+                            <div class="form__group">
+                              <div class="form__subtitle"><span>Минимальный объем &nbsp</span>
+                                <div class="svg-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-tultip" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 4.47998 4.48047 0 10 0C15.5195 0 20 4.47998 20 10C20 15.52 15.5195 20 10 20C4.48047 20 0 15.52 0 10ZM11 14V16H9V14H11ZM10 18C5.58984 18 2 14.4099 2 10C2 5.59009 5.58984 2 10 2C14.4102 2 18 5.59009 18 10C18 14.4099 14.4102 18 10 18ZM6 8C6 5.79004 7.79004 4 10 4C12.21 4 14 5.79004 14 8C14 9.28296 13.21 9.97339 12.4404 10.6455C11.7109 11.2832 11 11.9045 11 13H9C9 11.1787 9.94238 10.4565 10.7705 9.82153C11.4209 9.32349 12 8.87915 12 8C12 6.8999 11.0996 6 10 6C8.90039 6 8 6.8999 8 8H6Z" transform="translate(2 2)" fill="white"/>
+</mask>
+<g mask="url(#svg-tultip)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
+</svg>
+
+                                </div>
+                              </div>
+                              <div class="form__input-box">
+                                <input type="number"/>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card__col">
+                            <div class="form__group">
+                              <div class="form__subtitle"><span>Минимальная оценка отзывов &nbsp</span>
+                                <div class="svg-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-tultip" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 4.47998 4.48047 0 10 0C15.5195 0 20 4.47998 20 10C20 15.52 15.5195 20 10 20C4.48047 20 0 15.52 0 10ZM11 14V16H9V14H11ZM10 18C5.58984 18 2 14.4099 2 10C2 5.59009 5.58984 2 10 2C14.4102 2 18 5.59009 18 10C18 14.4099 14.4102 18 10 18ZM6 8C6 5.79004 7.79004 4 10 4C12.21 4 14 5.79004 14 8C14 9.28296 13.21 9.97339 12.4404 10.6455C11.7109 11.2832 11 11.9045 11 13H9C9 11.1787 9.94238 10.4565 10.7705 9.82153C11.4209 9.32349 12 8.87915 12 8C12 6.8999 11.0996 6 10 6C8.90039 6 8 6.8999 8 8H6Z" transform="translate(2 2)" fill="white"/>
+</mask>
+<g mask="url(#svg-tultip)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
+</svg>
+
+                                </div>
+                              </div>
+                              <div class="form__input-box">
+                                <input type="number"/>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card__col">
+                            <div class="form__group">
+                              <div class="form__subtitle"><span>Ограничения для новых покупателей &nbsp</span>
+                                <div class="svg-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-tultip" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 4.47998 4.48047 0 10 0C15.5195 0 20 4.47998 20 10C20 15.52 15.5195 20 10 20C4.48047 20 0 15.52 0 10ZM11 14V16H9V14H11ZM10 18C5.58984 18 2 14.4099 2 10C2 5.59009 5.58984 2 10 2C14.4102 2 18 5.59009 18 10C18 14.4099 14.4102 18 10 18ZM6 8C6 5.79004 7.79004 4 10 4C12.21 4 14 5.79004 14 8C14 9.28296 13.21 9.97339 12.4404 10.6455C11.7109 11.2832 11 11.9045 11 13H9C9 11.1787 9.94238 10.4565 10.7705 9.82153C11.4209 9.32349 12 8.87915 12 8C12 6.8999 11.0996 6 10 6C8.90039 6 8 6.8999 8 8H6Z" transform="translate(2 2)" fill="white"/>
+</mask>
+<g mask="url(#svg-tultip)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
+</svg>
+
+                                </div>
+                              </div>
+                              <div class="form__input-box">
+                                <input type="number"/>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card__col">
+                            <div class="form__group">
+                              <div class="form__subtitle"><span>Коэффициент объема сделок &nbsp</span>
+                                <div class="svg-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-tultip" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 4.47998 4.48047 0 10 0C15.5195 0 20 4.47998 20 10C20 15.52 15.5195 20 10 20C4.48047 20 0 15.52 0 10ZM11 14V16H9V14H11ZM10 18C5.58984 18 2 14.4099 2 10C2 5.59009 5.58984 2 10 2C14.4102 2 18 5.59009 18 10C18 14.4099 14.4102 18 10 18ZM6 8C6 5.79004 7.79004 4 10 4C12.21 4 14 5.79004 14 8C14 9.28296 13.21 9.97339 12.4404 10.6455C11.7109 11.2832 11 11.9045 11 13H9C9 11.1787 9.94238 10.4565 10.7705 9.82153C11.4209 9.32349 12 8.87915 12 8C12 6.8999 11.0996 6 10 6C8.90039 6 8 6.8999 8 8H6Z" transform="translate(2 2)" fill="white"/>
+</mask>
+<g mask="url(#svg-tultip)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
+</svg>
+
+                                </div>
+                              </div>
+                              <div class="form__input-box">
+                                <input type="number"/>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card__col">
+                            <div class="form__group">
+                              <div class="form__check">
+                                <input type="checkbox" id="show-payt-num"/>
+                                <label for="show-payt-num">Отображать номер платежа</label>
                               </div>
                             </div>
                           </div>
                         </div>
-                        <div class="card__hint caption dark">У пользователя есть подтверденный номер телефона в Европе</div>
-                      </div>
+                      </form>
                     </div>
                   </div>
                 </div>
+                <!--Параметры безопасности-->
                 <div class="cards__card">
                   <div class="card">
-                    <div class="card__head card__head--hint">
-                      <div class="card__title-wrap card__title-wrap--hint"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <mask id="svg-wonder" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 4.47998 4.47998 0 10 0C15.52 0 20 4.47998 20 10C20 15.52 15.52 20 10 20C4.47998 20 0 15.52 0 10ZM11 14V16H9V14H11ZM10 18C5.58984 18 2 14.41 2 10C2 5.58997 5.58984 2 10 2C14.4102 2 18 5.58997 18 10C18 14.41 14.4102 18 10 18ZM6 8C6 5.79004 7.79004 4 10 4C12.21 4 14 5.79004 14 8C14 9.28296 13.21 9.97339 12.4409 10.6456C11.7109 11.2833 11 11.9047 11 13H9C9 11.1787 9.94189 10.4565 10.7705 9.82166C11.4204 9.32361 12 8.87927 12 8C12 6.90002 11.1001 6 10 6C8.8999 6 8 6.90002 8 8H6Z" transform="translate(2 2)" fill="white"/>
-    </mask>
-    <g mask="url(#svg-wonder)">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
-    </g>
+                    <div class="card__head">
+                      <div class="card__title-wrap">
+                        <!--include ../../svg/wonder.svg-->
+                        <h3 class="card__title">Параметры безопасности</h3>
+                      </div>
+                    </div>
+                    <div class="card__inner">
+                      <form class="form">
+                        <h4 class="card__subtitle">Кто может ответить предложение</h4>
+                        <div class="card__col card__col--full">
+                          <div class="form__group">
+                            <div class="form__check-wrap">
+                              <div class="form__check">
+                                <input type="checkbox" id="user-verify"/>
+                                <label for="user-verify">Люди прошедшие проверку личности</label>
+                              </div>
+                              <div class="svg-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-tultip" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 4.47998 4.48047 0 10 0C15.5195 0 20 4.47998 20 10C20 15.52 15.5195 20 10 20C4.48047 20 0 15.52 0 10ZM11 14V16H9V14H11ZM10 18C5.58984 18 2 14.4099 2 10C2 5.59009 5.58984 2 10 2C14.4102 2 18 5.59009 18 10C18 14.4099 14.4102 18 10 18ZM6 8C6 5.79004 7.79004 4 10 4C12.21 4 14 5.79004 14 8C14 9.28296 13.21 9.97339 12.4404 10.6455C11.7109 11.2832 11 11.9045 11 13H9C9 11.1787 9.94238 10.4565 10.7705 9.82153C11.4209 9.32349 12 8.87915 12 8C12 6.8999 11.0996 6 10 6C8.90039 6 8 6.8999 8 8H6Z" transform="translate(2 2)" fill="white"/>
+</mask>
+<g mask="url(#svg-tultip)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
 </svg>
 
-                        <h3 class="card__title">Как начать и связаться с трейдером?</h3>
-                      </div>
-                      <div class="card__arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <mask id="id-down-arrow" mask-type="alpha" maskUnits="userSpaceOnUse" x="6" y="8" width="12" height="8">
-        <path d="M1.41 0L6 4.58L10.59 0L12 1.41L6 7.41L0 1.41L1.41 0Z" transform="translate(6 8.58997)" fill="white"/>
-    </mask>
-    <g mask="url(#id-down-arrow)">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#282828"/>
-    </g>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form__group">
+                            <div class="form__check-wrap">
+                              <div class="form__check">
+                                <input type="checkbox" id="phone-verify"/>
+                                <label for="phone-verify">Люди с подтвержденным номером телефона</label>
+                              </div>
+                              <div class="svg-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-tultip" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 4.47998 4.48047 0 10 0C15.5195 0 20 4.47998 20 10C20 15.52 15.5195 20 10 20C4.48047 20 0 15.52 0 10ZM11 14V16H9V14H11ZM10 18C5.58984 18 2 14.4099 2 10C2 5.59009 5.58984 2 10 2C14.4102 2 18 5.59009 18 10C18 14.4099 14.4102 18 10 18ZM6 8C6 5.79004 7.79004 4 10 4C12.21 4 14 5.79004 14 8C14 9.28296 13.21 9.97339 12.4404 10.6455C11.7109 11.2832 11 11.9045 11 13H9C9 11.1787 9.94238 10.4565 10.7705 9.82153C11.4209 9.32349 12 8.87915 12 8C12 6.8999 11.0996 6 10 6C8.90039 6 8 6.8999 8 8H6Z" transform="translate(2 2)" fill="white"/>
+</mask>
+<g mask="url(#svg-tultip)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
 </svg>
 
-                      </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form__group">
+                            <div class="form__check-wrap">
+                              <div class="form__check">
+                                <input type="checkbox" id="conf-sellers"/>
+                                <label for="conf-sellers">Торговцы с вашего списка доверенных</label>
+                              </div>
+                              <div class="svg-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-tultip" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 4.47998 4.48047 0 10 0C15.5195 0 20 4.47998 20 10C20 15.52 15.5195 20 10 20C4.48047 20 0 15.52 0 10ZM11 14V16H9V14H11ZM10 18C5.58984 18 2 14.4099 2 10C2 5.59009 5.58984 2 10 2C14.4102 2 18 5.59009 18 10C18 14.4099 14.4102 18 10 18ZM6 8C6 5.79004 7.79004 4 10 4C12.21 4 14 5.79004 14 8C14 9.28296 13.21 9.97339 12.4404 10.6455C11.7109 11.2832 11 11.9045 11 13H9C9 11.1787 9.94238 10.4565 10.7705 9.82153C11.4209 9.32349 12 8.87915 12 8C12 6.8999 11.0996 6 10 6C8.90039 6 8 6.8999 8 8H6Z" transform="translate(2 2)" fill="white"/>
+</mask>
+<g mask="url(#svg-tultip)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
+</svg>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
                     </div>
                   </div>
                 </div>
+                <!--Параметры цены-->
                 <div class="cards__card">
-                  <div class="card">
-                    <div class="card__head card__head--hint">
-                      <div class="card__title-wrap card__title-wrap--hint"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <mask id="svg-wonder" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 4.47998 4.47998 0 10 0C15.52 0 20 4.47998 20 10C20 15.52 15.52 20 10 20C4.47998 20 0 15.52 0 10ZM11 14V16H9V14H11ZM10 18C5.58984 18 2 14.41 2 10C2 5.58997 5.58984 2 10 2C14.4102 2 18 5.58997 18 10C18 14.41 14.4102 18 10 18ZM6 8C6 5.79004 7.79004 4 10 4C12.21 4 14 5.79004 14 8C14 9.28296 13.21 9.97339 12.4409 10.6456C11.7109 11.2833 11 11.9047 11 13H9C9 11.1787 9.94189 10.4565 10.7705 9.82166C11.4204 9.32361 12 8.87927 12 8C12 6.90002 11.1001 6 10 6C8.8999 6 8 6.90002 8 8H6Z" transform="translate(2 2)" fill="white"/>
-    </mask>
-    <g mask="url(#svg-wonder)">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
-    </g>
-</svg>
-
-                        <h3 class="card__title">Отмена сделки?</h3>
+                  <div class="card card--footer">
+                    <div class="card__head">
+                      <div class="card__title-wrap">
+                        <h3 class="card__title">Параметры цены</h3>
                       </div>
-                      <div class="card__arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <mask id="id-down-arrow" mask-type="alpha" maskUnits="userSpaceOnUse" x="6" y="8" width="12" height="8">
-        <path d="M1.41 0L6 4.58L10.59 0L12 1.41L6 7.41L0 1.41L1.41 0Z" transform="translate(6 8.58997)" fill="white"/>
-    </mask>
-    <g mask="url(#id-down-arrow)">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#282828"/>
-    </g>
+                    </div>
+                    <div class="card__inner">
+                      <form class="form">
+                        <div class="card__cols">
+                          <div class="card__col">
+                            <label class="form__label">Cумма кредита</label>
+                            <div class="card__cols card__cols--exchange">
+                              <div class="card__col">
+                                <div class="form__group">
+                                  <div class="form__input-box">
+                                    <input type="number"/>
+                                    <div class="form__input-side"><span>BTC</span></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="svg-icon-wrap">
+                                <div class="svg-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-exchange" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M20 10C20 4.47998 15.52 0 10 0C4.47998 0 0 4.47998 0 10C0 15.52 4.47998 20 10 20C15.52 20 20 15.52 20 10ZM13 4.5L16.5 8L13 11.5V9H9V7H13V4.5ZM3.5 12L7 15.5V13H11V11H7V8.5L3.5 12Z" transform="translate(2 2)" fill="white"/>
+</mask>
+<g mask="url(#svg-exchange)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
 </svg>
 
+                                </div>
+                              </div>
+                              <div class="card__col">
+                                <div class="form__group">
+                                  <div class="form__input-box">
+                                    <input id="val" type="number" placeholder="валюта"/>
+                                    <!--.form__input-side-->
+                                    <div class="form__input-sel form__input-sel--side form__input-sel--card">
+                                      <div class="custom-select">
+                                        <select>
+                                          <option value="unseleceted" selected="selected">валюта</option>
+                                          <option value="USD">U</option>
+                                          <option value="EUR">EUR</option>
+                                          <option value="GBP">GBP</option>
+                                          <option value="JPY">JPY</option>
+                                          <option value="CHF">CHF</option>
+                                          <option value="CNY">CNY</option>
+                                          <option value="RUB">RUB</option>
+                                          <option value="UAH">UAH</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card__col">
+                            <label class="form__label">Срок кредитования</label>
+                            <div class="card__cols">
+                              <div class="card__col">
+                                <div class="form__group">
+                                  <div class="form__input-box">
+                                    <div class="form__input-sel custom-select">
+                                      <select>
+                                        <option value="unseleceted" selected="selected">от</option>
+                                        <option value="USD">USD</option>
+                                        <option value="EUR">EUR</option>
+                                        <option value="GBP">GBP</option>
+                                        <option value="JPY">JPY</option>
+                                        <option value="CHF">CHF</option>
+                                        <option value="CNY">CNY</option>
+                                        <option value="RUB">RUB</option>
+                                        <option value="UAH">UAH</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card__col">
+                                <div class="form__group">
+                                  <div class="form__input-box">
+                                    <div class="form__input-sel custom-select">
+                                      <select>
+                                        <option value="unseleceted" selected="selected">до</option>
+                                        <option value="USD">USD</option>
+                                        <option value="EUR">EUR</option>
+                                        <option value="GBP">GBP</option>
+                                        <option value="JPY">JPY</option>
+                                        <option value="CHF">CHF</option>
+                                        <option value="CNY">CNY</option>
+                                        <option value="RUB">RUB</option>
+                                        <option value="UAH">UAH</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card__cols">
+                          <div class="card__col card__col--full">
+                            <div class="form__group">
+                              <div class="card__cols">
+                                <div class="card__col">
+                                  <div class="form__group">
+                                    <label class="form__label">Обеспечение
+                                      <div class="svg-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-tultip" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 4.47998 4.48047 0 10 0C15.5195 0 20 4.47998 20 10C20 15.52 15.5195 20 10 20C4.48047 20 0 15.52 0 10ZM11 14V16H9V14H11ZM10 18C5.58984 18 2 14.4099 2 10C2 5.59009 5.58984 2 10 2C14.4102 2 18 5.59009 18 10C18 14.4099 14.4102 18 10 18ZM6 8C6 5.79004 7.79004 4 10 4C12.21 4 14 5.79004 14 8C14 9.28296 13.21 9.97339 12.4404 10.6455C11.7109 11.2832 11 11.9045 11 13H9C9 11.1787 9.94238 10.4565 10.7705 9.82153C11.4209 9.32349 12 8.87915 12 8C12 6.8999 11.0996 6 10 6C8.90039 6 8 6.8999 8 8H6Z" transform="translate(2 2)" fill="white"/>
+</mask>
+<g mask="url(#svg-tultip)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
+</svg>
+
+                                      </div>
+                                    </label>
+                                    <div class="form__input-box">
+                                      <input type="number" placeholder="0"/>
+                                      <div class="form__input-side"><span>%</span></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <h4 class="card__subtitle">Порог ликвидации</h4>
+                        <div class="card__cols">
+                          <div class="card__col card__col--full">
+                            <div class="form__group">
+                              <div class="form__check-wrap">
+                                <div class="form__radio">
+                                  <input type="radio" id="fixed" name="EliminationThreshold" velue="fixed"/>
+                                  <label for="fixed">Фиксированный</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form__group">
+                              <div class="form__check-wrap">
+                                <div class="form__radio">
+                                  <input type="radio" id="float" name="EliminationThreshold" value="float"/>
+                                  <label for="float">Плавающий</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                      <div class="card__cols">
+                        <div class="card__col card__col--full">
+                          <div class="form__group">
+                            <div class="card__cols">
+                              <div class="card__col">
+                                <div class="form__group">
+                                  <label class="form__label">Процентная ставка
+                                    <div class="svg-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-tultip" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 4.47998 4.48047 0 10 0C15.5195 0 20 4.47998 20 10C20 15.52 15.5195 20 10 20C4.48047 20 0 15.52 0 10ZM11 14V16H9V14H11ZM10 18C5.58984 18 2 14.4099 2 10C2 5.59009 5.58984 2 10 2C14.4102 2 18 5.59009 18 10C18 14.4099 14.4102 18 10 18ZM6 8C6 5.79004 7.79004 4 10 4C12.21 4 14 5.79004 14 8C14 9.28296 13.21 9.97339 12.4404 10.6455C11.7109 11.2832 11 11.9045 11 13H9C9 11.1787 9.94238 10.4565 10.7705 9.82153C11.4209 9.32349 12 8.87915 12 8C12 6.8999 11.0996 6 10 6C8.90039 6 8 6.8999 8 8H6Z" transform="translate(2 2)" fill="white"/>
+</mask>
+<g mask="url(#svg-tultip)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
+</svg>
+
+                                    </div>
+                                  </label>
+                                  <div class="form__input-box">
+                                    <input type="number" placeholder="0"/>
+                                    <div class="form__input-side"><span>%</span></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card__col">
+                                <div class="form__group">
+                                  <label class="form__label">
+                                    <div class="svg-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-tultip" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 4.47998 4.48047 0 10 0C15.5195 0 20 4.47998 20 10C20 15.52 15.5195 20 10 20C4.48047 20 0 15.52 0 10ZM11 14V16H9V14H11ZM10 18C5.58984 18 2 14.4099 2 10C2 5.59009 5.58984 2 10 2C14.4102 2 18 5.59009 18 10C18 14.4099 14.4102 18 10 18ZM6 8C6 5.79004 7.79004 4 10 4C12.21 4 14 5.79004 14 8C14 9.28296 13.21 9.97339 12.4404 10.6455C11.7109 11.2832 11 11.9045 11 13H9C9 11.1787 9.94238 10.4565 10.7705 9.82153C11.4209 9.32349 12 8.87915 12 8C12 6.8999 11.0996 6 10 6C8.90039 6 8 6.8999 8 8H6Z" transform="translate(2 2)" fill="white"/>
+</mask>
+<g mask="url(#svg-tultip)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
+</svg>
+
+                                    </div>
+                                  </label>
+                                  <div class="form__input-box">
+                                    <input type="number" placeholder="0"/>
+                                    <div class="form__input-side"><span>%/мec</span></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card__col">
+                                <div class="form__group">
+                                  <label class="form__label">Процентная ставка
+                                    <div class="svg-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-tultip" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 4.47998 4.48047 0 10 0C15.5195 0 20 4.47998 20 10C20 15.52 15.5195 20 10 20C4.48047 20 0 15.52 0 10ZM11 14V16H9V14H11ZM10 18C5.58984 18 2 14.4099 2 10C2 5.59009 5.58984 2 10 2C14.4102 2 18 5.59009 18 10C18 14.4099 14.4102 18 10 18ZM6 8C6 5.79004 7.79004 4 10 4C12.21 4 14 5.79004 14 8C14 9.28296 13.21 9.97339 12.4404 10.6455C11.7109 11.2832 11 11.9045 11 13H9C9 11.1787 9.94238 10.4565 10.7705 9.82153C11.4209 9.32349 12 8.87915 12 8C12 6.8999 11.0996 6 10 6C8.90039 6 8 6.8999 8 8H6Z" transform="translate(2 2)" fill="white"/>
+</mask>
+<g mask="url(#svg-tultip)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
+</svg>
+
+                                    </div>
+                                  </label>
+                                  <div class="form__input-box">
+                                    <input type="number" placeholder="0"/>
+                                    <div class="form__input-side"><span>%</span></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card__col">
+                                <div class="form__group">
+                                  <label class="form__label">
+                                    <div class="svg-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-tultip" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 4.47998 4.48047 0 10 0C15.5195 0 20 4.47998 20 10C20 15.52 15.5195 20 10 20C4.48047 20 0 15.52 0 10ZM11 14V16H9V14H11ZM10 18C5.58984 18 2 14.4099 2 10C2 5.59009 5.58984 2 10 2C14.4102 2 18 5.59009 18 10C18 14.4099 14.4102 18 10 18ZM6 8C6 5.79004 7.79004 4 10 4C12.21 4 14 5.79004 14 8C14 9.28296 13.21 9.97339 12.4404 10.6455C11.7109 11.2832 11 11.9045 11 13H9C9 11.1787 9.94238 10.4565 10.7705 9.82153C11.4209 9.32349 12 8.87915 12 8C12 6.8999 11.0996 6 10 6C8.90039 6 8 6.8999 8 8H6Z" transform="translate(2 2)" fill="white"/>
+</mask>
+<g mask="url(#svg-tultip)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
+</svg>
+
+                                    </div>
+                                  </label>
+                                  <div class="form__input-box">
+                                    <input type="number" placeholder="0"/>
+                                    <div class="form__input-side"><span>%/мec</span></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card__col">
+                                <div class="form__group">
+                                  <label class="form__label">Процентная ставка
+                                    <div class="svg-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-tultip" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 4.47998 4.48047 0 10 0C15.5195 0 20 4.47998 20 10C20 15.52 15.5195 20 10 20C4.48047 20 0 15.52 0 10ZM11 14V16H9V14H11ZM10 18C5.58984 18 2 14.4099 2 10C2 5.59009 5.58984 2 10 2C14.4102 2 18 5.59009 18 10C18 14.4099 14.4102 18 10 18ZM6 8C6 5.79004 7.79004 4 10 4C12.21 4 14 5.79004 14 8C14 9.28296 13.21 9.97339 12.4404 10.6455C11.7109 11.2832 11 11.9045 11 13H9C9 11.1787 9.94238 10.4565 10.7705 9.82153C11.4209 9.32349 12 8.87915 12 8C12 6.8999 11.0996 6 10 6C8.90039 6 8 6.8999 8 8H6Z" transform="translate(2 2)" fill="white"/>
+</mask>
+<g mask="url(#svg-tultip)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
+</svg>
+
+                                    </div>
+                                  </label>
+                                  <div class="form__input-box">
+                                    <input type="number" placeholder="0"/>
+                                    <div class="form__input-side"><span>%</span></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card__col">
+                                <div class="form__group">
+                                  <label class="form__label">
+                                    <div class="svg-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-tultip" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 4.47998 4.48047 0 10 0C15.5195 0 20 4.47998 20 10C20 15.52 15.5195 20 10 20C4.48047 20 0 15.52 0 10ZM11 14V16H9V14H11ZM10 18C5.58984 18 2 14.4099 2 10C2 5.59009 5.58984 2 10 2C14.4102 2 18 5.59009 18 10C18 14.4099 14.4102 18 10 18ZM6 8C6 5.79004 7.79004 4 10 4C12.21 4 14 5.79004 14 8C14 9.28296 13.21 9.97339 12.4404 10.6455C11.7109 11.2832 11 11.9045 11 13H9C9 11.1787 9.94238 10.4565 10.7705 9.82153C11.4209 9.32349 12 8.87915 12 8C12 6.8999 11.0996 6 10 6C8.90039 6 8 6.8999 8 8H6Z" transform="translate(2 2)" fill="white"/>
+</mask>
+<g mask="url(#svg-tultip)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
+</svg>
+
+                                    </div>
+                                  </label>
+                                  <div class="form__input-box">
+                                    <input type="number" placeholder="0"/>
+                                    <div class="form__input-side"><span>%/мec</span></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cards__add-condition">
+                        <div class="card__btn"><a class="l-btn" href="#">
+                            <div class="l-btn__inner">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="24" height="24" fill="black" fill-opacity="0"/>
+<mask id="svg-add" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.49023 2 2 6.48999 2 12C2 17.51 6.49023 22 12 22C17.5098 22 22 17.51 22 12C22 6.48999 17.5098 2 12 2ZM11 7V11H7V13H11V17H13V13H17V11H13V7H11ZM4 12C4 16.41 7.58984 20 12 20C16.4102 20 20 16.41 20 12C20 7.58997 16.4102 4 12 4C7.58984 4 4 7.58997 4 12Z" fill="white"/>
+</mask>
+<g mask="url(#svg-add)">
+<rect width="24" height="24" fill="black" fill-opacity="0"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
+</svg>
+                              Добавить условие
+                            </div></a></div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="cards__card">
-                  <div class="card">
-                    <div class="card__head card__head--hint">
-                      <div class="card__title-wrap card__title-wrap--hint"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <mask id="svg-wonder" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 4.47998 4.47998 0 10 0C15.52 0 20 4.47998 20 10C20 15.52 15.52 20 10 20C4.47998 20 0 15.52 0 10ZM11 14V16H9V14H11ZM10 18C5.58984 18 2 14.41 2 10C2 5.58997 5.58984 2 10 2C14.4102 2 18 5.58997 18 10C18 14.41 14.4102 18 10 18ZM6 8C6 5.79004 7.79004 4 10 4C12.21 4 14 5.79004 14 8C14 9.28296 13.21 9.97339 12.4409 10.6456C11.7109 11.2833 11 11.9047 11 13H9C9 11.1787 9.94189 10.4565 10.7705 9.82166C11.4204 9.32361 12 8.87927 12 8C12 6.90002 11.1001 6 10 6C8.8999 6 8 6.90002 8 8H6Z" transform="translate(2 2)" fill="white"/>
-    </mask>
-    <g mask="url(#svg-wonder)">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
-    </g>
-</svg>
-
-                        <h3 class="card__title">Как продолжить?</h3>
-                      </div>
-                      <div class="card__arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <mask id="id-down-arrow" mask-type="alpha" maskUnits="userSpaceOnUse" x="6" y="8" width="12" height="8">
-        <path d="M1.41 0L6 4.58L10.59 0L12 1.41L6 7.41L0 1.41L1.41 0Z" transform="translate(6 8.58997)" fill="white"/>
-    </mask>
-    <g mask="url(#id-down-arrow)">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#282828"/>
-    </g>
-</svg>
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="cards__card">
-                  <div class="card">
-                    <div class="card__head card__head--hint">
-                      <div class="card__title-wrap card__title-wrap--hint"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <mask id="svg-wonder" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 4.47998 4.47998 0 10 0C15.52 0 20 4.47998 20 10C20 15.52 15.52 20 10 20C4.47998 20 0 15.52 0 10ZM11 14V16H9V14H11ZM10 18C5.58984 18 2 14.41 2 10C2 5.58997 5.58984 2 10 2C14.4102 2 18 5.58997 18 10C18 14.41 14.4102 18 10 18ZM6 8C6 5.79004 7.79004 4 10 4C12.21 4 14 5.79004 14 8C14 9.28296 13.21 9.97339 12.4409 10.6456C11.7109 11.2833 11 11.9047 11 13H9C9 11.1787 9.94189 10.4565 10.7705 9.82166C11.4204 9.32361 12 8.87927 12 8C12 6.90002 11.1001 6 10 6C8.8999 6 8 6.90002 8 8H6Z" transform="translate(2 2)" fill="white"/>
-    </mask>
-    <g mask="url(#svg-wonder)">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
-    </g>
-</svg>
-
-                        <h3 class="card__title">Советы</h3>
-                      </div>
-                      <div class="card__arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <mask id="id-down-arrow" mask-type="alpha" maskUnits="userSpaceOnUse" x="6" y="8" width="12" height="8">
-        <path d="M1.41 0L6 4.58L10.59 0L12 1.41L6 7.41L0 1.41L1.41 0Z" transform="translate(6 8.58997)" fill="white"/>
-    </mask>
-    <g mask="url(#id-down-arrow)">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#282828"/>
-    </g>
-</svg>
-
-                      </div>
+                  <div class="card__footer">
+                    <div class="card__cols">
+                      <div class="card__footer-item"><span>Максимальная сумма кредита</span><span class="form__price">14 683 USD</span></div>
+                      <div class="card__footer-item"><span>Начисленная сумма %</span><span class="form__price">557 USD</span></div>
+                      <div class="card__footer-item"><span>Итого</span><span class="form__price">15 240 USD</span></div>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="cards__btn--center">
+              <div class="button l-btn l-btn--primary l-btn--full" type="submit">Опубликовать</div>
             </div>
           </div>
         </div>
@@ -524,6 +1163,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <!--common scripts-->
     <script src="js/modules/modal.js"></script>
-    <script type="text/javascript" src="js/index.min.js"></script>
+    <script type="text/javascript" src="js/modules/select-new.js"></script>
   </body>
 </html>

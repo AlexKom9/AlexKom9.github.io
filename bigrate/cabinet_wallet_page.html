@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Bigrate</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="libs/bootstrap.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+  </head>
+  <body class="l-page">
+    <div class="l-wrap">
+      <header class="header">
+        <div class="l-container">
+          <div class="header__inner">
+            <div class="header__logo"><span class="l-logo">Bigrate.</span></div>
+            <ul class="header__nav">
+              <li class="header__nav-item"><a class="header__nav-link" href="#">Разместить объявление</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="#">Форум</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="#">Блог</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="#">Справка</a></li>
+              <li class="header__nav-item header__nav-item--select">
+                <!--a(href="#").header__nav-link Русский--><img src="img/icons/language.png"/>
+                <div class="custom-select header__custom-select">
+                  <select>
+                    <option value="en">English</option>
+                    <option value="ru" selected="selected">Русский</option>
+                    <option value="uk">Українська</option>
+                  </select>
+                </div>
+              </li>
+              <li class="header__nav-item"><img src="img/icons/ic24PxLogin.png"/><a class="header__nav-link" href="#">Выйти</a></li>
+            </ul>
+            <div class="header__menu"><img src="img/icons/notification.svg"/><img src="img/icons/wallet.svg"/>
+              <div class="header__menu-user"><img src="https://1ofdmq2n8tc36m6i46scovo2e-wpengine.netdna-ssl.com/wp-content/uploads/2014/04/Steven_Hallam-slide.jpg"/></div>
+              <div class="header__menu-dots"><img src="img/icons/menu-dots.svg"/></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="h-stat">
+        <div class="l-container l-container--center">
+          <div class="l-inner l-inner--10">
+            <div class="h-stat__inner">
+              <div class="h-stat__items">
+                <div class="h-stat__item">
+                  <p>Общий баланс кошелька</p>
+                  <p class="h-stat__val"><span>1.56987</span> BTC</p>
+                </div>
+                <div class="h-stat__item">
+                  <p>Комиссия за транзакцию</p>
+                  <p class="h-stat__val"><span>0.00005</span>  BTC</p>
+                </div>
+                <div class="h-stat__item">
+                  <p>Максимальная сумма для отправки</p>
+                  <p class="h-stat__val"><span>0.00005</span> BTC</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="s-rev">
+        <div class="l-container l-container--center"></div>
+      </section>
+      <section class="cabinet">
+        <div class="l-container">
+          <div class="l-title">
+            <h1>Основная Информация</h1>
+          </div>
+          <div class="cards__inner">
+            <div class="cards__side">
+              <div class="cards__user">
+                <!--todo: include blocks/user-card/user-card-->
+                <div class="user-card">
+                  <div class="user-card__inner">
+                    <div class="user-card__img-container">
+                      <div class="user-card__img"><img src="https://www.webmarketingeturismo.it/wp-content/uploads/2016/11/mobile-user.png"/></div>
+                    </div>
+                    <div class="user-card__main">
+                      <p class="user-card__name">Jugernaut</p>
+                      <div class="user-card__confirmation"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-security" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="1" width="18" height="22">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 4L9 0L18 4V10C18 15.55 14.1602 20.74 9 22C3.83984 20.74 0 15.55 0 10V4ZM3 12L7 16L15 8L13.5898 6.58002L7 13.17L4.41016 10.59L3 12Z" transform="translate(3 1)" fill="white"/>
+</mask>
+<g mask="url(#svg-security)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
+</svg>
+<span>Пользователь подтвержден</span>
+                      </div>
+                      <div class="user-card__rat">
+                        <div class="rat">
+                          <div class="rat__str">Рейтинг</div>
+                          <div class="rat__line">
+                            <div class="rat__inner danger"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="user-card__emoji">
+                        <div class="user-card__emoji-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-good" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 4.47998 4.47021 0 9.99023 0C15.52 0 20 4.47998 20 10C20 15.52 15.52 20 9.99023 20C4.47021 20 0 15.52 0 10ZM6.5 9C7.32861 9 8 8.32837 8 7.5C8 6.67163 7.32861 6 6.5 6C5.67139 6 5 6.67163 5 7.5C5 8.32837 5.67139 9 6.5 9ZM13.5 9C14.3286 9 15 8.32837 15 7.5C15 6.67163 14.3286 6 13.5 6C12.6714 6 12 6.67163 12 7.5C12 8.32837 12.6714 9 13.5 9ZM10 18C5.58008 18 2 14.42 2 10C2 5.57996 5.58008 2 10 2C14.4199 2 18 5.57996 18 10C18 14.42 14.4199 18 10 18ZM6.5498 12C7.25 13.1899 8.52002 14 10 14C11.48 14 12.75 13.1899 13.4497 12H15.1201C14.3198 14.05 12.3301 15.5 10 15.5C7.66992 15.5 5.67969 14.05 4.87988 12H6.5498Z" transform="translate(2 2)" fill="white"/>
+</mask>
+<g mask="url(#svg-good)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#04B512"/>
+</g>
+</svg>
+<span class="good">16</span>
+                        </div>
+                        <div class="user-card__emoji-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="neutral" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.99023 0C4.47021 0 0 4.47998 0 10C0 15.52 4.47021 20 9.99023 20C15.52 20 20 15.52 20 10C20 4.47998 15.52 0 9.99023 0ZM8 7.5C8 8.32837 7.32861 9 6.5 9C5.67139 9 5 8.32837 5 7.5C5 6.67163 5.67139 6 6.5 6C7.32861 6 8 6.67163 8 7.5ZM13.5 9C14.3286 9 15 8.32837 15 7.5C15 6.67163 14.3286 6 13.5 6C12.6714 6 12 6.67163 12 7.5C12 8.32837 12.6714 9 13.5 9ZM7 13.5V12H13V13.5H7ZM2 10C2 14.42 5.58008 18 10 18C14.4199 18 18 14.42 18 10C18 5.57996 14.4199 2 10 2C5.58008 2 2 5.57996 2 10Z" transform="translate(2 2)" fill="white"/>
+</mask>
+<g mask="url(#neutral)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#ACACAC"/>
+</g>
+</svg>
+<span class="neutral">8</span>
+                        </div>
+                        <div class="user-card__emoji-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="bad-svg" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.99023 0C4.47021 0 0 4.47998 0 10C0 15.52 4.47021 20 9.99023 20C15.52 20 20 15.52 20 10C20 4.47998 15.52 0 9.99023 0ZM6.5 9C7.32861 9 8 8.32837 8 7.5C8 6.67163 7.32861 6 6.5 6C5.67139 6 5 6.67163 5 7.5C5 8.32837 5.67139 9 6.5 9ZM13.5 9C14.3286 9 15 8.32837 15 7.5C15 6.67163 14.3286 6 13.5 6C12.6714 6 12 6.67163 12 7.5C12 8.32837 12.6714 9 13.5 9ZM4.87988 15.5C5.67969 13.45 7.66992 12 10 12C12.3301 12 14.3198 13.45 15.1201 15.5H13.4497C12.75 14.3101 11.48 13.5 10 13.5C8.52002 13.5 7.23975 14.3101 6.5498 15.5H4.87988ZM2 10C2 14.42 5.58008 18 10 18C14.4199 18 18 14.42 18 10C18 5.57996 14.4199 2 10 2C5.58008 2 2 5.57996 2 10Z" transform="translate(2 2)" fill="white"/>
+</mask>
+<g mask="url(#bad-svg)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#F25454"/>
+</g>
+</svg>
+<span class="bad">3</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cards__nav cabinet__card">
+                <ul class="cab-nav">
+                  <li class="cab-nav__item cab-nav__item--active"><a href="#">
+                      <!--.cab-nav__img--><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-user-info" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="4" width="19" height="17">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8 8C10.21 8 12 6.21001 12 4C12 1.78999 10.21 0 8 0C5.79004 0 4 1.78999 4 4C4 6.21001 5.79004 8 8 8ZM6 13L9 10.06C8.61035 10.02 8.32031 10 8 10C5.33008 10 0 11.34 0 14V16H9L6 13ZM9 13L12.4697 16.5L19 9.91L17.5996 8.5L12.4697 13.67L10.4004 11.59L9 13Z" transform="translate(3 4)" fill="white"/>
+</mask>
+<g mask="url(#svg-user-info)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
+</svg>
+<span>Основная информация</span></a></li>
+                  <li class="cab-nav__item"><a href="#">
+                      <!--.cab-nav__img--><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-wallet" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="3" width="19" height="18">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M18 15V16C18 17.1 17.1001 18 16 18H2C0.890137 18 0 17.1 0 16V2C0 0.900024 0.890137 0 2 0H16C17.1001 0 18 0.900024 18 2V3H9C7.89014 3 7 3.90002 7 5V13C7 14.1 7.89014 15 9 15H18ZM9 13H19V5H9V13ZM11.5 9C11.5 9.83002 12.1699 10.5 13 10.5C13.8301 10.5 14.5 9.83002 14.5 9C14.5 8.16998 13.8301 7.5 13 7.5C12.1699 7.5 11.5 8.16998 11.5 9Z" transform="translate(3 3)" fill="white"/>
+</mask>
+<g mask="url(#svg-wallet)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
+</svg>
+<span>Кошелек</span></a></li>
+                  <li class="cab-nav__item"><a href="#">
+                      <!--.cab-nav__img--><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-exchange" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M20 10C20 4.47998 15.52 0 10 0C4.47998 0 0 4.47998 0 10C0 15.52 4.47998 20 10 20C15.52 20 20 15.52 20 10ZM13 4.5L16.5 8L13 11.5V9H9V7H13V4.5ZM3.5 12L7 15.5V13H11V11H7V8.5L3.5 12Z" transform="translate(2 2)" fill="white"/>
+</mask>
+<g mask="url(#svg-exchange)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
+</svg>
+<span>Информационная панель торговца</span></a></li>
+                  <li class="cab-nav__item"><a href="#">
+                      <!--.cab-nav__img--><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-security" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="1" width="18" height="22">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 4L9 0L18 4V10C18 15.55 14.1602 20.74 9 22C3.83984 20.74 0 15.55 0 10V4ZM3 12L7 16L15 8L13.5898 6.58002L7 13.17L4.41016 10.59L3 12Z" transform="translate(3 1)" fill="white"/>
+</mask>
+<g mask="url(#svg-security)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
+</svg>
+<span>Безопасность учетной записи</span></a></li>
+                  <li class="cab-nav__item"><a href="#">
+                      <!--.cab-nav__img--><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-friends" mask-type="alpha" maskUnits="userSpaceOnUse" x="1" y="5" width="22" height="14">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.99023 3C9.99023 4.66003 8.66016 6 7 6C5.33984 6 4 4.66003 4 3C4 1.33997 5.33984 0 7 0C8.66016 0 9.99023 1.33997 9.99023 3ZM17.9902 3C17.9902 4.66003 16.6602 6 15 6C13.3398 6 12 4.66003 12 3C12 1.33997 13.3398 0 15 0C16.6602 0 17.9902 1.33997 17.9902 3ZM7 8C4.66992 8 0 9.17004 0 11.5V14H14V11.5C14 9.17004 9.33008 8 7 8ZM14.0298 8.05005C14.3799 8.02002 14.71 8 15 8C17.3296 8 22 9.17004 22 11.5V14H16V11.5C16 10.02 15.1899 8.89001 14.0298 8.05005Z" transform="translate(1 5)" fill="white"/>
+</mask>
+<g mask="url(#svg-friends)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
+</svg>
+<span>Доверенные торговцы</span></a></li>
+                  <li class="cab-nav__item"><a href="#">
+                      <!--.cab-nav__img--><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="price" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 4.47998 4.47998 0 10 0C15.52 0 20 4.47998 20 10C20 15.52 15.52 20 10 20C4.47998 20 0 15.52 0 10ZM11.4102 18V16.09C13.1504 15.76 14.52 14.76 14.5303 12.93C14.5303 10.41 12.3701 9.53998 10.3501 9.02002C8.33008 8.5 7.68018 7.95001 7.68018 7.10999C7.68018 6.15002 8.58008 5.46997 10.0801 5.46997C11.6602 5.46997 12.25 6.22998 12.3003 7.34003H14.2603C14.2002 5.81 13.27 4.40002 11.4102 3.95001V2H8.74023V3.92999C7.02002 4.29999 5.63037 5.41998 5.63037 7.14001C5.63037 9.19 7.33008 10.21 9.81006 10.81C12.04 11.34 12.48 12.12 12.48 12.95C12.48 13.56 12.04 14.54 10.0801 14.54C8.25 14.54 7.53027 13.72 7.43018 12.67H5.47021C5.58008 14.61 7.03027 15.71 8.74023 16.07V18H11.4102Z" transform="translate(2 2)" fill="white"/>
+</mask>
+<g mask="url(#price)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
+</svg>
+<span>Крипто-ломбард</span></a></li>
+                  <li class="cab-nav__item"><a href="#">
+                      <!--.cab-nav__img--><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-log-out" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="3" width="18" height="18">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16 16V9H18V16C18 17.0996 17.1 18 16 18H2C0.899994 18 0 17.0996 0 16V9H2V16H16ZM5.41 6.41016L8 3.83008V13.5H10V3.83008L12.59 6.41016L14 5L9 0L4 5L5.41 6.41016Z" transform="translate(21 3) rotate(90)" fill="white"/>
+</mask>
+<g mask="url(#svg-log-out)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" transform="translate(24) rotate(90)" fill="#3987E0"/>
+</g>
+</svg>
+<span>Выйти из аккаунта</span></a></li>
+                </ul>
+              </div>
+              <div class="cards__edit-btn"><a class="l-btn" href="#">
+                  <div class="l-btn__inner"><img src="img/icons/edit.png"/>Редактировать профиль</div></a></div>
+            </div>
+            <div class="cards__main">
+              <div class="cabinet__content">
+                <div class="cards__tabs">
+                  <div class="wallet">
+                    <div class="wallet__tabs">
+                      <div class="wallet__tab">
+                        <div class="l-tab switch-tab" data-id="wallet-send" data-switch-group="wallet">
+                          <div class="l-tab__inner">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-get-bit" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="3" width="18" height="18">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12.5898 7.08984L10 9.66992V0H8V9.66992L5.41016 7.08984L4 8.5L9 13.5L14 8.5L12.5898 7.08984ZM16 16V9H18V16C18 17.1001 17.0996 18 16 18H2C0.900391 18 0 17.1001 0 16V9H2V16H16Z" transform="translate(3 3)" fill="white"/>
+</mask>
+<g mask="url(#svg-get-bit)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
+</svg>
+                            Отправить биткоин
+                          </div>
+                        </div>
+                      </div>
+                      <div class="wallet__tab">
+                        <div class="l-tab switch-tab" data-id="wallet-get" data-switch-group="wallet">
+                          <div class="l-tab__inner">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-send-bit" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="3" width="18" height="18">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5.41016 6.41016L8 3.83008V13.5H10V3.83008L12.5898 6.41016L14 5L9 0L4 5L5.41016 6.41016ZM16 16V9H18V16C18 17.1001 17.0996 18 16 18H2C0.900391 18 0 17.1001 0 16V9H2V16H16Z" transform="translate(3 3)" fill="white"/>
+</mask>
+<g mask="url(#svg-send-bit)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="white"/>
+</g>
+</svg>
+                            Получить биткоин
+                          </div>
+                        </div>
+                      </div>
+                      <div class="wallet__tab">
+                        <div class="l-tab switch-tab active" data-id="wallet-transactions" data-switch-group="wallet">
+                          <div class="l-tab__inner">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-transactions" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="5" width="18" height="14">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M14.0098 0L18 4L14.0098 8V5H7V3H14.0098V0ZM0 10L3.99023 6V9H11V11H3.99023V14L0 10Z" transform="translate(3 5)" fill="white"/>
+</mask>
+<g mask="url(#svg-transactions)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
+</svg>
+                            Транзакции кошелька
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="switch-content" id="wallet-send" data-switch-group="wallet">
+                  <div class="cards__card">
+                    <div class="card">
+                      <div class="card__head">
+                        <div class="card__title-wrap">
+                          <h3 class="card__title">Отправить биткоины</h3>
+                        </div>
+                      </div>
+                      <div class="card__inner">
+                        <form class="form">
+                          <div class="card__cols">
+                            <div class="card__col card__col--full">
+                              <div class="form__group">
+                                <label class="form__label">Принимающий адресс биткоин</label>
+                                <div class="form__input-box">
+                                  <input type="number"/>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card__col">
+                              <div class="form__group">
+                                <label class="form__label">Сумма в биткоинах</label>
+                                <div class="form__input-box">
+                                  <input type="number" placeholder="0"/>
+                                  <div class="form__input-side"><span>BTC</span></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cards__card">
+                    <div class="card">
+                      <div class="card__head">
+                        <div class="card__title-wrap">
+                          <h3 class="card__title">Дополнительные возможности</h3>
+                        </div>
+                      </div>
+                      <div class="card__inner">
+                        <form class="form">
+                          <div class="card__cols">
+                            <div class="card__col card__col--full">
+                              <div class="form__group">
+                                <label class="form__label">Описание</label>
+                                <div class="form__input-box">
+                                  <input type="number"/>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card__col">
+                              <div class="form__group">
+                                <label class="form__label">Сумма</label>
+                                <div class="form__input-box">
+                                  <input type="number" placeholder="0"/>
+                                  <div class="form__input-side">
+                                    <div class="form__input-sel custom-select">
+                                      <select>
+                                        <option value="unseleceted" selected="selected">Кредитование</option>
+                                        <option value="USD">USD</option>
+                                        <option value="EUR">EUR</option>
+                                        <option value="GBP">GBP</option>
+                                        <option value="JPY">JPY</option>
+                                        <option value="CHF">CHF</option>
+                                        <option value="CNY">CNY</option>
+                                        <option value="RUB">RUB</option>
+                                        <option value="UAH">UAH</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cards__btn"><a class="l-btn l-btn--primary" href="#">
+                      <div class="l-btn__inner"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-wallet" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="3" width="19" height="18">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M18 15V16C18 17.1 17.1001 18 16 18H2C0.890137 18 0 17.1 0 16V2C0 0.900024 0.890137 0 2 0H16C17.1001 0 18 0.900024 18 2V3H9C7.89014 3 7 3.90002 7 5V13C7 14.1 7.89014 15 9 15H18ZM9 13H19V5H9V13ZM11.5 9C11.5 9.83002 12.1699 10.5 13 10.5C13.8301 10.5 14.5 9.83002 14.5 9C14.5 8.16998 13.8301 7.5 13 7.5C12.1699 7.5 11.5 8.16998 11.5 9Z" transform="translate(3 3)" fill="white"/>
+</mask>
+<g mask="url(#svg-wallet)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
+</svg>
+<span>Продолжить</span>
+                      </div></a></div>
+                  <div class="cards__card">
+                    <div class="card">
+                      <div class="card__head card__head--hint">
+                        <div class="card__title-wrap card__title-wrap--hint"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <mask id="svg-wonder" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 4.47998 4.47998 0 10 0C15.52 0 20 4.47998 20 10C20 15.52 15.52 20 10 20C4.47998 20 0 15.52 0 10ZM11 14V16H9V14H11ZM10 18C5.58984 18 2 14.41 2 10C2 5.58997 5.58984 2 10 2C14.4102 2 18 5.58997 18 10C18 14.41 14.4102 18 10 18ZM6 8C6 5.79004 7.79004 4 10 4C12.21 4 14 5.79004 14 8C14 9.28296 13.21 9.97339 12.4409 10.6456C11.7109 11.2833 11 11.9047 11 13H9C9 11.1787 9.94189 10.4565 10.7705 9.82166C11.4204 9.32361 12 8.87927 12 8C12 6.90002 11.1001 6 10 6C8.8999 6 8 6.90002 8 8H6Z" transform="translate(2 2)" fill="white"/>
+    </mask>
+    <g mask="url(#svg-wonder)">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+    </g>
+</svg>
+
+                          <h3 class="card__title">Сколько времени занимает транзакция с биткоинами?</h3>
+                        </div>
+                        <div class="card__arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <mask id="id-down-arrow" mask-type="alpha" maskUnits="userSpaceOnUse" x="6" y="8" width="12" height="8">
+        <path d="M1.41 0L6 4.58L10.59 0L12 1.41L6 7.41L0 1.41L1.41 0Z" transform="translate(6 8.58997)" fill="white"/>
+    </mask>
+    <g mask="url(#id-down-arrow)">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#282828"/>
+    </g>
+</svg>
+
+                        </div>
+                      </div>
+                      <div class="card__inner card__inner--hint">
+                        <div class="card__descr">Кошелек Localbitcoins – это веб-кошелек: адреса, с которых отправляются биткоины, не связаны с вашей учетной записью. Если вы запрашиваете у продавца возврат средств, попросите его отправить вам эти средства на ваш принимающий адрес.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cards__card">
+                    <div class="card">
+                      <div class="card__head card__head--hint">
+                        <div class="card__title-wrap card__title-wrap--hint"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <mask id="svg-wonder" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 4.47998 4.47998 0 10 0C15.52 0 20 4.47998 20 10C20 15.52 15.52 20 10 20C4.47998 20 0 15.52 0 10ZM11 14V16H9V14H11ZM10 18C5.58984 18 2 14.41 2 10C2 5.58997 5.58984 2 10 2C14.4102 2 18 5.58997 18 10C18 14.41 14.4102 18 10 18ZM6 8C6 5.79004 7.79004 4 10 4C12.21 4 14 5.79004 14 8C14 9.28296 13.21 9.97339 12.4409 10.6456C11.7109 11.2833 11 11.9047 11 13H9C9 11.1787 9.94189 10.4565 10.7705 9.82166C11.4204 9.32361 12 8.87927 12 8C12 6.90002 11.1001 6 10 6C8.8999 6 8 6.90002 8 8H6Z" transform="translate(2 2)" fill="white"/>
+    </mask>
+    <g mask="url(#svg-wonder)">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+    </g>
+</svg>
+
+                          <h3 class="card__title">Возврат и выплата биткоинов</h3>
+                        </div>
+                        <div class="card__arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <mask id="id-down-arrow" mask-type="alpha" maskUnits="userSpaceOnUse" x="6" y="8" width="12" height="8">
+        <path d="M1.41 0L6 4.58L10.59 0L12 1.41L6 7.41L0 1.41L1.41 0Z" transform="translate(6 8.58997)" fill="white"/>
+    </mask>
+    <g mask="url(#id-down-arrow)">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#282828"/>
+    </g>
+</svg>
+
+                        </div>
+                      </div>
+                      <div class="card__inner card__inner--hint">
+                        <div class="card__descr">Кошелек Localbitcoins – это веб-кошелек: адреса, с которых отправляются биткоины, не связаны с вашей учетной записью. Если вы запрашиваете у продавца возврат средств, попросите его отправить вам эти средства на ваш принимающий адрес.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cards__card">
+                    <div class="card">
+                      <div class="card__head card__head--hint">
+                        <div class="card__title-wrap card__title-wrap--hint"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <mask id="svg-wonder" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 4.47998 4.47998 0 10 0C15.52 0 20 4.47998 20 10C20 15.52 15.52 20 10 20C4.47998 20 0 15.52 0 10ZM11 14V16H9V14H11ZM10 18C5.58984 18 2 14.41 2 10C2 5.58997 5.58984 2 10 2C14.4102 2 18 5.58997 18 10C18 14.41 14.4102 18 10 18ZM6 8C6 5.79004 7.79004 4 10 4C12.21 4 14 5.79004 14 8C14 9.28296 13.21 9.97339 12.4409 10.6456C11.7109 11.2833 11 11.9047 11 13H9C9 11.1787 9.94189 10.4565 10.7705 9.82166C11.4204 9.32361 12 8.87927 12 8C12 6.90002 11.1001 6 10 6C8.8999 6 8 6.90002 8 8H6Z" transform="translate(2 2)" fill="white"/>
+    </mask>
+    <g mask="url(#svg-wonder)">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+    </g>
+</svg>
+
+                          <h3 class="card__title">Комиссия за исходящие сделки с биткоинами</h3>
+                        </div>
+                        <div class="card__arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <mask id="id-down-arrow" mask-type="alpha" maskUnits="userSpaceOnUse" x="6" y="8" width="12" height="8">
+        <path d="M1.41 0L6 4.58L10.59 0L12 1.41L6 7.41L0 1.41L1.41 0Z" transform="translate(6 8.58997)" fill="white"/>
+    </mask>
+    <g mask="url(#id-down-arrow)">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#282828"/>
+    </g>
+</svg>
+
+                        </div>
+                      </div>
+                      <div class="card__inner card__inner--hint">
+                        <div class="card__descr">Кошелек Localbitcoins – это веб-кошелек: адреса, с которых отправляются биткоины, не связаны с вашей учетной записью. Если вы запрашиваете у продавца возврат средств, попросите его отправить вам эти средства на ваш принимающий адрес.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="switch-content" id="wallet-get" data-switch-group="wallet">
+                  <div class="cards__card">
+                    <div class="card">
+                      <div class="card__head">
+                        <div class="card__title-wrap">
+                          <h3 class="card__title">Получить биткоины</h3>
+                        </div>
+                      </div>
+                      <div class="card__inner">
+                        <form class="form">
+                          <div class="card__cols">
+                            <div class="card__col card__col--full">
+                              <div class="form__group">
+                                <label class="form__label">Используйте приведенный ниже биткоин-адрес, чтобы получить биткоины.</label>
+                                <div class="form__input-box">
+                                  <input type="number"/>
+                                  <div class="form__input-side">
+                                    <div class="svg-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="24" height="24" fill="black" fill-opacity="0"/>
+<mask id="svg-copy" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="1" width="19" height="22">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16 1H4C2.90039 1 2 1.8999 2 3V17H4V3H16V1ZM19 5H8C7.8457 5 7.69531 5.01758 7.55078 5.05127C7.42578 5.08057 7.30273 5.12158 7.1875 5.17334C6.49023 5.48633 6 6.18896 6 7V21C6 21.4482 6.15039 21.8633 6.40234 22.1978C6.76758 22.6841 7.34766 23 8 23H19C20.0996 23 21 22.1001 21 21V7C21 5.8999 20.0996 5 19 5ZM8 21H19V7H8V21Z" fill="white"/>
+</mask>
+<g mask="url(#svg-copy)">
+<rect width="24" height="24" fill="black" fill-opacity="0"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#939393"/>
+</g>
+</svg>
+
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cards__card">
+                    <div class="card">
+                      <div class="card__head">
+                        <div class="card__title-wrap">
+                          <h3 class="card__title">Входящие транзакции и комиссии</h3>
+                        </div>
+                      </div>
+                      <div class="card__inner">
+                        <div class="card__descr">
+                          <p>Текущая комиссия за депозит для входящих транзакций: 0.00015 BTC Процесс получения биткоинов обычно  занимает 30 минут, однако он может затянуться до 14 дней и больше. Входящая транзакция должна получить 3 подтверждения сети биткоинов, прежде чем появиться в вашем кошельке. Вы можете ознакомиться с более подробной информацией в нашем разделе часто задаваемых вопросов.</p>
+                        </div>
+                        <div class="card__btn"><a class="l-btn" href="#">
+                            <div class="l-btn__inner"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-transactions" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="5" width="18" height="14">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M14.0098 0L18 4L14.0098 8V5H7V3H14.0098V0ZM0 10L3.99023 6V9H11V11H3.99023V14L0 10Z" transform="translate(3 5)" fill="white"/>
+</mask>
+<g mask="url(#svg-transactions)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
+</svg>
+<span>Показать входящие транзакции биткоин</span>
+                            </div></a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cards__card">
+                    <div class="card">
+                      <div class="card__head">
+                        <div class="card__title-wrap">
+                          <h3 class="card__title">Старые адреса</h3>
+                        </div>
+                      </div>
+                      <div class="card__inner">
+                        <div class="card__descr">
+                          <p>В целях защиты вашей конфиденциальности мы предоставляем новый биткоин-адрес для каждого перевода. Это защищает вас от потенциальной опасности отслеживания платежей, если кто-нибудь решит это сделать посредством анализа цепочки блоков.</p>
+                          <p class="card__descr-warn">Обратите внимания, что адреса действительны лишь в течение 12 мес.</p>
+                        </div>
+                        <h4 class="card__subtitle">Старые адреса</h4>
+                        <div class="card__table">
+                          <table class="table">
+                            <tr class="table__row">
+                              <th class="table__head">
+                                <div class="table__cell"><span>Создан</span></div>
+                              </th>
+                              <th class="table__head">
+                                <div class="table__cell"><span>Адрес</span></div>
+                              </th>
+                            </tr>
+                            <tr class="table__row">
+                              <td>
+                                <div class="table__cell"><span>07.07.2018</span></div>
+                              </td>
+                              <td>
+                                <div class="table__cell"><span>37gW5z2SdhxiNzndMOEkBHyW8UDV7LAtZ</span></div>
+                              </td>
+                            </tr>
+                            <tr class="table__row">
+                              <td>
+                                <div class="table__cell"><span>07.07.2018</span></div>
+                              </td>
+                              <td>
+                                <div class="table__cell"><span>37gW5z2SdhxiNzndMOEkBHyW8UDV7LAtZ</span></div>
+                              </td>
+                            </tr>
+                            <tr class="table__row">
+                              <td>
+                                <div class="table__cell"><span>07.07.2018</span></div>
+                              </td>
+                              <td>
+                                <div class="table__cell"><span>37gW5z2SdhxiNzndMOEkBHyW8UDV7LAtZ</span></div>
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cards__card">
+                    <div class="card">
+                      <div class="card__head">
+                        <div class="card__title-wrap">
+                          <h3 class="card__title">QR код для мобильного</h3>
+                        </div>
+                      </div>
+                      <div class="card__inner">
+                        <div class="card__descr">
+                          <p>Это ваш принимающий адрес в виде QR-кода. Вы можете отправлять биткоины из кошелька на мобильном, отсканировав этот код.</p>
+                        </div>
+                        <div class="card__qr"><img src="img/QR.jpg" alt="QR"/></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="switch-content" id="wallet-transactions" data-switch-group="wallet">
+                  <div class="cards__card">
+                    <div class="card">
+                      <div class="card__head">
+                        <div class="card__title-wrap">
+                          <h3 class="card__title">Транзакции кошелька</h3>
+                        </div>
+                      </div>
+                      <div class="card__filter">
+                        <div class="card__filter-tabs">
+                          <div class="card__filter-tab">
+                            <div class="l-tab l-tab--filter"><span>Все</span></div>
+                          </div>
+                          <div class="card__filter-tab">
+                            <div class="l-tab l-tab--filter"><span>Отправленные</span></div>
+                          </div>
+                          <div class="card__filter-tab">
+                            <div class="l-tab l-tab--filter"><span>Полученные</span></div>
+                          </div>
+                        </div>
+                        <div class="card__filter-interval">
+                          <div class="interval"><span>Период: &nbsp</span>
+                            <div class="interval__sel custom-select">
+                              <select>
+                                <option selected="selected" value="unset">Выберете интервал</option>
+                                <option value="lalka">lalka</option>
+                                <option value="lalka">lalka</option>
+                                <option value="lalka">lalka</option>
+                                <option value="lalka">lalka</option>
+                                <option value="lalka">lalka</option>
+                              </select>
+                            </div>
+                            <div class="interval__sel custom-select">
+                              <select>
+                                <option selected="selected" value="unset">Выберете интервал</option>
+                                <option value="lalka">lalka</option>
+                                <option value="lalka">lalka</option>
+                                <option value="lalka">lalka</option>
+                                <option value="lalka">lalka</option>
+                                <option value="lalka">lalka</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card__inner">
+                        <div class="card__table">
+                          <table class="table">
+                            <tr class="table__row">
+                              <th class="table__head">
+                                <div class="table__cell"><span>Дата</span></div>
+                              </th>
+                              <th class="table__head">
+                                <div class="table__cell"><span>Полученные BTC</span></div>
+                              </th>
+                              <th class="table__head">
+                                <div class="table__cell"><span>Отправленные BTC</span></div>
+                              </th>
+                              <th class="table__head">
+                                <div class="table__cell"><span>Описание</span></div>
+                              </th>
+                              <th class="table__head" style="max-width: 160px">
+                                <div class="table__cell"><span>Сумма комиссии за депозит, BTC</span></div>
+                              </th>
+                            </tr>
+                            <tr class="table__row">
+                              <td>
+                                <div class="table__cell"><span>07.07.2018</span></div>
+                              </td>
+                              <td>
+                                <div class="table__cell"><span>0.15248</span></div>
+                              </td>
+                              <td>
+                                <div class="table__cell"><span></span></div>
+                              </td>
+                              <td>
+                                <div class="table__cell"><span>сделка с yuriknk</span></div>
+                              </td>
+                              <td>
+                                <div class="table__cell"><span>0.0005</span></div>
+                              </td>
+                            </tr>
+                            <tr class="table__row">
+                              <td>
+                                <div class="table__cell"><span>07.07.2018</span></div>
+                              </td>
+                              <td>
+                                <div class="table__cell"><span>0.15248</span></div>
+                              </td>
+                              <td>
+                                <div class="table__cell"><span></span></div>
+                              </td>
+                              <td>
+                                <div class="table__cell"><span>сделка с yuriknk</span></div>
+                              </td>
+                              <td>
+                                <div class="table__cell"><span>0.0005</span></div>
+                              </td>
+                            </tr>
+                            <tr class="table__row">
+                              <td>
+                                <div class="table__cell"><span>07.07.2018</span></div>
+                              </td>
+                              <td>
+                                <div class="table__cell"><span>0.15248</span></div>
+                              </td>
+                              <td>
+                                <div class="table__cell"><span></span></div>
+                              </td>
+                              <td>
+                                <div class="table__cell"><span>сделка с yuriknk</span></div>
+                              </td>
+                              <td>
+                                <div class="table__cell"><span>0.0005</span></div>
+                              </td>
+                            </tr>
+                            <tr class="table__row table__row--no-bottom-border">
+                              <td colspan="10">
+                                <div class="card__btn card__btn--center">
+                                  <div class="l-btn">
+                                    <div class="l-btn__inner"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="24" height="24" fill="black" fill-opacity="0"/>
+<mask id="svg-reload" mask-type="alpha" maskUnits="userSpaceOnUse" x="1" y="4" width="22" height="16">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 6C8.68945 6 6 8.68994 6 12H9L5 16L1 12H4C4 7.58008 7.58008 4 12 4C12.7793 4 13.5312 4.11328 14.2422 4.32275C14.9629 4.53516 15.6406 4.84717 16.2598 5.24023L14.8008 6.7002C13.9707 6.25 13.0098 6 12 6ZM15 12L19 8L23 12H20C20 16.4199 16.4199 20 12 20C10.4297 20 8.9707 19.54 7.74023 18.7598L9.20117 17.2998C10.0293 17.75 10.9902 18 12 18C15.3105 18 18 15.3101 18 12H15Z" fill="white"/>
+</mask>
+<g mask="url(#svg-reload)">
+<rect width="24" height="24" fill="black" fill-opacity="0"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
+</svg>
+<span>Показать больше</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr class="table__row table__row--footer">
+                              <td>
+                                <div class="table__cell"><span>Всего :</span></div>
+                              </td>
+                              <td>
+                                <div class="table__cell"><span>123123</span></div>
+                              </td>
+                              <td>
+                                <div class="table__cell"><span>12321</span></div>
+                              </td>
+                              <td>
+                                <div class="table__cell"><span></span></div>
+                              </td>
+                              <td style="max-width: 160px">
+                                <div class="table__cell"><span>12312</span></div>
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="l-container">
+          <div class="footer__inner">
+            <div class="footer__info">
+              <div class="footer__logo">
+                <p class="l-logo">Bigrate.</p>
+              </div>
+              <div class="footer__socials"><a class="footer__socials-icon" href="#"><i class="fab fa-twitter"></i></a><a class="footer__socials-icon" href="#"><i class="fab fa-facebook-f"></i></a><a class="footer__socials-icon" href="#"><i class="fab fa-github"></i></a><a class="footer__socials-icon" href="#"><i class="fab fa-google-plus-g"></i></a></div>
+              <div class="footer__copy">
+                <p>Powered by<a href="//peiko.space">peiko</a></p>
+                <p>© 2018 Bigrate</p>
+              </div>
+            </div>
+            <div class="footer__links">
+              <div class="footer__group col-4"><a class="footer__group-name" href="#">О проекте</a>
+                <ul class="footer__grup-ul">
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">О Нас</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Комиссия</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Конфидециальность</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Условия предоставления услуг</a></li>
+                </ul>
+              </div>
+              <div class="footer__group col-4"><a class="footer__group-name" href="#">Поддержка</a>
+                <ul class="footer__grup-ul">
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Служба поддержки</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">FAQ</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Руководства</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Забыли пароль?</a></li>
+                </ul>
+              </div>
+              <div class="footer__group col-4"><a class="footer__group-name" href="#">Услуги</a>
+                <ul class="footer__grup-ul">
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Документация API</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Партнерская программа</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Руководства</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="modal-wrap" id="modal-welcome">
+      <div class="modal modal--welcome">
+        <div class="rlog">
+          <div class="rlog__title">Добро пожаловать</div>
+          <form class="form">
+            <div class="form__group">
+              <label class="form__label" for="email-log">Логин или Email</label>
+              <input class="form__input" id="email-log" type="email"/>
+              <p class="form__hint">Логин может содержать: буквы, цифры, . и _</p>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="password-log">Пароль</label>
+              <input class="form__input" id="password-log" type="password"/>
+              <div class="form__hint"><a class="form__hint" href="#">Забыл пароль ?</a></div>
+            </div>
+            <div class="form__btn">
+              <button class="l-btn l-btn--primary l-btn--full" type="submit">Войти</button>
+            </div>
+          </form>
+          <div class="rlog__footer">
+            <div><span>Нет аккаунта ? &nbsp</span><a href="#">Зарегистрироваться</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-wrap" id="modal-auth">
+      <div class="modal modal--auth">
+        <div class="rlog">
+          <div class="rlog__title rlog__title--auth">Двухфакторная аутентификация</div>
+          <div class="rlog__subtitle">Попытка войти в систему как Jugernaut</div>
+          <form class="form">
+            <div class="form__horizontal">
+              <div class="form__group">
+                <label class="form__label" for="confirm">Введите полученый код с приложения</label>
+                <input class="form__input" id="confirm" type="number"/>
+                <p class="form__hint">Логин может содержать: буквы, цифры, . и _</p>
+              </div>
+              <div class="form__btn">
+                <button class="l-btn l-btn--primary l-btn--full caption" type="submit">Verify</button>
+              </div>
+            </div>
+          </form>
+          <div class="rlog__footer"><a class="rlog__change-acc" href="#">Сменить учетную запись</a><br/><br/><a class="rlog__link" href="#">Проблемы с двухфакторной аутентификацией?</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-wrap" id="modal-reg">
+      <div class="modal modal--reg">
+        <div class="modal-box">
+          <div class="modal-box__side"></div>
+          <div class="modal-box__main">
+            <div class="rlog">
+              <h2 class="rlog__title">Регистрация</h2>
+              <form class="form">
+                <div class="form__group">
+                  <label class="form__label" for="login-reg">Логин</label>
+                  <input class="form__input" id="login-reg" type="text"/>
+                  <p class="form__hint">Логин может содержать: буквы, цифры, . и _</p>
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="email-reg">Email</label>
+                  <input class="form__input" id="email-reg" type="email" placeholder="example@mail.com"/>
+                  <p class="form__hint form__hint--err">Логин может содержать: буквы, цифры, . и _</p>
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="password-reg">Пароль</label>
+                  <input class="form__input" id="password-reg" type="password"/>
+                  <p class="form__hint">Логин может содержать: буквы, цифры, . и _</p>
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="conf-password-reg">Повторите пароль</label>
+                  <input class="form__input" id="conf-password-reg" type="password"/>
+                  <div class="form__hint"><a href="#">Забыл пароль ?</a></div>
+                </div>
+                <div class="form__group">
+                  <div id="form__capcha"></div>
+                </div>
+                <div class="form__btn">
+                  <button class="l-btn l-btn--primary l-btn--full" type="submit">Зарегистрироваться</button>
+                </div>
+              </form>
+              <div class="rlog__footer">
+                <div><span>Уже есть аккаунт? &nbsp</span><a href="#"> Войти</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-wrap" id="modal-license">
+      <div class="modal modal--license">
+        <div class="rlog">
+          <div class="rlog__title rlog__title--license">Условия использования</div>
+          <div class="rlog__inner">
+            <p>Lorem ipsum dolor.</p><br/>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, ea?</p><br/>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eos nesciunt omnis ratione suscipit. Autem eveniet facere fugit ipsum, non quae quo repudiandae similique voluptas. Ab adipisci delectus nostrum veniam?</p><br/>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, sequi.</p><br/>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab architecto blanditiis doloremque eaque maiores odio ratione rem ut? A ad architecto atque dolores earum esse eum explicabo id, ipsa istelabore molestiae mollitia nisi nobis, odit officiis provident quas quis, quos repudiandae rerumsint soluta tempora temporibus unde voluptatibus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque odit recusandae sapiente tempore? A alias aliquid aperiam asperiores autem commodi dignissimos dolore dolorem eaque, excepturi fuga impedit ipsam laboriosam minima molestiae nam nisi non numquam praesentium quam quibusdam quo quos rem, rerum similique ut vel voluptatem? Architecto, ea, natus?</p><br/>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div class="rlog__footer rlog__footer--license">
+            <div class="l-btn l-btn--shaded">Не согласен</div>
+            <div class="l-btn l-btn--primary">Согласен</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!--common scripts-->
+    <script src="js/modules/modal.js"></script>
+    <script type="text/javascript" src="js/modules/select-new.js"></script>
+    <script type="text/javascript" src="js/modules/switchTab.js"></script>
+  </body>
+</html>
