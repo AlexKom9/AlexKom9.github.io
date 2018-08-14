@@ -2106,7 +2106,70 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /* 9 */,
 /* 10 */,
 /* 11 */,
-/* 12 */,
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var modals = function modals() {
+
+    var state = 'cloosed';
+    return {
+        clickBtn: function clickBtn() {
+            var self = this;
+            $('.show-modal').on('click', function (event) {
+                event.stopPropagation();
+                var id = $(this).data('id');
+                console.log('---id = ', id);
+                self.showModal(id);
+            });
+        },
+        sideClick: function sideClick() {
+            $('.l-modal').on('click', function (event) {
+                event.stopPropagation();
+            });
+            $(window).on('click', function () {
+                $(window).trigger('close-modals');
+            });
+        },
+        confirmClick: function confirmClick() {
+            $(".l-modal-confirm").on('click', function () {
+                $(window).trigger('close-modals');
+            });
+        },
+        showModal: function showModal(id) {
+            $(window).trigger('close-modals');
+            state = 'opened';
+            $('.l-page').addClass('l-page--modal-active');
+            $('.l-modal-wrap').addClass('l-modal-wrap--active');
+            $('#' + id).show();
+            console.log(id);
+            console.log('--showModal is done with id ---- ', id);
+        },
+        actions: function actions() {
+            $(window).on('close-modals', function () {
+                $('.l-page').removeClass('l-page--modal-active');
+                $('.l-modal-wrap').removeClass('l-modal-wrap--active');
+                $('.l-modal').hide();
+                state = 'closed';
+            });
+        },
+        init: function init() {
+            this.clickBtn();
+            this.sideClick();
+            this.confirmClick();
+            this.actions();
+        }
+    };
+};
+
+exports.default = modals;
+
+/***/ }),
 /* 13 */,
 /* 14 */,
 /* 15 */,
@@ -2137,6 +2200,10 @@ var _orderCounter = __webpack_require__(20);
 
 var _orderCounter2 = _interopRequireDefault(_orderCounter);
 
+var _modals = __webpack_require__(12);
+
+var _modals2 = _interopRequireDefault(_modals);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
@@ -2145,8 +2212,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 		var k = $(this).data("nesting");
 		$(this).css('padding-left', 40 * k);
 	});
-	// .data('nesting');
-	// console.log('')
 })();
 
 var tabSwitch = function tabSwitch() {
@@ -2162,7 +2227,8 @@ $(document).ready(function () {
 	(0, _interfaceUnit2.default)().init();
 	tabSwitch();
 	(0, _orderCounter2.default)().init();
-	// console.log(reg)
+	(0, _modals2.default)().init();
+	(0, _modals2.default)().showModal('notification-modal');
 });
 
 /***/ }),

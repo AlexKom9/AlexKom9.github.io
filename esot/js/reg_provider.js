@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 38);
+/******/ 	return __webpack_require__(__webpack_require__.s = 41);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -186,7 +186,7 @@ exports.default = interfaceUnit;
 
 /***/ }),
 
-/***/ 12:
+/***/ 13:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1928,21 +1928,39 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 /***/ }),
 
-/***/ 38:
+/***/ 4:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(39);
+var __WEBPACK_AMD_DEFINE_RESULT__;/*!
+* global/window.js
+* https://github.com/RobinHerbots/Inputmask
+* Copyright (c) 2010 - 2018 Robin Herbots
+* Licensed under the MIT license (http://www.opensource.org/licenses/mit-license.php)
+* Version: 4.0.0
+*/
+
+ true ? !(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
+    return window;
+}).call(exports, __webpack_require__, exports, module),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports && (module.exports = window);
+
+/***/ }),
+
+/***/ 41:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(42);
 
 
 /***/ }),
 
-/***/ 39:
+/***/ 42:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _reg = __webpack_require__(12);
+var _reg = __webpack_require__(13);
 
 var _reg2 = _interopRequireDefault(_reg);
 
@@ -1966,24 +1984,6 @@ $(document).ready(function () {
 	(0, _mask2.default)().init();
 	(0, _interfaceUnit2.default)().init();
 });
-
-/***/ }),
-
-/***/ 4:
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_RESULT__;/*!
-* global/window.js
-* https://github.com/RobinHerbots/Inputmask
-* Copyright (c) 2010 - 2018 Robin Herbots
-* Licensed under the MIT license (http://www.opensource.org/licenses/mit-license.php)
-* Version: 4.0.0
-*/
-
- true ? !(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
-    return window;
-}).call(exports, __webpack_require__, exports, module),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports && (module.exports = window);
 
 /***/ }),
 

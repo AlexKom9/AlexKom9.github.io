@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous"/>
   </head>
   <body class="l-page">
-    <div class="l-wrap l-wrap--modal">
+    <div class="l-wrap">
       <div class="l-content">
         <header class="header header--cab">
           <div class="large-container">
@@ -203,7 +203,7 @@
                         <tbody>
                           <tr>
                             <td colspan="9">
-                              <button class="cab__btn">фильтр</button>
+                              <button class="cab__btn show-modal" data-id="filter-modal">фильтр</button>
                             </td>
                           </tr>
                           <tr>
@@ -1184,33 +1184,166 @@
           </div>
         </div>
       </div>
-      <div class="footer">
-        <div class="large-container"><a class="left-container left-container--header" href="#">
-            <div class="footer__icons"><a class="footer__icon footer__icon--youtube" href="#"><img src="img/icons/youtube.png"/></a><a class="footer__icon footer__icon--facebook" href="#"><img src="img/icons/facebook.png"/></a><a class="footer__icon footer__icon--insta" href="#"><img src="img/icons/insta.png"/></a></div></a>
-          <div class="footer__inner">
-            <div class="footer__info">
-              <h6 class="footer__info-title">Информция</h6>
-              <ul class="footer__info-list">
-                <li class="footer__info-item"> <a href="#">О ESOT</a></li>
-                <li class="footer__info-item"> <a href="#">Пользовательское соглашение</a></li>
-                <li class="footer__info-item"> <a href="#">Политика конфиденциальности</a></li>
-                <li class="footer__info-item"> <a href="#">Отзывы</a></li>
-                <li class="footer__info-item"><a href="#">Обратная свзяь</a></li>
-              </ul>
-            </div>
-            <div class="footer__info">
-              <h6 class="footer__info-title">Условия работы</h6>
-              <ul class="footer__info-list">
-                <li class="footer__info-item"> <a href="#">Поставщикам</a></li>
-                <li class="footer__info-item"><a href="#">Продавцам</a></li>
-                <li class="footer__info-item"> <a href="#">Клиентам</a></li>
-              </ul>
-            </div>
-            <div class="footer__info">
-              <h6 class="footer__info-title">Подписка</h6>
-              <input class="footer__info-email" type="email" placeholder="Ваш email"/>
-              <button class="footer__info-btn l-btn">Подписаться</button>
-            </div>
+    </div>
+    <div class="l-modal-wrap">
+      <div class="l-modal" id="notification-modal">
+        <h3 class="l-modal__title">Действие невозможно выполнить. Пожалуйста, сначала подтвердите свой e-mail. Перейдите по ссылке в письме, которое мы выслали вам при регистрации.</h3>
+        <div class="l-modal__footer">
+          <button class="l-btn l-modal-confirm">Отправить</button>
+        </div>
+      </div>
+      <div class="l-modal l-modal-cabinet" id="filter-modal">
+        <h3 class="l-modal__title">Фильтрация заказов</h3>
+        <form>
+          <table>
+            <tr>
+              <td>
+                <label>Номер заказа</label>
+              </td>
+              <td>
+                <input class="l-btn" type="number"/>
+              </td>
+              <td>
+                <label>Или диапазон от</label>
+              </td>
+              <td>
+                <input class="l-btn" type="number"/>
+              </td>
+              <td>
+                <label>до</label>
+              </td>
+              <td>
+                <input class="l-btn" type="number"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>Статус</label>
+              </td>
+              <td colspan="5">
+                <div class="in-checkboxes">
+                  <input type="checkbox" id="stationery"/>
+                  <label for="stationery">Подтвержден</label>
+                  <input type="checkbox" id="food"/>
+                  <label for="food">Подтверждается</label>
+                  <input type="checkbox" id="equip"/>
+                  <label for="equip">Отклонен</label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>Дата</label>
+              </td>
+              <td>
+                <input class="l-btn" type="date"/>
+              </td>
+              <td>
+                <label>Или диапазон от</label>
+              </td>
+              <td>
+                <input class="l-btn" type="date"/>
+              </td>
+              <td>
+                <label>до</label>
+              </td>
+              <td>
+                <input class="l-btn" type="date"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>Сумма, грн</label>
+              </td>
+              <td>
+                <input class="l-btn" type="number"/>
+              </td>
+              <td>
+                <label>Или диапазон от</label>
+              </td>
+              <td>
+                <input class="l-btn" type="number"/>
+              </td>
+              <td>
+                <label>до</label>
+              </td>
+              <td>
+                <input class="l-btn" type="number"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>Клиент</label>
+              </td>
+              <td colspan="5">
+                <select class="l-btn">
+                  <option value="">- Выберите из списка -</option>
+                  <option value="client">Клиент</option>
+                  <option value="client">Клиент</option>
+                  <option value="client">Клиент</option>
+                  <option value="client">Клиент</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>Клиент</label>
+              </td>
+              <td colspan="5">
+                <select class="l-btn">
+                  <option value="">- Выберите из списка -</option>
+                  <option value="client">Продавец</option>
+                  <option value="client">Продавец</option>
+                  <option value="client">Продавец</option>
+                  <option value="client">Продавец</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="6" align="center">
+                <button class="l-btn l-modal-confirm">Отфильтровать</button>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+      <div class="l-modal l-modal-cabinet" id="reject-modal">
+        <h3 class="l-modal__title">Обязательно укажите чёткую причину отказа что бы продавец мог решить вопрос</h3>
+        <form>
+          <p>Я отказываюсь от заказа потому что:</p>
+          <textarea rows="5"></textarea>
+        </form>
+        <div class="l-modal__footer">
+          <button class="l-btn l-modal-confirm">Отправить</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="large-container"><a class="left-container left-container--header" href="#">
+          <div class="footer__icons"><a class="footer__icon footer__icon--youtube" href="#"><img src="img/icons/youtube.png"/></a><a class="footer__icon footer__icon--facebook" href="#"><img src="img/icons/facebook.png"/></a><a class="footer__icon footer__icon--insta" href="#"><img src="img/icons/insta.png"/></a></div></a>
+        <div class="footer__inner">
+          <div class="footer__info">
+            <h6 class="footer__info-title">Информция</h6>
+            <ul class="footer__info-list">
+              <li class="footer__info-item"> <a href="#">О ESOT</a></li>
+              <li class="footer__info-item"> <a href="#">Пользовательское соглашение</a></li>
+              <li class="footer__info-item"> <a href="#">Политика конфиденциальности</a></li>
+              <li class="footer__info-item"> <a href="#">Отзывы</a></li>
+              <li class="footer__info-item"><a href="#">Обратная свзяь</a></li>
+            </ul>
+          </div>
+          <div class="footer__info">
+            <h6 class="footer__info-title">Условия работы</h6>
+            <ul class="footer__info-list">
+              <li class="footer__info-item"> <a href="#">Поставщикам</a></li>
+              <li class="footer__info-item"><a href="#">Продавцам</a></li>
+              <li class="footer__info-item"> <a href="#">Клиентам</a></li>
+            </ul>
+          </div>
+          <div class="footer__info">
+            <h6 class="footer__info-title">Подписка</h6>
+            <input class="footer__info-email" type="email" placeholder="Ваш email"/>
+            <button class="footer__info-btn l-btn">Подписаться</button>
           </div>
         </div>
       </div>
