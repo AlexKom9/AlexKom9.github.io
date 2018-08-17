@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Bigrate</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="libs/bootstrap.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+  </head>
+  <body class="l-page">
+    <div class="l-wrap">
+      <header class="header">
+        <div class="l-container">
+          <div class="header__inner">
+            <div class="header__logo"><span class="l-logo">Bigrate.</span></div>
+            <ul class="header__nav">
+              <li class="header__nav-item"><a class="header__nav-link" href="#">Разместить объявление</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="#">Форум</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="#">Блог</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="#">Справка</a></li>
+              <li class="header__nav-item header__nav-item--select">
+                <!--a(href="#").header__nav-link Русский--><img src="img/icons/language.png"/>
+                <div class="custom-select header__custom-select">
+                  <select>
+                    <option value="en">English</option>
+                    <option value="ru" selected="selected">Русский</option>
+                    <option value="uk">Українська</option>
+                  </select>
+                </div>
+              </li>
+              <li class="header__nav-item"><img src="img/icons/ic24PxLogin.png"/><a class="header__nav-link" href="#">Выйти</a></li>
+            </ul>
+            <div class="header__menu"><img src="img/icons/notification.svg"/><img src="img/icons/wallet.svg"/>
+              <div class="header__menu-user"><img src="https://1ofdmq2n8tc36m6i46scovo2e-wpengine.netdna-ssl.com/wp-content/uploads/2014/04/Steven_Hallam-slide.jpg"/></div>
+              <div class="header__menu-dots"><img src="img/icons/menu-dots.svg"/></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="h-stat">
+        <div class="l-container l-container--center">
+          <div class="l-inner l-inner--10">
+            <div class="h-stat__inner">
+              <div class="h-stat__items">
+                <div class="h-stat__item">
+                  <p>Общий баланс кошелька</p>
+                  <p class="h-stat__val"><span>1.56987</span> BTC</p>
+                </div>
+                <div class="h-stat__item">
+                  <p>Комиссия за транзакцию</p>
+                  <p class="h-stat__val"><span>0.00005</span>  BTC</p>
+                </div>
+                <div class="h-stat__item">
+                  <p>Максимальная сумма для отправки</p>
+                  <p class="h-stat__val"><span>0.00005</span> BTC</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="s-rev">
+        <div class="l-container l-container--center"></div>
+      </section>
+      <section class="cards">
+        <div class="l-container l-container--center">
+          <div class="l-inner l-inner--10">
+            <h1 class="l-title">Подтверждение номера телефона</h1>
+            <div class="cards__card">
+              <div class="card">
+                <div class="card__title"></div>
+                <div class="card__sec">
+                  <div class="card__descr"></div>Подтвердите свой телефонный номер, чтобы повысить репутацию вашей учетной записи и  получить доступ к большему количеству объявлений.<br/>Выберите код страны и введите телефонный номер.
+                </div>
+                <form>
+                  <div class="card__sec">
+                    <div class="card__cols">
+                      <div class="card__col">
+                        <div class="card__col card__col--full">
+                          <div class="form__group">
+                            <label class="form__label">Страна</label>
+                            <div class="form__input-box">
+                              <div class="form__input-sel custom-select custom-select--filter">
+                                <select>
+                                  <option>Мозамбик</option>
+                                  <option>Уганда</option>
+                                  <option>ЮАР</option>
+                                  <option>Танзания</option>
+                                  <option>Судан</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card__col card__col--full">
+                          <div class="card__cols">
+                            <div class="card__col card__col--phone-index">
+                              <div class="form__group">
+                                <label class="form__label">Код</label>
+                                <div class="form__input-box">
+                                  <input type="text" value="+38" disabled="disabled"/>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card__col card__col--phone">
+                              <label class="form__label">Номер телефона</label>
+                              <div class="form__group">
+                                <div class="form__input-box">
+                                  <div class="form__input-wrap">
+                                    <input type="number"/>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card__btn">
+                    <button class="l-btn l-btn--primary l-btn--big-padding">
+                      <div class="l-btn__inner"><span>Отправить СМС</span>
+                      </div>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <h1 class="l-title">Подтверждение номера телефона</h1>
+            <div class="cards__card">
+              <div class="card">
+                <div class="card__title"></div>
+                <div class="card__sec">
+                  <div class="card__descr"></div>Мы отправили SMS-сообщение с проверочным кодом на ваш телефонный номер +380686536365.<br/>Введите код подтверждения в поле ниже.
+                </div>
+                <form>
+                  <div class="card__sec">
+                    <div class="card__cols">
+                      <div class="card__col">
+                        <div class="card__col card__col--full">
+                          <div class="form__group">
+                            <div class="form__label">Код потверждения</div>
+                            <div class="form__input-box">
+                              <div class="form__input-wrap">
+                                <input type="number"/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card__coll card__col--full">
+                          <div class="card__descr">Ничего не пришло? &nbsp<a href="#">Отправить код повторно</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card__btn">
+                    <button class="l-btn l-btn--primary l-btn--big-padding">
+                      <div class="l-btn__inner"><span>Отправить СМС</span>
+                      </div>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="l-container">
+          <div class="footer__inner">
+            <div class="footer__info">
+              <div class="footer__logo">
+                <p class="l-logo">Bigrate.</p>
+              </div>
+              <div class="footer__socials"><a class="footer__socials-icon" href="#"><i class="fab fa-twitter"></i></a><a class="footer__socials-icon" href="#"><i class="fab fa-facebook-f"></i></a><a class="footer__socials-icon" href="#"><i class="fab fa-github"></i></a><a class="footer__socials-icon" href="#"><i class="fab fa-google-plus-g"></i></a></div>
+              <div class="footer__copy">
+                <p>Powered by<a href="//peiko.space">peiko</a></p>
+                <p>© 2018 Bigrate</p>
+              </div>
+            </div>
+            <div class="footer__links">
+              <div class="footer__group col-4"><a class="footer__group-name" href="#">О проекте</a>
+                <ul class="footer__grup-ul">
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">О Нас</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Комиссия</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Конфидециальность</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Условия предоставления услуг</a></li>
+                </ul>
+              </div>
+              <div class="footer__group col-4"><a class="footer__group-name" href="#">Поддержка</a>
+                <ul class="footer__grup-ul">
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Служба поддержки</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">FAQ</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Руководства</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Забыли пароль?</a></li>
+                </ul>
+              </div>
+              <div class="footer__group col-4"><a class="footer__group-name" href="#">Услуги</a>
+                <ul class="footer__grup-ul">
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Документация API</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Партнерская программа</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Руководства</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!--common scripts-->
+    <script src="js/modules/modal.js"></script>
+    <script type="text/javascript" src="js/modules/select-new.js"></script>
+  </body>
+</html>

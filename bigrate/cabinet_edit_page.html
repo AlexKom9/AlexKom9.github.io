@@ -67,7 +67,7 @@
       <section class="cabinet">
         <div class="l-container">
           <div class="l-title">
-            <h1>Основная Информация</h1>
+            <h1>Редактирование профиля</h1>
           </div>
           <div class="cards__inner">
             <div class="cards__side">
@@ -214,41 +214,162 @@
             <div class="cards__main">
               <div class="cards__content">
                 <div class="cards__card">
-                  <div class="card l-card">
-                    <div class="card__head">
-                      <h3 class="card__title">Обо мне</h3>
+                  <!--MAIN INFO-->
+                  <form>
+                    <div class="card">
+                      <div class="card__head">
+                        <h3 class="card__title">Основная информация</h3>
+                      </div>
+                      <div class="card__inner">
+                        <div class="c-tab">
+                          <div class="c-tab__row row">
+                            <div class="c-tab__cell col-xs-4 col-md-3 c-tab__cell--head"><span>Email</span></div>
+                            <div class="c-tab__cell col-xs-8 col-md-9">
+                              <div class="c-tab__cell-inner c-tab__cell-inner--container"><span>soh.labor@gmail.com</span>
+                                <div class="c-tab__cell-verify-btn">
+                                  <!--a(href="#").l-btn.l-btn--s.l-btn--gray-text Изменить--><a class="l-btn l-btn--s l-btn--gray-text" href="">
+                                    <div class="l-btn__inner"><span>Изменить</span>
+                                    </div></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="c-tab__row row">
+                            <div class="c-tab__cell col-xs-4 col-md-3 c-tab__cell--head"><span>Телефон</span></div>
+                            <div class="c-tab__cell col-xs-8 col-md-9">
+                              <div class="c-tab__cell-inner c-tab__cell-inner--container"><span>+38095 543 12 23</span>
+                                <div class="c-tab__cell-verify-btn">
+                                  <!--a(href="#").l-btn.l-btn--s.l-btn--gray-text Изменить--><a class="l-btn l-btn--s l-btn--gray-text" href="">
+                                    <div class="l-btn__inner"><span>Изменить</span>
+                                    </div></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="c-tab__row row">
+                            <div class="c-tab__cell col-xs-4 col-md-3 c-tab__cell--head"><span>Пароль</span></div>
+                            <div class="c-tab__cell col-xs-8 col-md-9">
+                              <div class="c-tab__cell-inner c-tab__cell-inner--container"><span>***********</span>
+                                <div class="c-tab__cell-verify-btn">
+                                  <!--a(href="#").l-btn.l-btn--s.l-btn--gray-text Изменить--><a class="l-btn l-btn--s l-btn--gray-text" href="">
+                                    <div class="l-btn__inner"><span>Изменить</span>
+                                    </div></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="c-tab__row row">
+                            <div class="c-tab__cell col-xs-4 col-md-3 c-tab__cell--head"><span>Настоящее имя</span></div>
+                            <div class="c-tab__cell col-xs-8 col-md-9">
+                              <div class="c-tab__cell-inner c-tab__cell-inner--container">
+                                <div>
+                                  <div class="conf conf--not-conf"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="security-lost" mask-type="alpha" maskUnits="userSpaceOnUse" x="1" y="2" width="22" height="19">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M22 19L11 0L0 19H22ZM10 16V14H12V16H10ZM10 12H12V8H10V12Z" transform="translate(1 2)" fill="white"/>
+</mask>
+<g mask="url(#security-lost)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#EB5757"/>
+</g>
+</svg>
+<span>Имя не подтверждено</span>
+                                  </div>
+                                </div>
+                                <div class="c-tab__cell-verify-btn">
+                                  <!--a(href="#").l-btn.l-btn--s.l-btn--gray-text Изменить--><a class="l-btn l-btn--s l-btn--gray-text" href="">
+                                    <div class="l-btn__inner"><span>Изменить</span>
+                                    </div></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card__inner">
+                        <div class="card__sec">
+                          <div class="form__check-wrap">
+                            <div class="form__check">
+                              <input type="checkbox" id="showNameConfirm"/>
+                              <label for="showNameConfirm">Ваше имя пользователя отображается, когда люди совершают новые сделки с вашими бывшими партнерами.</label>
+                            </div>
+                            <p class="form__check-caption caption">Ваше имя пользователя отображается, когда люди совершают новые сделки с вашими бывшими партнерами.</p>
+                          </div>
+                        </div>
+                        <div class="form__group">
+                          <label class="form__label">Часовой пояс</label>
+                          <div class="form__input-box">
+                            <div class="form__input-sel custom-select">
+                              <select>
+                                <option value="unseleceted" selected="selected">+00:00</option>
+                                <option value="USD">USD +00:00</option>
+                                <option value="EUR">EUR +00:00</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form__group">
+                          <label class="form__label">О Себе</label>
+                          <textarea class="form__textarea" rows="5"></textarea>
+                          <p class="caption">Показывается в общедоступном профиле. Только обычный текст, не более 200 символов</p>
+                        </div>
+                      </div>
                     </div>
-                    <div class="card__inner">
-                      <p class="card__descr">If you are looking for a new way to promote your business that won’t cost you more money, maybe printing is one of the options you won’t resist. Printing is a widely use process in making printed materials that are used for advertising. Brochure, catalogs, flyers, banners, posters, and booklets are some of several examples of printed materials.</p>
+                    <div class="cards__btn cards__btn--margin cards__btn--center">
+                      <button class="l-btn l-btn--primary l-btn--big-padding">
+                        <div class="l-btn__inner"><span>Сохранить</span>
+                        </div>
+                      </button>
                     </div>
-                  </div>
-                </div>
-                <div class="cards__card">
-                  <div class="card l-card">
-                    <div class="card__head">
-                      <h3 class="card__title">Основная информация</h3>
-                    </div>
-                    <div class="card__inner">
-                      <div class="c-tab">
-                        <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-4 col-md-3 c-tab__cell--head"><span>Последняя активность</span></div>
-                          <div class="c-tab__cell col-xs-8 col-md-9"><span>25.04.2018</span></div>
+                  </form>
+                  <!-- NOTIFICATION-->
+                  <div class="cards__card">
+                    <div class="card">
+                      <div class="card__head">
+                        <h3 class="card__title">Уведомления</h3>
+                      </div>
+                      <div class="card__inner">
+                        <div class="form__group">
+                          <div class="form__check-wrap">
+                            <div class="form__check">
+                              <input type="checkbox" id="not1"/>
+                              <label for="not1">Сообщения электронной почты будут просто содержать предложение войти на сайт, где можно будет просмотреть собственно уведомления.</label>
+                            </div>
+                            <p class="form__check-caption caption">Сообщения электронной почты будут просто содержать предложение войти на сайт, где можно будет просмотреть собственно уведомления.</p>
+                          </div>
                         </div>
-                        <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-4 col-md-3 c-tab__cell--head"><span>Страна</span></div>
-                          <div class="c-tab__cell col-xs-8 col-md-9"><span>Европа</span></div>
+                        <div class="form__group">
+                          <div class="form__check-wrap">
+                            <div class="form__check">
+                              <input type="checkbox" id="not2"/>
+                              <label for="not2">Вы будете получать внешние уведомления за пределами окна браузера.</label>
+                            </div>
+                            <p class="form__check-caption caption">Вы будете получать внешние уведомления за пределами окна браузера.</p>
+                          </div>
                         </div>
-                        <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-4 col-md-3 c-tab__cell--head"><span> Язык</span></div>
-                          <div class="c-tab__cell col-xs-8 col-md-9"><span>Русский, Английский</span></div>
+                        <div class="form__group">
+                          <div class="form__check-wrap">
+                            <div class="form__check">
+                              <input type="checkbox" id="not3"/>
+                              <label for="not3">Получать SMS уведомления о новых запросах контакта (бесплатно).</label>
+                            </div>
+                            <p class="form__check-caption caption">Получать SMS уведомления о новых запросах контакта (бесплатно).</p>
+                          </div>
                         </div>
-                        <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-4 col-md-3 c-tab__cell--head"><span>Дата создания</span></div>
-                          <div class="c-tab__cell col-xs-8 col-md-9"><span>14.08.2015</span></div>
+                        <div class="form__group">
+                          <div class="form__check-wrap">
+                            <div class="form__check">
+                              <input type="checkbox" id="not4"/>
+                              <label for="not4">Получать SMS-уведомления о новых онлайн-платежах для ваших объявлений (бесплатно).</label>
+                            </div>
+                            <p class="form__check-caption caption">Получать SMS-уведомления о новых онлайн-платежах для ваших объявлений (бесплатно).</p>
+                          </div>
                         </div>
-                        <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-4 col-md-3 c-tab__cell--head"><span>Первая покупка</span></div>
-                          <div class="c-tab__cell col-xs-8 col-md-9"><span>16.08.2015</span></div>
+                        <div class="form__group"></div>
+                        <div class="form__check-wrap">
+                          <div class="form__check">
+                            <input type="checkbox" id="not5"/>
+                            <label for="not5">Отправлять SMS-уведомления при каждой новой отправке биткоинов из депонирования платежа (бесплатно)</label>
+                          </div>
+                          <p class="form__check-caption caption">Отправлять SMS-уведомления при каждой новой отправке биткоинов из депонирования платежа (бесплатно)</p>
                         </div>
                       </div>
                     </div>
@@ -257,21 +378,37 @@
                 <div class="cards__card">
                   <div class="card l-card">
                     <div class="card__head">
-                      <h3 class="card__title">Объем сделок</h3>
+                      <h3 class="card__title">Проверка</h3>
                     </div>
                     <div class="card__inner">
                       <div class="c-tab">
                         <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-4 col-md-3 c-tab__cell--head"><span>Сумма</span></div>
-                          <div class="c-tab__cell col-xs-8 col-md-9"><span>267,3 BTC</span></div>
+                          <div class="c-tab__cell col-xs-4 col-md-3 c-tab__cell--head"><span>Email</span></div>
+                          <div class="c-tab__cell col-xs-8 col-md-9"><span class="color-secondary">Подтвержден</span></div>
                         </div>
                         <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-4 col-md-3 c-tab__cell--head"><span>Подтвержденные сделки</span></div>
-                          <div class="c-tab__cell col-xs-8 col-md-9"><span>1547</span></div>
+                          <div class="c-tab__cell col-xs-4 col-md-3 c-tab__cell--head"><span>Телефон</span></div>
+                          <div class="c-tab__cell col-xs-8 col-md-9">
+                            <div class="c-tab__cell-inner c-tab__cell-inner--container"><span class="color-warn">Не подтвержден</span>
+                              <div class="c-tab__cell-verify-btn">
+                                <!--a(href="#").l-btn.l-btn--s.l-btn--gray-text Пройти проверку--><a class="l-btn l-btn--s l-btn--gray-text" href="">
+                                  <div class="l-btn__inner"><span>Пройти проверку</span>
+                                  </div></a>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                         <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-4 col-md-3 c-tab__cell--head"><span>Количество партнеров</span></div>
-                          <div class="c-tab__cell col-xs-8 col-md-9"><span>348</span></div>
+                          <div class="c-tab__cell col-xs-4 col-md-3 c-tab__cell--head"><span>Личность</span></div>
+                          <div class="c-tab__cell col-xs-8 col-md-9">
+                            <div class="c-tab__cell-inner c-tab__cell-inner--container"><span class="color-warn">Не подтверждена</span>
+                              <div class="c-tab__cell-verify-btn">
+                                <!--a(href="#").l-btn.l-btn--s.l-btn--gray-text Пройти проверку--><a class="l-btn l-btn--s l-btn--gray-text" href="">
+                                  <div class="l-btn__inner"><span>Пройти проверку</span>
+                                  </div></a>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -283,84 +420,24 @@
                       <h3 class="card__title">Безопасность</h3>
                     </div>
                     <div class="card__inner">
-                      <div class="c-tab">
-                        <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-4 col-md-3 c-tab__cell--head"><span>Email</span></div>
-                          <div class="c-tab__cell c-tab__cell--between-align col-xs-8 col-md-9">
-                            <div>
-                              <div class="conf conf--conf"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="svg-security" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="1" width="18" height="22">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 4L9 0L18 4V10C18 15.55 14.1602 20.74 9 22C3.83984 20.74 0 15.55 0 10V4ZM3 12L7 16L15 8L13.5898 6.58002L7 13.17L4.41016 10.59L3 12Z" transform="translate(3 1)" fill="white"/>
+                      <div class="card__sec">
+                        <p>Уровень безопасности вашей учетной записи: &nbsp<span class="color-warn">слабый</span></p>
+                      </div>
+                      <div class="card__btn">
+                        <button class="l-btn">
+                          <div class="l-btn__inner"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="24" height="24" fill="white" fill-opacity="0"/>
+<path d="M13 6L11.59 7.30154L15.5 11H5V13H15.5L11.59 16.6985L13 18L19 12L13 6Z" fill="#B25C5C"/>
+<mask id="svg-arrow-right" mask-type="alpha" maskUnits="userSpaceOnUse" x="5" y="6" width="14" height="12">
+<path d="M13 6L11.59 7.30154L15.5 11H5V13H15.5L11.59 16.6985L13 18L19 12L13 6Z" fill="#B25C5C"/>
 </mask>
-<g mask="url(#svg-security)">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+<g mask="url(#svg-arrow-right)">
+<rect width="24" height="24" fill="#3987E0"/>
 </g>
 </svg>
-<span> Подтвержден</span>
-                              </div>
-                            </div>
+<span>Перейти к настройкам безопасности</span>
                           </div>
-                        </div>
-                        <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-4 col-md-3 c-tab__cell--head"><span>Телефон</span></div>
-                          <div class="c-tab__cell c-tab__cell--between-align col-xs-8 col-md-9">
-                            <div class="c-tab__cell-conf">
-                              <div class="conf conf--not-conf"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="security-lost" mask-type="alpha" maskUnits="userSpaceOnUse" x="1" y="2" width="22" height="19">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M22 19L11 0L0 19H22ZM10 16V14H12V16H10ZM10 12H12V8H10V12Z" transform="translate(1 2)" fill="white"/>
-</mask>
-<g mask="url(#security-lost)">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#EB5757"/>
-</g>
-</svg>
-<span>Не подтвержден</span>
-                              </div>
-                            </div>
-                            <div class="c-tab__cell-verify-btn"><a class="l-btn l-btn--s" href="#">перейти к верификации</a></div>
-                          </div>
-                        </div>
-                        <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-4 col-md-3 c-tab__cell--head"><span>Удостоверение личности</span></div>
-                          <div class="c-tab__cell c-tab__cell--between-align col-xs-8 col-md-9">
-                            <div>
-                              <div class="conf conf--conf"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="svg-security" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="1" width="18" height="22">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 4L9 0L18 4V10C18 15.55 14.1602 20.74 9 22C3.83984 20.74 0 15.55 0 10V4ZM3 12L7 16L15 8L13.5898 6.58002L7 13.17L4.41016 10.59L3 12Z" transform="translate(3 1)" fill="white"/>
-</mask>
-<g mask="url(#svg-security)">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
-</g>
-</svg>
-<span> Подтвержден</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-4 col-md-3 c-tab__cell--head"><span>Имя</span></div>
-                          <div class="c-tab__cell c-tab__cell--between-align col-xs-8 col-md-9">
-                            <div>
-                              <div class="conf conf--conf"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="svg-security" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="1" width="18" height="22">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 4L9 0L18 4V10C18 15.55 14.1602 20.74 9 22C3.83984 20.74 0 15.55 0 10V4ZM3 12L7 16L15 8L13.5898 6.58002L7 13.17L4.41016 10.59L3 12Z" transform="translate(3 1)" fill="white"/>
-</mask>
-<g mask="url(#svg-security)">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
-</g>
-</svg>
-<span> Подтвержден</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-4 col-md-3 c-tab__cell--head"><span>Доверенный партнер</span></div>
-                          <div class="c-tab__cell col-xs-8 col-md-9"><span>Доверие у 500+ пользователей</span></div>
-                        </div>
-                        <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-4 col-md-3 c-tab__cell--head"><span>Заблокирован</span></div>
-                          <div class="c-tab__cell col-xs-8 col-md-9"><span>У 8-и пользователей</span></div>
-                        </div>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -368,189 +445,28 @@
                 <div class="cards__card">
                   <div class="card l-card">
                     <div class="card__head">
-                      <h3 class="card__title">Отзывы</h3>
+                      <h3 class="card__title">Удаление учетной записи</h3>
                     </div>
                     <div class="card__inner">
-                      <div class="card__item">
-                        <div class="sin-rev">
-                          <div class="sin-rev__head">
-                            <div class="sin-rev__head-img"><img src="img/icons/good.svg"/></div>
-                            <div class="sin-rev__head-info">
-                              <p class="sin-rev__head-info-name">Carlos Burton</p>
-                              <p class="sin-rev__head-info-date">21.02.2018</p>
-                            </div>
-                          </div>
-                          <div class="sin-rev__body">
-                            <p>«Forget Ebay and other forms of advertising for your property that costs you hard earned money. Why not do it all for free? Investment Assets Properties have ready several locations around the world to take your free listings for any luxury property you have…»</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card__item">
-                        <div class="sin-rev">
-                          <div class="sin-rev__head">
-                            <div class="sin-rev__head-img"><img src="img/icons/neutral.svg"/></div>
-                            <div class="sin-rev__head-info">
-                              <p class="sin-rev__head-info-name">Carlos Burton</p>
-                              <p class="sin-rev__head-info-date">21.02.2018</p>
-                            </div>
-                          </div>
-                          <div class="sin-rev__body">
-                            <p>«Forget Ebay and other forms of advertising for your property that costs you hard earned money. Why not do it all for free? Investment Assets Properties have ready several locations around the world to take your free listings for any luxury property you have…»</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card__item">
-                        <div class="sin-rev">
-                          <div class="sin-rev__head">
-                            <div class="sin-rev__head-img"><img src="img/icons/bad.svg"/></div>
-                            <div class="sin-rev__head-info">
-                              <p class="sin-rev__head-info-name">Carlos Burton</p>
-                              <p class="sin-rev__head-info-date">21.02.2018</p>
-                            </div>
-                          </div>
-                          <div class="sin-rev__body">
-                            <p>«Forget Ebay and other forms of advertising for your property that costs you hard earned money. Why not do it all for free? Investment Assets Properties have ready several locations around the world to take your free listings for any luxury property you have…»</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card__footer">
-                      <div class="card__btn card__btn--right"><a class="l-btn" href="#">
-                          <div class="l-btn__inner"><img src="img/icons/arrow-right.svg"/><span>Показать больше</span></div></a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="addition">
-        <div class="l-container l-container--center">
-          <div class="l-inner l-inner--10">
-            <div class="addition__inner">
-              <h2 class="l-subtitle">Полезные статьи и новости</h2>
-              <div class="addition__cards">
-                <div class="addition__card">
-                  <div class="prev-card">
-                    <div class="prev-card__head" style="background-image: url(img/card_prev.png)"></div>
-                    <div class="prev-card__info">
-                      <div class="prev-card__info-date">
-                        <div class="date"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="1" y="1" width="14" height="14">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M6.66016 0C2.98047 0 0 2.98666 0 6.66667C0 10.3467 2.98047 13.3333 6.66016 13.3333C10.3467 13.3333 13.333 10.3467 13.333 6.66667C13.333 2.98666 10.3467 0 6.66016 0ZM6.66602 12C3.71973 12 1.33301 9.61333 1.33301 6.66666C1.33301 3.72 3.71973 1.33333 6.66602 1.33333C9.61328 1.33333 12 3.72 12 6.66666C12 9.61333 9.61328 12 6.66602 12ZM6 3.33333H7V6.83333L10 8.61333L9.5 9.43333L6 7.33333V3.33333Z" transform="translate(1.33301 1.33333)" fill="white"/>
+                      <div class="card__btn">
+                        <button class="l-btn l-btn--delete">
+                          <div class="l-btn__inner"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="24" height="24" fill="black" fill-opacity="0"/>
+<mask id="svg-delete" mask-type="alpha" maskUnits="userSpaceOnUse" x="5" y="3" width="14" height="18">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 3L15.5 4H19V6H5V4H8.5L9.5 3H14.5ZM6 19C6 20.1 6.90039 21 8 21H16C17.0996 21 18 20.1 18 19V7H6V19ZM8.45996 11.88L9.87012 10.47L12 12.59L14.1201 10.47L15.5303 11.88L13.4102 14L15.5303 16.12L14.1201 17.53L12 15.4099L9.87988 17.53L8.46973 16.12L10.5898 14L8.45996 11.88Z" fill="white"/>
 </mask>
-<g mask="url(#mask0)">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+<g mask="url(#svg-delete)">
+<rect width="24" height="24" fill="black" fill-opacity="0"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#EB5757"/>
 </g>
 </svg>
-<span>20.03.2017</span>
-                        </div>
+<span>Удалить учетную запись Bigrate</span>
+                          </div>
+                        </button>
                       </div>
-                      <div class="prev-card__info-views">
-                        <div class="views"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <mask id="svg-eye" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="3" width="16" height="10">
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.33301 0C4 0 1.15332 2.07333 0 5C1.15332 7.92667 4 10 7.33301 10C10.667 10 13.5137 7.92667 14.667 5C13.5137 2.07333 10.667 0 7.33301 0ZM7.33301 8.33334C5.49316 8.33334 4 6.84001 4 5C4 3.16 5.49316 1.66667 7.33301 1.66667C9.17285 1.66667 10.667 3.16 10.667 5C10.667 6.84001 9.17285 8.33334 7.33301 8.33334ZM5.33301 5C5.33301 3.89333 6.22656 3 7.33301 3C8.43945 3 9.33301 3.89333 9.33301 5C9.33301 6.10666 8.43945 7 7.33301 7C6.22656 7 5.33301 6.10666 5.33301 5Z" transform="translate(0.666992 3)" fill="white"/>
-    </mask>
-    <g mask="url(#svg-eye)">
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H16V16H0V0Z" fill="#3987E0"/>
-    </g>
-</svg>
-<span>1563</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="prev-card__body">
-                      <h4 class="prev-card__title">More tools for offchain transactions</h4>
-                      <p class="prev-card__descr">We have developed several tools that can help make transacting with Bitcoin cheaper incertain cases. We have developed several tools that can help make transacting with Bitcoin cheaper in certain cases. We have developed several tools that can help make transacting with Bitcoin cheaper in certain cases.</p>
-                    </div>
-                    <div class="prev-card__footer">
-                      <div class="prev-card__btn"><a class="l-btn l-btn--arr" href="#">
-                          <div class="l-btn__inner"><img src="img/icons/ic24pxarrow-right.png"/><span>Показать больше</span></div></a></div>
                     </div>
                   </div>
                 </div>
-                <div class="addition__card">
-                  <div class="prev-card">
-                    <div class="prev-card__head" style="background-image: url(img/card_prev.png)"></div>
-                    <div class="prev-card__info">
-                      <div class="prev-card__info-date">
-                        <div class="date"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="1" y="1" width="14" height="14">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M6.66016 0C2.98047 0 0 2.98666 0 6.66667C0 10.3467 2.98047 13.3333 6.66016 13.3333C10.3467 13.3333 13.333 10.3467 13.333 6.66667C13.333 2.98666 10.3467 0 6.66016 0ZM6.66602 12C3.71973 12 1.33301 9.61333 1.33301 6.66666C1.33301 3.72 3.71973 1.33333 6.66602 1.33333C9.61328 1.33333 12 3.72 12 6.66666C12 9.61333 9.61328 12 6.66602 12ZM6 3.33333H7V6.83333L10 8.61333L9.5 9.43333L6 7.33333V3.33333Z" transform="translate(1.33301 1.33333)" fill="white"/>
-</mask>
-<g mask="url(#mask0)">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
-</g>
-</svg>
-<span>20.03.2017</span>
-                        </div>
-                      </div>
-                      <div class="prev-card__info-views">
-                        <div class="views"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <mask id="svg-eye" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="3" width="16" height="10">
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.33301 0C4 0 1.15332 2.07333 0 5C1.15332 7.92667 4 10 7.33301 10C10.667 10 13.5137 7.92667 14.667 5C13.5137 2.07333 10.667 0 7.33301 0ZM7.33301 8.33334C5.49316 8.33334 4 6.84001 4 5C4 3.16 5.49316 1.66667 7.33301 1.66667C9.17285 1.66667 10.667 3.16 10.667 5C10.667 6.84001 9.17285 8.33334 7.33301 8.33334ZM5.33301 5C5.33301 3.89333 6.22656 3 7.33301 3C8.43945 3 9.33301 3.89333 9.33301 5C9.33301 6.10666 8.43945 7 7.33301 7C6.22656 7 5.33301 6.10666 5.33301 5Z" transform="translate(0.666992 3)" fill="white"/>
-    </mask>
-    <g mask="url(#svg-eye)">
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H16V16H0V0Z" fill="#3987E0"/>
-    </g>
-</svg>
-<span>1563</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="prev-card__body">
-                      <h4 class="prev-card__title">More tools for offchain transactions</h4>
-                      <p class="prev-card__descr">We have developed several tools that can help make transacting with Bitcoin cheaper incertain cases. We have developed several tools that can help make transacting with Bitcoin cheaper in certain cases. We have developed several tools that can help make transacting with Bitcoin cheaper in certain cases.</p>
-                    </div>
-                    <div class="prev-card__footer">
-                      <div class="prev-card__btn"><a class="l-btn l-btn--arr" href="#">
-                          <div class="l-btn__inner"><img src="img/icons/ic24pxarrow-right.png"/><span>Показать больше</span></div></a></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="addition__card">
-                  <div class="prev-card">
-                    <div class="prev-card__head" style="background-image: url(img/card_prev.png)"></div>
-                    <div class="prev-card__info">
-                      <div class="prev-card__info-date">
-                        <div class="date"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="1" y="1" width="14" height="14">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M6.66016 0C2.98047 0 0 2.98666 0 6.66667C0 10.3467 2.98047 13.3333 6.66016 13.3333C10.3467 13.3333 13.333 10.3467 13.333 6.66667C13.333 2.98666 10.3467 0 6.66016 0ZM6.66602 12C3.71973 12 1.33301 9.61333 1.33301 6.66666C1.33301 3.72 3.71973 1.33333 6.66602 1.33333C9.61328 1.33333 12 3.72 12 6.66666C12 9.61333 9.61328 12 6.66602 12ZM6 3.33333H7V6.83333L10 8.61333L9.5 9.43333L6 7.33333V3.33333Z" transform="translate(1.33301 1.33333)" fill="white"/>
-</mask>
-<g mask="url(#mask0)">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
-</g>
-</svg>
-<span>20.03.2017</span>
-                        </div>
-                      </div>
-                      <div class="prev-card__info-views">
-                        <div class="views"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <mask id="svg-eye" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="3" width="16" height="10">
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.33301 0C4 0 1.15332 2.07333 0 5C1.15332 7.92667 4 10 7.33301 10C10.667 10 13.5137 7.92667 14.667 5C13.5137 2.07333 10.667 0 7.33301 0ZM7.33301 8.33334C5.49316 8.33334 4 6.84001 4 5C4 3.16 5.49316 1.66667 7.33301 1.66667C9.17285 1.66667 10.667 3.16 10.667 5C10.667 6.84001 9.17285 8.33334 7.33301 8.33334ZM5.33301 5C5.33301 3.89333 6.22656 3 7.33301 3C8.43945 3 9.33301 3.89333 9.33301 5C9.33301 6.10666 8.43945 7 7.33301 7C6.22656 7 5.33301 6.10666 5.33301 5Z" transform="translate(0.666992 3)" fill="white"/>
-    </mask>
-    <g mask="url(#svg-eye)">
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H16V16H0V0Z" fill="#3987E0"/>
-    </g>
-</svg>
-<span>1563</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="prev-card__body">
-                      <h4 class="prev-card__title">More tools for offchain transactions</h4>
-                      <p class="prev-card__descr">We have developed several tools that can help make transacting with Bitcoin cheaper incertain cases. We have developed several tools that can help make transacting with Bitcoin cheaper in certain cases. We have developed several tools that can help make transacting with Bitcoin cheaper in certain cases.</p>
-                    </div>
-                    <div class="prev-card__footer">
-                      <div class="prev-card__btn"><a class="l-btn l-btn--arr" href="#">
-                          <div class="l-btn__inner"><img src="img/icons/ic24pxarrow-right.png"/><span>Показать больше</span></div></a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="addition__footer">
-                <div class="sim-arr__btn-go"><a class="l-btn" href="#">Перейти ко всем статьям</a></div>
               </div>
             </div>
           </div>

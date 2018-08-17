@@ -151,8 +151,9 @@
                       <form class="form">
                         <div class="card__cols">
                           <div class="card__col">
-                            <h4 class="card__col-title">Тип Сделки</h4>
+                            <!--h4.card__col-title Тип Сделки-->
                             <div class="form__group">
+                              <label class="form__label">Тип Сделки</label>
                               <div class="form__input-box">
                                 <div class="form__input-sel custom-select">
                                   <select>
@@ -171,12 +172,13 @@
                             </div>
                           </div>
                           <div class="card__col">
-                            <h4 class="card__col-title">Тип Сделки</h4>
+                            <!--h4.card__col-title Выбор Валюты-->
                             <div class="form__group">
+                              <label class="form__label">Выбор Валюты</label>
                               <div class="form__input-box">
                                 <div class="form__input-sel custom-select">
                                   <select>
-                                    <option value="unseleceted" selected="selected">Кредитование</option>
+                                    <option value="unseleceted" selected="selected">Выбор валюты</option>
                                     <option value="USD">USD</option>
                                     <option value="EUR">EUR</option>
                                     <option value="GBP">GBP</option>
@@ -193,10 +195,72 @@
                           <div class="card__col card__col--full">
                             <div class="card__cols">
                               <div class="card__col">
+                                <!--h4.card__col-title Способ оплаты-->
+                                <div class="form__group">
+                                  <label class="form__label">Способ оплаты</label>
+                                  <div class="form__input-box">
+                                    <div class="form__input-sel custom-select">
+                                      <select>
+                                        <option value="unseleceted" selected="selected">Выберите способ оплаты</option>
+                                        <option value="USD">USD</option>
+                                        <option value="EUR">EUR</option>
+                                        <option value="GBP">GBP</option>
+                                        <option value="JPY">JPY</option>
+                                        <option value="CHF">CHF</option>
+                                        <option value="CNY">CNY</option>
+                                        <option value="RUB">RUB</option>
+                                        <option value="UAH">UAH</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card__col">
+                                <!--h4.card__col-title Способ оплаты-->
+                                <div class="form__group">
+                                  <label class="form__label">Способ оплаты</label>
+                                  <div class="form__input-box-wrap--with-delete">
+                                    <div class="form__input-box">
+                                      <input type="text"/>
+                                    </div>
+                                    <div class="svg-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="24" height="24" fill="black" fill-opacity="0"/>
+<mask id="svg-delete" mask-type="alpha" maskUnits="userSpaceOnUse" x="5" y="3" width="14" height="18">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 3L15.5 4H19V6H5V4H8.5L9.5 3H14.5ZM6 19C6 20.1 6.90039 21 8 21H16C17.0996 21 18 20.1 18 19V7H6V19ZM8.45996 11.88L9.87012 10.47L12 12.59L14.1201 10.47L15.5303 11.88L13.4102 14L15.5303 16.12L14.1201 17.53L12 15.4099L9.87988 17.53L8.46973 16.12L10.5898 14L8.45996 11.88Z" fill="white"/>
+</mask>
+<g mask="url(#svg-delete)">
+<rect width="24" height="24" fill="black" fill-opacity="0"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#EB5757"/>
+</g>
+</svg>
+
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card__col card__col--full">
+                            <button class="add-btn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="24" height="24" fill="black" fill-opacity="0"/>
+<mask id="svg-add" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.49023 2 2 6.48999 2 12C2 17.51 6.49023 22 12 22C17.5098 22 22 17.51 22 12C22 6.48999 17.5098 2 12 2ZM11 7V11H7V13H11V17H13V13H17V11H13V7H11ZM4 12C4 16.41 7.58984 20 12 20C16.4102 20 20 16.41 20 12C20 7.58997 16.4102 4 12 4C7.58984 4 4 7.58997 4 12Z" fill="white"/>
+</mask>
+<g mask="url(#svg-add)">
+<rect width="24" height="24" fill="black" fill-opacity="0"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
+</svg>
+<span>Добавить еще способ</span>
+                            </button>
+                          </div>
+                          <div class="card__col card__col--full">
+                            <div class="card__cols">
+                              <div class="card__col">
                                 <div class="form__group">
                                   <label class="form__label">Страна &nbsp<span class="warn">*</span></label>
                                   <div class="form__input-box">
-                                    <div class="form__input-sel custom-select">
+                                    <div class="form__input-sel custom-select custom-select--filter">
                                       <select>
                                         <option value="USD" selected="selected">Австралия</option>
                                         <option value="EUR"> Аргентина</option>
@@ -247,13 +311,21 @@
                                   <div class="card__col card__col--house">
                                     <div class="form__group">
                                       <label class="form__label">Дом &nbsp</label>
-                                      <input class="form__input" type="text"/>
+                                      <div class="form__input-box">
+                                        <div class="form__input-wrap">
+                                          <input type="text"/>
+                                        </div>
+                                      </div>
                                     </div>
                                   </div>
                                   <div class="card__col card__col--index">
                                     <div class="form__group">
                                       <label class="form__label">Индекс &nbsp</label>
-                                      <input class="form__input" type="text"/>
+                                      <div class="form__input-box">
+                                        <div class="form__input-wrap">
+                                          <input type="text"/>
+                                        </div>
+                                      </div>
                                     </div>
                                   </div>
                                   <div class="card__col card__col--deal-btn">
@@ -294,7 +366,9 @@
                             <div class="form__group">
                               <label class="form__label">Прибыль</label>
                               <div class="form__input-box">
-                                <input type="number"/>
+                                <div class="form__input-wrap">
+                                  <input type="number"/>
+                                </div>
                                 <div class="form__input-side"><span>%</span></div>
                               </div>
                             </div>
@@ -308,7 +382,9 @@
                                   <div class="form__group">
                                     <label class="form__label">Уравнение цены</label>
                                     <div class="form__input-box form__input-box--double">
-                                      <input type="text"/>
+                                      <div class="form__input-wrap">
+                                        <input type="text"/>
+                                      </div>
                                       <div class="form__input-footer"><span class="caption">по текущей рыночной стоимости: &nbsp</span><span class="form__price form__price--small">25,176.31 AED / BTC</span></div>
                                     </div>
                                   </div>
@@ -327,13 +403,17 @@
                           <div class="card__cols">
                             <div class="card__col">
                               <div class="form__input-box">
-                                <input type="number" placeholder="0"/>
+                                <div class="form__input-wrap">
+                                  <input type="number" placeholder="0"/>
+                                </div>
                                 <div class="form__input-side"><span>min</span></div>
                               </div>
                             </div>
                             <div class="card__col">
                               <div class="form__input-box">
-                                <input type="number" placeholder="0"/>
+                                <div class="form__input-wrap">
+                                  <input type="number" placeholder="0"/>
+                                </div>
                                 <div class="form__input-side"><span>max</span></div>
                               </div>
                             </div>
@@ -548,7 +628,9 @@
                                 </div>
                               </div>
                               <div class="form__input-box">
-                                <input type="number"/>
+                                <div class="form__input-wrap">
+                                  <input type="number"/>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -567,7 +649,9 @@
                                 </div>
                               </div>
                               <div class="form__input-box">
-                                <input type="number"/>
+                                <div class="form__input-wrap">
+                                  <input type="number"/>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -586,7 +670,9 @@
                                 </div>
                               </div>
                               <div class="form__input-box">
-                                <input type="number"/>
+                                <div class="form__input-wrap">
+                                  <input type="number"/>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -605,7 +691,9 @@
                                 </div>
                               </div>
                               <div class="form__input-box">
-                                <input type="number"/>
+                                <div class="form__input-wrap">
+                                  <input type="number"/>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -711,7 +799,9 @@
                               <div class="card__col">
                                 <div class="form__group">
                                   <div class="form__input-box">
-                                    <input type="number"/>
+                                    <div class="form__input-wrap">
+                                      <input type="number"/>
+                                    </div>
                                     <div class="form__input-side"><span>BTC</span></div>
                                   </div>
                                 </div>
@@ -731,7 +821,9 @@
                               <div class="card__col">
                                 <div class="form__group">
                                   <div class="form__input-box">
-                                    <input id="val" type="number" placeholder="валюта"/>
+                                    <div class="form__input-wrap">
+                                      <input id="val" type="number" placeholder="валюта"/>
+                                    </div>
                                     <!--.form__input-side-->
                                     <div class="form__input-sel form__input-sel--side form__input-sel--card">
                                       <div class="custom-select">
@@ -816,7 +908,9 @@
                                       </div>
                                     </label>
                                     <div class="form__input-box">
-                                      <input type="number" placeholder="0"/>
+                                      <div class="form__input-wrap">
+                                        <input type="number" placeholder="0"/>
+                                      </div>
                                       <div class="form__input-side"><span>%</span></div>
                                     </div>
                                   </div>
@@ -866,14 +960,16 @@
                                     </div>
                                   </label>
                                   <div class="form__input-box">
-                                    <input type="number" placeholder="0"/>
+                                    <div class="form__input-wrap">
+                                      <input type="number" placeholder="0"/>
+                                    </div>
                                     <div class="form__input-side"><span>%</span></div>
                                   </div>
                                 </div>
                               </div>
                               <div class="card__col">
                                 <div class="form__group">
-                                  <label class="form__label">
+                                  <label class="form__label form__label--with-delete">
                                     <div class="svg-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <mask id="svg-tultip" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 4.47998 4.48047 0 10 0C15.5195 0 20 4.47998 20 10C20 15.52 15.5195 20 10 20C4.48047 20 0 15.52 0 10ZM11 14V16H9V14H11ZM10 18C5.58984 18 2 14.4099 2 10C2 5.59009 5.58984 2 10 2C14.4102 2 18 5.59009 18 10C18 14.4099 14.4102 18 10 18ZM6 8C6 5.79004 7.79004 4 10 4C12.21 4 14 5.79004 14 8C14 9.28296 13.21 9.97339 12.4404 10.6455C11.7109 11.2832 11 11.9045 11 13H9C9 11.1787 9.94238 10.4565 10.7705 9.82153C11.4209 9.32349 12 8.87915 12 8C12 6.8999 11.0996 6 10 6C8.90039 6 8 6.8999 8 8H6Z" transform="translate(2 2)" fill="white"/>
@@ -885,9 +981,25 @@
 
                                     </div>
                                   </label>
-                                  <div class="form__input-box">
-                                    <input type="number" placeholder="0"/>
-                                    <div class="form__input-side"><span>%/мec</span></div>
+                                  <div class="form__input-box-wrap--with-delete">
+                                    <div class="form__input-box">
+                                      <div class="form__input-wrap">
+                                        <input type="number" placeholder="0"/>
+                                      </div>
+                                      <div class="form__input-side"><span>%/мec</span></div>
+                                    </div>
+                                    <div class="svg-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="24" height="24" fill="black" fill-opacity="0"/>
+<mask id="svg-delete" mask-type="alpha" maskUnits="userSpaceOnUse" x="5" y="3" width="14" height="18">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 3L15.5 4H19V6H5V4H8.5L9.5 3H14.5ZM6 19C6 20.1 6.90039 21 8 21H16C17.0996 21 18 20.1 18 19V7H6V19ZM8.45996 11.88L9.87012 10.47L12 12.59L14.1201 10.47L15.5303 11.88L13.4102 14L15.5303 16.12L14.1201 17.53L12 15.4099L9.87988 17.53L8.46973 16.12L10.5898 14L8.45996 11.88Z" fill="white"/>
+</mask>
+<g mask="url(#svg-delete)">
+<rect width="24" height="24" fill="black" fill-opacity="0"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#EB5757"/>
+</g>
+</svg>
+
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -906,14 +1018,16 @@
                                     </div>
                                   </label>
                                   <div class="form__input-box">
-                                    <input type="number" placeholder="0"/>
+                                    <div class="form__input-wrap">
+                                      <input type="number" placeholder="0"/>
+                                    </div>
                                     <div class="form__input-side"><span>%</span></div>
                                   </div>
                                 </div>
                               </div>
                               <div class="card__col">
                                 <div class="form__group">
-                                  <label class="form__label">
+                                  <label class="form__label form__label--with-delete">
                                     <div class="svg-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <mask id="svg-tultip" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 4.47998 4.48047 0 10 0C15.5195 0 20 4.47998 20 10C20 15.52 15.5195 20 10 20C4.48047 20 0 15.52 0 10ZM11 14V16H9V14H11ZM10 18C5.58984 18 2 14.4099 2 10C2 5.59009 5.58984 2 10 2C14.4102 2 18 5.59009 18 10C18 14.4099 14.4102 18 10 18ZM6 8C6 5.79004 7.79004 4 10 4C12.21 4 14 5.79004 14 8C14 9.28296 13.21 9.97339 12.4404 10.6455C11.7109 11.2832 11 11.9045 11 13H9C9 11.1787 9.94238 10.4565 10.7705 9.82153C11.4209 9.32349 12 8.87915 12 8C12 6.8999 11.0996 6 10 6C8.90039 6 8 6.8999 8 8H6Z" transform="translate(2 2)" fill="white"/>
@@ -925,9 +1039,25 @@
 
                                     </div>
                                   </label>
-                                  <div class="form__input-box">
-                                    <input type="number" placeholder="0"/>
-                                    <div class="form__input-side"><span>%/мec</span></div>
+                                  <div class="form__input-box-wrap--with-delete">
+                                    <div class="form__input-box">
+                                      <div class="form__input-wrap">
+                                        <input type="number" placeholder="0"/>
+                                      </div>
+                                      <div class="form__input-side"><span>%/мec</span></div>
+                                    </div>
+                                    <div class="svg-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="24" height="24" fill="black" fill-opacity="0"/>
+<mask id="svg-delete" mask-type="alpha" maskUnits="userSpaceOnUse" x="5" y="3" width="14" height="18">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 3L15.5 4H19V6H5V4H8.5L9.5 3H14.5ZM6 19C6 20.1 6.90039 21 8 21H16C17.0996 21 18 20.1 18 19V7H6V19ZM8.45996 11.88L9.87012 10.47L12 12.59L14.1201 10.47L15.5303 11.88L13.4102 14L15.5303 16.12L14.1201 17.53L12 15.4099L9.87988 17.53L8.46973 16.12L10.5898 14L8.45996 11.88Z" fill="white"/>
+</mask>
+<g mask="url(#svg-delete)">
+<rect width="24" height="24" fill="black" fill-opacity="0"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#EB5757"/>
+</g>
+</svg>
+
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -946,14 +1076,16 @@
                                     </div>
                                   </label>
                                   <div class="form__input-box">
-                                    <input type="number" placeholder="0"/>
+                                    <div class="form__input-wrap">
+                                      <input type="number" placeholder="0"/>
+                                    </div>
                                     <div class="form__input-side"><span>%</span></div>
                                   </div>
                                 </div>
                               </div>
                               <div class="card__col">
                                 <div class="form__group">
-                                  <label class="form__label">
+                                  <label class="form__label form__label--with-delete">
                                     <div class="svg-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <mask id="svg-tultip" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 4.47998 4.48047 0 10 0C15.5195 0 20 4.47998 20 10C20 15.52 15.5195 20 10 20C4.48047 20 0 15.52 0 10ZM11 14V16H9V14H11ZM10 18C5.58984 18 2 14.4099 2 10C2 5.59009 5.58984 2 10 2C14.4102 2 18 5.59009 18 10C18 14.4099 14.4102 18 10 18ZM6 8C6 5.79004 7.79004 4 10 4C12.21 4 14 5.79004 14 8C14 9.28296 13.21 9.97339 12.4404 10.6455C11.7109 11.2832 11 11.9045 11 13H9C9 11.1787 9.94238 10.4565 10.7705 9.82153C11.4209 9.32349 12 8.87915 12 8C12 6.8999 11.0996 6 10 6C8.90039 6 8 6.8999 8 8H6Z" transform="translate(2 2)" fill="white"/>
@@ -965,9 +1097,25 @@
 
                                     </div>
                                   </label>
-                                  <div class="form__input-box">
-                                    <input type="number" placeholder="0"/>
-                                    <div class="form__input-side"><span>%/мec</span></div>
+                                  <div class="form__input-box-wrap--with-delete">
+                                    <div class="form__input-box">
+                                      <div class="form__input-wrap">
+                                        <input type="number" placeholder="0"/>
+                                      </div>
+                                      <div class="form__input-side"><span>%/мec</span></div>
+                                    </div>
+                                    <div class="svg-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="24" height="24" fill="black" fill-opacity="0"/>
+<mask id="svg-delete" mask-type="alpha" maskUnits="userSpaceOnUse" x="5" y="3" width="14" height="18">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 3L15.5 4H19V6H5V4H8.5L9.5 3H14.5ZM6 19C6 20.1 6.90039 21 8 21H16C17.0996 21 18 20.1 18 19V7H6V19ZM8.45996 11.88L9.87012 10.47L12 12.59L14.1201 10.47L15.5303 11.88L13.4102 14L15.5303 16.12L14.1201 17.53L12 15.4099L9.87988 17.53L8.46973 16.12L10.5898 14L8.45996 11.88Z" fill="white"/>
+</mask>
+<g mask="url(#svg-delete)">
+<rect width="24" height="24" fill="black" fill-opacity="0"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#EB5757"/>
+</g>
+</svg>
+
+                                    </div>
                                   </div>
                                 </div>
                               </div>

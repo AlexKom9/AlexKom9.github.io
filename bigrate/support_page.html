@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Bigrate</title>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"/>
+  </head>
+  <body class="l-page">
+    <div class="l-wrap">
+      <!--h1 TITLE-->
+      <header class="header">
+        <div class="l-container">
+          <div class="header__inner">
+            <div class="header__logo"><span class="l-logo">Bigrate.</span></div>
+            <ul class="header__nav">
+              <li class="header__nav-item"><a class="header__nav-link" href="#">Разместить объявление</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="#">Форум</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="#">Блог</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="#">Справка</a></li>
+              <li class="header__nav-item header__nav-item--select">
+                <!--a(href="#").header__nav-link Русский--><img src="img/icons/language.png"/>
+                <div class="custom-select header__custom-select">
+                  <select>
+                    <option value="en">English</option>
+                    <option value="ru" selected="selected">Русский</option>
+                    <option value="uk">Українська</option>
+                  </select>
+                </div>
+              </li>
+              <li class="header__nav-item call-modal" data-id="modal-reg"><img src="img/icons/ic24PxLogin.png"/><a class="header__nav-link" href="#">Регистрация</a></li>
+              <li class="header__nav-item call-modal" data-id="modal-welcome"><img src="img/icons/ic24PxLanguage.png"/><a class="header__nav-link">Вход</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <section class="hero hero--blog">
+        <div class="l-container l-container--center">
+          <div class="l-inner l-inner--10">
+            <div class="hero__inner hero__inner--sapport hero__inner--column">
+              <h1 class="hero__title hero__title--left">Служба Поддержки</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="support">
+        <div class="l-container l-container--center">
+          <div class="l-inner l-inner--10">
+            <div class="support__inner">
+              <div class="card">
+                <div class="card__cols">
+                  <div class="card__col">
+                    <div class="card__sec">
+                      <p>Пожалуйста, уделите время, чтобы описать вашу проблему.<br/>Если никакая из опций ниже не подходит вашему случаю, отправьте нам сообщение с вашей проблемой.</p>
+                    </div>
+                    <h4 class="card__subtitle">Выберите вашу проблему</h4>
+                    <div class="card__sec">
+                      <div class="support__link-wrap"><a class="support__link" href="#">Я хочу сообщить о мошенничестве</a></div>
+                      <div class="support__link-wrap"><a class="support__link" href="#">Необходима помощь с оспариваемой сделкой</a></div>
+                      <div class="support__link-wrap"><a class="support__link" href="#">Проблемы с Биткойн транзакцией</a></div>
+                      <div class="support__link-wrap"><a class="support__link" href="#">Мой аккаунт был взломан</a></div>
+                      <div class="support__link-wrap"><a class="support__link" href="#">Я являюсь новым пользователем</a></div>
+                      <div class="support__link-wrap"><a class="support__link" href="#">Мой аккаунт заблокирован</a></div>
+                      <div class="support__link-wrap"><a class="support__link" href="#">У меня проблемы с объявлением</a></div>
+                      <div class="support__link-wrap"><a class="support__link" href="#">Я получил отзыв с нецензурной лексикой</a></div>
+                      <div class="support__link-wrap"><a class="support__link" href="#">Сообщить об ошибке на сайте (баг)</a></div>
+                      <div class="support__link-wrap"><a class="support__link" href="#">Я не могу зайти на свой аккаунт</a></div>
+                      <div class="support__link-wrap"><a class="support__link" href="#">Я не получаю письмо о подтверждении адреса электронной почты</a></div>
+                      <div class="support__link-wrap"><a class="support__link" href="#">Я не могу подтвердить свой номер телефона</a></div>
+                    </div>
+                  </div>
+                  <div class="card__col">
+                    <div class="form__group">
+                      <label class="form__label">Тема обращения</label>
+                      <div class="form__input-box">
+                        <div class="form__input-sel custom-select">
+                          <select>
+                            <option value="">Выберите тему обращения</option>
+                            <option value="1">1111111111111111111111</option>
+                            <option value="2">222222222222222222</option>
+                            <option value="3">3333</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__group">
+                      <label class="form__label">Email</label>
+                      <div class="form__input-box">
+                        <div class="form__input-wrap">
+                          <input type="email" value="init" placeholder="example@mail.com"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__group">
+                      <label class="form__label">Email
+                        <!--.form__input-wrap-->
+                      </label>
+                      <textarea class="form__textarea" type="text" rows="7" placeholder="Enter message... "></textarea>
+                    </div>
+                    <div class="support__btns">
+                      <div class="support__btn">
+                        <div class="l-btn l-btn--full">
+                          <div class="l-btn__inner"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="24" height="24" fill="white" fill-opacity="0"/>
+<path d="M13 6L11.59 7.30154L15.5 11H5V13H15.5L11.59 16.6985L13 18L19 12L13 6Z" fill="#B25C5C"/>
+<mask id="svg-arrow-right" mask-type="alpha" maskUnits="userSpaceOnUse" x="5" y="6" width="14" height="12">
+<path d="M13 6L11.59 7.30154L15.5 11H5V13H15.5L11.59 16.6985L13 18L19 12L13 6Z" fill="#B25C5C"/>
+</mask>
+<g mask="url(#svg-arrow-right)">
+<rect width="24" height="24" fill="#3987E0"/>
+</g>
+</svg>
+<span>Показать больше</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="support__btn">
+                        <div class="l-btn l-btn--primary l-btn--full">
+                          <div class="l-btn__inner"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="24" height="24" fill="white" fill-opacity="0"/>
+<path d="M13 6L11.59 7.30154L15.5 11H5V13H15.5L11.59 16.6985L13 18L19 12L13 6Z" fill="#B25C5C"/>
+<mask id="svg-arrow-right" mask-type="alpha" maskUnits="userSpaceOnUse" x="5" y="6" width="14" height="12">
+<path d="M13 6L11.59 7.30154L15.5 11H5V13H15.5L11.59 16.6985L13 18L19 12L13 6Z" fill="#B25C5C"/>
+</mask>
+<g mask="url(#svg-arrow-right)">
+<rect width="24" height="24" fill="#3987E0"/>
+</g>
+</svg>
+<span>Отправить</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="l-container">
+          <div class="footer__inner">
+            <div class="footer__info">
+              <div class="footer__logo">
+                <p class="l-logo">Bigrate.</p>
+              </div>
+              <div class="footer__socials"><a class="footer__socials-icon" href="#"><i class="fab fa-twitter"></i></a><a class="footer__socials-icon" href="#"><i class="fab fa-facebook-f"></i></a><a class="footer__socials-icon" href="#"><i class="fab fa-github"></i></a><a class="footer__socials-icon" href="#"><i class="fab fa-google-plus-g"></i></a></div>
+              <div class="footer__copy">
+                <p>Powered by<a href="//peiko.space">peiko</a></p>
+                <p>© 2018 Bigrate</p>
+              </div>
+            </div>
+            <div class="footer__links">
+              <div class="footer__group col-4"><a class="footer__group-name" href="#">О проекте</a>
+                <ul class="footer__grup-ul">
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">О Нас</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Комиссия</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Конфидециальность</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Условия предоставления услуг</a></li>
+                </ul>
+              </div>
+              <div class="footer__group col-4"><a class="footer__group-name" href="#">Поддержка</a>
+                <ul class="footer__grup-ul">
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Служба поддержки</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">FAQ</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Руководства</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Забыли пароль?</a></li>
+                </ul>
+              </div>
+              <div class="footer__group col-4"><a class="footer__group-name" href="#">Услуги</a>
+                <ul class="footer__grup-ul">
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Документация API</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Партнерская программа</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Руководства</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!--common scripts-->
+    <script src="js/modules/modal.js"></script>
+    <script type="text/javascript" src="js/modules/select-new.js"></script>
+  </body>
+</html>
