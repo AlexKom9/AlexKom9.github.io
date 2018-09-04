@@ -1,0 +1,539 @@
+
+<!--mixin l-check(label ,id)-->
+<!--	.form__check-wrap-->
+<!--		.form__check-->
+<!--			input(type="checkbox" id=id)-->
+<!--			label( for=id )= label-->
+<!--		block caption-->
+<!--			if block-->
+<!--				p.form__check-caption.caption-->
+<!--			else-->
+<!--		block hint-->
+<!--			if block-->
+<!--				.form__check-caption.caption-->
+<!--			else--><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Bigrate</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="libs/bootstrap.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+  </head>
+  <body class="l-page">
+    <div class="l-wrap">
+      <div class="header-wrap">
+        <header class="header">
+          <div class="l-container">
+            <div class="header__inner">
+              <div class="header__logo"><span class="l-logo">Bigrate.</span></div>
+              <div class="header__main">
+                <ul class="header__nav">
+                  <li class="header__nav-item"><a class="header__nav-link" href="#">Разместить объявление</a></li>
+                  <li class="header__nav-item"><a class="header__nav-link" href="#">Форум</a></li>
+                  <li class="header__nav-item"><a class="header__nav-link" href="#">Блог</a></li>
+                  <li class="header__nav-item"><a class="header__nav-link" href="#">Справка</a></li>
+                  <li class="header__nav-item header__nav-item--select"><img src="img/icons/language.png"/>
+                    <div class="custom-select header__custom-select">
+                      <select>
+                        <option value="en">English</option>
+                        <option value="ru" selected="selected">Русский</option>
+                        <option value="uk">Українська</option>
+                      </select>
+                    </div>
+                  </li>
+                  <li class="header__nav-item"><img src="img/icons/ic24PxLogin.png"/><a class="header__nav-link" href="#">Выйти</a></li>
+                </ul>
+                <div class="header__menu">
+                  <div class="header__menu-icon header__drop-container js-header-drop-container" id="js-header-notifications"><img src="img/icons/notification.svg"/>
+                    <div class="header__drop js-header-drop" id="js-header-notifications-drop">
+                      <div class="drop-head drop-head--notification">
+                        <div class="drop-head__inner">
+                          <ul class="drop-head__notes">
+                            <li class="drop-head__note">
+                              <div class="drop-head__note-icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16 32C24.8367 32 32 24.8365 32 16C32 7.16345 24.8367 0 16 0C7.16333 0 0 7.16345 0 16C0 24.8365 7.16333 32 16 32ZM10.6001 16L13.75 19.1499L21.7 11.2L22.75 12.25L13.75 21.25L9.55005 17.0499L10.6001 16Z" fill="#48D953"/>
+</svg>
+
+                              </div>
+                              <div class="drop-head__note-body">
+                                <p class="caption">2 минуты назад</p>
+                                <p class="color-secondary">Ваш номер телефона подтвержден</p>
+                              </div>
+                            </li>
+                            <li class="drop-head__note">
+                              <div class="drop-head__note-icon"><svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path d="M15.25 17.2573H16.75V14.2573H15.25V17.2573Z" fill="#EB5757"/>
+	<path d="M16.75 20.2573V18.7573H15.25V20.2573H16.75Z" fill="#EB5757"/>
+	<path fill-rule="evenodd" clip-rule="evenodd" d="M16 32.7573C24.8367 32.7573 32 25.5939 32 16.7573C32 7.92078 24.8367 0.757324 16 0.757324C7.16333 0.757324 0 7.92078 0 16.7573C0 25.5939 7.16333 32.7573 16 32.7573ZM24.25 22.5073L16 8.25732L7.75 22.5073H24.25Z" fill="#EB5757"/>
+</svg>
+
+                              </div>
+                              <div class="drop-head__note-body">
+                                <p class="caption">2 минуты назад</p>
+                                <p class="color-warn">Транзакция с пользователем &nbsp<strong>Valantinaggio &nbsp</strong>не совершилась</p>
+                              </div>
+                            </li>
+                            <li class="drop-head__note drop-head__note--transparent">
+                              <div class="drop-head__note-icon"><svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22 13.7573L16 17.5073L10 13.7573V12.2573L16 16.0073L22 12.2573V13.7573Z" fill="#C9C9C9"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16 32.7573C24.8367 32.7573 32 25.5939 32 16.7573C32 7.92078 24.8367 0.757324 16 0.757324C7.16333 0.757324 0 7.92078 0 16.7573C0 25.5939 7.16333 32.7573 16 32.7573ZM23.5 12.2573C23.5 11.4323 22.825 10.7573 22 10.7573H10C9.17505 10.7573 8.50757 11.4323 8.50757 12.2573L8.5 21.2573C8.5 22.0823 9.17505 22.7573 10 22.7573H22C22.825 22.7573 23.5 22.0823 23.5 21.2573V12.2573Z" fill="#C9C9C9"/>
+</svg>
+
+                              </div>
+                              <div class="drop-head__note-body">
+                                <p class="caption">Сообщение от пользователя &nbsp<strong>Valantinaggio</strong></p>
+                                <p class="caption">20 Авг. 19:41</p>
+                                <p class="drop-head__note-message">
+                                  Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+                                  
+                                </p>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="drop-head__footer"><span>Очистить все уведомления</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header__menu-icon"><img src="img/icons/wallet.svg"/></div>
+                  <div class="header__menu-user-wrap header__drop-container js-header-drop-container" id="js-header-user-menu-btn">
+                    <div class="header__menu-user"><img src="https://1ofdmq2n8tc36m6i46scovo2e-wpengine.netdna-ssl.com/wp-content/uploads/2014/04/Steven_Hallam-slide.jpg"/></div>
+                    <div class="header__menu-dots"><img src="img/icons/menu-dots.svg"/></div>
+                    <div class="header__drop js-header-drop" id="js-header-user-menu">
+                      <div class="drop-head">
+                        <ul class="drop-head__nav">
+                          <li class="drop-head__nav-item">
+                            <div class="drop-head__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-user-info" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="4" width="19" height="17">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8 8C10.21 8 12 6.21001 12 4C12 1.78999 10.21 0 8 0C5.79004 0 4 1.78999 4 4C4 6.21001 5.79004 8 8 8ZM6 13L9 10.06C8.61035 10.02 8.32031 10 8 10C5.33008 10 0 11.34 0 14V16H9L6 13ZM9 13L12.4697 16.5L19 9.91L17.5996 8.5L12.4697 13.67L10.4004 11.59L9 13Z" transform="translate(3 4)" fill="white"/>
+</mask>
+<g mask="url(#svg-user-info)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
+</svg>
+
+                            </div><span>Основная информация</span>
+                          </li>
+                          <li class="drop-head__nav-item">
+                            <div class="drop-head__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="24" height="24" fill="black" fill-opacity="0"/>
+<mask id="svg-edit" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="2" width="19" height="20">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M20.71 5.63004C21.0999 6.02005 21.0999 6.65005 20.71 7.04007L18.8799 8.87015L15.1299 5.12015L16.96 3.29007C17.3499 2.90005 17.98 2.90005 18.3699 3.29007L20.71 5.63004ZM3 21.0002V17.2502L14.0601 6.19009L17.8101 9.94009L6.75 21.0002H3Z" fill="white"/>
+</mask>
+<g mask="url(#svg-edit)">
+<rect width="24" height="24" fill="black" fill-opacity="0"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#C9C9C9"/>
+</g>
+</svg>
+
+                            </div><span>Редактировать профиль</span>
+                          </li>
+                          <li class="drop-head__nav-item">
+                            <div class="drop-head__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-log-out" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="3" width="18" height="18">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16 16V9H18V16C18 17.0996 17.1 18 16 18H2C0.899994 18 0 17.0996 0 16V9H2V16H16ZM5.41 6.41016L8 3.83008V13.5H10V3.83008L12.59 6.41016L14 5L9 0L4 5L5.41 6.41016Z" transform="translate(21 3) rotate(90)" fill="white"/>
+</mask>
+<g mask="url(#svg-log-out)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" transform="translate(24) rotate(90)" fill="#3987E0"/>
+</g>
+</svg>
+
+                            </div><span>Выйти из аккаунта</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header__burger">
+                    <div class="burger" id="js-mobile-menu-btn">
+                      <div class="burger__line"></div>
+                      <div class="burger__line"></div>
+                      <div class="burger__line"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="header__mobile-menu">
+          <div class="header-mobile-menu" id="js-mobile-menu">
+            <div class="header-mobile-menu__inner">
+              <ul class="header-mobile-menu__items">
+                <li class="header-mobile-menu__item"><a class="header-mobile-menu__item-link" href="#">Разместить объявление</a></li>
+                <li class="header-mobile-menu__item"><a class="header-mobile-menu__item-link" href="#">Справка</a></li>
+                <li class="header-mobile-menu__item"><a class="header-mobile-menu__item-link" href="#">Блог</a></li>
+                <li class="header-mobile-menu__item"><a class="header-mobile-menu__item-link" href="#">Форум</a></li>
+                <li class="header-mobile-menu__item"><a class="header-mobile-menu__item-link" href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-user-info" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="4" width="19" height="17">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8 8C10.21 8 12 6.21001 12 4C12 1.78999 10.21 0 8 0C5.79004 0 4 1.78999 4 4C4 6.21001 5.79004 8 8 8ZM6 13L9 10.06C8.61035 10.02 8.32031 10 8 10C5.33008 10 0 11.34 0 14V16H9L6 13ZM9 13L12.4697 16.5L19 9.91L17.5996 8.5L12.4697 13.67L10.4004 11.59L9 13Z" transform="translate(3 4)" fill="white"/>
+</mask>
+<g mask="url(#svg-user-info)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
+</svg>
+<span>Основная информация</span></a></li>
+                <li class="header-mobile-menu__item"><a class="header-mobile-menu__item-link" href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="24" height="24" fill="black" fill-opacity="0"/>
+<mask id="svg-edit" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="2" width="19" height="20">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M20.71 5.63004C21.0999 6.02005 21.0999 6.65005 20.71 7.04007L18.8799 8.87015L15.1299 5.12015L16.96 3.29007C17.3499 2.90005 17.98 2.90005 18.3699 3.29007L20.71 5.63004ZM3 21.0002V17.2502L14.0601 6.19009L17.8101 9.94009L6.75 21.0002H3Z" fill="white"/>
+</mask>
+<g mask="url(#svg-edit)">
+<rect width="24" height="24" fill="black" fill-opacity="0"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#C9C9C9"/>
+</g>
+</svg>
+<span>Редактировать профиль</span></a></li>
+                <li class="header-mobile-menu__item"><a class="header-mobile-menu__item-link" href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-log-out" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="3" width="18" height="18">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16 16V9H18V16C18 17.0996 17.1 18 16 18H2C0.899994 18 0 17.0996 0 16V9H2V16H16ZM5.41 6.41016L8 3.83008V13.5H10V3.83008L12.59 6.41016L14 5L9 0L4 5L5.41 6.41016Z" transform="translate(21 3) rotate(90)" fill="white"/>
+</mask>
+<g mask="url(#svg-log-out)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" transform="translate(24) rotate(90)" fill="#3987E0"/>
+</g>
+</svg>
+<span>Выйти из аккаунта</span></a></li>
+                <li class="header-mobile-menu__item header-mobile-menu__item--lang">
+                  <div class="header-mobile-menu__item-lang-box"><img src="img/icons/language.png"/>
+                    <div class="custom-select header__custom-select">
+                      <select>
+                        <option value="en">English</option>
+                        <option value="ru" selected="selected">Русский</option>
+                        <option value="uk">Українська</option>
+                      </select>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="h-stat">
+        <div class="l-container">
+          <div class="l-container-center">
+            <div class="l-inner l-inner--10">
+              <div class="h-stat__inner">
+                <div class="h-stat__items">
+                  <div class="h-stat__item">
+                    <p>Общий баланс кошелька</p>
+                    <p class="h-stat__val"><span>1.56987</span> BTC</p>
+                  </div>
+                  <div class="h-stat__item">
+                    <p>Комиссия за транзакцию</p>
+                    <p class="h-stat__val"><span>0.00005</span>  BTC</p>
+                  </div>
+                  <div class="h-stat__item">
+                    <p>Максимальная сумма для отправки</p>
+                    <p class="h-stat__val"><span>0.00005</span> BTC</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cards">
+        <div class="l-container">
+          <div class="l-container-center">
+            <div class="l-inner l-inner--10">
+              <h1 class="l-title">Подтверждение номера телефона</h1>
+              <div class="cards__card">
+                <div class="card">
+                  <div class="card__title"></div>
+                  <div class="card__sec">
+                    <div class="card__descr"></div>Подтвердите свой телефонный номер, чтобы повысить репутацию вашей учетной записи и  получить доступ к большему количеству объявлений.<br/>Выберите код страны и введите телефонный номер.
+                  </div>
+                  <form>
+                    <div class="card__sec">
+                      <div class="card__cols">
+                        <div class="card__col">
+                          <div class="card__col card__col--full">
+                            <div class="form__group">
+                              <label class="form__label">Страна</label>
+                              <div class="form__input-box">
+                                <div class="form__input-sel custom-select custom-select--filter">
+                                  <select>
+                                    <option>Мозамбик</option>
+                                    <option>Уганда</option>
+                                    <option>ЮАР</option>
+                                    <option>Танзания</option>
+                                    <option>Судан</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card__col card__col--full">
+                            <div class="card__cols">
+                              <div class="card__col card__col--phone-index">
+                                <div class="form__group">
+                                  <label class="form__label">Код</label>
+                                  <div class="form__input-box">
+                                    <input type="text" value="+38" disabled="disabled"/>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card__col card__col--phone">
+                                <label class="form__label">Номер телефона</label>
+                                <div class="form__group">
+                                  <div class="form__input-box">
+                                    <div class="form__input-wrap">
+                                      <input type="number"/>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__btn">
+                      <button class="l-btn l-btn--primary l-btn--big-padding">
+                        <div class="l-btn__inner"><span>Отправить СМС</span>
+                        </div>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <h1 class="l-title">Подтверждение номера телефона</h1>
+              <div class="cards__card">
+                <div class="card">
+                  <div class="card__title"></div>
+                  <div class="card__sec">
+                    <div class="card__descr"></div>Мы отправили SMS-сообщение с проверочным кодом на ваш телефонный номер +380686536365.<br/>Введите код подтверждения в поле ниже.
+                  </div>
+                  <form>
+                    <div class="card__sec">
+                      <div class="card__cols">
+                        <div class="card__col">
+                          <div class="card__col card__col--full">
+                            <div class="form__group">
+                              <div class="form__label">Код потверждения</div>
+                              <div class="form__input-box">
+                                <div class="form__input-wrap">
+                                  <input type="number"/>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card__coll card__col--full">
+                            <div class="card__descr">Ничего не пришло? &nbsp<a href="#">Отправить код повторно</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__btn">
+                      <button class="l-btn l-btn--primary l-btn--big-padding">
+                        <div class="l-btn__inner"><span>Отправить СМС</span>
+                        </div>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <h1 class="l-title">Изменение номера телефона</h1>
+              <div class="cards__card">
+                <div class="card">
+                  <div class="card__sec">
+                    <h3 class="card__subtitle">Для изменения номера телефона вам нужно сначала деактивировать старй номер</h3>
+                  </div>
+                  <div class="card__sec">
+                    <p>Вы можете деактивировать номер телефона вашей учетной записи здесь. Если вы продолжите, мы отправим вам SMS-подтверждение на номер телефона. Вы сможете завершить процесс деактивации мгновенно с кодом подтверждения. Если номер телефона недоступен, то деактивация произойдет через 24 часа.<br/><br/>Процесс деактивации можно отменить в любое время, до того как он будет деактивирован навсегда (через 24 часа).<br/><br/>Вы собираетесь деактивировать номер +38 068 695 3654</p>
+                  </div>
+                  <form>
+                    <div class="card__sec">
+                      <div class="form__check-wrap">
+                        <div class="form__check">
+                          <input type="checkbox" id="deactivate-phone"/>
+                          <label for="deactivate-phone">Деактивировть номер</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__btn">
+                      <button class="l-btn l-btn--primary l-btn--big-padding" type="submit">
+                        <div class="l-btn__inner"><span>Подтвердить</span>
+                        </div>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <h1 class="l-title">Изменить адрес электронной почты</h1>
+              <div class="cards__card">
+                <div class="card">
+                  <div class="card__sec">
+                    <p>После изменения адреса электронной почты, вам придется подтвердить его снова. Если сразу после его изменения вы не получили email подтверждения, выполните следующие действия:</p>
+                  </div>
+                  <div class="card__sec">
+                    <ul>
+                      <li>• Подождите еще немного</li>
+                      <li>• Проверьте папку spam</li>
+                      <li>• Используйте другой адрес электронной почты</li>
+                    </ul>
+                  </div>
+                  <div class="card__sec">
+                    <p>Если вы не подтвердите вашу электронную почту в течение 24 часов, мы отправим еще один email подтверждения. Если вы не осуществите подтверждение в течение 72 часов, неподтвержденный email адрес будет удален из вашей учетной записи. Потом вы сможете подтвердить другой адрес электронной почты.
+                      <bt></bt>Так как восстановление учетной записи привязано к вашему подтведжденному email адресу, вам потребуется подтвердить это действие, используя ваши регистрационные данные.
+                    </p>
+                  </div>
+                  <form>
+                    <div class="card__sec">
+                      <div class="card__cols">
+                        <div class="card__col">
+                          <div class="forom__group">
+                            <div class="form__label">Ваш пароль &nbsp<span class="warn">*</span></div>
+                            <div class="form__input-box">
+                              <div class="form__input-wrap">
+                                <input type="password"/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__sec">
+                      <p>Пожалуйста, подтвердите изменение адреса электронной почты вашим паролем</p>
+                    </div>
+                    <div class="card__sec">
+                      <div class="card__cols">
+                        <div class="card__col">
+                          <div class="forom__group">
+                            <div class="form__label">Новый адрес электронной почты</div>
+                            <div class="form__input-box">
+                              <div class="form__input-wrap">
+                                <input type="email"/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__sec"><img src="img/captcha.jpg" alt="captcha"/></div>
+                    <div class="card__btn">
+                      <button class="l-btn l-btn--primary l-btn--big-padding">
+                        <div class="l-btn__inner"><span>Изменить</span>
+                        </div>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <h1 class="l-title">Проверка личности службой Bigrate</h1>
+              <div class="card__cards">
+                <div class="card">
+                  <div class="card__sec">
+                    <p>Чтобы начать проверку удостоверения личности, пожалуйста, воспользуйтесь формой ниже. После того как служба Bigrate проверит ваше удостоверение, вы сможете покупать и продавать биткоины у гораздо большего количества  трейдеров.<br/>Следующие условия являются обязательными для успешного прохождения проверки личности:</p>
+                  </div>
+                  <div class="card__sec">
+                    <ul>
+                      <li>• вы не скрыли и не сделали нечеткой какие-либо данные на вашем удостоверении личности;</li>
+                      <li>• вы ничего не подписали поверх изображения или удостоверения личности;</li>
+                      <li>• на фотографии видны все четыре уголка вашего удостоверения личности;</li>
+                      <li>• ваше удостоверение сфотографировано в прямом ракурсе, искаженные изображения не обрабатываются;</li>
+                      <li>• при фотографировании вы не пользовались вспышкой, и на изображении нет бликов;</li>
+                      <li>• фотография цветная.</li>
+                    </ul>
+                  </div>
+                  <div class="card__sec">
+                    <p>Для прохождения проверки приготовьте ваше удостоверение личности</p>
+                  </div>
+                  <div class="card__sec">
+                    <div class="card__cols">
+                      <div class="card__col">
+                        <div class="form__group">
+                          <label class="form__label">Укажите страну выдачи</label>
+                          <div class="form__input-box">
+                            <div class="form__input-sel custom-select custom-select--filter">
+                              <select>
+                                <option value="USD" selected="selected">Австралия</option>
+                                <option value="EUR"> Аргентина</option>
+                                <option value="GBP">Уганда</option>
+                                <option value="JPY">Мавритания</option>
+                                <option value="CHF">Чад</option>
+                                <option value="CNY">Мозамбик</option>
+                                <option value="RUB">Судан</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card__col card__col--full">
+                        <p>Пожалуйста, подтвердите изменение адреса электронной почты вашим паролем</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card__sec"><img src="img/netverify.jpg"/></div>
+                  <div class="card__btn">
+                    <button class="l-btn l-btn--primary l-btn--big-padding">
+                      <div class="l-btn__inner"><span>Начать верификацию</span>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="l-container">
+          <div class="footer__inner">
+            <div class="footer__info">
+              <div class="footer__logo">
+                <p class="l-logo">Bigrate.</p>
+              </div>
+              <div class="footer__socials"><a class="footer__socials-icon" href="#"><i class="fab fa-twitter"></i></a><a class="footer__socials-icon" href="#"><i class="fab fa-facebook-f"></i></a><a class="footer__socials-icon" href="#"><i class="fab fa-github"></i></a><a class="footer__socials-icon" href="#"><i class="fab fa-google-plus-g"></i></a></div>
+              <div class="footer__copy">
+                <p>Powered by &nbsp<a class="color-primary" href="//peiko.space">peiko</a></p>
+                <p>© 2018 Bigrate</p>
+              </div>
+            </div>
+            <div class="footer__links">
+              <div class="footer__group">
+                <input type="checkbox" id="about" name="footer-groups"/>
+                <label class="footer__group-name" for="about">О проекте</label>
+                <ul class="footer__group-ul">
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">О Нас</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Комиссия</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Конфидециальность</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Условия предоставления услуг</a></li>
+                </ul>
+              </div>
+              <div class="footer__group">
+                <input type="checkbox" id="support" name="footer-groups"/>
+                <label class="footer__group-name" for="support">Поддержка</label>
+                <ul class="footer__group-ul">
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Служба поддержки</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">FAQ</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Руководства</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Забыли пароль?</a></li>
+                </ul>
+              </div>
+              <div class="footer__group">
+                <input type="checkbox" id="services" name="footer-groups"/>
+                <label class="footer__group-name" for="services">Услуги</label>
+                <ul class="footer__group-ul">
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Документация API</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Партнерская программа</a></li>
+                  <li class="footer__group-li"><a class="footer__group-link" href="link.link">Руководства</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__copy footer__copy--mobile">
+              <p>Powered by &nbsp<a class="color-primary" href="//peiko.space">peiko</a></p>
+              <p>© 2018 Bigrate</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

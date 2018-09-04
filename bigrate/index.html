@@ -11,361 +11,320 @@
   <body class="l-page">
     <div class="l-wrap">
       <!--h1 TITLE-->
-      <header class="header">
-        <div class="l-container">
-          <div class="header__inner">
-            <div class="header__logo"><span class="l-logo">Bigrate.</span></div>
-            <ul class="header__nav">
-              <li class="header__nav-item"><a class="header__nav-link" href="#">Разместить объявление</a></li>
-              <li class="header__nav-item"><a class="header__nav-link" href="#">Форум</a></li>
-              <li class="header__nav-item"><a class="header__nav-link" href="#">Блог</a></li>
-              <li class="header__nav-item"><a class="header__nav-link" href="#">Справка</a></li>
-              <li class="header__nav-item header__nav-item--select">
-                <!--a(href="#").header__nav-link Русский--><img src="img/icons/language.png"/>
-                <div class="custom-select header__custom-select">
-                  <select>
-                    <option value="en">English</option>
-                    <option value="ru" selected="selected">Русский</option>
-                    <option value="uk">Українська</option>
-                  </select>
+      <div class="header-wrap">
+        <header class="header">
+          <div class="l-container">
+            <div class="header__inner">
+              <div class="header__logo"><span class="l-logo">Bigrate.</span></div>
+              <div class="header__main">
+                <ul class="header__nav">
+                  <li class="header__nav-item"><a class="header__nav-link" href="#">Разместить объявление</a></li>
+                  <li class="header__nav-item"><a class="header__nav-link" href="#">Форум</a></li>
+                  <li class="header__nav-item"><a class="header__nav-link" href="#">Блог</a></li>
+                  <li class="header__nav-item"><a class="header__nav-link" href="#">Справка</a></li>
+                  <li class="header__nav-item header__nav-item--select">
+                    <!--a(href="#").header__nav-link Русский--><img src="img/icons/language.png"/>
+                    <div class="custom-select header__custom-select">
+                      <select>
+                        <option value="en">English</option>
+                        <option value="ru" selected="selected">Русский</option>
+                        <option value="uk">Українська</option>
+                      </select>
+                    </div>
+                  </li>
+                  <li class="header__nav-item call-modal" data-id="modal-reg"><img src="img/icons/ic24PxLogin.png"/><a class="header__nav-link" href="#">Регистрация</a></li>
+                  <li class="header__nav-item call-modal" data-id="modal-welcome"><img src="img/icons/ic24PxLanguage.png"/><a class="header__nav-link">Вход</a></li>
+                </ul>
+                <div class="header__burger">
+                  <div class="burger" id="js-mobile-menu-btn">
+                    <div class="burger__line"></div>
+                    <div class="burger__line"></div>
+                    <div class="burger__line"></div>
+                  </div>
                 </div>
-              </li>
-              <li class="header__nav-item call-modal" data-id="modal-reg"><img src="img/icons/ic24PxLogin.png"/><a class="header__nav-link" href="#">Регистрация</a></li>
-              <li class="header__nav-item call-modal" data-id="modal-welcome"><img src="img/icons/ic24PxLanguage.png"/><a class="header__nav-link">Вход</a></li>
-            </ul>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="header__mobile-menu">
+          <div class="header-mobile-menu" id="js-mobile-menu">
+            <div class="header-mobile-menu__inner">
+              <ul class="header-mobile-menu__items">
+                <li class="header-mobile-menu__item"><a class="header-mobile-menu__item-link" href="#">Разместить объявление</a></li>
+                <li class="header-mobile-menu__item"><a class="header-mobile-menu__item-link" href="#">Справка</a></li>
+                <li class="header-mobile-menu__item"><a class="header-mobile-menu__item-link" href="#">Блог</a></li>
+                <li class="header-mobile-menu__item"><a class="header-mobile-menu__item-link" href="#">Форум</a></li>
+                <li class="header-mobile-menu__item"><a class="header-mobile-menu__item-link" href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-signup" mask-type="alpha" maskUnits="userSpaceOnUse" x="1" y="4" width="22" height="16">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15 12C17.21 12 19 10.21 19 8C19 5.79 17.21 4 15 4C12.79 4 11 5.79 11 8C11 10.21 12.79 12 15 12ZM6 10V7H4V10H1V12H4V15H6V12H9V10H6ZM7 18C7 15.34 12.3301 14 15 14C17.6699 14 23 15.34 23 18V20H7V18Z" fill="white"/>
+</mask>
+<g mask="url(#svg-signup)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
+</svg>
+<span>Регистрация</span></a></li>
+                <li class="header-mobile-menu__item"><a class="header-mobile-menu__item-link" href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-login" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="3" width="18" height="18">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5 19H12V21H5C3.8999 21 3 20.1 3 19V5C3 3.89999 3.8999 3 5 3L12 3V5L5 5L5 19ZM13.9102 15.59L11.3301 13H21V11H11.3301L13.9102 8.41L12.5 7L7.5 12L12.5 17L13.9102 15.59Z" fill="white"/>
+</mask>
+<g mask="url(#svg-login)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M24 0V24H0V0L24 0Z" fill="#3987E0"/>
+</g>
+</svg>
+<span>Вход</span></a></li>
+                <li class="header-mobile-menu__item header-mobile-menu__item--lang">
+                  <div class="header-mobile-menu__item-lang-box"><img src="img/icons/language.png"/>
+                    <div class="custom-select header__custom-select">
+                      <select>
+                        <option value="en">English</option>
+                        <option value="ru" selected="selected">Русский</option>
+                        <option value="uk">Українська</option>
+                      </select>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </header>
+      </div>
       <section class="hero">
-        <div class="l-container l-container--center">
-          <div class="hero__inner">
-            <div class="hero__main">
-              <h1 class="hero__title">Покупка и продажа биткоинов</h1>
-              <p class="hero__subtitle">Совершайте безопасные анонимные сделки рядом с Вами или онлайн</p>
-              <div class="hero__reg-btn"><a class="l-btn l-btn--white" href="#"><span>Зарегестрироваться</span></a></div>
-            </div>
-            <div class="hero__widget">
-              <div class="widget">
-                <form class="form">
-                  <div class="widget__head">
-                    <h4 class="widget__head-name">Быстрый поиск сделки</h4>
-                  </div>
-                  <div class="widget__inner">
-                    <div class="form__group">
-                      <label class="form__label" for="email-log">Логин или Email</label>
-                      <div class="form__input-box">
-                        <input id="val" type="number" placeholder="валюта"/>
-                        <div class="form__input-sel form__input-sel--side custom-select">
-                          <select>
-                            <option value="unseleceted" selected="selected">валюта</option>
-                            <option value="USD">USD</option>
-                            <option value="EUR">EUR</option>
-                            <option value="GBP">GBP</option>
-                            <option value="JPY">JPY</option>
-                            <option value="CHF">CHF</option>
-                            <option value="CNY">CNY</option>
-                            <option value="RUB">RUB</option>
-                            <option value="UAH">UAH</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form__group">
-                      <label class="form__label">Тип сделки</label>
-                      <div class="form__input-box">
-                        <div class="form__input-sel custom-select">
-                          <select>
-                            <option value="USD" selected="selected">USD</option>
-                            <option value="EUR">EUR</option>
-                            <option value="GBP">GBP</option>
-                            <option value="JPY">JPY</option>
-                            <option value="CHF">CHF</option>
-                            <option value="CNY">CNY</option>
-                            <option value="RUB">RUB</option>
-                            <option value="UAH">UAH</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form__group">
-                      <label class="form__label">Страна</label>
-                      <div class="form__input-box">
-                        <div class="form__input-sel custom-select">
-                          <select>
-                            <option value="USD" selected="selected">Австралия</option>
-                            <option value="EUR"> Аргентина</option>
-                            <option value="GBP">Уганда</option>
-                            <option value="JPY">Мавритания</option>
-                            <option value="CHF">Чад</option>
-                            <option value="CNY">Мозамбик</option>
-                            <option value="RUB">Судан</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form__group">
-                      <label class="form__label">Способ оплаты</label>
-                      <div class="form__input-box">
-                        <div class="form__input-sel custom-select">
-                          <select>
-                            <option value="cash-post" selected="selected">Наличные по почте</option>
-                            <option value="cash-account">Внесение наличных на счет</option>
-                            <option value="inner-bank-transfer">Банковские переводы внутри банка</option>
-                            <option value="pay-pal">Pay Pal</option>
-                            <option value="bank-transfer">Переводы через конкретный банк</option>
-                            <option value="CNY">CNY</option>
-                            <option value="RUB">RUB</option>
-                            <option value="UAH">UAH</option>
-                          </select>
-                        </div>
-                        <!--.sel-->
-                        <!--	.sel__box.sel__box--opened-->
-                        <!--		span Выбрать-->
-                        <!--	.sel__drop-->
-                        <!--		ul-->
-                        <!--			li.sel__item e-->
-                        <!--			li.sel__item Внесение наличных на счет-->
-                        <!--			li.sel__item Банковские переводы внутри банка-->
-                        <!--			li.sel__item Pay Pal-->
-                        <!--			li.sel__item Переводы через конкретный банк-->
-                      </div>
-                    </div>
-                    <div class="form__btn">
-                      <button class="l-btn l-btn--primary l-btn--full" type="submit">Найти</button>
-                    </div>
-                  </div>
-                </form>
+        <div class="l-container">
+          <div class="l-container-center">
+            <div class="hero__inner">
+              <div class="hero__main">
+                <h1 class="hero__title">Покупка и продажа биткоинов</h1>
+                <p class="hero__subtitle">Совершайте безопасные анонимные сделки рядом с Вами или онлайн</p>
+                <div class="hero__reg-btn"><a class="l-btn l-btn--white" href="#"><span>Зарегестрироваться</span></a></div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="orders">
-        <div class="l-container l-container--center">
-          <div class="l-inner l-inner--10">
-            <div class="orders__inner">
-              <div class="orders__h-control">
-                <div class="orders__h-control-switch">
-                  <div class="switch">
-                    <input id="swOnline" type="radio" name="typeSwitch" checked="checked"/>
-                    <label class="switch-state" for="swOnline"><span>Онлайн</span></label>
-                    <input id="swLocal" type="radio" name="typeSwitch"/>
-                    <label class="switch-state" for="swLocal"><span>Локально</span></label>
-                  </div>
-                </div>
-                <div class="orders__h-control-country">
-                  <div class="country"><span>Страна :</span>
-                    <div class="country__box country__box--opened"><span>Европа</span>
-                      <div class="country__drop">
-                        <div class="country__drop-head">
-                          <p>Страна</p>
-                          <input type="text" placeholder="Начните вводить"/>
+              <div class="hero__widget">
+                <div class="card card--widgwt">
+                  <form class="form">
+                    <div class="card__head">
+                      <h4 class="card__title card__title--center">Быстрый поиск сделки</h4>
+                    </div>
+                    <div class="card__inner">
+                      <div class="card__cols">
+                        <div class="card__col card__col--always-split">
+                          <div class="form__group">
+                            <label class="form__label" for="email-log">Сумма</label>
+                            <div class="form__input-box">
+                              <input id="val" type="number" placeholder=""/>
+                            </div>
+                          </div>
                         </div>
-                        <ul>
-                          <li>Австралия</li>
-                          <li>Австралия</li>
-                          <li>Австралия</li>
-                          <li>Австралия</li>
-                          <li>Австралия</li>
-                          <li>Австралия</li>
-                          <li>Австралия</li>
-                          <li>Австралия</li>
-                          <li>Австралия</li>
-                        </ul>
+                        <div class="card__col card__col--always-split">
+                          <div class="form__group">
+                            <label class="form__label" for="email-log">Валюта</label>
+                            <div class="form__input-box">
+                              <div class="form__input-sel custom-select">
+                                <select>
+                                  <option value="unseleceted" selected="selected">валюта</option>
+                                  <option value="USD">USD</option>
+                                  <option value="EUR">EUR</option>
+                                  <option value="GBP">GBP</option>
+                                  <option value="JPY">JPY</option>
+                                  <option value="CHF">CHF</option>
+                                  <option value="CNY">CNY</option>
+                                  <option value="RUB">RUB</option>
+                                  <option value="UAH">UAH</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__group">
+                        <label class="form__label">Тип сделки</label>
+                        <div class="form__input-box">
+                          <div class="form__input-sel custom-select">
+                            <select>
+                              <option value="USD" selected="selected">USD</option>
+                              <option value="EUR">EUR</option>
+                              <option value="GBP">GBP</option>
+                              <option value="JPY">JPY</option>
+                              <option value="CHF">CHF</option>
+                              <option value="CNY">CNY</option>
+                              <option value="RUB">RUB</option>
+                              <option value="UAH">UAH</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__group">
+                        <label class="form__label">Страна</label>
+                        <div class="form__input-box">
+                          <div class="form__input-sel custom-select">
+                            <select>
+                              <option value="USD" selected="selected">Австралия</option>
+                              <option value="EUR"> Аргентина</option>
+                              <option value="GBP">Уганда</option>
+                              <option value="JPY">Мавритания</option>
+                              <option value="CHF">Чад</option>
+                              <option value="CNY">Мозамбик</option>
+                              <option value="RUB">Судан</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__group">
+                        <label class="form__label">Способ оплаты</label>
+                        <div class="form__input-box">
+                          <div class="form__input-sel custom-select">
+                            <select>
+                              <option value="cash-post" selected="selected">Наличные по почте</option>
+                              <option value="cash-account">Внесение наличных на счет</option>
+                              <option value="inner-bank-transfer">Банковские переводы внутри банка</option>
+                              <option value="pay-pal">Pay Pal</option>
+                              <option value="bank-transfer">Переводы через конкретный банк</option>
+                              <option value="CNY">CNY</option>
+                              <option value="RUB">RUB</option>
+                              <option value="UAH">UAH</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__btn">
+                        <button class="l-btn l-btn--primary l-btn--full" type="submit">Найти</button>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div class="info-tab__table">
-                <div class="i-tab">
-                  <div class="i-tab__tabs">
-                    <div class="i-tab__tabs-wrap">
-                      <div class="i-tab__tab i-tab__tab--active"><span>Купить биткоин онлайн</span></div>
-                      <div class="i-tab__tab"><span>Купить биткоин за наличные</span></div>
-                      <div class="i-tab__tab"><span>Продать биткоин онлайн</span></div>
-                    </div>
-                  </div>
-                  <div class="i-tab__inner">
-                    <div class="i-tab__content">
-                      <div class="i-tab__head i-tab__row">
-                        <div class="i-tab__head-cell i-tab__cell"><span>Продавец</span></div>
-                        <div class="i-tab__head-cell i-tab__cell"><span>Способ оплаты</span></div>
-                        <div class="i-tab__head-cell i-tab__head-cell--sort i-tab__head-cell--up i-tab__cell"><span>Цена /BTC</span></div>
-                        <div class="i-tab__head-cell i-tab__cell"><span>Лимит</span></div>
-                      </div>
-                      <div class="i-tab__row">
-                        <div class="i-tab__cell online">
-                          <p class="i-tab__prod-name">Jugernaut<span class="dot"></span></p>
-                          <div class="i-tab__rat">
-                            <div class="rat">
-                              <div class="rat__str">Рейтинг</div>
-                              <div class="rat__line">
-                                <div class="rat__inner abs"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="i-tab__cell"><span class="i-tab__payment">National Bank Transfer</span></div>
-                        <div class="i-tab__cell">
-                          <p class="i-tab__price-usd">7521.2 USD</p>
-                          <p class="i-tab__price-hint">Наценка</p>
-                          <p class="i-tab__price-markup">-6,4%</p>
-                        </div>
-                        <div class="i-tab__cell">
-                          <p class="i-tab__limit">120 - 180 USD</p>
-                        </div>
-                        <div class="i-tab__cell">
-                          <div class="i-tab__buy"><a class="l-btn l-btn--sec" href="#">Купить</a></div>
-                        </div>
-                      </div>
-                      <div class="i-tab__row">
-                        <div class="i-tab__cell offline">
-                          <p class="i-tab__prod-name">Jugernaut<span class="dot"></span></p>
-                          <div class="i-tab__rat">
-                            <div class="rat">
-                              <div class="rat__str">Рейтинг</div>
-                              <div class="rat__line">
-                                <div class="rat__inner conf"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="i-tab__cell"><span class="i-tab__payment">National Bank Transfer</span></div>
-                        <div class="i-tab__cell">
-                          <p class="i-tab__price-usd">7521.2 USD</p>
-                          <p class="i-tab__price-hint">Наценка</p>
-                          <p class="i-tab__price-markup">-6,4%</p>
-                        </div>
-                        <div class="i-tab__cell">
-                          <p class="i-tab__limit">120 - 180 USD</p>
-                        </div>
-                        <div class="i-tab__cell">
-                          <div class="i-tab__buy"><a class="l-btn l-btn--sec" href="#">Купить</a></div>
-                        </div>
-                      </div>
-                      <div class="i-tab__row">
-                        <div class="i-tab__cell away">
-                          <p class="i-tab__prod-name">Jugernaut<span class="dot"></span></p>
-                          <div class="i-tab__rat">
-                            <div class="rat">
-                              <div class="rat__str">Рейтинг</div>
-                              <div class="rat__line">
-                                <div class="rat__inner mid"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="i-tab__cell"><span class="i-tab__payment">National Bank Transfer</span></div>
-                        <div class="i-tab__cell">
-                          <p class="i-tab__price-usd">7521.2 USD</p>
-                          <p class="i-tab__price-hint">Наценка</p>
-                          <p class="i-tab__price-markup">-6,4%</p>
-                        </div>
-                        <div class="i-tab__cell">
-                          <p class="i-tab__limit">120 - 180 USD</p>
-                        </div>
-                        <div class="i-tab__cell">
-                          <div class="i-tab__buy"><a class="l-btn l-btn--sec" href="#">Купить</a></div>
-                        </div>
-                      </div>
-                      <div class="i-tab__row">
-                        <div class="i-tab__cell online">
-                          <p class="i-tab__prod-name">Jugernaut<span class="dot"></span></p>
-                          <div class="i-tab__rat">
-                            <div class="rat">
-                              <div class="rat__str">Рейтинг</div>
-                              <div class="rat__line">
-                                <div class="rat__inner danger"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="i-tab__cell"><span class="i-tab__payment">National Bank Transfer</span></div>
-                        <div class="i-tab__cell">
-                          <p class="i-tab__price-usd">7521.2 USD</p>
-                          <p class="i-tab__price-hint">Наценка</p>
-                          <p class="i-tab__price-markup">-6,4%</p>
-                        </div>
-                        <div class="i-tab__cell">
-                          <p class="i-tab__limit">120 - 180 USD</p>
-                        </div>
-                        <div class="i-tab__cell">
-                          <div class="i-tab__buy"><a class="l-btn l-btn--sec" href="#">Купить</a></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="i-tab__footer"><a class="l-btn l-btn--arr" href="#">
-                      <div class="l-btn__inner"><img src="img/icons/reload-more.png"/><span>Показать больше</span></div></a></div>
+                  </form>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <div id="OrderApp"></div>
       <section class="addition">
-        <div class="l-container l-container--center">
-          <div class="l-inner l-inner--10">
-            <div class="addition__inner">
-              <div class="l-title">
-                <h2>Полезные статьи и новости</h2>
-              </div>
-              <div class="addition__cards">
-                <div class="addition__card">
-                  <div class="prev-card">
-                    <div class="prev-card__head" style="background-image: url(img/card_prev.png)"></div>
-                    <div class="prev-card__info">
-                      <div class="prev-card__info-date"><img src="img/icons/access_time_24px.png" srcset="img/icons/access_time_24px@2x.png 2x,img/icons/access_time_24px@3x.png 3x"/><span>20.03.2017</span></div>
-                      <div class="prev-card__info-views"><img src="img/icons/eye.png" srcset="img/icons/eye@2x.png 2x, img/icons/eye@3x.png 3x,"/><span>153</span></div>
+        <div class="l-container">
+          <div class="l-container-center">
+            <div class="l-inner l-inner--10">
+              <div class="addition__inner">
+                <h2 class="l-subtitle">Полезные статьи и новости</h2>
+                <div class="addition__cards">
+                  <div class="addition__card">
+                    <div class="prev-card">
+                      <div class="prev-card__head" style="background-image: url(img/card_prev.png)"></div>
+                      <div class="prev-card__info">
+                        <div class="prev-card__info-date">
+                          <div class="date"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="1" y="1" width="14" height="14">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.66016 0C2.98047 0 0 2.98666 0 6.66667C0 10.3467 2.98047 13.3333 6.66016 13.3333C10.3467 13.3333 13.333 10.3467 13.333 6.66667C13.333 2.98666 10.3467 0 6.66016 0ZM6.66602 12C3.71973 12 1.33301 9.61333 1.33301 6.66666C1.33301 3.72 3.71973 1.33333 6.66602 1.33333C9.61328 1.33333 12 3.72 12 6.66666C12 9.61333 9.61328 12 6.66602 12ZM6 3.33333H7V6.83333L10 8.61333L9.5 9.43333L6 7.33333V3.33333Z" transform="translate(1.33301 1.33333)" fill="white"/>
+</mask>
+<g mask="url(#mask0)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
+</svg>
+<span>20.03.2017</span>
+                          </div>
+                        </div>
+                        <div class="prev-card__info-views">
+                          <div class="views"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <mask id="svg-eye" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="3" width="16" height="10">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.33301 0C4 0 1.15332 2.07333 0 5C1.15332 7.92667 4 10 7.33301 10C10.667 10 13.5137 7.92667 14.667 5C13.5137 2.07333 10.667 0 7.33301 0ZM7.33301 8.33334C5.49316 8.33334 4 6.84001 4 5C4 3.16 5.49316 1.66667 7.33301 1.66667C9.17285 1.66667 10.667 3.16 10.667 5C10.667 6.84001 9.17285 8.33334 7.33301 8.33334ZM5.33301 5C5.33301 3.89333 6.22656 3 7.33301 3C8.43945 3 9.33301 3.89333 9.33301 5C9.33301 6.10666 8.43945 7 7.33301 7C6.22656 7 5.33301 6.10666 5.33301 5Z" transform="translate(0.666992 3)" fill="white"/>
+    </mask>
+    <g mask="url(#svg-eye)">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H16V16H0V0Z" fill="#3987E0"/>
+    </g>
+</svg>
+<span>1563</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="prev-card__body">
+                        <h4 class="prev-card__title">More tools for offchain transactions</h4>
+                        <p class="prev-card__descr">We have developed several tools that can help make transacting with Bitcoin cheaper incertain cases. We have developed several tools that can help make transacting with Bitcoin cheaper in certain cases. We have developed several tools that can help make transacting with Bitcoin cheaper in certain cases.</p>
+                      </div>
+                      <div class="prev-card__footer">
+                        <div class="prev-card__btn"><a class="l-btn l-btn--arr" href="#">
+                            <div class="l-btn__inner"><img src="img/icons/ic24pxarrow-right.png"/><span>Показать больше</span></div></a></div>
+                      </div>
                     </div>
-                    <div class="prev-card__body">
-                      <h4 class="prev-card__title">More tools for offchain transactions</h4>
-                      <p class="prev-card__descr">We have developed several tools that can help make transacting with Bitcoin cheaper in certain cases.</p>
+                  </div>
+                  <div class="addition__card">
+                    <div class="prev-card">
+                      <div class="prev-card__head" style="background-image: url(img/card_prev.png)"></div>
+                      <div class="prev-card__info">
+                        <div class="prev-card__info-date">
+                          <div class="date"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="1" y="1" width="14" height="14">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.66016 0C2.98047 0 0 2.98666 0 6.66667C0 10.3467 2.98047 13.3333 6.66016 13.3333C10.3467 13.3333 13.333 10.3467 13.333 6.66667C13.333 2.98666 10.3467 0 6.66016 0ZM6.66602 12C3.71973 12 1.33301 9.61333 1.33301 6.66666C1.33301 3.72 3.71973 1.33333 6.66602 1.33333C9.61328 1.33333 12 3.72 12 6.66666C12 9.61333 9.61328 12 6.66602 12ZM6 3.33333H7V6.83333L10 8.61333L9.5 9.43333L6 7.33333V3.33333Z" transform="translate(1.33301 1.33333)" fill="white"/>
+</mask>
+<g mask="url(#mask0)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
+</svg>
+<span>20.03.2017</span>
+                          </div>
+                        </div>
+                        <div class="prev-card__info-views">
+                          <div class="views"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <mask id="svg-eye" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="3" width="16" height="10">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.33301 0C4 0 1.15332 2.07333 0 5C1.15332 7.92667 4 10 7.33301 10C10.667 10 13.5137 7.92667 14.667 5C13.5137 2.07333 10.667 0 7.33301 0ZM7.33301 8.33334C5.49316 8.33334 4 6.84001 4 5C4 3.16 5.49316 1.66667 7.33301 1.66667C9.17285 1.66667 10.667 3.16 10.667 5C10.667 6.84001 9.17285 8.33334 7.33301 8.33334ZM5.33301 5C5.33301 3.89333 6.22656 3 7.33301 3C8.43945 3 9.33301 3.89333 9.33301 5C9.33301 6.10666 8.43945 7 7.33301 7C6.22656 7 5.33301 6.10666 5.33301 5Z" transform="translate(0.666992 3)" fill="white"/>
+    </mask>
+    <g mask="url(#svg-eye)">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H16V16H0V0Z" fill="#3987E0"/>
+    </g>
+</svg>
+<span>1563</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="prev-card__body">
+                        <h4 class="prev-card__title">More tools for offchain transactions</h4>
+                        <p class="prev-card__descr">We have developed several tools that can help make transacting with Bitcoin cheaper incertain cases. We have developed several tools that can help make transacting with Bitcoin cheaper in certain cases. We have developed several tools that can help make transacting with Bitcoin cheaper in certain cases.</p>
+                      </div>
+                      <div class="prev-card__footer">
+                        <div class="prev-card__btn"><a class="l-btn l-btn--arr" href="#">
+                            <div class="l-btn__inner"><img src="img/icons/ic24pxarrow-right.png"/><span>Показать больше</span></div></a></div>
+                      </div>
                     </div>
-                    <div class="prev-card__footer">
-                      <div class="prev-card__btn"><a class="l-btn l-btn--arr" href="#">
-                          <div class="l-btn__inner"><img src="img/icons/ic24pxarrow-right.png"/><span>Показать больше</span></div></a></div>
+                  </div>
+                  <div class="addition__card">
+                    <div class="prev-card">
+                      <div class="prev-card__head" style="background-image: url(img/card_prev.png)"></div>
+                      <div class="prev-card__info">
+                        <div class="prev-card__info-date">
+                          <div class="date"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="1" y="1" width="14" height="14">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.66016 0C2.98047 0 0 2.98666 0 6.66667C0 10.3467 2.98047 13.3333 6.66016 13.3333C10.3467 13.3333 13.333 10.3467 13.333 6.66667C13.333 2.98666 10.3467 0 6.66016 0ZM6.66602 12C3.71973 12 1.33301 9.61333 1.33301 6.66666C1.33301 3.72 3.71973 1.33333 6.66602 1.33333C9.61328 1.33333 12 3.72 12 6.66666C12 9.61333 9.61328 12 6.66602 12ZM6 3.33333H7V6.83333L10 8.61333L9.5 9.43333L6 7.33333V3.33333Z" transform="translate(1.33301 1.33333)" fill="white"/>
+</mask>
+<g mask="url(#mask0)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
+</svg>
+<span>20.03.2017</span>
+                          </div>
+                        </div>
+                        <div class="prev-card__info-views">
+                          <div class="views"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <mask id="svg-eye" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="3" width="16" height="10">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.33301 0C4 0 1.15332 2.07333 0 5C1.15332 7.92667 4 10 7.33301 10C10.667 10 13.5137 7.92667 14.667 5C13.5137 2.07333 10.667 0 7.33301 0ZM7.33301 8.33334C5.49316 8.33334 4 6.84001 4 5C4 3.16 5.49316 1.66667 7.33301 1.66667C9.17285 1.66667 10.667 3.16 10.667 5C10.667 6.84001 9.17285 8.33334 7.33301 8.33334ZM5.33301 5C5.33301 3.89333 6.22656 3 7.33301 3C8.43945 3 9.33301 3.89333 9.33301 5C9.33301 6.10666 8.43945 7 7.33301 7C6.22656 7 5.33301 6.10666 5.33301 5Z" transform="translate(0.666992 3)" fill="white"/>
+    </mask>
+    <g mask="url(#svg-eye)">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H16V16H0V0Z" fill="#3987E0"/>
+    </g>
+</svg>
+<span>1563</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="prev-card__body">
+                        <h4 class="prev-card__title">More tools for offchain transactions</h4>
+                        <p class="prev-card__descr">We have developed several tools that can help make transacting with Bitcoin cheaper incertain cases. We have developed several tools that can help make transacting with Bitcoin cheaper in certain cases. We have developed several tools that can help make transacting with Bitcoin cheaper in certain cases.</p>
+                      </div>
+                      <div class="prev-card__footer">
+                        <div class="prev-card__btn"><a class="l-btn l-btn--arr" href="#">
+                            <div class="l-btn__inner"><img src="img/icons/ic24pxarrow-right.png"/><span>Показать больше</span></div></a></div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="addition__card">
-                  <div class="prev-card">
-                    <div class="prev-card__head" style="background-image: url(img/card_prev.png)"></div>
-                    <div class="prev-card__info">
-                      <div class="prev-card__info-date"><img src="img/icons/access_time_24px.png" srcset="img/icons/access_time_24px@2x.png 2x,img/icons/access_time_24px@3x.png 3x"/><span>20.03.2017</span></div>
-                      <div class="prev-card__info-views"><img src="img/icons/eye.png" srcset="img/icons/eye@2x.png 2x, img/icons/eye@3x.png 3x,"/><span>153</span></div>
-                    </div>
-                    <div class="prev-card__body">
-                      <h4 class="prev-card__title">More tools for offchain transactions</h4>
-                      <p class="prev-card__descr">We have developed several tools that can help make transacting with Bitcoin cheaper in certain cases.</p>
-                    </div>
-                    <div class="prev-card__footer">
-                      <div class="prev-card__btn"><a class="l-btn l-btn--arr" href="#">
-                          <div class="l-btn__inner"><img src="img/icons/ic24pxarrow-right.png"/><span>Показать больше</span></div></a></div>
-                    </div>
-                  </div>
+                <div class="addition__footer"><a class="l-btn l-btn l-btn--mobile-full" href="">
+                    <div class="l-btn__inner"><span>Перейти ко всем статьям</span>
+                    </div></a>
                 </div>
-                <div class="addition__card">
-                  <div class="prev-card">
-                    <div class="prev-card__head" style="background-image: url(img/card_prev.png)"></div>
-                    <div class="prev-card__info">
-                      <div class="prev-card__info-date"><img src="img/icons/access_time_24px.png" srcset="img/icons/access_time_24px@2x.png 2x,img/icons/access_time_24px@3x.png 3x"/><span>20.03.2017</span></div>
-                      <div class="prev-card__info-views"><img src="img/icons/eye.png" srcset="img/icons/eye@2x.png 2x, img/icons/eye@3x.png 3x,"/><span>153</span></div>
-                    </div>
-                    <div class="prev-card__body">
-                      <h4 class="prev-card__title">More tools for offchain transactions</h4>
-                      <p class="prev-card__descr">We have developed several tools that can help make transacting with Bitcoin cheaper in certain cases.</p>
-                    </div>
-                    <div class="prev-card__footer">
-                      <div class="prev-card__btn"><a class="l-btn l-btn--arr" href="#">
-                          <div class="l-btn__inner"><img src="img/icons/ic24pxarrow-right.png"/><span>Показать больше</span></div></a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="addition__footer">
-                <div class="sim-arr__btn-go"><a class="l-btn" href="#">Перейти ко всем статьям</a></div>
               </div>
             </div>
           </div>
@@ -380,34 +339,44 @@
               </div>
               <div class="footer__socials"><a class="footer__socials-icon" href="#"><i class="fab fa-twitter"></i></a><a class="footer__socials-icon" href="#"><i class="fab fa-facebook-f"></i></a><a class="footer__socials-icon" href="#"><i class="fab fa-github"></i></a><a class="footer__socials-icon" href="#"><i class="fab fa-google-plus-g"></i></a></div>
               <div class="footer__copy">
-                <p>Powered by<a href="//peiko.space">peiko</a></p>
+                <p>Powered by &nbsp<a class="color-primary" href="//peiko.space">peiko</a></p>
                 <p>© 2018 Bigrate</p>
               </div>
             </div>
             <div class="footer__links">
-              <div class="footer__group col-4"><a class="footer__group-name" href="#">О проекте</a>
-                <ul class="footer__grup-ul">
+              <div class="footer__group">
+                <input type="checkbox" id="about" name="footer-groups"/>
+                <label class="footer__group-name" for="about">О проекте</label>
+                <ul class="footer__group-ul">
                   <li class="footer__group-li"><a class="footer__group-link" href="link.link">О Нас</a></li>
                   <li class="footer__group-li"><a class="footer__group-link" href="link.link">Комиссия</a></li>
                   <li class="footer__group-li"><a class="footer__group-link" href="link.link">Конфидециальность</a></li>
                   <li class="footer__group-li"><a class="footer__group-link" href="link.link">Условия предоставления услуг</a></li>
                 </ul>
               </div>
-              <div class="footer__group col-4"><a class="footer__group-name" href="#">Поддержка</a>
-                <ul class="footer__grup-ul">
+              <div class="footer__group">
+                <input type="checkbox" id="support" name="footer-groups"/>
+                <label class="footer__group-name" for="support">Поддержка</label>
+                <ul class="footer__group-ul">
                   <li class="footer__group-li"><a class="footer__group-link" href="link.link">Служба поддержки</a></li>
                   <li class="footer__group-li"><a class="footer__group-link" href="link.link">FAQ</a></li>
                   <li class="footer__group-li"><a class="footer__group-link" href="link.link">Руководства</a></li>
                   <li class="footer__group-li"><a class="footer__group-link" href="link.link">Забыли пароль?</a></li>
                 </ul>
               </div>
-              <div class="footer__group col-4"><a class="footer__group-name" href="#">Услуги</a>
-                <ul class="footer__grup-ul">
+              <div class="footer__group">
+                <input type="checkbox" id="services" name="footer-groups"/>
+                <label class="footer__group-name" for="services">Услуги</label>
+                <ul class="footer__group-ul">
                   <li class="footer__group-li"><a class="footer__group-link" href="link.link">Документация API</a></li>
                   <li class="footer__group-li"><a class="footer__group-link" href="link.link">Партнерская программа</a></li>
                   <li class="footer__group-li"><a class="footer__group-link" href="link.link">Руководства</a></li>
                 </ul>
               </div>
+            </div>
+            <div class="footer__copy footer__copy--mobile">
+              <p>Powered by &nbsp<a class="color-primary" href="//peiko.space">peiko</a></p>
+              <p>© 2018 Bigrate</p>
             </div>
           </div>
         </div>
@@ -521,15 +490,47 @@
         </div>
       </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <!--common scripts-->
-    <script src="js/modules/modal.js"></script>
-    <script type="text/javascript" src="js/index.min.js"></script>
-    <script type="text/javascript" src="js/modules/select-new.js"></script>
-    <!--script(src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous")-->
-    <!--script.-->
-    <!--	$('.hero').bgscroll({-->
-    <!--		direction: bottom-->
-    <!--	})-->
+    <div class="alert-wrap" id="alert-confirm">
+      <div class="alert alert--confirm">
+        <div class="alert__side"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="48" height="48" fill="black" fill-opacity="0"/>
+<mask id="svg-ok-outline" mask-type="alpha" maskUnits="userSpaceOnUse" x="4" y="4" width="40" height="40">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M24 4C12.96 4 4 12.96 4 24C4 35.04 12.96 44 24 44C35.04 44 44 35.04 44 24C44 12.96 35.04 4 24 4ZM24 40C15.1802 40 8 32.8198 8 24C8 15.1802 15.1802 8 24 8C32.8198 8 40 15.1802 40 24C40 32.8198 32.8198 40 24 40ZM20 28.3403L33.1802 15.1602L36 18L20 34L12 26L14.8198 23.1802L20 28.3403Z" fill="white"/>
+</mask>
+<g mask="url(#svg-ok-outline)">
+<rect width="48" height="48" fill="black" fill-opacity="0"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H48V48H0V0Z" fill="white"/>
+</g>
+</svg>
+
+        </div>
+        <div class="alert__body"><span data-default="Операция выполнена успешно !"></span></div>
+      </div>
+    </div>
+    <div class="alert-wrap" id="alert-reject">
+      <div class="alert alert--reject">
+        <div class="alert__side"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="48" height="48" fill="black" fill-opacity="0"/>
+<mask id="svg-reject" mask-type="alpha" maskUnits="userSpaceOnUse" x="4" y="4" width="40" height="40">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M24 4C12.9399 4 4 12.9399 4 24C4 35.0601 12.9399 44 24 44C35.0601 44 44 35.0601 44 24C44 12.9399 35.0601 4 24 4ZM29.1802 16L24 21.1802L18.8198 16L16 18.8198L21.1802 24L16 29.1802L18.8198 32L24 26.8198L29.1802 32L32 29.1802L26.8198 24L32 18.8198L29.1802 16ZM8 24C8 32.8198 15.1802 40 24 40C32.8198 40 40 32.8198 40 24C40 15.1802 32.8198 8 24 8C15.1802 8 8 15.1802 8 24Z" fill="white"/>
+</mask>
+<g mask="url(#svg-reject)">
+<rect width="48" height="48" fill="black" fill-opacity="0"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H48V48H0V0Z" fill="white"/>
+</g>
+</svg>
+
+        </div>
+        <div class="alert__body"><span data-default="Отклонено !"></span></div>
+      </div>
+    </div>
+    <section class="alert"></section>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <scrips src="js/index.js"></scrips>
+    <!--VUE.js-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script type="text/javascript" src="js/vue/indexOrder.js"></script>
+    <!--common scrip-->
+    <script type="text/javascript" src="js/index.js"></script>
   </body>
 </html>

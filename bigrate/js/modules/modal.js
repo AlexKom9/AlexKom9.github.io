@@ -1,5 +1,4 @@
-var modal = function(){
-	// console.log('init')
+const Modals = function(){
 	return {
 		modalEvents: function(){
 			var self =  this;
@@ -30,7 +29,6 @@ var modal = function(){
 			$('.l-wrap').addClass('l-wrap--modal');
 			$('#' + id).addClass('modal-wrap--active');
 		},
-
 		init: function(){
 			this.modalEvents();
 			this.closeModals();
@@ -38,6 +36,4 @@ var modal = function(){
 	}
 };
 
-modal().init();
-
-// modal().showModal('modal-license')
+export default Modals

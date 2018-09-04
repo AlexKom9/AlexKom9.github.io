@@ -1,4 +1,17 @@
-<!DOCTYPE html>
+
+<!--mixin l-check(label ,id)-->
+<!--	.form__check-wrap-->
+<!--		.form__check-->
+<!--			input(type="checkbox" id=id)-->
+<!--			label( for=id )= label-->
+<!--		block caption-->
+<!--			if block-->
+<!--				p.form__check-caption.caption-->
+<!--			else-->
+<!--		block hint-->
+<!--			if block-->
+<!--				.form__check-caption.caption-->
+<!--			else--><!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
@@ -11,73 +24,236 @@
   </head>
   <body class="l-page">
     <div class="l-wrap">
-      <header class="header">
-        <div class="l-container">
-          <div class="header__inner">
-            <div class="header__logo"><span class="l-logo">Bigrate.</span></div>
-            <ul class="header__nav">
-              <li class="header__nav-item"><a class="header__nav-link" href="#">Разместить объявление</a></li>
-              <li class="header__nav-item"><a class="header__nav-link" href="#">Форум</a></li>
-              <li class="header__nav-item"><a class="header__nav-link" href="#">Блог</a></li>
-              <li class="header__nav-item"><a class="header__nav-link" href="#">Справка</a></li>
-              <li class="header__nav-item header__nav-item--select">
-                <!--a(href="#").header__nav-link Русский--><img src="img/icons/language.png"/>
-                <div class="custom-select header__custom-select">
-                  <select>
-                    <option value="en">English</option>
-                    <option value="ru" selected="selected">Русский</option>
-                    <option value="uk">Українська</option>
-                  </select>
+      <div class="header-wrap">
+        <header class="header">
+          <div class="l-container">
+            <div class="header__inner">
+              <div class="header__logo"><span class="l-logo">Bigrate.</span></div>
+              <div class="header__main">
+                <ul class="header__nav">
+                  <li class="header__nav-item"><a class="header__nav-link" href="#">Разместить объявление</a></li>
+                  <li class="header__nav-item"><a class="header__nav-link" href="#">Форум</a></li>
+                  <li class="header__nav-item"><a class="header__nav-link" href="#">Блог</a></li>
+                  <li class="header__nav-item"><a class="header__nav-link" href="#">Справка</a></li>
+                  <li class="header__nav-item header__nav-item--select"><img src="img/icons/language.png"/>
+                    <div class="custom-select header__custom-select">
+                      <select>
+                        <option value="en">English</option>
+                        <option value="ru" selected="selected">Русский</option>
+                        <option value="uk">Українська</option>
+                      </select>
+                    </div>
+                  </li>
+                  <li class="header__nav-item"><img src="img/icons/ic24PxLogin.png"/><a class="header__nav-link" href="#">Выйти</a></li>
+                </ul>
+                <div class="header__menu">
+                  <div class="header__menu-icon header__drop-container js-header-drop-container" id="js-header-notifications"><img src="img/icons/notification.svg"/>
+                    <div class="header__drop js-header-drop" id="js-header-notifications-drop">
+                      <div class="drop-head drop-head--notification">
+                        <div class="drop-head__inner">
+                          <ul class="drop-head__notes">
+                            <li class="drop-head__note">
+                              <div class="drop-head__note-icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16 32C24.8367 32 32 24.8365 32 16C32 7.16345 24.8367 0 16 0C7.16333 0 0 7.16345 0 16C0 24.8365 7.16333 32 16 32ZM10.6001 16L13.75 19.1499L21.7 11.2L22.75 12.25L13.75 21.25L9.55005 17.0499L10.6001 16Z" fill="#48D953"/>
+</svg>
+
+                              </div>
+                              <div class="drop-head__note-body">
+                                <p class="caption">2 минуты назад</p>
+                                <p class="color-secondary">Ваш номер телефона подтвержден</p>
+                              </div>
+                            </li>
+                            <li class="drop-head__note">
+                              <div class="drop-head__note-icon"><svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path d="M15.25 17.2573H16.75V14.2573H15.25V17.2573Z" fill="#EB5757"/>
+	<path d="M16.75 20.2573V18.7573H15.25V20.2573H16.75Z" fill="#EB5757"/>
+	<path fill-rule="evenodd" clip-rule="evenodd" d="M16 32.7573C24.8367 32.7573 32 25.5939 32 16.7573C32 7.92078 24.8367 0.757324 16 0.757324C7.16333 0.757324 0 7.92078 0 16.7573C0 25.5939 7.16333 32.7573 16 32.7573ZM24.25 22.5073L16 8.25732L7.75 22.5073H24.25Z" fill="#EB5757"/>
+</svg>
+
+                              </div>
+                              <div class="drop-head__note-body">
+                                <p class="caption">2 минуты назад</p>
+                                <p class="color-warn">Транзакция с пользователем &nbsp<strong>Valantinaggio &nbsp</strong>не совершилась</p>
+                              </div>
+                            </li>
+                            <li class="drop-head__note drop-head__note--transparent">
+                              <div class="drop-head__note-icon"><svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22 13.7573L16 17.5073L10 13.7573V12.2573L16 16.0073L22 12.2573V13.7573Z" fill="#C9C9C9"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16 32.7573C24.8367 32.7573 32 25.5939 32 16.7573C32 7.92078 24.8367 0.757324 16 0.757324C7.16333 0.757324 0 7.92078 0 16.7573C0 25.5939 7.16333 32.7573 16 32.7573ZM23.5 12.2573C23.5 11.4323 22.825 10.7573 22 10.7573H10C9.17505 10.7573 8.50757 11.4323 8.50757 12.2573L8.5 21.2573C8.5 22.0823 9.17505 22.7573 10 22.7573H22C22.825 22.7573 23.5 22.0823 23.5 21.2573V12.2573Z" fill="#C9C9C9"/>
+</svg>
+
+                              </div>
+                              <div class="drop-head__note-body">
+                                <p class="caption">Сообщение от пользователя &nbsp<strong>Valantinaggio</strong></p>
+                                <p class="caption">20 Авг. 19:41</p>
+                                <p class="drop-head__note-message">
+                                  Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+                                  
+                                </p>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="drop-head__footer"><span>Очистить все уведомления</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header__menu-icon"><img src="img/icons/wallet.svg"/></div>
+                  <div class="header__menu-user-wrap header__drop-container js-header-drop-container" id="js-header-user-menu-btn">
+                    <div class="header__menu-user"><img src="https://1ofdmq2n8tc36m6i46scovo2e-wpengine.netdna-ssl.com/wp-content/uploads/2014/04/Steven_Hallam-slide.jpg"/></div>
+                    <div class="header__menu-dots"><img src="img/icons/menu-dots.svg"/></div>
+                    <div class="header__drop js-header-drop" id="js-header-user-menu">
+                      <div class="drop-head">
+                        <ul class="drop-head__nav">
+                          <li class="drop-head__nav-item">
+                            <div class="drop-head__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-user-info" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="4" width="19" height="17">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8 8C10.21 8 12 6.21001 12 4C12 1.78999 10.21 0 8 0C5.79004 0 4 1.78999 4 4C4 6.21001 5.79004 8 8 8ZM6 13L9 10.06C8.61035 10.02 8.32031 10 8 10C5.33008 10 0 11.34 0 14V16H9L6 13ZM9 13L12.4697 16.5L19 9.91L17.5996 8.5L12.4697 13.67L10.4004 11.59L9 13Z" transform="translate(3 4)" fill="white"/>
+</mask>
+<g mask="url(#svg-user-info)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
+</svg>
+
+                            </div><span>Основная информация</span>
+                          </li>
+                          <li class="drop-head__nav-item">
+                            <div class="drop-head__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="24" height="24" fill="black" fill-opacity="0"/>
+<mask id="svg-edit" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="2" width="19" height="20">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M20.71 5.63004C21.0999 6.02005 21.0999 6.65005 20.71 7.04007L18.8799 8.87015L15.1299 5.12015L16.96 3.29007C17.3499 2.90005 17.98 2.90005 18.3699 3.29007L20.71 5.63004ZM3 21.0002V17.2502L14.0601 6.19009L17.8101 9.94009L6.75 21.0002H3Z" fill="white"/>
+</mask>
+<g mask="url(#svg-edit)">
+<rect width="24" height="24" fill="black" fill-opacity="0"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#C9C9C9"/>
+</g>
+</svg>
+
+                            </div><span>Редактировать профиль</span>
+                          </li>
+                          <li class="drop-head__nav-item">
+                            <div class="drop-head__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-log-out" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="3" width="18" height="18">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16 16V9H18V16C18 17.0996 17.1 18 16 18H2C0.899994 18 0 17.0996 0 16V9H2V16H16ZM5.41 6.41016L8 3.83008V13.5H10V3.83008L12.59 6.41016L14 5L9 0L4 5L5.41 6.41016Z" transform="translate(21 3) rotate(90)" fill="white"/>
+</mask>
+<g mask="url(#svg-log-out)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" transform="translate(24) rotate(90)" fill="#3987E0"/>
+</g>
+</svg>
+
+                            </div><span>Выйти из аккаунта</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header__burger">
+                    <div class="burger" id="js-mobile-menu-btn">
+                      <div class="burger__line"></div>
+                      <div class="burger__line"></div>
+                      <div class="burger__line"></div>
+                    </div>
+                  </div>
                 </div>
-              </li>
-              <li class="header__nav-item"><img src="img/icons/ic24PxLogin.png"/><a class="header__nav-link" href="#">Выйти</a></li>
-            </ul>
-            <div class="header__menu"><img src="img/icons/notification.svg"/><img src="img/icons/wallet.svg"/>
-              <div class="header__menu-user"><img src="https://1ofdmq2n8tc36m6i46scovo2e-wpengine.netdna-ssl.com/wp-content/uploads/2014/04/Steven_Hallam-slide.jpg"/></div>
-              <div class="header__menu-dots"><img src="img/icons/menu-dots.svg"/></div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="header__mobile-menu">
+          <div class="header-mobile-menu" id="js-mobile-menu">
+            <div class="header-mobile-menu__inner">
+              <ul class="header-mobile-menu__items">
+                <li class="header-mobile-menu__item"><a class="header-mobile-menu__item-link" href="#">Разместить объявление</a></li>
+                <li class="header-mobile-menu__item"><a class="header-mobile-menu__item-link" href="#">Справка</a></li>
+                <li class="header-mobile-menu__item"><a class="header-mobile-menu__item-link" href="#">Блог</a></li>
+                <li class="header-mobile-menu__item"><a class="header-mobile-menu__item-link" href="#">Форум</a></li>
+                <li class="header-mobile-menu__item"><a class="header-mobile-menu__item-link" href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-user-info" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="4" width="19" height="17">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8 8C10.21 8 12 6.21001 12 4C12 1.78999 10.21 0 8 0C5.79004 0 4 1.78999 4 4C4 6.21001 5.79004 8 8 8ZM6 13L9 10.06C8.61035 10.02 8.32031 10 8 10C5.33008 10 0 11.34 0 14V16H9L6 13ZM9 13L12.4697 16.5L19 9.91L17.5996 8.5L12.4697 13.67L10.4004 11.59L9 13Z" transform="translate(3 4)" fill="white"/>
+</mask>
+<g mask="url(#svg-user-info)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#3987E0"/>
+</g>
+</svg>
+<span>Основная информация</span></a></li>
+                <li class="header-mobile-menu__item"><a class="header-mobile-menu__item-link" href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="24" height="24" fill="black" fill-opacity="0"/>
+<mask id="svg-edit" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="2" width="19" height="20">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M20.71 5.63004C21.0999 6.02005 21.0999 6.65005 20.71 7.04007L18.8799 8.87015L15.1299 5.12015L16.96 3.29007C17.3499 2.90005 17.98 2.90005 18.3699 3.29007L20.71 5.63004ZM3 21.0002V17.2502L14.0601 6.19009L17.8101 9.94009L6.75 21.0002H3Z" fill="white"/>
+</mask>
+<g mask="url(#svg-edit)">
+<rect width="24" height="24" fill="black" fill-opacity="0"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#C9C9C9"/>
+</g>
+</svg>
+<span>Редактировать профиль</span></a></li>
+                <li class="header-mobile-menu__item"><a class="header-mobile-menu__item-link" href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-log-out" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="3" width="18" height="18">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16 16V9H18V16C18 17.0996 17.1 18 16 18H2C0.899994 18 0 17.0996 0 16V9H2V16H16ZM5.41 6.41016L8 3.83008V13.5H10V3.83008L12.59 6.41016L14 5L9 0L4 5L5.41 6.41016Z" transform="translate(21 3) rotate(90)" fill="white"/>
+</mask>
+<g mask="url(#svg-log-out)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" transform="translate(24) rotate(90)" fill="#3987E0"/>
+</g>
+</svg>
+<span>Выйти из аккаунта</span></a></li>
+                <li class="header-mobile-menu__item header-mobile-menu__item--lang">
+                  <div class="header-mobile-menu__item-lang-box"><img src="img/icons/language.png"/>
+                    <div class="custom-select header__custom-select">
+                      <select>
+                        <option value="en">English</option>
+                        <option value="ru" selected="selected">Русский</option>
+                        <option value="uk">Українська</option>
+                      </select>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-      </header>
+      </div>
       <section class="h-stat">
-        <div class="l-container l-container--center">
-          <div class="l-inner l-inner--10">
-            <div class="h-stat__inner">
-              <div class="h-stat__items">
-                <div class="h-stat__item">
-                  <p>Общий баланс кошелька</p>
-                  <p class="h-stat__val"><span>1.56987</span> BTC</p>
-                </div>
-                <div class="h-stat__item">
-                  <p>Комиссия за транзакцию</p>
-                  <p class="h-stat__val"><span>0.00005</span>  BTC</p>
-                </div>
-                <div class="h-stat__item">
-                  <p>Максимальная сумма для отправки</p>
-                  <p class="h-stat__val"><span>0.00005</span> BTC</p>
+        <div class="l-container">
+          <div class="l-container-center">
+            <div class="l-inner l-inner--10">
+              <div class="h-stat__inner">
+                <div class="h-stat__items">
+                  <div class="h-stat__item">
+                    <p>Общий баланс кошелька</p>
+                    <p class="h-stat__val"><span>1.56987</span> BTC</p>
+                  </div>
+                  <div class="h-stat__item">
+                    <p>Комиссия за транзакцию</p>
+                    <p class="h-stat__val"><span>0.00005</span>  BTC</p>
+                  </div>
+                  <div class="h-stat__item">
+                    <p>Максимальная сумма для отправки</p>
+                    <p class="h-stat__val"><span>0.00005</span> BTC</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="s-rev">
-        <div class="l-container l-container--center"></div>
-      </section>
       <section class="cards">
-        <div class="l-container l-container--center">
-          <div class="l-inner l-inner--10">
-            <div class="cards__inner">
-              <div class="cards__side">
-                <div class="cards__user">
-                  <div class="user-card">
-                    <div class="user-card__inner">
-                      <div class="user-card__img-container">
-                        <div class="user-card__img"><img src="https://www.webmarketingeturismo.it/wp-content/uploads/2016/11/mobile-user.png"/></div>
-                      </div>
-                      <div class="user-card__main">
-                        <p class="user-card__name">Jugernaut</p>
-                        <div class="user-card__confirmation"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="l-container">
+          <div class="l-container-center">
+            <div class="l-inner l-inner--10">
+              <div class="cards__inner">
+                <div class="cards__side">
+                  <div class="cards__card cards__card--user">
+                    <div class="user-card card l-card">
+                      <div class="user-card__inner">
+                        <div class="user-card__img-container">
+                          <div class="user-card__img"><img src="https://www.webmarketingeturismo.it/wp-content/uploads/2016/11/mobile-user.png"/></div>
+                        </div>
+                        <div class="user-card__main">
+                          <p class="user-card__name">Jugernaut</p>
+                          <div class="user-card__confirmation">
+                            <!--include ../../../svg/security.svg-->
+                            <!--span Пользователь подтвержден-->
+                            <div class="conf conf--conf"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <mask id="svg-security" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="1" width="18" height="22">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M0 4L9 0L18 4V10C18 15.55 14.1602 20.74 9 22C3.83984 20.74 0 15.55 0 10V4ZM3 12L7 16L15 8L13.5898 6.58002L7 13.17L4.41016 10.59L3 12Z" transform="translate(3 1)" fill="white"/>
 </mask>
@@ -86,17 +262,19 @@
 </g>
 </svg>
 <span>Пользователь подтвержден</span>
-                        </div>
-                        <div class="user-card__rat">
-                          <div class="rat">
-                            <div class="rat__str">Рейтинг</div>
-                            <div class="rat__line">
-                              <div class="rat__inner danger"></div>
                             </div>
                           </div>
-                        </div>
-                        <div class="user-card__emoji">
-                          <div class="user-card__emoji-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <div class="user-card__footer">
+                            <div class="user-card__rating">
+                              <div class="rating">
+                                <div class="rating__title">Рейтинг</div>
+                                <div class="rating__bar">
+                                  <div class="rating__progress"></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="user-card__emoji">
+                              <div class="user-card__emoji-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <mask id="svg-good" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 4.47998 4.47021 0 9.99023 0C15.52 0 20 4.47998 20 10C20 15.52 15.52 20 9.99023 20C4.47021 20 0 15.52 0 10ZM6.5 9C7.32861 9 8 8.32837 8 7.5C8 6.67163 7.32861 6 6.5 6C5.67139 6 5 6.67163 5 7.5C5 8.32837 5.67139 9 6.5 9ZM13.5 9C14.3286 9 15 8.32837 15 7.5C15 6.67163 14.3286 6 13.5 6C12.6714 6 12 6.67163 12 7.5C12 8.32837 12.6714 9 13.5 9ZM10 18C5.58008 18 2 14.42 2 10C2 5.57996 5.58008 2 10 2C14.4199 2 18 5.57996 18 10C18 14.42 14.4199 18 10 18ZM6.5498 12C7.25 13.1899 8.52002 14 10 14C11.48 14 12.75 13.1899 13.4497 12H15.1201C14.3198 14.05 12.3301 15.5 10 15.5C7.66992 15.5 5.67969 14.05 4.87988 12H6.5498Z" transform="translate(2 2)" fill="white"/>
 </mask>
@@ -105,8 +283,8 @@
 </g>
 </svg>
 <span class="good">16</span>
-                          </div>
-                          <div class="user-card__emoji-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              </div>
+                              <div class="user-card__emoji-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <mask id="neutral" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99023 0C4.47021 0 0 4.47998 0 10C0 15.52 4.47021 20 9.99023 20C15.52 20 20 15.52 20 10C20 4.47998 15.52 0 9.99023 0ZM8 7.5C8 8.32837 7.32861 9 6.5 9C5.67139 9 5 8.32837 5 7.5C5 6.67163 5.67139 6 6.5 6C7.32861 6 8 6.67163 8 7.5ZM13.5 9C14.3286 9 15 8.32837 15 7.5C15 6.67163 14.3286 6 13.5 6C12.6714 6 12 6.67163 12 7.5C12 8.32837 12.6714 9 13.5 9ZM7 13.5V12H13V13.5H7ZM2 10C2 14.42 5.58008 18 10 18C14.4199 18 18 14.42 18 10C18 5.57996 14.4199 2 10 2C5.58008 2 2 5.57996 2 10Z" transform="translate(2 2)" fill="white"/>
 </mask>
@@ -115,8 +293,8 @@
 </g>
 </svg>
 <span class="neutral">8</span>
-                          </div>
-                          <div class="user-card__emoji-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              </div>
+                              <div class="user-card__emoji-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <mask id="bad-svg" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99023 0C4.47021 0 0 4.47998 0 10C0 15.52 4.47021 20 9.99023 20C15.52 20 20 15.52 20 10C20 4.47998 15.52 0 9.99023 0ZM6.5 9C7.32861 9 8 8.32837 8 7.5C8 6.67163 7.32861 6 6.5 6C5.67139 6 5 6.67163 5 7.5C5 8.32837 5.67139 9 6.5 9ZM13.5 9C14.3286 9 15 8.32837 15 7.5C15 6.67163 14.3286 6 13.5 6C12.6714 6 12 6.67163 12 7.5C12 8.32837 12.6714 9 13.5 9ZM4.87988 15.5C5.67969 13.45 7.66992 12 10 12C12.3301 12 14.3198 13.45 15.1201 15.5H13.4497C12.75 14.3101 11.48 13.5 10 13.5C8.52002 13.5 7.23975 14.3101 6.5498 15.5H4.87988ZM2 10C2 14.42 5.58008 18 10 18C14.4199 18 18 14.42 18 10C18 5.57996 14.4199 2 10 2C5.58008 2 2 5.57996 2 10Z" transform="translate(2 2)" fill="white"/>
 </mask>
@@ -125,78 +303,79 @@
 </g>
 </svg>
 <span class="bad">3</span>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="cards__card">
-                  <div class="card l-card">
-                    <div class="card__head">
-                      <h3 class="card__title">Основная информация</h3>
-                    </div>
-                    <div class="card__inner">
-                      <div class="c-tab">
-                        <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-7 col-lg-6 c-tab__cell--head"><span>Последняя активность</span></div>
-                          <div class="c-tab__cell col-xs-5 col-lg-6"><span>25.04.2018</span></div>
-                        </div>
-                        <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-7 col-lg-6 c-tab__cell--head"><span>Страна</span></div>
-                          <div class="c-tab__cell col-xs-5 col-lg-6"><span>Европа</span></div>
-                        </div>
-                        <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-7 col-lg-6 c-tab__cell--head"><span> Язык</span></div>
-                          <div class="c-tab__cell col-xs-5 col-lg-6"><span>Русский, Английский</span></div>
-                        </div>
-                        <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-7 col-lg-6 c-tab__cell--head"><span>Дата создания</span></div>
-                          <div class="c-tab__cell col-xs-5 col-lg-6"><span>14.08.2015</span></div>
-                        </div>
-                        <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-7 col-lg-6 c-tab__cell--head"><span>Первая покупка</span></div>
-                          <div class="c-tab__cell col-xs-5 col-lg-6"><span>16.08.2015</span></div>
+                  <div class="cards__card">
+                    <div class="card l-card card--sm-toggle">
+                      <div class="card__head card__head--sm-toggle card__head--sm-toggle-active">
+                        <h3 class="card__title">Основная информация</h3>
+                      </div>
+                      <div class="card__inner card__inner--sm-toggle">
+                        <div class="c-tab">
+                          <div class="c-tab__row row">
+                            <div class="c-tab__cell col-xs-6 c-tab__cell--head"><span>Последняя активность</span></div>
+                            <div class="c-tab__cell col-xs-5"><span>25.04.2018</span></div>
+                          </div>
+                          <div class="c-tab__row row">
+                            <div class="c-tab__cell col-xs-6 c-tab__cell--head"><span>Страна</span></div>
+                            <div class="c-tab__cell col-xs-5"><span>Европа</span></div>
+                          </div>
+                          <div class="c-tab__row row">
+                            <div class="c-tab__cell col-xs-6 c-tab__cell--head"><span> Язык</span></div>
+                            <div class="c-tab__cell col-xs-5"><span>Русский, Английский</span></div>
+                          </div>
+                          <div class="c-tab__row row">
+                            <div class="c-tab__cell col-xs-6 c-tab__cell--head"><span>Дата создания</span></div>
+                            <div class="c-tab__cell col-xs-5"><span>14.08.2015</span></div>
+                          </div>
+                          <div class="c-tab__row row">
+                            <div class="c-tab__cell col-xs-6 c-tab__cell--head"><span>Первая покупка</span></div>
+                            <div class="c-tab__cell col-xs-5"><span>16.08.2015</span></div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="cards__card">
-                  <div class="card l-card">
-                    <div class="card__head">
-                      <h3 class="card__title">Объем сделок</h3>
-                    </div>
-                    <div class="card__inner">
-                      <div class="c-tab">
-                        <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-7 col-lg-6 c-tab__cell--head"><span>Сумма</span></div>
-                          <div class="c-tab__cell col-xs-5 col-lg-6"><span>267,3 BTC</span></div>
-                        </div>
-                        <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-7 col-lg-6 c-tab__cell--head"><span>Подтвержденные сделки</span></div>
-                          <div class="c-tab__cell col-xs-7 col-lg-6"><span>1547</span></div>
-                        </div>
-                        <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-7 col-lg-6 c-tab__cell--head"><span>Количество партнеров</span></div>
-                          <div class="c-tab__cell col-xs-5 col-lg-6"><span>348</span></div>
+                  <div class="cards__card">
+                    <div class="card l-card card--sm-toggle">
+                      <div class="card__head card__head card__head--sm-toggle card__head--sm-toggle-active">
+                        <h3 class="card__title">Объем сделок</h3>
+                      </div>
+                      <div class="card__inner card__inner--sm-toggle">
+                        <div class="c-tab">
+                          <div class="c-tab__row row">
+                            <div class="c-tab__cell col-xs-6 c-tab__cell--head"><span>Сумма</span></div>
+                            <div class="c-tab__cell col-xs-5"><span>267,3 BTC</span></div>
+                          </div>
+                          <div class="c-tab__row row">
+                            <div class="c-tab__cell col-xs-6 c-tab__cell--head"><span>Подтвержденные сделки</span></div>
+                            <div class="c-tab__cell col-xs-6"><span>1547</span></div>
+                          </div>
+                          <div class="c-tab__row row">
+                            <div class="c-tab__cell col-xs-6 c-tab__cell--head"><span>Количество партнеров</span></div>
+                            <div class="c-tab__cell col-xs-5"><span>348</span></div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="cards__card">
-                  <div class="card l-card">
-                    <div class="card__head">
-                      <h3 class="card__title">Безопасность</h3>
-                    </div>
-                    <div class="card__inner">
-                      <div class="c-tab">
-                        <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-7 col-lg-6 c-tab__cell--head"><span>Email</span></div>
-                          <div class="c-tab__cell col-xs-5 col-lg-6">
-                            <div>
-                              <div class="conf conf--conf conf--small"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <div class="cards__card">
+                    <div class="card l-card card--sm-toggle">
+                      <div class="card__head card__head card__head--sm-toggle card__head--sm-toggle-active">
+                        <h3 class="card__title">Безопасность</h3>
+                      </div>
+                      <div class="card__inner card__inner--smf card__inner--sm-toggle">
+                        <div class="c-tab">
+                          <div class="c-tab__row row">
+                            <div class="c-tab__cell col-xs-6 c-tab__cell--head"><span>Email</span></div>
+                            <div class="c-tab__cell col-xs-6">
+                              <div>
+                                <div class="conf conf--conf conf--small"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <mask id="svg-security" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="1" width="18" height="22">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M0 4L9 0L18 4V10C18 15.55 14.1602 20.74 9 22C3.83984 20.74 0 15.55 0 10V4ZM3 12L7 16L15 8L13.5898 6.58002L7 13.17L4.41016 10.59L3 12Z" transform="translate(3 1)" fill="white"/>
 </mask>
@@ -205,15 +384,15 @@
 </g>
 </svg>
 <span> Подтвержден</span>
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                        <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-7 col-lg-6 c-tab__cell--head"><span>Телефон</span></div>
-                          <div class="c-tab__cell col-xs-5 col-lg-6">
-                            <div class="c-tab__cell-conf">
-                              <div class="conf conf--not-conf conf--small"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <div class="c-tab__row row">
+                            <div class="c-tab__cell col-xs-6 c-tab__cell--head"><span>Телефон</span></div>
+                            <div class="c-tab__cell col-xs-6">
+                              <div class="c-tab__cell-conf">
+                                <div class="conf conf--not-conf conf--small"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <mask id="security-lost" mask-type="alpha" maskUnits="userSpaceOnUse" x="1" y="2" width="22" height="19">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M22 19L11 0L0 19H22ZM10 16V14H12V16H10ZM10 12H12V8H10V12Z" transform="translate(1 2)" fill="white"/>
 </mask>
@@ -222,15 +401,15 @@
 </g>
 </svg>
 <span> Не подтвержден</span>
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                        <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-7 col-lg-6 c-tab__cell--head"><span>Удостоверение личности</span></div>
-                          <div class="c-tab__cell col-xs-5 col-lg-6">
-                            <div>
-                              <div class="conf conf--conf conf--small"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <div class="c-tab__row row">
+                            <div class="c-tab__cell col-xs-6 c-tab__cell--head"><span>Удостоверение личности</span></div>
+                            <div class="c-tab__cell col-xs-6">
+                              <div>
+                                <div class="conf conf--conf conf--small"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <mask id="svg-security" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="1" width="18" height="22">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M0 4L9 0L18 4V10C18 15.55 14.1602 20.74 9 22C3.83984 20.74 0 15.55 0 10V4ZM3 12L7 16L15 8L13.5898 6.58002L7 13.17L4.41016 10.59L3 12Z" transform="translate(3 1)" fill="white"/>
 </mask>
@@ -239,15 +418,15 @@
 </g>
 </svg>
 <span> Подтвержден</span>
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                        <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-7 col-lg-6 c-tab__cell--head"><span>Имя</span></div>
-                          <div class="c-tab__cell col-xs-5 col-lg-6">
-                            <div>
-                              <div class="conf conf--conf conf--small"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <div class="c-tab__row row">
+                            <div class="c-tab__cell col-xs-6 c-tab__cell--head"><span>Имя</span></div>
+                            <div class="c-tab__cell col-xs-6">
+                              <div>
+                                <div class="conf conf--conf conf--small"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <mask id="svg-security" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="1" width="18" height="22">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M0 4L9 0L18 4V10C18 15.55 14.1602 20.74 9 22C3.83984 20.74 0 15.55 0 10V4ZM3 12L7 16L15 8L13.5898 6.58002L7 13.17L4.41016 10.59L3 12Z" transform="translate(3 1)" fill="white"/>
 </mask>
@@ -256,24 +435,24 @@
 </g>
 </svg>
 <span> Подтвержден</span>
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                        <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-7 col-lg-6 c-tab__cell--head"><span>Доверенный партнер</span></div>
-                          <div class="c-tab__cell col-xs-5 col-lg-6"><span>Доверие у 500+ пользователей</span></div>
-                        </div>
-                        <div class="c-tab__row row">
-                          <div class="c-tab__cell col-xs-7 col-lg-6 c-tab__cell--head"><span>Заблокирован</span></div>
-                          <div class="c-tab__cell col-xs-5 col-lg-6"><span>У 8-и пользователей</span></div>
+                          <div class="c-tab__row row">
+                            <div class="c-tab__cell col-xs-6 c-tab__cell--head"><span>Доверенный партнер</span></div>
+                            <div class="c-tab__cell col-xs-6"><span>Доверие у 500+ пользователей</span></div>
+                          </div>
+                          <div class="c-tab__row row">
+                            <div class="c-tab__cell col-xs-6 c-tab__cell--head"><span>Заблокирован</span></div>
+                            <div class="c-tab__cell col-xs-5"><span>У 8-и пользователей</span></div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="cards__btn cards__btn--full"><a class="l-btn l-btn--primary" href="#">
-                    <div class="l-btn__inner"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <div class="cards__btn cards__btn--full"><a class="l-btn l-btn--primary l-btn--max-width-380" href="#">
+                      <div class="l-btn__inner"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <mask id="svg-add-to-friends" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="5" width="24" height="13">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M18 6C19.6597 6 20.9897 4.66003 20.9897 3C20.9897 1.33997 19.6597 0 18 0C17.6797 0 17.3696 0.0500488 17.0898 0.140015C17.6597 0.949951 17.9897 1.93005 17.9897 3C17.9897 4.06995 17.6499 5.04004 17.0898 5.85999C17.3696 5.94995 17.6797 6 18 6ZM8 5H5V2H3V5H0V7H3V10H5V7H8V5ZM15.9902 3C15.9902 4.66003 14.6602 6 13 6C11.3398 6 10 4.66003 10 3C10 1.33997 11.3398 0 13 0C14.6602 0 15.9902 1.33997 15.9902 3ZM19.6201 8.16003C20.4502 8.89001 21 9.82007 21 11V13H24V11C24 9.46008 21.6299 8.51001 19.6201 8.16003ZM7 11C7 9 11 8 13 8C15 8 19 9 19 11V13H7V11Z" transform="translate(0 5)" fill="white"/>
 </mask>
@@ -282,10 +461,10 @@
 </g>
 </svg>
 
-                      <!--img(src="img/icons/arrow-right.svg")--><span>Добавить в список проверенных</span>
-                    </div></a></div>
-                <div class="cards__btn cards__btn--full"><a class="l-btn" href="#">
-                    <div class="l-btn__inner"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!--img(src="img/icons/arrow-right.svg")--><span>Добавить в список проверенных</span>
+                      </div></a></div>
+                  <div class="cards__btn cards__btn--full"><a class="l-btn l-btn--max-width-380" href="#">
+                      <div class="l-btn__inner"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <mask id="svg-block" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0C4.47998 0 0 4.47998 0 10C0 15.52 4.47998 20 10 20C15.52 20 20 15.52 20 10C20 4.47998 15.52 0 10 0ZM10 18C5.58008 18 2 14.4199 2 10C2 8.15002 2.62988 6.44995 3.68994 5.09998L14.8999 16.3099C13.5498 17.37 11.8501 18 10 18ZM5.1001 3.68994L16.3101 14.9C17.3701 13.55 18 11.85 18 10C18 5.57996 14.4199 2 10 2C8.1499 2 6.4502 2.63 5.1001 3.68994Z" transform="translate(2 2)" fill="white"/>
 </mask>
@@ -295,9 +474,9 @@
 </g>
 </svg>
 <span>Заблокировать пользователя</span>
-                    </div></a></div>
-                <div class="cards__btn cards__btn--full"><a class="l-btn l-btn--shaded" href="#">
-                    <div class="l-btn__inner"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      </div></a></div>
+                  <div class="cards__btn cards__btn--full"><a class="l-btn l-btn--shaded l-btn--max-width-380" href="#">
+                      <div class="l-btn__inner"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <mask id="svg-complain" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="3" width="18" height="18">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.27002 0H12.73L18 5.27002V12.73L12.73 18H5.27002L0 12.73V5.27002L5.27002 0ZM11.8999 16L16 11.9V6.09998L11.8999 2H6.1001L2 6.09998V11.9L6.1001 16H11.8999ZM9 14C9.55225 14 10 13.5522 10 13C10 12.4478 9.55225 12 9 12C8.44775 12 8 12.4478 8 13C8 13.5522 8.44775 14 9 14ZM10 4H8V11H10V4Z" transform="translate(3 3)" fill="white"/>
 </mask>
@@ -306,106 +485,107 @@
 </g>
 </svg>
 <span>Показать больше</span>
-                    </div></a></div>
-              </div>
-              <div class="cards__main">
-                <div class="cards__card">
-                  <div class="card l-card">
-                    <div class="card__head">
-                      <h3 class="card__title">Обо мне</h3>
-                    </div>
-                    <div class="card__inner">
-                      <p class="card__descr">If you are looking for a new way to promote your business that won’t cost you more money, maybe printing is one of the options you won’t resist. Printing is a widely use process in making printed materials that are used for advertising. Brochure, catalogs, flyers, banners, posters, and booklets are some of several examples of printed materials.</p>
+                      </div></a></div>
+                </div>
+                <div class="cards__main">
+                  <div class="cards__card">
+                    <div class="card l-card card--sm-toggle">
+                      <div class="card__head card__head card__head--sm-toggle card__head--sm-toggle-active">
+                        <h3 class="card__title">Обо мне</h3>
+                      </div>
+                      <div class="card__inner card__inner--sm-toggle">
+                        <p class="card__descr">If you are looking for a new way to promote your business that won’t cost you more money, maybe printing is one of the options you won’t resist. Printing is a widely use process in making printed materials that are used for advertising. Brochure, catalogs, flyers, banners, posters, and booklets are some of several examples of printed materials.</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="cards__card">
-                  <div class="card l-card">
-                    <div class="card__head">
-                      <h3 class="card__title">Отзывы</h3>
-                    </div>
-                    <div class="card__inner">
-                      <div class="card__item">
-                        <div class="sin-rev">
-                          <div class="sin-rev__head">
-                            <div class="sin-rev__head-img"><img src="img/icons/good.svg"/></div>
-                            <div class="sin-rev__head-info">
-                              <p class="sin-rev__head-info-name">Carlos Burton</p>
-                              <p class="sin-rev__head-info-date">21.02.2018</p>
+                  <div class="cards__card">
+                    <div class="card l-card card--sm-toggle">
+                      <div class="card__head card__head card__head--sm-toggle">
+                        <h3 class="card__title">Отзывы</h3>
+                      </div>
+                      <div class="card__inner card__inner--sm-toggle">
+                        <div class="card__item">
+                          <div class="sin-rev">
+                            <div class="sin-rev__head">
+                              <div class="sin-rev__head-img"><img src="img/icons/good.svg"/></div>
+                              <div class="sin-rev__head-info">
+                                <p class="sin-rev__head-info-name">Carlos Burton</p>
+                                <p class="sin-rev__head-info-date">21.02.2018</p>
+                              </div>
+                            </div>
+                            <div class="sin-rev__body">
+                              <p>«Forget Ebay and other forms of advertising for your property that costs you hard earned money. Why not do it all for free? Investment Assets Properties have ready several locations around the world to take your free listings for any luxury property you have…»</p>
                             </div>
                           </div>
-                          <div class="sin-rev__body">
-                            <p>«Forget Ebay and other forms of advertising for your property that costs you hard earned money. Why not do it all for free? Investment Assets Properties have ready several locations around the world to take your free listings for any luxury property you have…»</p>
-                          </div>
                         </div>
-                      </div>
-                      <div class="card__item">
-                        <div class="sin-rev">
-                          <div class="sin-rev__head">
-                            <div class="sin-rev__head-img"><img src="img/icons/neutral.svg"/></div>
-                            <div class="sin-rev__head-info">
-                              <p class="sin-rev__head-info-name">Carlos Burton</p>
-                              <p class="sin-rev__head-info-date">21.02.2018</p>
+                        <div class="card__item">
+                          <div class="sin-rev">
+                            <div class="sin-rev__head">
+                              <div class="sin-rev__head-img"><img src="img/icons/neutral.svg"/></div>
+                              <div class="sin-rev__head-info">
+                                <p class="sin-rev__head-info-name">Carlos Burton</p>
+                                <p class="sin-rev__head-info-date">21.02.2018</p>
+                              </div>
+                            </div>
+                            <div class="sin-rev__body">
+                              <p>«Forget Ebay and other forms of advertising for your property that costs you hard earned money. Why not do it all for free? Investment Assets Properties have ready several locations around the world to take your free listings for any luxury property you have…»</p>
                             </div>
                           </div>
-                          <div class="sin-rev__body">
-                            <p>«Forget Ebay and other forms of advertising for your property that costs you hard earned money. Why not do it all for free? Investment Assets Properties have ready several locations around the world to take your free listings for any luxury property you have…»</p>
-                          </div>
                         </div>
-                      </div>
-                      <div class="card__item">
-                        <div class="sin-rev">
-                          <div class="sin-rev__head">
-                            <div class="sin-rev__head-img"><img src="img/icons/bad.svg"/></div>
-                            <div class="sin-rev__head-info">
-                              <p class="sin-rev__head-info-name">Carlos Burton</p>
-                              <p class="sin-rev__head-info-date">21.02.2018</p>
+                        <div class="card__item">
+                          <div class="sin-rev">
+                            <div class="sin-rev__head">
+                              <div class="sin-rev__head-img"><img src="img/icons/bad.svg"/></div>
+                              <div class="sin-rev__head-info">
+                                <p class="sin-rev__head-info-name">Carlos Burton</p>
+                                <p class="sin-rev__head-info-date">21.02.2018</p>
+                              </div>
+                            </div>
+                            <div class="sin-rev__body">
+                              <p>«Forget Ebay and other forms of advertising for your property that costs you hard earned money. Why not do it all for free? Investment Assets Properties have ready several locations around the world to take your free listings for any luxury property you have…»</p>
                             </div>
                           </div>
-                          <div class="sin-rev__body">
-                            <p>«Forget Ebay and other forms of advertising for your property that costs you hard earned money. Why not do it all for free? Investment Assets Properties have ready several locations around the world to take your free listings for any luxury property you have…»</p>
-                          </div>
                         </div>
-                      </div>
-                      <div class="card__item">
-                        <div class="sin-rev">
-                          <div class="sin-rev__head">
-                            <div class="sin-rev__head-img"><img src="img/icons/good.svg"/></div>
-                            <div class="sin-rev__head-info">
-                              <p class="sin-rev__head-info-name">Carlos Burton</p>
-                              <p class="sin-rev__head-info-date">21.02.2018</p>
+                        <div class="card__item">
+                          <div class="sin-rev">
+                            <div class="sin-rev__head">
+                              <div class="sin-rev__head-img"><img src="img/icons/good.svg"/></div>
+                              <div class="sin-rev__head-info">
+                                <p class="sin-rev__head-info-name">Carlos Burton</p>
+                                <p class="sin-rev__head-info-date">21.02.2018</p>
+                              </div>
+                            </div>
+                            <div class="sin-rev__body">
+                              <p>«Forget Ebay and other forms of advertising for your property that costs you hard earned money. Why not do it all for free? Investment Assets Properties have ready several locations around the world to take your free listings for any luxury property you have…»</p>
                             </div>
                           </div>
-                          <div class="sin-rev__body">
-                            <p>«Forget Ebay and other forms of advertising for your property that costs you hard earned money. Why not do it all for free? Investment Assets Properties have ready several locations around the world to take your free listings for any luxury property you have…»</p>
-                          </div>
                         </div>
-                      </div>
-                      <div class="card__item">
-                        <div class="sin-rev">
-                          <div class="sin-rev__head">
-                            <div class="sin-rev__head-img"><img src="img/icons/neutral.svg"/></div>
-                            <div class="sin-rev__head-info">
-                              <p class="sin-rev__head-info-name">Carlos Burton</p>
-                              <p class="sin-rev__head-info-date">21.02.2018</p>
+                        <div class="card__item">
+                          <div class="sin-rev">
+                            <div class="sin-rev__head">
+                              <div class="sin-rev__head-img"><img src="img/icons/neutral.svg"/></div>
+                              <div class="sin-rev__head-info">
+                                <p class="sin-rev__head-info-name">Carlos Burton</p>
+                                <p class="sin-rev__head-info-date">21.02.2018</p>
+                              </div>
+                            </div>
+                            <div class="sin-rev__body">
+                              <p>«Forget Ebay and other forms of advertising for your property that costs you hard earned money. Why not do it all for free? Investment Assets Properties have ready several locations around the world to take your free listings for any luxury property you have…»</p>
                             </div>
                           </div>
-                          <div class="sin-rev__body">
-                            <p>«Forget Ebay and other forms of advertising for your property that costs you hard earned money. Why not do it all for free? Investment Assets Properties have ready several locations around the world to take your free listings for any luxury property you have…»</p>
-                          </div>
+                        </div>
+                        <div class="card__footer">
+                          <div class="card__btn card__btn--right"><a class="l-btn" href="#">
+                              <div class="l-btn__inner"><img src="img/icons/arrow-right.svg"/><span>Показать больше</span></div></a></div>
                         </div>
                       </div>
-                    </div>
-                    <div class="card__footer">
-                      <div class="card__btn card__btn--right"><a class="l-btn" href="#">
-                          <div class="l-btn__inner"><img src="img/icons/arrow-right.svg"/><span>Показать больше</span></div></a></div>
                     </div>
                   </div>
-                </div>
-                <div class="cards__card">
-                  <div class="card l-card">
-                    <div class="card__head">
-                      <h3 class="card__title">Время задержки запуска депонирования платежа продавцом</h3>
+                  <div class="cards__card">
+                    <div class="card l-card card--sm-toggle">
+                      <div class="card__head">
+                        <h3 class="card__title">Время задержки запуска депонирования платежа продавцом</h3>
+                      </div>
                       <div class="card__inner">
                         <p>Медиана: 1 min</p>
                         <p>Среднее: 7 min</p>
@@ -414,159 +594,10 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="orders">
-              <div class="orders__inner">
-                <div class="orders__h-control">
-                  <h3 class="l-title">Похожие сделки</h3>
-                  <div class="orders__h-control-country">
-                    <div class="country"><span>Страна :</span>
-                      <div class="country__box country__box--opened"><span>Европа</span>
-                        <div class="country__drop">
-                          <div class="country__drop-head">
-                            <p>Страна</p>
-                            <input type="text" placeholder="Начните вводить"/>
-                          </div>
-                          <ul>
-                            <li>Австралия</li>
-                            <li>Австралия</li>
-                            <li>Австралия</li>
-                            <li>Австралия</li>
-                            <li>Австралия</li>
-                            <li>Австралия</li>
-                            <li>Австралия</li>
-                            <li>Австралия</li>
-                            <li>Австралия</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="info-tab__table">
-                  <div class="i-tab">
-                    <div class="i-tab__tabs">
-                      <div class="i-tab__tabs-wrap">
-                        <div class="i-tab__tab i-tab__tab--active"><span>Купить биткоин онлайн</span></div>
-                        <div class="i-tab__tab"><span>Купить биткоин за наличные</span></div>
-                        <div class="i-tab__tab"><span>Продать биткоин онлайн</span></div>
-                      </div>
-                    </div>
-                    <div class="i-tab__inner">
-                      <div class="i-tab__content">
-                        <div class="i-tab__head i-tab__row">
-                          <div class="i-tab__head-cell i-tab__cell"><span>Продавец</span></div>
-                          <div class="i-tab__head-cell i-tab__cell"><span>Способ оплаты</span></div>
-                          <div class="i-tab__head-cell i-tab__head-cell--sort i-tab__head-cell--up i-tab__cell"><span>Цена /BTC</span></div>
-                          <div class="i-tab__head-cell i-tab__cell"><span>Лимит</span></div>
-                        </div>
-                        <div class="i-tab__row">
-                          <div class="i-tab__cell online">
-                            <p class="i-tab__prod-name">Jugernaut<span class="dot"></span></p>
-                            <div class="i-tab__rat">
-                              <div class="rat">
-                                <div class="rat__str">Рейтинг</div>
-                                <div class="rat__line">
-                                  <div class="rat__inner abs"></div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="i-tab__cell"><span class="i-tab__payment">National Bank Transfer</span></div>
-                          <div class="i-tab__cell">
-                            <p class="i-tab__price-usd">7521.2 USD</p>
-                            <p class="i-tab__price-hint">Наценка</p>
-                            <p class="i-tab__price-markup">-6,4%</p>
-                          </div>
-                          <div class="i-tab__cell">
-                            <p class="i-tab__limit">120 - 180 USD</p>
-                          </div>
-                          <div class="i-tab__cell">
-                            <div class="i-tab__buy"><a class="l-btn l-btn--sec" href="#">Купить</a></div>
-                          </div>
-                        </div>
-                        <div class="i-tab__row">
-                          <div class="i-tab__cell offline">
-                            <p class="i-tab__prod-name">Jugernaut<span class="dot"></span></p>
-                            <div class="i-tab__rat">
-                              <div class="rat">
-                                <div class="rat__str">Рейтинг</div>
-                                <div class="rat__line">
-                                  <div class="rat__inner conf"></div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="i-tab__cell"><span class="i-tab__payment">National Bank Transfer</span></div>
-                          <div class="i-tab__cell">
-                            <p class="i-tab__price-usd">7521.2 USD</p>
-                            <p class="i-tab__price-hint">Наценка</p>
-                            <p class="i-tab__price-markup">-6,4%</p>
-                          </div>
-                          <div class="i-tab__cell">
-                            <p class="i-tab__limit">120 - 180 USD</p>
-                          </div>
-                          <div class="i-tab__cell">
-                            <div class="i-tab__buy"><a class="l-btn l-btn--sec" href="#">Купить</a></div>
-                          </div>
-                        </div>
-                        <div class="i-tab__row">
-                          <div class="i-tab__cell away">
-                            <p class="i-tab__prod-name">Jugernaut<span class="dot"></span></p>
-                            <div class="i-tab__rat">
-                              <div class="rat">
-                                <div class="rat__str">Рейтинг</div>
-                                <div class="rat__line">
-                                  <div class="rat__inner mid"></div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="i-tab__cell"><span class="i-tab__payment">National Bank Transfer</span></div>
-                          <div class="i-tab__cell">
-                            <p class="i-tab__price-usd">7521.2 USD</p>
-                            <p class="i-tab__price-hint">Наценка</p>
-                            <p class="i-tab__price-markup">-6,4%</p>
-                          </div>
-                          <div class="i-tab__cell">
-                            <p class="i-tab__limit">120 - 180 USD</p>
-                          </div>
-                          <div class="i-tab__cell">
-                            <div class="i-tab__buy"><a class="l-btn l-btn--sec" href="#">Купить</a></div>
-                          </div>
-                        </div>
-                        <div class="i-tab__row">
-                          <div class="i-tab__cell online">
-                            <p class="i-tab__prod-name">Jugernaut<span class="dot"></span></p>
-                            <div class="i-tab__rat">
-                              <div class="rat">
-                                <div class="rat__str">Рейтинг</div>
-                                <div class="rat__line">
-                                  <div class="rat__inner danger"></div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="i-tab__cell"><span class="i-tab__payment">National Bank Transfer</span></div>
-                          <div class="i-tab__cell">
-                            <p class="i-tab__price-usd">7521.2 USD</p>
-                            <p class="i-tab__price-hint">Наценка</p>
-                            <p class="i-tab__price-markup">-6,4%</p>
-                          </div>
-                          <div class="i-tab__cell">
-                            <p class="i-tab__limit">120 - 180 USD</p>
-                          </div>
-                          <div class="i-tab__cell">
-                            <div class="i-tab__buy"><a class="l-btn l-btn--sec" href="#">Купить</a></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="i-tab__footer"><a class="l-btn l-btn--arr" href="#">
-                        <div class="l-btn__inner"><img src="img/icons/reload-more.png"/><span>Показать больше</span></div></a></div>
-                  </div>
-                </div>
+              <div class="l-container">
+                <h2 class="l-title">Предложения</h2>
               </div>
+              <div id="OrderApp"></div>
             </div>
           </div>
         </div>
@@ -581,34 +612,44 @@
               </div>
               <div class="footer__socials"><a class="footer__socials-icon" href="#"><i class="fab fa-twitter"></i></a><a class="footer__socials-icon" href="#"><i class="fab fa-facebook-f"></i></a><a class="footer__socials-icon" href="#"><i class="fab fa-github"></i></a><a class="footer__socials-icon" href="#"><i class="fab fa-google-plus-g"></i></a></div>
               <div class="footer__copy">
-                <p>Powered by<a href="//peiko.space">peiko</a></p>
+                <p>Powered by &nbsp<a class="color-primary" href="//peiko.space">peiko</a></p>
                 <p>© 2018 Bigrate</p>
               </div>
             </div>
             <div class="footer__links">
-              <div class="footer__group col-4"><a class="footer__group-name" href="#">О проекте</a>
-                <ul class="footer__grup-ul">
+              <div class="footer__group">
+                <input type="checkbox" id="about" name="footer-groups"/>
+                <label class="footer__group-name" for="about">О проекте</label>
+                <ul class="footer__group-ul">
                   <li class="footer__group-li"><a class="footer__group-link" href="link.link">О Нас</a></li>
                   <li class="footer__group-li"><a class="footer__group-link" href="link.link">Комиссия</a></li>
                   <li class="footer__group-li"><a class="footer__group-link" href="link.link">Конфидециальность</a></li>
                   <li class="footer__group-li"><a class="footer__group-link" href="link.link">Условия предоставления услуг</a></li>
                 </ul>
               </div>
-              <div class="footer__group col-4"><a class="footer__group-name" href="#">Поддержка</a>
-                <ul class="footer__grup-ul">
+              <div class="footer__group">
+                <input type="checkbox" id="support" name="footer-groups"/>
+                <label class="footer__group-name" for="support">Поддержка</label>
+                <ul class="footer__group-ul">
                   <li class="footer__group-li"><a class="footer__group-link" href="link.link">Служба поддержки</a></li>
                   <li class="footer__group-li"><a class="footer__group-link" href="link.link">FAQ</a></li>
                   <li class="footer__group-li"><a class="footer__group-link" href="link.link">Руководства</a></li>
                   <li class="footer__group-li"><a class="footer__group-link" href="link.link">Забыли пароль?</a></li>
                 </ul>
               </div>
-              <div class="footer__group col-4"><a class="footer__group-name" href="#">Услуги</a>
-                <ul class="footer__grup-ul">
+              <div class="footer__group">
+                <input type="checkbox" id="services" name="footer-groups"/>
+                <label class="footer__group-name" for="services">Услуги</label>
+                <ul class="footer__group-ul">
                   <li class="footer__group-li"><a class="footer__group-link" href="link.link">Документация API</a></li>
                   <li class="footer__group-li"><a class="footer__group-link" href="link.link">Партнерская программа</a></li>
                   <li class="footer__group-li"><a class="footer__group-link" href="link.link">Руководства</a></li>
                 </ul>
               </div>
+            </div>
+            <div class="footer__copy footer__copy--mobile">
+              <p>Powered by &nbsp<a class="color-primary" href="//peiko.space">peiko</a></p>
+              <p>© 2018 Bigrate</p>
             </div>
           </div>
         </div>
@@ -722,9 +763,10 @@
         </div>
       </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <!--common scripts-->
-    <script src="js/modules/modal.js"></script>
-    <script type="text/javascript" src="js/index.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+    <!--VUE.js-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script type="text/javascript" src="js/vue/indexOrder.js"></script>
   </body>
 </html>
