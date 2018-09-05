@@ -565,7 +565,7 @@ var cardToggle = function cardToggle() {
 
         alwaysToggle: function alwaysToggle() {
             $('.card__head--toggle').on('click', function () {
-                $(this).toggleClass('.card__head--toggle-active');
+                $(this).toggleClass('card__head--toggle-active');
                 $(this).closest('.card').find('.card__inner').toggle('slow');
             });
 
