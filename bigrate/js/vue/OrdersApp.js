@@ -1922,150 +1922,189 @@ exports.default = {
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
-
 var Select = function Select() {
-    return {
-        createSelect: function createSelect() {
+  return {
+    createSelect: function createSelect() {
 
-            var selBox = $('<div class="sel"></div>');
-            var selPremier = $('<div class="sel__premier"></div>');
-            var selDrop = $('<div class="sel__drop sel-hide"><ul></ul></div>');
-            var selArrow = $('<div class="sel__arrow"></div>');
+      var selBox = $('<div class="sel"></div>');
+      var selPremier = $('<div class="sel__premier"></div>');
+      var selDrop = $('<div class="sel__drop sel-hide"><ul></ul></div>');
+      var selArrow = $('<div class="sel__arrow"></div>');
 
-            var selPremierInput = $('<div class="sel__input-box"><input class="sel__input" type="text"/><div' + ' class="sel__clear"></div></div>');
+      var selPremierInput = $('<div class="sel__input-box"><input class="sel__input" type="text"/><div' + ' class="sel__clear"></div></div>');
 
-            var selPremierSpan = $('<span></span>');
-            var selElem = $(this).find('select')[0];
+      var selPremierSpan = $('<span></span>');
+      var selElem = $(this).find('select')[0];
 
-            var selIndex = void 0;
-            if (selElem.selectedIndex === 0 || selElem.selectedIndex) {
-                selIndex = selElem.selectedIndex;
-            } else return;
+      var selIndex = void 0;
+      if (selElem.selectedIndex === 0 || selElem.selectedIndex) {
+        selIndex = selElem.selectedIndex;
+      } else return;
 
-            //hack
-            if (!selElem.options.length) {
-                return;
-            }
+      //hack
+      if (!selElem.options.length) {
+        return;
+      }
 
-            selPremierSpan.html(selElem.options[selIndex].innerHTML);
+      selPremierSpan.html(selElem.options[selIndex].innerHTML);
 
-            for (var i = 0; i < selElem.length; i++) {
-                var selItem = $('<li class="sel__item"></li>');
-                selItem.html(selElem[i].innerHTML);
-                if (i === selIndex) {
-                    $(selItem).addClass('sel__item--active');
-                }
-                selDrop.find('ul').append(selItem);
-            }
-
-            if ($(this).hasClass('custom-select--filter')) {
-                $(selPremier).append(selPremierInput).append(selPremierSpan).append(selArrow);
-            } else {
-                $(selPremier).append(selPremierSpan).append(selArrow);
-            }
-
-            $(selBox).append(selPremier).append(selDrop);
-
-            if (!$(this).find('.sel').length > 0) {
-                $(this).append(selBox);
-                $(this).each(Select().selectActions);
-            }
-        },
-
-        selectActions: function selectActions() {
-
-            //SHOW/HIDE sel drop-down
-            $(this).on('click', '.sel__premier', function (event) {
-                // console.log('select click');
-                event.stopPropagation();
-                Select().closeAllSel(this);
-
-                $(window).trigger('close-another-drops', this);
-
-                $(this).toggleClass('sel__premier--opened');
-                $(this).closest('.sel').find('.sel__drop').toggleClass('sel-hide');
-                if ($(this).has('input').length) {
-                    $(this).find('input').focus();
-                }
-            });
-
-            //SHOW/HIDE button for clean input
-            $(this).on('keyup change', '.sel__input-box input', function () {
-                var parent = $(this).parent();
-                if ($(this).val()) {
-                    parent.find('.sel__clear').show();
-                } else {
-                    parent.find('.sel__clear').hide();
-                }
-            });
-            //initialize Clear input
-            $(this).on('click', '.sel__clear', function () {
-                var parent = $(this).parent();
-                parent.find('input').val('');
-                $(this).hide();
-            }).on('click', '.sel__premier input', function (event) {
-                event.stopPropagation();
-                console.log('click on input');
-            });
-
-            //Chose item from select
-            $(this).on('click', '.sel__item', function () {
-                var text = $(this).html();
-                var index = $(this).index();
-                var selPrimer = $(this).closest('.sel').find('.sel__premier');
-                console.log(selPrimer);
-                Select().closeAllSel();
-                $(this).parent().find('.sel__item').removeClass('sel__item--active');
-                $(this).addClass('sel__item--active');
-                $(this).closest('.sel').find('.sel__premier span').html(text);
-
-                if ($(selPrimer).find('input').length) {
-                    $(selPrimer).find('input').val(text).change();
-                }
-
-                var select = $(this).closest('.sel').parent().find('select');
-                select[0].selectedIndex = index;
-                select[0].dispatchEvent(new Event('change'));
-            });
-            // close All select
-            // $(window).on('click', function(){
-            //     self.closeAllSel();
-            // });
-        },
-
-        closeAllSel: function closeAllSel(elmnt) {
-            /*a function that will close all select boxes in the document,
-            except the current select box:*/
-            var x = void 0,
-                y = void 0,
-                i = void 0,
-                arrNo = [];
-            x = document.getElementsByClassName("sel__drop");
-            y = document.getElementsByClassName("sel__premier");
-            for (i = 0; i < y.length; i++) {
-                if (elmnt == y[i]) {
-                    arrNo.push(i);
-                } else {
-                    y[i].classList.remove("sel__premier--opened");
-                }
-            }
-
-            for (i = 0; i < x.length; i++) {
-                if (arrNo.indexOf(i)) {
-                    x[i].classList.add("sel-hide");
-                }
-            }
-        },
-
-        init: function init() {
-            // this.selectActions();
-            var selectList = $('.custom-select');
-            selectList.each(this.createSelect);
+      for (var i = 0; i < selElem.length; i++) {
+        var selItem = $('<li class="sel__item"></li>');
+        selItem.html(selElem[i].innerHTML);
+        if (i === selIndex) {
+          $(selItem).addClass('sel__item--active');
         }
-    };
+        selDrop.find('ul').append(selItem);
+      }
+
+      if ($(this).hasClass('custom-select--filter')) {
+        $(selPremier).append(selPremierInput).append(selPremierSpan).append(selArrow);
+      } else {
+        $(selPremier).append(selPremierSpan).append(selArrow);
+      }
+
+      $(selBox).append(selPremier).append(selDrop);
+
+      if (!$(this).find('.sel').length > 0) {
+        $(this).append(selBox);
+        $(this).each(Select().selectActions);
+      }
+    },
+
+    selectActions: function selectActions() {
+
+      //SHOW/HIDE sel drop-down
+      $(this).on('click', '.sel__premier', function (event) {
+        // console.log('select click');
+        event.stopPropagation();
+        Select().closeAllSel(this);
+
+        $(window).trigger('close-another-drops', this);
+
+        $(this).toggleClass('sel__premier--opened');
+        $(this).closest('.sel').find('.sel__drop').toggleClass('sel-hide');
+        if ($(this).has('input').length) {
+          $(this).find('input').focus();
+        }
+      });
+
+      //SHOW/HIDE button for clean input
+      $(this).on('keyup change', '.sel__input-box input', function () {
+        var parent = $(this).parent();
+        if ($(this).val()) {
+          parent.find('.sel__clear').show();
+        } else {
+          parent.find('.sel__clear').hide();
+        }
+      });
+      //initialize Clear input
+      $(this).on('click', '.sel__clear', function () {
+        var parent = $(this).parent();
+        parent.find('input').val('');
+        $(this).hide();
+      }).on('click', '.sel__premier input', function (event) {
+        event.stopPropagation();
+        console.log('click on input');
+      });
+
+      //Chose item from select
+      $(this).on('click', '.sel__item', function () {
+        var text = $(this).html();
+        var index = $(this).index();
+        var selPrimer = $(this).closest('.sel').find('.sel__premier');
+        console.log(selPrimer);
+        Select().closeAllSel();
+        $(this).parent().find('.sel__item').removeClass('sel__item--active');
+        $(this).addClass('sel__item--active');
+        $(this).closest('.sel').find('.sel__premier span').html(text);
+
+        if ($(selPrimer).find('input').length) {
+          $(selPrimer).find('input').val(text).change();
+        }
+
+        var select = $(this).closest('.sel').parent().find('select');
+        select[0].selectedIndex = index;
+        select[0].dispatchEvent(new Event('change'));
+      });
+      // close All select
+      // $(window).on('click', function(){
+      //     self.closeAllSel();
+      // });
+    },
+
+    closeAllSel: function closeAllSel(elmnt) {
+      /*a function that will close all select boxes in the document,
+      except the current select box:*/
+      var x = void 0,
+          y = void 0,
+          i = void 0,
+          arrNo = [];
+      x = document.getElementsByClassName("sel__drop");
+      y = document.getElementsByClassName("sel__premier");
+      for (i = 0; i < y.length; i++) {
+        if (elmnt == y[i]) {
+          arrNo.push(i);
+        } else {
+          y[i].classList.remove("sel__premier--opened");
+        }
+      }
+
+      for (i = 0; i < x.length; i++) {
+        if (arrNo.indexOf(i)) {
+          x[i].classList.add("sel-hide");
+        }
+      }
+    },
+
+    choseOptionValue: function choseOptionValue(data) {
+      return function () {
+        var select = $(this).find('select')[0];
+
+        var selectedOption = Array.from(select.options).filter(function (option) {
+          if (option.value === data) {
+            return true;
+          }
+        })[0];
+
+        var selectedIndex = selectedOption.index;
+        var text = selectedOption.innerHTML;
+
+        $(select).parent().find('.sel__item').removeClass('sel__item--active');
+        $(select).parent().find('.sel__item').eq(selectedIndex).addClass('sel__item--active');
+
+        $(select).parent().find('.sel').find('.sel__premier span').html(text);
+        select.selectedIndex = selectedIndex;
+        select.dispatchEvent(new Event('change'));
+      };
+    },
+
+    choseOptionIndex: function choseOptionIndex(index) {
+      return function () {
+        var select = $(this).find('select')[0];
+        var selectedIndex = index;
+
+        var selectedOption = select.options[selectedIndex];
+        var text = selectedOption.innerHTML;
+
+        $(select).parent().find('.sel__item').removeClass('sel__item--active');
+        $(select).parent().find('.sel__item').eq(selectedIndex).addClass('sel__item--active');
+
+        $(select).parent().find('.sel').find('.sel__premier span').html(text);
+        select.selectedIndex = selectedIndex;
+        select.dispatchEvent(new Event('change'));
+      };
+    },
+
+    init: function init() {
+      var selectList = $('.custom-select');
+      selectList.each(this.createSelect);
+    }
+  };
 };
+
+window.Select = Select;
 
 exports.default = Select;
 

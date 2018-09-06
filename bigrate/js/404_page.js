@@ -60,11 +60,12 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ([
-/* 0 */
+/* 0 */,
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -116,7 +117,6 @@ function Header() {
             });
 
             _mobileMenu.on('click', function (event) {
-                console.log('clicckckckckkc');
                 event.stopPropagation();
                 _mobileMenu.show();
             });
@@ -157,6 +157,11 @@ function Header() {
                 }
                 $(this).find('.js-header-drop').hide();
             });
+            $('.header-mobile-menu__item-link').on('click', function () {
+                _mobileMenu.hide();
+                mobileMenuBtn.removeClass('burger--active');
+                $('.l-page').removeClass('l-page--noscroll');
+            });
             // mobileMenu.slideUp('275');
             // mobileMenuBtn.removeClass('burger--active');
             // $('.l-page').removeClass('l-page--noscroll');
@@ -173,162 +178,201 @@ function Header() {
 exports.default = Header;
 
 /***/ }),
-/* 1 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
-
 var Select = function Select() {
-    return {
-        createSelect: function createSelect() {
+  return {
+    createSelect: function createSelect() {
 
-            var selBox = $('<div class="sel"></div>');
-            var selPremier = $('<div class="sel__premier"></div>');
-            var selDrop = $('<div class="sel__drop sel-hide"><ul></ul></div>');
-            var selArrow = $('<div class="sel__arrow"></div>');
+      var selBox = $('<div class="sel"></div>');
+      var selPremier = $('<div class="sel__premier"></div>');
+      var selDrop = $('<div class="sel__drop sel-hide"><ul></ul></div>');
+      var selArrow = $('<div class="sel__arrow"></div>');
 
-            var selPremierInput = $('<div class="sel__input-box"><input class="sel__input" type="text"/><div' + ' class="sel__clear"></div></div>');
+      var selPremierInput = $('<div class="sel__input-box"><input class="sel__input" type="text"/><div' + ' class="sel__clear"></div></div>');
 
-            var selPremierSpan = $('<span></span>');
-            var selElem = $(this).find('select')[0];
+      var selPremierSpan = $('<span></span>');
+      var selElem = $(this).find('select')[0];
 
-            var selIndex = void 0;
-            if (selElem.selectedIndex === 0 || selElem.selectedIndex) {
-                selIndex = selElem.selectedIndex;
-            } else return;
+      var selIndex = void 0;
+      if (selElem.selectedIndex === 0 || selElem.selectedIndex) {
+        selIndex = selElem.selectedIndex;
+      } else return;
 
-            //hack
-            if (!selElem.options.length) {
-                return;
-            }
+      //hack
+      if (!selElem.options.length) {
+        return;
+      }
 
-            selPremierSpan.html(selElem.options[selIndex].innerHTML);
+      selPremierSpan.html(selElem.options[selIndex].innerHTML);
 
-            for (var i = 0; i < selElem.length; i++) {
-                var selItem = $('<li class="sel__item"></li>');
-                selItem.html(selElem[i].innerHTML);
-                if (i === selIndex) {
-                    $(selItem).addClass('sel__item--active');
-                }
-                selDrop.find('ul').append(selItem);
-            }
-
-            if ($(this).hasClass('custom-select--filter')) {
-                $(selPremier).append(selPremierInput).append(selPremierSpan).append(selArrow);
-            } else {
-                $(selPremier).append(selPremierSpan).append(selArrow);
-            }
-
-            $(selBox).append(selPremier).append(selDrop);
-
-            if (!$(this).find('.sel').length > 0) {
-                $(this).append(selBox);
-                $(this).each(Select().selectActions);
-            }
-        },
-
-        selectActions: function selectActions() {
-
-            //SHOW/HIDE sel drop-down
-            $(this).on('click', '.sel__premier', function (event) {
-                // console.log('select click');
-                event.stopPropagation();
-                Select().closeAllSel(this);
-
-                $(window).trigger('close-another-drops', this);
-
-                $(this).toggleClass('sel__premier--opened');
-                $(this).closest('.sel').find('.sel__drop').toggleClass('sel-hide');
-                if ($(this).has('input').length) {
-                    $(this).find('input').focus();
-                }
-            });
-
-            //SHOW/HIDE button for clean input
-            $(this).on('keyup change', '.sel__input-box input', function () {
-                var parent = $(this).parent();
-                if ($(this).val()) {
-                    parent.find('.sel__clear').show();
-                } else {
-                    parent.find('.sel__clear').hide();
-                }
-            });
-            //initialize Clear input
-            $(this).on('click', '.sel__clear', function () {
-                var parent = $(this).parent();
-                parent.find('input').val('');
-                $(this).hide();
-            }).on('click', '.sel__premier input', function (event) {
-                event.stopPropagation();
-                console.log('click on input');
-            });
-
-            //Chose item from select
-            $(this).on('click', '.sel__item', function () {
-                var text = $(this).html();
-                var index = $(this).index();
-                var selPrimer = $(this).closest('.sel').find('.sel__premier');
-                console.log(selPrimer);
-                Select().closeAllSel();
-                $(this).parent().find('.sel__item').removeClass('sel__item--active');
-                $(this).addClass('sel__item--active');
-                $(this).closest('.sel').find('.sel__premier span').html(text);
-
-                if ($(selPrimer).find('input').length) {
-                    $(selPrimer).find('input').val(text).change();
-                }
-
-                var select = $(this).closest('.sel').parent().find('select');
-                select[0].selectedIndex = index;
-                select[0].dispatchEvent(new Event('change'));
-            });
-            // close All select
-            // $(window).on('click', function(){
-            //     self.closeAllSel();
-            // });
-        },
-
-        closeAllSel: function closeAllSel(elmnt) {
-            /*a function that will close all select boxes in the document,
-            except the current select box:*/
-            var x = void 0,
-                y = void 0,
-                i = void 0,
-                arrNo = [];
-            x = document.getElementsByClassName("sel__drop");
-            y = document.getElementsByClassName("sel__premier");
-            for (i = 0; i < y.length; i++) {
-                if (elmnt == y[i]) {
-                    arrNo.push(i);
-                } else {
-                    y[i].classList.remove("sel__premier--opened");
-                }
-            }
-
-            for (i = 0; i < x.length; i++) {
-                if (arrNo.indexOf(i)) {
-                    x[i].classList.add("sel-hide");
-                }
-            }
-        },
-
-        init: function init() {
-            // this.selectActions();
-            var selectList = $('.custom-select');
-            selectList.each(this.createSelect);
+      for (var i = 0; i < selElem.length; i++) {
+        var selItem = $('<li class="sel__item"></li>');
+        selItem.html(selElem[i].innerHTML);
+        if (i === selIndex) {
+          $(selItem).addClass('sel__item--active');
         }
-    };
+        selDrop.find('ul').append(selItem);
+      }
+
+      if ($(this).hasClass('custom-select--filter')) {
+        $(selPremier).append(selPremierInput).append(selPremierSpan).append(selArrow);
+      } else {
+        $(selPremier).append(selPremierSpan).append(selArrow);
+      }
+
+      $(selBox).append(selPremier).append(selDrop);
+
+      if (!$(this).find('.sel').length > 0) {
+        $(this).append(selBox);
+        $(this).each(Select().selectActions);
+      }
+    },
+
+    selectActions: function selectActions() {
+
+      //SHOW/HIDE sel drop-down
+      $(this).on('click', '.sel__premier', function (event) {
+        // console.log('select click');
+        event.stopPropagation();
+        Select().closeAllSel(this);
+
+        $(window).trigger('close-another-drops', this);
+
+        $(this).toggleClass('sel__premier--opened');
+        $(this).closest('.sel').find('.sel__drop').toggleClass('sel-hide');
+        if ($(this).has('input').length) {
+          $(this).find('input').focus();
+        }
+      });
+
+      //SHOW/HIDE button for clean input
+      $(this).on('keyup change', '.sel__input-box input', function () {
+        var parent = $(this).parent();
+        if ($(this).val()) {
+          parent.find('.sel__clear').show();
+        } else {
+          parent.find('.sel__clear').hide();
+        }
+      });
+      //initialize Clear input
+      $(this).on('click', '.sel__clear', function () {
+        var parent = $(this).parent();
+        parent.find('input').val('');
+        $(this).hide();
+      }).on('click', '.sel__premier input', function (event) {
+        event.stopPropagation();
+        console.log('click on input');
+      });
+
+      //Chose item from select
+      $(this).on('click', '.sel__item', function () {
+        var text = $(this).html();
+        var index = $(this).index();
+        var selPrimer = $(this).closest('.sel').find('.sel__premier');
+        console.log(selPrimer);
+        Select().closeAllSel();
+        $(this).parent().find('.sel__item').removeClass('sel__item--active');
+        $(this).addClass('sel__item--active');
+        $(this).closest('.sel').find('.sel__premier span').html(text);
+
+        if ($(selPrimer).find('input').length) {
+          $(selPrimer).find('input').val(text).change();
+        }
+
+        var select = $(this).closest('.sel').parent().find('select');
+        select[0].selectedIndex = index;
+        select[0].dispatchEvent(new Event('change'));
+      });
+      // close All select
+      // $(window).on('click', function(){
+      //     self.closeAllSel();
+      // });
+    },
+
+    closeAllSel: function closeAllSel(elmnt) {
+      /*a function that will close all select boxes in the document,
+      except the current select box:*/
+      var x = void 0,
+          y = void 0,
+          i = void 0,
+          arrNo = [];
+      x = document.getElementsByClassName("sel__drop");
+      y = document.getElementsByClassName("sel__premier");
+      for (i = 0; i < y.length; i++) {
+        if (elmnt == y[i]) {
+          arrNo.push(i);
+        } else {
+          y[i].classList.remove("sel__premier--opened");
+        }
+      }
+
+      for (i = 0; i < x.length; i++) {
+        if (arrNo.indexOf(i)) {
+          x[i].classList.add("sel-hide");
+        }
+      }
+    },
+
+    choseOptionValue: function choseOptionValue(data) {
+      return function () {
+        var select = $(this).find('select')[0];
+
+        var selectedOption = Array.from(select.options).filter(function (option) {
+          if (option.value === data) {
+            return true;
+          }
+        })[0];
+
+        var selectedIndex = selectedOption.index;
+        var text = selectedOption.innerHTML;
+
+        $(select).parent().find('.sel__item').removeClass('sel__item--active');
+        $(select).parent().find('.sel__item').eq(selectedIndex).addClass('sel__item--active');
+
+        $(select).parent().find('.sel').find('.sel__premier span').html(text);
+        select.selectedIndex = selectedIndex;
+        select.dispatchEvent(new Event('change'));
+      };
+    },
+
+    choseOptionIndex: function choseOptionIndex(index) {
+      return function () {
+        var select = $(this).find('select')[0];
+        var selectedIndex = index;
+
+        var selectedOption = select.options[selectedIndex];
+        var text = selectedOption.innerHTML;
+
+        $(select).parent().find('.sel__item').removeClass('sel__item--active');
+        $(select).parent().find('.sel__item').eq(selectedIndex).addClass('sel__item--active');
+
+        $(select).parent().find('.sel').find('.sel__premier span').html(text);
+        select.selectedIndex = selectedIndex;
+        select.dispatchEvent(new Event('change'));
+      };
+    },
+
+    init: function init() {
+      var selectList = $('.custom-select');
+      selectList.each(this.createSelect);
+    }
+  };
 };
+
+window.Select = Select;
 
 exports.default = Select;
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -341,7 +385,7 @@ var Modals = function Modals() {
 	return {
 		modalEvents: function modalEvents() {
 			var self = this;
-			$('.call-modal').on('click', function (evetn) {
+			$('.js-call-modal').on('click', function (evetn) {
 				event.stopPropagation();
 				var id = $(this).data('id');
 				console.log('click -- id == ' + id);
@@ -351,6 +395,7 @@ var Modals = function Modals() {
 				event.stopPropagation();
 			});
 			$(document).on('click', this.closeModals);
+			$('.rlog__close').on('click', this.closeModals);
 		},
 
 		closeModals: function closeModals() {
@@ -377,7 +422,7 @@ window.Modals = Modals();
 exports.default = Modals;
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -453,34 +498,34 @@ window.Alerts = Alerts;
 exports.default = Alerts;
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(5);
+module.exports = __webpack_require__(6);
 
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _modal = __webpack_require__(2);
+var _modal = __webpack_require__(3);
 
 var _modal2 = _interopRequireDefault(_modal);
 
-var _alerts = __webpack_require__(3);
+var _alerts = __webpack_require__(4);
 
 var _alerts2 = _interopRequireDefault(_alerts);
 
-var _header = __webpack_require__(0);
+var _header = __webpack_require__(1);
 
 var _header2 = _interopRequireDefault(_header);
 
-__webpack_require__(1);
+__webpack_require__(2);
 
-__webpack_require__(6);
+__webpack_require__(7);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -494,7 +539,7 @@ $(document).ready(function () {
 });
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
