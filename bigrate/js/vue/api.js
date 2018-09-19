@@ -60,35 +60,32 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 44);
+/******/ 	return __webpack_require__(__webpack_require__.s = 12);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 44:
+/***/ 12:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(45);
+module.exports = __webpack_require__(3);
 
 
 /***/ }),
 
-/***/ 45:
+/***/ 3:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-// console.log('search_page.js');
-// import OrdersSearchResult from './vue/components/OrdersSearchResult'
-//
-// $(document).ready(function () {
-//   let app = new Vue({
-//     el: '#OrdersSearchResultApp',
-//     render: h => h('OrdersSearchResult')
-//   });
-// });
 
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var ordersUrl = exports.ordersUrl = BASE_URL + "api/orders?";
+var countriesUrl = exports.countriesUrl = BASE_URL + "api/countries";
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=search_page.js.map
+//# sourceMappingURL=api.js.map

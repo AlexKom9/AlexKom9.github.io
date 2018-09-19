@@ -13,10 +13,7 @@
     <link rel="stylesheet" href="svgSprite/symbol/sprite.css"/>
     <link rel="stylesheet" href="libs/perfect-scrollbar.css"/>
     <script>var BASE_URL = 'http://front.bigrate.loc/';</script>
-    <!--link(rel="stylesheet" href="css/main.css")-->
-    <!--link( rel="stylesheet" href="libs/jquery-ui-1.12.1.custom/jquery-ui.css")-->
-    <!--link(rel="stylesheet" href="libs/jquery-ui-1.12.1.custom/jquery-ui.structure.min.css")-->
-    <!--link(rel="stylesheet" href="libs/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css")-->
+    <link rel="stylesheet" href="./libs/perfect-scrollbar.css" crossorigin="anonymous"/>
   </head>
   <body class="l-page">
     <div class="l-wrap">
@@ -245,21 +242,21 @@
       <section class="cabinet">
         <div class="l-container">
           <div class="l-title-wrap">
-            <button class="l-btn js-hide-full-list mr-m" data-group="full-list">
-              <div class="l-btn__inner"><svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg">
+            <button class="l-btn">
+              <div class="l-btn__inner"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <rect width="24" height="24" fill="white" fill-opacity="0"/>
-    <path d="M11 18L12.41 16.6985L8.5 13H19V11H8.5L12.41 7.30154L11 6L5 12L11 18Z" fill="#B25C5C"/>
-    <mask id="svg-arrow-left" mask-type="alpha" maskUnits="userSpaceOnUse" x="5" y="6" width="14" height="12">
-        <path d="M11 18L12.41 16.6985L8.5 13H19V11H8.5L12.41 7.30154L11 6L5 12L11 18Z" fill="#B25C5C"/>
+    <path d="M13 6L11.59 7.30154L15.5 11H5V13H15.5L11.59 16.6985L13 18L19 12L13 6Z"/>
+    <mask id="svg-arrow-right" mask-type="alpha" maskUnits="userSpaceOnUse" x="5" y="6" width="14" height="12">
+        <path d="M13 6L11.59 7.30154L15.5 11H5V13H15.5L11.59 16.6985L13 18L19 12L13 6Z" fill="#B25C5C"/>
     </mask>
-    <g mask="url(#svg-arrow-left)">
-        <rect width="24" height="24" fill="inherit"/>
+    <g mask="url(#svg-arrow-right)" fill="inherit">
+        <rect width="24" height="24"/>
     </g>
 </svg>
-<span>Назад</span>
+<span>Назад к панели</span>
               </div>
             </button>
-            <h1 class="l-title">Проверенные пользователи</h1>
+            <h1 class="l-title">Кредитование, используя Банковский перевод Ukraine, в валюте Ukrainian Hryvnia (UAH)</h1>
           </div>
           <div class="cards__inner">
             <div class="cards__side cabinet__side">
@@ -360,665 +357,141 @@
             </div>
             <div class="cards__main cabinet__main">
               <div class="cards__content">
-                <div class="cards__card cards__card--full-xs js-group-content" data-group="table">
-                  <div class="card-tab">
-                    <div class="card-tab__tabs">
-                      <!--.card-tab__tabs-wrap-->
-                      <div class="card-tab__tab card-tab__tab--active" data-group="list-of-trusted"><span>Список доверенных</span></div>
-                      <div class="card-tab__tab" data-group="my-ads-for-verified"><span>Все Мои объявления для проверенных</span></div>
-                    </div>
-                    <div class="card-tab__inner js-group-content verified-users" data-group="list-of-trusted">
-                      <h2 class="card__title mb-m">Специальные предложения для проверенных пользователей</h2>
-                      <div class="card__sec">
-                        <p>Проверенные пользователи получают доступ к вашим объявлениям, помеченным как для проверенных пользователей. Вы можете создавать специальные объявления для друзей с лучшей ценой и меньшими  ограничениями, используя опцию Только проверенные пользователи.<br/>Пригласите друзей на Bigrate, оставьте им отзыв после сделки или зайдите на их профиль, чтобы  отметить их как проверенных пользователей.<br/><br/>Только у проверенных пользователей есть доступ к вашим объявлениям для проверенных пользователей.</p>
-                      </div>
-                      <h2 class="card__title mb-m">Проверенные пользователи</h2>
-                      <div class="card-tab__table">
-                        <div class="c-tab c-tab--font-s">
-                          <div class="c-tab__row verified-users__row">
-                            <div class="c-tab__cell c-tab__cell--head verified-users__cell-user"><span>Пользователь</span></div>
-                            <div class="c-tab__cell c-tab__cell--head verified-users__cell-status"><span>Осуществлял сделки</span></div>
-                          </div><a class="c-tab__row verified-users__row" href="#">
-                            <div class="c-tab__cell verified-users__cell-user">
-                              <div class="user-rating-card">
-                                <p class="user-rating-card__name">Alex Kornienko<span class="dot"></span></p>
-                                <div class="user-rating-card__rat">
-                                  <div class="rating">
-                                    <div class="rating__title">Рейтинг</div>
-                                    <div class="rating__bar">
-                                      <div class="rating__progress"></div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="c-tab__cell verified-users__cell-status"><span class="color-secondary">Да</span></div></a><a class="c-tab__row verified-users__row" href="#">
-                            <div class="c-tab__cell verified-users__cell-user">
-                              <div class="user-rating-card">
-                                <p class="user-rating-card__name">Alex Kornienko<span class="dot"></span></p>
-                                <div class="user-rating-card__rat">
-                                  <div class="rating">
-                                    <div class="rating__title">Рейтинг</div>
-                                    <div class="rating__bar">
-                                      <div class="rating__progress"></div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="c-tab__cell verified-users__cell-status"><span class="color-secondary">Да</span></div></a><a class="c-tab__row verified-users__row" href="#">
-                            <div class="c-tab__cell verified-users__cell-user">
-                              <div class="user-rating-card">
-                                <p class="user-rating-card__name">Alex Kornienko<span class="dot"></span></p>
-                                <div class="user-rating-card__rat">
-                                  <div class="rating">
-                                    <div class="rating__title">Рейтинг</div>
-                                    <div class="rating__bar">
-                                      <div class="rating__progress"></div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="c-tab__cell verified-users__cell-status"><span class="color-secondary">Да</span></div></a><a class="c-tab__row verified-users__row" href="#">
-                            <div class="c-tab__cell verified-users__cell-user">
-                              <div class="user-rating-card">
-                                <p class="user-rating-card__name">Alex Kornienko<span class="dot"></span></p>
-                                <div class="user-rating-card__rat">
-                                  <div class="rating">
-                                    <div class="rating__title">Рейтинг</div>
-                                    <div class="rating__bar">
-                                      <div class="rating__progress"></div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="c-tab__cell verified-users__cell-status"><span class="color-secondary">Да</span></div></a><a class="c-tab__row verified-users__row" href="#">
-                            <div class="c-tab__cell verified-users__cell-user">
-                              <div class="user-rating-card">
-                                <p class="user-rating-card__name">Alex Kornienko<span class="dot"></span></p>
-                                <div class="user-rating-card__rat">
-                                  <div class="rating">
-                                    <div class="rating__title">Рейтинг</div>
-                                    <div class="rating__bar">
-                                      <div class="rating__progress"></div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="c-tab__cell verified-users__cell-status"><span class="color-secondary">Да</span></div></a>
+                <div class="active-deal">
+                  <div class="active-deal__inner">
+                    <div class="active-deal__col active-deal__col--stretched">
+                      <div class="card deal-term">
+                        <div class="card__head card__head--toggle-mobile">
+                          <h4 class="card__title">Информация о сделке</h4>
                         </div>
-                      </div>
-                      <div class="card-tab__btn card-tab__btn card-tab__btn--right mb-m mt-m">
-                        <button class="l-btn js-show-full-list l-btn--mobile-full" data-param="verified-users">
-                          <div class="l-btn__inner"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <rect width="24" height="24" fill="white" fill-opacity="0"/>
-    <path d="M13 6L11.59 7.30154L15.5 11H5V13H15.5L11.59 16.6985L13 18L19 12L13 6Z"/>
-    <mask id="svg-arrow-right" mask-type="alpha" maskUnits="userSpaceOnUse" x="5" y="6" width="14" height="12">
-        <path d="M13 6L11.59 7.30154L15.5 11H5V13H15.5L11.59 16.6985L13 18L19 12L13 6Z" fill="#B25C5C"/>
-    </mask>
-    <g mask="url(#svg-arrow-right)" fill="inherit">
-        <rect width="24" height="24"/>
-    </g>
+                        <div class="card__inner card__inner--toggle-mobile">
+                          <div class="deal-term__inner">
+                            <div class="mb-m">
+                              <p class="caption">Покупатель</p>
+                              <p class="secondary">Krokodile_678</p>
+                            </div>
+                            <div class="mb-m">
+                              <p class="caption">Ожидание оплаты</p>
+                              <p class="secondary font-supra">14 576 USD/BTC</p>
+                            </div>
+                            <div class="mb-m">
+                              <p class="caption">Сумма депонирования</p>
+                              <p class="secondary font-supra">0,4256 BTC</p>
+                            </div>
+                            <div class="mb-m">
+                              <div class="caption">Удостовертесь, что партнер знает куда отправлять деньги</div>
+                            </div>
+                          </div>
+                          <div class="deal-term__btn">
+                            <button class="l-btn l-btn--primary l-btn--center w-100">
+                              <div class="l-btn__inner"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<mask id="svg-send-bit" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="3" width="18" height="18">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5.41016 6.41016L8 3.83008V13.5H10V3.83008L12.5898 6.41016L14 5L9 0L4 5L5.41016 6.41016ZM16 16V9H18V16C18 17.1001 17.0996 18 16 18H2C0.900391 18 0 17.1001 0 16V9H2V16H16Z" transform="translate(3 3)" fill="white"/>
+</mask>
+<g mask="url(#svg-send-bit)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="inherit"/>
+</g>
 </svg>
-<span>Показать больше</span>
+<span>Отправить BTC</span>
+                              </div>
+                            </button>
                           </div>
-                        </button>
-                      </div>
-                      <h2 class="card__title mb-m">Проверенные пользователи</h2>
-                      <div class="card-tab__table">
-                        <div class="c-tab c-tab--font-s">
-                          <div class="c-tab__row verified-users__row">
-                            <div class="c-tab__cell c-tab__cell--head verified-users__cell-user"><span>Пользователь</span></div>
-                            <div class="c-tab__cell c-tab__cell--head verified-users__cell-status"><span>Осуществлял сделки</span></div>
-                          </div><a class="c-tab__row verified-users__row" href="#">
-                            <div class="c-tab__cell verified-users__cell-user">
-                              <div class="user-rating-card">
-                                <p class="user-rating-card__name">Alex Kornienko<span class="dot"></span></p>
-                                <div class="user-rating-card__rat">
-                                  <div class="rating">
-                                    <div class="rating__title">Рейтинг</div>
-                                    <div class="rating__bar">
-                                      <div class="rating__progress"></div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="c-tab__cell verified-users__cell-status"><span class="color-secondary">Да</span></div></a><a class="c-tab__row verified-users__row" href="#">
-                            <div class="c-tab__cell verified-users__cell-user">
-                              <div class="user-rating-card">
-                                <p class="user-rating-card__name">Alex Kornienko<span class="dot"></span></p>
-                                <div class="user-rating-card__rat">
-                                  <div class="rating">
-                                    <div class="rating__title">Рейтинг</div>
-                                    <div class="rating__bar">
-                                      <div class="rating__progress"></div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="c-tab__cell verified-users__cell-status"><span class="color-secondary">Да</span></div></a><a class="c-tab__row verified-users__row" href="#">
-                            <div class="c-tab__cell verified-users__cell-user">
-                              <div class="user-rating-card">
-                                <p class="user-rating-card__name">Alex Kornienko<span class="dot"></span></p>
-                                <div class="user-rating-card__rat">
-                                  <div class="rating">
-                                    <div class="rating__title">Рейтинг</div>
-                                    <div class="rating__bar">
-                                      <div class="rating__progress"></div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="c-tab__cell verified-users__cell-status"><span class="color-secondary">Да</span></div></a><a class="c-tab__row verified-users__row" href="#">
-                            <div class="c-tab__cell verified-users__cell-user">
-                              <div class="user-rating-card">
-                                <p class="user-rating-card__name">Alex Kornienko<span class="dot"></span></p>
-                                <div class="user-rating-card__rat">
-                                  <div class="rating">
-                                    <div class="rating__title">Рейтинг</div>
-                                    <div class="rating__bar">
-                                      <div class="rating__progress"></div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="c-tab__cell verified-users__cell-status"><span class="color-secondary">Да</span></div></a><a class="c-tab__row verified-users__row" href="#">
-                            <div class="c-tab__cell verified-users__cell-user">
-                              <div class="user-rating-card">
-                                <p class="user-rating-card__name">Alex Kornienko<span class="dot"></span></p>
-                                <div class="user-rating-card__rat">
-                                  <div class="rating">
-                                    <div class="rating__title">Рейтинг</div>
-                                    <div class="rating__bar">
-                                      <div class="rating__progress"></div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="c-tab__cell verified-users__cell-status"><span class="color-secondary">Да</span></div></a>
                         </div>
                       </div>
-                      <div class="card-tab__btn card-tab__btn card-tab__btn--right mb-m mt-m">
-                        <button class="l-btn js-switch-tab js-show-full-list l-btn--mobile-full" data-param="you-verified">
-                          <div class="l-btn__inner"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <rect width="24" height="24" fill="white" fill-opacity="0"/>
-    <path d="M13 6L11.59 7.30154L15.5 11H5V13H15.5L11.59 16.6985L13 18L19 12L13 6Z"/>
-    <mask id="svg-arrow-right" mask-type="alpha" maskUnits="userSpaceOnUse" x="5" y="6" width="14" height="12">
-        <path d="M13 6L11.59 7.30154L15.5 11H5V13H15.5L11.59 16.6985L13 18L19 12L13 6Z" fill="#B25C5C"/>
-    </mask>
-    <g mask="url(#svg-arrow-right)" fill="inherit">
-        <rect width="24" height="24"/>
-    </g>
+                    </div>
+                    <div class="active-deal__col">
+                      <div class="chat">
+                        <div class="chat__head">
+                          <div class="chat__head-img"><img src="https://www.webmarketingeturismo.it/wp-content/uploads/2016/11/mobile-user.png"/></div>
+                          <div class="chat__head-inf">
+                            <p class="chat__head-name">Krokodile_678</p><span class="chat__head-stat caption">был в сети 12 мин назад</span>
+                          </div>
+                        </div>
+                        <div class="chat__inner" id="js-chat-window-scroll">
+                          <div class="chat__message-container">
+                            <div class="chat__message-wrap">
+                              <div class="chat__message chat__message--in">
+                                <p class="chat__message-body">Wow</p>
+                                <p class="chat__message-body">So what is going on?</p>
+                              </div>
+                            </div>
+                            <div class="chat__message-wrap">
+                              <div class="chat__message chat__message--out">
+                                <p class="chat__message-body">We had a meth addict in here this morning who was biologically younger than you are, and he's 58</p><span class="caption">Read 16:26</span>
+                              </div>
+                            </div>
+                            <div class="chat__message-wrap">
+                              <div class="chat__message chat__message--in">
+                                <p class="chat__message-body">So what is going on?</p>
+                              </div>
+                            </div>
+                            <div class="chat__message-wrap">
+                              <div class="chat__message chat__message--out">
+                                <p class="chat__message-body">I'm a good programmer. I mean, it's the onlam good a last year, I threw a Frisbee and it chipped my tooth.</p><span class="caption">Delivered</span>
+                              </div>
+                            </div>
+                            <div class="chat__message-wrap">
+                              <div class="chat__message chat__message--in">
+                                <p class="chat__message-body">Wow</p>
+                                <p class="chat__message-body">So what is going on?</p>
+                              </div>
+                            </div>
+                            <div class="chat__message-wrap">
+                              <div class="chat__message chat__message--out">
+                                <p class="chat__message-body">We had a meth addict in here this morning who was biologically younger than you are, and he's 58</p><span class="caption">Read 16:26</span>
+                              </div>
+                            </div>
+                            <div class="chat__message-wrap">
+                              <div class="chat__message chat__message--in">
+                                <p class="chat__message-body">So what is going on?</p>
+                              </div>
+                            </div>
+                            <div class="chat__message-wrap">
+                              <div class="chat__message chat__message--out">
+                                <p class="chat__message-body">I'm a good programmer. I mean, it's the onlam good a last year, I threw a Frisbee and it chipped my tooth.</p><span class="caption">Delivered</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="chat__footer">
+                          <textarea class="chet__input"></textarea>
+                          <div class="chat__footer-control">
+                            <div class="chat__footer-send"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<rect width="24" height="24" fill="black" fill-opacity="0"/>
+<mask id="svg-send" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="3" width="21" height="18">
+<path d="M2.01 21L23 12L2.01 3L2 10L17 12L2 14L2.01 21Z" fill="white"/>
+</mask>
+<g mask="url(#svg-send)">
+<rect width="24" height="24" fill="black" fill-opacity="0"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="inherit"/>
+</g>
 </svg>
-<span>Показать больше</span>
-                          </div>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="card-tab__inner js-group-content varifed-ads" data-group="my-ads-for-verified">
-                      <h2 class="card__title mb-m">Сделки с проверенными пользователями</h2>
-                      <div class="card__sec">
-                        <p>Эти объявления доступны пользователям, которых вы добавили в список  Только проверенные пользователи, а также пользователям, добавившим в этот список вас. Чтобы просмотреть ваши собственные объявления, зайдите в раздел Информационная панель.</p>
-                      </div>
-                      <div class="verified-ads__table-wrap" id="varifed-ads__table-wrap">
-                        <div class="card-tab__table verified-ads__table">
-                          <div class="c-tab c-tab--font-s">
-                            <div class="c-tab__row verified-ads__row">
-                              <div class="c-tab__cell c-tab__cell--head verified-ads__cell"><span>Пользователь</span></div>
-                              <div class="c-tab__cell c-tab__cell--head verified-ads__cell"><span>Описание(место)</span></div>
-                              <div class="c-tab__cell c-tab__cell--head verified-ads__cell"><span>Цена/BTC</span></div>
-                              <div class="c-tab__cell c-tab__cell--head verified-ads__cell"><span>Сумма</span></div>
-                              <div class="c-tab__cell c-tab__cell--head verified-ads__cell"><span>Способ оплаты</span></div>
+
                             </div>
-                            <div class="c-tab__row verified-ads__row">
-                              <div class="c-tab__cell verified-ads__cell">
-                                <div class="user-rating-card">
-                                  <p class="user-rating-card__name">AlexKornienko<span class="dot"></span></p>
-                                  <div class="user-rating-card__rat">
-                                    <div class="rating">
-                                      <div class="rating__title">Рейтинг</div>
-                                      <div class="rating__bar">
-                                        <div class="rating__progress"></div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="c-tab__cell verified-ads__cell"><span>Украина</span></div>
-                              <div class="c-tab__cell verified-ads__cell"><span>75 865</span></div>
-                              <div class="c-tab__cell verified-ads__cell"><span>5135</span></div>
-                              <div class="c-tab__cell verified-ads__cell"><span class="color-secondary">Банковские системы</span></div>
-                            </div>
-                            <div class="verified-ads__card-mobile mb-m">
-                              <div class="mb-s">
-                                <div class="user-rating-card">
-                                  <p class="user-rating-card__name">AlexKornienko<span class="dot"></span></p>
-                                  <div class="user-rating-card__rat">
-                                    <div class="rating">
-                                      <div class="rating__title">Рейтинг</div>
-                                      <div class="rating__bar">
-                                        <div class="rating__progress"></div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="mb-s">
-                                <p class="caption">Описание(место)</p>
-                                <p class="fs-m2">Украина</p>
-                              </div>
-                              <div class="mb-s">
-                                <p class="caption">Цена/BTC</p>
-                                <p class="fs-m2">75 865</p>
-                              </div>
-                              <div class="mb-s">
-                                <p class="caption">Сумма</p>
-                                <p class="fs-m2">5135</p>
-                              </div>
-                              <div class="mb-m">
-                                <p class="caption">Способ оплаты</p>
-                                <p class="color-secondary">Банковские системы</p>
-                              </div>
-                            </div>
-                            <div class="c-tab__row verified-ads__row">
-                              <div class="c-tab__cell verified-ads__cell">
-                                <div class="user-rating-card">
-                                  <p class="user-rating-card__name">AlexKornienko<span class="dot"></span></p>
-                                  <div class="user-rating-card__rat">
-                                    <div class="rating">
-                                      <div class="rating__title">Рейтинг</div>
-                                      <div class="rating__bar">
-                                        <div class="rating__progress"></div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="c-tab__cell verified-ads__cell"><span>Украина</span></div>
-                              <div class="c-tab__cell verified-ads__cell"><span>75 865</span></div>
-                              <div class="c-tab__cell verified-ads__cell"><span>5135</span></div>
-                              <div class="c-tab__cell verified-ads__cell"><span class="color-secondary">Банковские системы</span></div>
-                            </div>
-                            <div class="verified-ads__card-mobile mb-m">
-                              <div class="mb-s">
-                                <div class="user-rating-card">
-                                  <p class="user-rating-card__name">AlexKornienko<span class="dot"></span></p>
-                                  <div class="user-rating-card__rat">
-                                    <div class="rating">
-                                      <div class="rating__title">Рейтинг</div>
-                                      <div class="rating__bar">
-                                        <div class="rating__progress"></div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="mb-s">
-                                <p class="caption">Описание(место)</p>
-                                <p class="fs-m2">Украина</p>
-                              </div>
-                              <div class="mb-s">
-                                <p class="caption">Цена/BTC</p>
-                                <p class="fs-m2">75 865</p>
-                              </div>
-                              <div class="mb-s">
-                                <p class="caption">Сумма</p>
-                                <p class="fs-m2">5135</p>
-                              </div>
-                              <div class="mb-m">
-                                <p class="caption">Способ оплаты</p>
-                                <p class="color-secondary">Банковские системы</p>
-                              </div>
-                            </div>
-                            <div class="c-tab__row verified-ads__row">
-                              <div class="c-tab__cell verified-ads__cell">
-                                <div class="user-rating-card">
-                                  <p class="user-rating-card__name">AlexKornienko<span class="dot"></span></p>
-                                  <div class="user-rating-card__rat">
-                                    <div class="rating">
-                                      <div class="rating__title">Рейтинг</div>
-                                      <div class="rating__bar">
-                                        <div class="rating__progress"></div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="c-tab__cell verified-ads__cell"><span>Украина</span></div>
-                              <div class="c-tab__cell verified-ads__cell"><span>75 865</span></div>
-                              <div class="c-tab__cell verified-ads__cell"><span>5135</span></div>
-                              <div class="c-tab__cell verified-ads__cell"><span class="color-secondary">Банковские системы</span></div>
-                            </div>
-                            <div class="verified-ads__card-mobile mb-m">
-                              <div class="mb-s">
-                                <div class="user-rating-card">
-                                  <p class="user-rating-card__name">AlexKornienko<span class="dot"></span></p>
-                                  <div class="user-rating-card__rat">
-                                    <div class="rating">
-                                      <div class="rating__title">Рейтинг</div>
-                                      <div class="rating__bar">
-                                        <div class="rating__progress"></div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="mb-s">
-                                <p class="caption">Описание(место)</p>
-                                <p class="fs-m2">Украина</p>
-                              </div>
-                              <div class="mb-s">
-                                <p class="caption">Цена/BTC</p>
-                                <p class="fs-m2">75 865</p>
-                              </div>
-                              <div class="mb-s">
-                                <p class="caption">Сумма</p>
-                                <p class="fs-m2">5135</p>
-                              </div>
-                              <div class="mb-m">
-                                <p class="caption">Способ оплаты</p>
-                                <p class="color-secondary">Банковские системы</p>
-                              </div>
-                            </div>
-                            <div class="c-tab__row verified-ads__row">
-                              <div class="c-tab__cell verified-ads__cell">
-                                <div class="user-rating-card">
-                                  <p class="user-rating-card__name">AlexKornienko<span class="dot"></span></p>
-                                  <div class="user-rating-card__rat">
-                                    <div class="rating">
-                                      <div class="rating__title">Рейтинг</div>
-                                      <div class="rating__bar">
-                                        <div class="rating__progress"></div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="c-tab__cell verified-ads__cell"><span>Украина</span></div>
-                              <div class="c-tab__cell verified-ads__cell"><span>75 865</span></div>
-                              <div class="c-tab__cell verified-ads__cell"><span>5135</span></div>
-                              <div class="c-tab__cell verified-ads__cell"><span class="color-secondary">Банковские системы</span></div>
-                            </div>
-                            <div class="verified-ads__card-mobile mb-m">
-                              <div class="mb-s">
-                                <div class="user-rating-card">
-                                  <p class="user-rating-card__name">AlexKornienko<span class="dot"></span></p>
-                                  <div class="user-rating-card__rat">
-                                    <div class="rating">
-                                      <div class="rating__title">Рейтинг</div>
-                                      <div class="rating__bar">
-                                        <div class="rating__progress"></div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="mb-s">
-                                <p class="caption">Описание(место)</p>
-                                <p class="fs-m2">Украина</p>
-                              </div>
-                              <div class="mb-s">
-                                <p class="caption">Цена/BTC</p>
-                                <p class="fs-m2">75 865</p>
-                              </div>
-                              <div class="mb-s">
-                                <p class="caption">Сумма</p>
-                                <p class="fs-m2">5135</p>
-                              </div>
-                              <div class="mb-m">
-                                <p class="caption">Способ оплаты</p>
-                                <p class="color-secondary">Банковские системы</p>
-                              </div>
-                            </div>
-                            <div class="c-tab__row verified-ads__row">
-                              <div class="c-tab__cell verified-ads__cell">
-                                <div class="user-rating-card">
-                                  <p class="user-rating-card__name">AlexKornienko<span class="dot"></span></p>
-                                  <div class="user-rating-card__rat">
-                                    <div class="rating">
-                                      <div class="rating__title">Рейтинг</div>
-                                      <div class="rating__bar">
-                                        <div class="rating__progress"></div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="c-tab__cell verified-ads__cell"><span>Украина</span></div>
-                              <div class="c-tab__cell verified-ads__cell"><span>75 865</span></div>
-                              <div class="c-tab__cell verified-ads__cell"><span>5135</span></div>
-                              <div class="c-tab__cell verified-ads__cell"><span class="color-secondary">Банковские системы</span></div>
-                            </div>
-                            <div class="verified-ads__card-mobile mb-m">
-                              <div class="mb-s">
-                                <div class="user-rating-card">
-                                  <p class="user-rating-card__name">AlexKornienko<span class="dot"></span></p>
-                                  <div class="user-rating-card__rat">
-                                    <div class="rating">
-                                      <div class="rating__title">Рейтинг</div>
-                                      <div class="rating__bar">
-                                        <div class="rating__progress"></div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="mb-s">
-                                <p class="caption">Описание(место)</p>
-                                <p class="fs-m2">Украина</p>
-                              </div>
-                              <div class="mb-s">
-                                <p class="caption">Цена/BTC</p>
-                                <p class="fs-m2">75 865</p>
-                              </div>
-                              <div class="mb-s">
-                                <p class="caption">Сумма</p>
-                                <p class="fs-m2">5135</p>
-                              </div>
-                              <div class="mb-m">
-                                <p class="caption">Способ оплаты</p>
-                                <p class="color-secondary">Банковские системы</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="cards__card">
-                  <div class="card verified-users">
-                    <div class="card__table">
-                      <div class="c-tab c-tab--font-s">
-                        <div class="c-tab__row verified-users__row">
-                          <div class="c-tab__cell c-tab__cell--head verified-users__cell-user"><span>Пользователь</span></div>
-                          <div class="c-tab__cell c-tab__cell--head verified-users__cell-status"><span>Осуществлял сделки</span></div>
-                        </div>
-                        <div class="c-tab__row verified-users__row">
-                          <div class="c-tab__cell verified-users__cell-user">
-                            <div class="user-rating-card">
-                              <p class="user-rating-card__name">Alex Kornienko<span class="dot"></span></p>
-                              <div class="user-rating-card__rat">
-                                <div class="rating">
-                                  <div class="rating__title">Рейтинг</div>
-                                  <div class="rating__bar">
-                                    <div class="rating__progress"></div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="c-tab__cell verified-users__cell-status"><span class="color-secondary">Да</span></div>
-                        </div>
-                        <div class="c-tab__row verified-users__row">
-                          <div class="c-tab__cell verified-users__cell-user">
-                            <div class="user-rating-card">
-                              <p class="user-rating-card__name">Alex Kornienko<span class="dot"></span></p>
-                              <div class="user-rating-card__rat">
-                                <div class="rating">
-                                  <div class="rating__title">Рейтинг</div>
-                                  <div class="rating__bar">
-                                    <div class="rating__progress"></div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="c-tab__cell verified-users__cell-status"><span class="color-secondary">Да</span></div>
-                        </div>
-                        <div class="c-tab__row verified-users__row">
-                          <div class="c-tab__cell verified-users__cell-user">
-                            <div class="user-rating-card">
-                              <p class="user-rating-card__name">Alex Kornienko<span class="dot"></span></p>
-                              <div class="user-rating-card__rat">
-                                <div class="rating">
-                                  <div class="rating__title">Рейтинг</div>
-                                  <div class="rating__bar">
-                                    <div class="rating__progress"></div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="c-tab__cell verified-users__cell-status"><span class="color-secondary">Да</span></div>
-                        </div>
-                        <div class="c-tab__row verified-users__row">
-                          <div class="c-tab__cell verified-users__cell-user">
-                            <div class="user-rating-card">
-                              <p class="user-rating-card__name">Alex Kornienko<span class="dot"></span></p>
-                              <div class="user-rating-card__rat">
-                                <div class="rating">
-                                  <div class="rating__title">Рейтинг</div>
-                                  <div class="rating__bar">
-                                    <div class="rating__progress"></div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="c-tab__cell verified-users__cell-status"><span class="color-secondary">Да</span></div>
-                        </div>
-                        <div class="c-tab__row verified-users__row">
-                          <div class="c-tab__cell verified-users__cell-user">
-                            <div class="user-rating-card">
-                              <p class="user-rating-card__name">Alex Kornienko<span class="dot"></span></p>
-                              <div class="user-rating-card__rat">
-                                <div class="rating">
-                                  <div class="rating__title">Рейтинг</div>
-                                  <div class="rating__bar">
-                                    <div class="rating__progress"></div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="c-tab__cell verified-users__cell-status"><span class="color-secondary">Да</span></div>
-                        </div>
-                        <div class="c-tab__row verified-users__row">
-                          <div class="c-tab__cell verified-users__cell-user">
-                            <div class="user-rating-card">
-                              <p class="user-rating-card__name">Alex Kornienko<span class="dot"></span></p>
-                              <div class="user-rating-card__rat">
-                                <div class="rating">
-                                  <div class="rating__title">Рейтинг</div>
-                                  <div class="rating__bar">
-                                    <div class="rating__progress"></div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="c-tab__cell verified-users__cell-status"><span class="color-secondary">Да</span></div>
-                        </div>
-                        <div class="c-tab__row verified-users__row">
-                          <div class="c-tab__cell verified-users__cell-user">
-                            <div class="user-rating-card">
-                              <p class="user-rating-card__name">Alex Kornienko<span class="dot"></span></p>
-                              <div class="user-rating-card__rat">
-                                <div class="rating">
-                                  <div class="rating__title">Рейтинг</div>
-                                  <div class="rating__bar">
-                                    <div class="rating__progress"></div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="c-tab__cell verified-users__cell-status"><span class="color-secondary">Да</span></div>
-                        </div>
-                        <div class="c-tab__row verified-users__row">
-                          <div class="c-tab__cell verified-users__cell-user">
-                            <div class="user-rating-card">
-                              <p class="user-rating-card__name">Alex Kornienko<span class="dot"></span></p>
-                              <div class="user-rating-card__rat">
-                                <div class="rating">
-                                  <div class="rating__title">Рейтинг</div>
-                                  <div class="rating__bar">
-                                    <div class="rating__progress"></div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="c-tab__cell verified-users__cell-status"><span class="color-secondary">Да</span></div>
-                        </div>
-                        <div class="c-tab__row verified-users__row">
-                          <div class="c-tab__cell verified-users__cell-user">
-                            <div class="user-rating-card">
-                              <p class="user-rating-card__name">Alex Kornienko<span class="dot"></span></p>
-                              <div class="user-rating-card__rat">
-                                <div class="rating">
-                                  <div class="rating__title">Рейтинг</div>
-                                  <div class="rating__bar">
-                                    <div class="rating__progress"></div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="c-tab__cell verified-users__cell-status"><span class="color-secondary">Да</span></div>
-                        </div>
-                        <div class="c-tab__row verified-users__row">
-                          <div class="c-tab__cell verified-users__cell-user">
-                            <div class="user-rating-card">
-                              <p class="user-rating-card__name">Alex Kornienko<span class="dot"></span></p>
-                              <div class="user-rating-card__rat">
-                                <div class="rating">
-                                  <div class="rating__title">Рейтинг</div>
-                                  <div class="rating__bar">
-                                    <div class="rating__progress"></div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="c-tab__cell verified-users__cell-status"><span class="color-secondary">Да</span></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card-tab__btn card-tab__btn card-tab__btn--right mb-m mt-m">
-                      <button class="l-btn l-btn--mobile-full">
-                        <div class="l-btn__inner"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <rect width="24" height="24" fill="white" fill-opacity="0"/>
-    <path d="M13 6L11.59 7.30154L15.5 11H5V13H15.5L11.59 16.6985L13 18L19 12L13 6Z"/>
-    <mask id="svg-arrow-right" mask-type="alpha" maskUnits="userSpaceOnUse" x="5" y="6" width="14" height="12">
-        <path d="M13 6L11.59 7.30154L15.5 11H5V13H15.5L11.59 16.6985L13 18L19 12L13 6Z" fill="#B25C5C"/>
-    </mask>
-    <g mask="url(#svg-arrow-right)" fill="inherit">
-        <rect width="24" height="24"/>
-    </g>
+                            <div class="chat__footer-attach"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<rect width="24" height="24" fill="black" fill-opacity="0"/>
+<mask id="svg-add-file" mask-type="alpha" maskUnits="userSpaceOnUse" x="7" y="3" width="10" height="18">
+<path d="M15.6364 7.09091V16.5C15.6364 18.3082 14.0091 19.7727 12 19.7727C9.99091 19.7727 8.36364 18.3082 8.36364 16.5V6.27273C8.36364 5.14364 9.38182 4.22727 10.6364 4.22727C11.8909 4.22727 12.9091 5.14364 12.9091 6.27273V14.8636C12.9091 15.3136 12.5 15.6818 12 15.6818C11.5 15.6818 11.0909 15.3136 11.0909 14.8636V7.09091H9.72727V14.8636C9.72727 15.9927 10.7455 16.9091 12 16.9091C13.2545 16.9091 14.2727 15.9927 14.2727 14.8636V6.27273C14.2727 4.46455 12.6455 3 10.6364 3C8.62727 3 7 4.46455 7 6.27273V16.5C7 18.9873 9.23636 21 12 21C14.7636 21 17 18.9873 17 16.5V7.09091H15.6364Z" fill="white"/>
+</mask>
+<g mask="url(#svg-add-file)">
+<rect width="24" height="24" fill="black" fill-opacity="0"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="inherit"/>
+</g>
 </svg>
-<span>Показать больше</span>
+
+                            </div>
+                          </div>
                         </div>
-                      </button>
+                      </div>
+                    </div>
+                    <div class="active-deal__manual">
+                      <h4 class="l-subtitle">Отправка биткоинов</h4>
+                      <ol>
+                        <li>Делайте запрос на сделку</li>
+                        <li>Высылаете копию паспорта или водительского удостовернеия</li>
+                        <li>Я высылаю номер карты Приват 24 Универсальная</li>
+                        <li>В поле "назначение платежа" обязательно пишите "Перевод личных средств" и указываете "Ссылочный номер/сообщение" (автоматически</li>
+                      </ol>
                     </div>
                   </div>
                 </div>
@@ -1338,5 +811,6 @@
     <!--VUE CDN-->
     <!--script(type='text/javascript' src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js")-->
     <script src="js/index.js"></script>
+    <!--script(src="./js/cabinet_active-deal_page.js")-->
   </body>
 </html>
