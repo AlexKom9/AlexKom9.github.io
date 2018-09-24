@@ -244,19 +244,20 @@
             <h1>Редактирование профиля</h1>
           </div>
           <div class="cards__inner">
-            <div class="cards__side cabinet__side">
-              <div class="cards__card cabinet__user">
-                <div class="user-card card l-card">
-                  <div class="user-card__inner">
-                    <div class="user-card__img-container">
-                      <div class="user-card__img"><img src="https://www.webmarketingeturismo.it/wp-content/uploads/2016/11/mobile-user.png"/></div>
-                    </div>
-                    <div class="user-card__main">
-                      <p class="user-card__name">Jugernaut</p>
-                      <div class="user-card__confirmation">
-                        <!--include ../../../svg/security.svg-->
-                        <!--span Пользователь подтвержден-->
-                        <div class="conf conf--conf"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <div class="cards__side cabinet__side" id="js-cabinet-side">
+              <div id="js-side-nav">
+                <div class="cards__card cabinet__user">
+                  <div class="user-card card l-card">
+                    <div class="user-card__inner">
+                      <div class="user-card__img-container">
+                        <div class="user-card__img"><img src="https://www.webmarketingeturismo.it/wp-content/uploads/2016/11/mobile-user.png"/></div>
+                      </div>
+                      <div class="user-card__main">
+                        <p class="user-card__name">Jugernaut</p>
+                        <div class="user-card__confirmation">
+                          <!--include ../../../svg/security.svg-->
+                          <!--span Пользователь подтвержден-->
+                          <div class="conf conf--conf"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <mask id="svg-security" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="1" width="18" height="22">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M0 4L9 0L18 4V10C18 15.55 14.1602 20.74 9 22C3.83984 20.74 0 15.55 0 10V4ZM3 12L7 16L15 8L13.5898 6.58002L7 13.17L4.41016 10.59L3 12Z" transform="translate(3 1)" fill="white"/>
 </mask>
@@ -265,78 +266,79 @@
 </g>
 </svg>
 <span>Пользователь подтвержден</span>
+                          </div>
                         </div>
-                      </div>
-                      <div class="user-card__footer">
-                        <div class="user-card__rating">
-                          <div class="rating">
-                            <div class="rating__title">Рейтинг</div>
-                            <div class="rating__bar">
-                              <div class="rating__progress"></div>
+                        <div class="user-card__footer">
+                          <div class="user-card__rating">
+                            <div class="rating">
+                              <div class="rating__title">Рейтинг</div>
+                              <div class="rating__bar">
+                                <div class="rating__progress"></div>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                        <div class="user-card__emoji">
-                          <div class="user-card__emoji-item">
-                            <svg class="svg-good-dims color-secondary-light">
-                              <use xlink:href="#good"></use>
-                            </svg><span class="good">16</span>
-                          </div>
-                          <div class="user-card__emoji-item">
-                            <svg class="svg-neutral-dims">
-                              <use xlink:href="#neutral"></use>
-                            </svg><span class="neutral">8</span>
-                          </div>
-                          <div class="user-card__emoji-item">
-                            <svg class="svg-bad-dims color-warn">
-                              <use xlink:href="#bad"></use>
-                            </svg><span class="bad">3</span>
+                          <div class="user-card__emoji">
+                            <div class="user-card__emoji-item">
+                              <svg class="svg-good-dims color-secondary-light">
+                                <use xlink:href="#good"></use>
+                              </svg><span class="good">16</span>
+                            </div>
+                            <div class="user-card__emoji-item">
+                              <svg class="svg-neutral-dims">
+                                <use xlink:href="#neutral"></use>
+                              </svg><span class="neutral">8</span>
+                            </div>
+                            <div class="user-card__emoji-item">
+                              <svg class="svg-bad-dims color-warn">
+                                <use xlink:href="#bad"></use>
+                              </svg><span class="bad">3</span>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="cards__nav cabinet__nav-container">
-                <div class="card cabinet__nav">
-                  <ul class="cabinet__nav-list">
-                    <li class="cabinet__nav-item cabinet__nav-item--active"><a href="#">
-                        <svg class="svg-user-info-dims">
-                          <use xlink:href="#user-info"></use>
-                        </svg><span>Основная информация</span></a></li>
-                    <li class="cabinet__nav-item"><a href="#">
-                        <svg class="svg-wallet-dims">
-                          <use xlink:href="#wallet"></use>
-                        </svg><span>Кошелек</span></a></li>
-                    <li class="cabinet__nav-item"><a href="#">
-                        <svg class="svg-exchange-dims">
-                          <use xlink:href="#exchange"></use>
-                        </svg><span>Информационная панель торговца</span></a></li>
-                    <li class="cabinet__nav-item"><a href="#">
-                        <svg class="svg-security-dims">
-                          <use xlink:href="#security"></use>
-                        </svg><span>Информационная панель торговца</span></a></li>
-                    <li class="cabinet__nav-item"><a href="#">
-                        <svg class="svg-friends-dims">
-                          <use xlink:href="#friends"></use>
-                        </svg><span>Доверенные торговцы</span></a></li>
-                    <li class="cabinet__nav-item"><a href="#">
-                        <svg class="svg-price-dims">
-                          <use xlink:href="#price"></use>
-                        </svg><span>Крипто-ломбард</span></a></li>
-                    <li class="cabinet__nav-item"><a href="#">
-                        <svg class="svg-log-out-dims">
-                          <use xlink:href="#log-out"></use>
-                        </svg><span>Выйти из аккаунта</span></a></li>
-                  </ul>
-                </div>
-                <div class="cards__edit-btn cabinet__edit-btn"><a class="l-btn" href="">
-                    <div class="l-btn__inner">
-                      <svg class="svg-edit-dims color-primary-light">
-                        <use xlink:href="#edit"></use>
-                      </svg><span>Редактировать профиль</span>
-                    </div></a>
+                <div class="cards__nav cabinet__nav-container">
+                  <div class="card cabinet__nav">
+                    <ul class="cabinet__nav-list">
+                      <li class="cabinet__nav-item cabinet__nav-item--active"><a href="#">
+                          <svg class="svg-user-info-dims">
+                            <use xlink:href="#user-info"></use>
+                          </svg><span>Основная информация</span></a></li>
+                      <li class="cabinet__nav-item"><a href="#">
+                          <svg class="svg-wallet-dims">
+                            <use xlink:href="#wallet"></use>
+                          </svg><span>Кошелек</span></a></li>
+                      <li class="cabinet__nav-item"><a href="#">
+                          <svg class="svg-exchange-dims">
+                            <use xlink:href="#exchange"></use>
+                          </svg><span>Информационная панель торговца</span></a></li>
+                      <li class="cabinet__nav-item"><a href="#">
+                          <svg class="svg-security-dims">
+                            <use xlink:href="#security"></use>
+                          </svg><span>Информационная панель торговца</span></a></li>
+                      <li class="cabinet__nav-item"><a href="#">
+                          <svg class="svg-friends-dims">
+                            <use xlink:href="#friends"></use>
+                          </svg><span>Доверенные торговцы</span></a></li>
+                      <li class="cabinet__nav-item"><a href="#">
+                          <svg class="svg-price-dims">
+                            <use xlink:href="#price"></use>
+                          </svg><span>Крипто-ломбард</span></a></li>
+                      <li class="cabinet__nav-item"><a href="#">
+                          <svg class="svg-log-out-dims">
+                            <use xlink:href="#log-out"></use>
+                          </svg><span>Выйти из аккаунта</span></a></li>
+                    </ul>
+                  </div>
+                  <div class="cards__edit-btn cabinet__edit-btn"><a class="l-btn" href="">
+                      <div class="l-btn__inner">
+                        <svg class="svg-edit-dims color-primary-light">
+                          <use xlink:href="#edit"></use>
+                        </svg><span>Редактировать профиль</span>
+                      </div></a>
+                  </div>
                 </div>
               </div>
             </div>
