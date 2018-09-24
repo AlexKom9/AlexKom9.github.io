@@ -246,17 +246,11 @@
         <div class="l-container">
           <div class="l-title-wrap">
             <button class="l-btn js-hide-full-list mr-m" data-group="full-list">
-              <div class="l-btn__inner"><svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg">
-    <rect width="24" height="24" fill="white" fill-opacity="0"/>
-    <path d="M11 18L12.41 16.6985L8.5 13H19V11H8.5L12.41 7.30154L11 6L5 12L11 18Z" fill="#B25C5C"/>
-    <mask id="svg-arrow-left" mask-type="alpha" maskUnits="userSpaceOnUse" x="5" y="6" width="14" height="12">
-        <path d="M11 18L12.41 16.6985L8.5 13H19V11H8.5L12.41 7.30154L11 6L5 12L11 18Z" fill="#B25C5C"/>
-    </mask>
-    <g mask="url(#svg-arrow-left)">
-        <rect width="24" height="24" fill="inherit"/>
-    </g>
-</svg>
-<span>Назад</span>
+              <div class="l-btn__inner">
+                <!--include ../../svg/arrow-left.svg-->
+                <svg class="svg-arrow-left-dims">
+                  <use xlink:href="#arrow-left"></use>
+                </svg><span>Назад</span>
               </div>
             </button>
             <h1 class="l-title">Проверенные пользователи</h1>
